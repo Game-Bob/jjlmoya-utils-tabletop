@@ -1,9 +1,11 @@
 import { diceRollerSimulator } from '../tool/dice-roller-simulator/entry';
+import { boardGameTimer } from '../tool/board-game-timer/entry';
 
-export const tabletopCategory: TabletopCategoryEntry = {
+export const tabletopCategory = {
   icon: 'mdi:dice-multiple-outline',
   tools: [
     diceRollerSimulator,
+    boardGameTimer,
   ],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),

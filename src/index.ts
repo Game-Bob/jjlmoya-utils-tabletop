@@ -2,6 +2,7 @@ export { tabletopCategory } from './category';
 export const tabletopCategorySEO = () => import('./category/TabletopCategorySEO.astro').then((m) => m.default);
 
 export { diceRollerSimulator, DICE_ROLLER_SIMULATOR_TOOL } from './tool/dice-roller-simulator';
+export { boardGameTimer, BOARD_GAME_TIMER_TOOL } from './tool/board-game-timer';
 
 export type {
   KnownLocale,

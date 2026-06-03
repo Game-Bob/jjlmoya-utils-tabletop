@@ -1,25 +1,27 @@
 import type { CategoryLocaleContent } from '../../types';
 
-const slug = 'horoloji';
-const title = 'Horoloji Araçları & Referans Kılavuzları';
-const description = 'Saat tutkunları için profesyonel düzeyde horoloji araçları-ssasiyet takibi, mekanizma demanyetizasyonu, bilekte geçen süre hesaplama ve popüler kalibreler için kurma kolu pozisyon referansları.';
+const slug = 'masa-oyunlari';
+const title = 'Masa Oyunu Araçları ve Yardımcı Programları';
+const description = 'Masa oyunları ve RPG için ücretsiz araçlar: canlı istatistiklerle sanal zar atma, çok oyunculu süreölçer ile tur sürelerini yönetme ve daha fazlası. Tarayıcıda çalışır, kayıt gerekmez, %100 gizli.';
 
 export const content: CategoryLocaleContent = {
   slug,
   title,
   description,
   seo: [
-    { type: 'title', text: 'Saat Tutkunları İçin Temel Araçlar', level: 2 },
-    { type: 'paragraph', html: 'İster mekanik bir mekanizmayı regüle ediyor, ister yakın zamanda manyetize olmuş bir saati demanyetize ediyor, bir zaman ölçeri ne sıklıkta taktığınızı takip ediyor ya da favori kalibrenizin kurma kolu pozisyonlarını öğreniyor olun, bu paket profesyonel düzeyde horoloji araçlarını parmaklarınızın ucuna getiriyor-halı ekipman gerektirmez.' },
-    { type: 'title', text: 'Hassasiyet, Demanyetizasyon & Kurma Kolu Referansları', level: 2 },
-    { type: 'paragraph', html: 'Atom saatine karşı günlük sapma takibinden hassas zamanlamayla bir mekanizmayı güvenle demanyetize etmeye, bir saati en son ne zaman taktığınızı bilmekten bir ETA veya Miyota kalibresindeki her kurma kolu pozisyonunu anlamaya kadar- araçlar her koleksiyoncu ve meraklının günlük ihtiyaçlarını karşılar.' },
-    {
-      type: 'stats', items: [
-        { label: 'Araçlar', value: '4', icon: 'mdi:tools' },
-        { label: 'Kalibreler', value: '8+', icon: 'mdi:engine' },
-        { label: 'Diller', value: '15', icon: 'mdi:translate' },
-        { label: 'Veri Gizliliği', value: 'Local', icon: 'mdi:shield-check' },
-      ]
-    },
+    { type: 'title', text: 'Masa Oyunu Araçları | Çevrimiçi Zar Atma ve Tur Zamanlayıcısı', level: 2 },
+    { type: 'paragraph', html: 'Oyun geceleri eğlence içindir, kayıp zar aramak ya da birinin sonuçları toplamasını beklemek için değil. Bu yardımcı program kütüphanesi, sana ve grubuna anında çalışan hızlı, iyi tasarlanmış araçlar sunar, karşılığında hiçbir şey istemez. İster bin bir şeyle uğraşan bir zindan efendisi ol, ister sadece zahmetsizce zar atmak isteyen bir oyuncu, bu araçlar senin için yapıldı.' },
+    { type: 'title', text: 'Gerçek Zamanlı İstatistiklerle Sanal Zar Atma', level: 2 },
+    { type: 'paragraph', html: 'Masanın altında zar aramaktan ya da birinin sonuçları toplamasını beklemekten bıktın mı? Sanal zar atıcı, değiştiriciler, avantaj, dezavantaj ve tam geçmişle birlikte herhangi bir çokyüzlü zar kombinasyonunu anında atmanı sağlar. Dahili olasılık analizörü, atmadan önce gerçek başarı şansını gösterir. Dungeons & Dragons, Pathfinder, Call of Cthulhu, Shadowrun veya şansa dayalı herhangi bir oyun için mükemmel.' },
+    { type: 'title', text: 'Akıllı Tur Zamanlayıcısı ile Oyunun Temposunu Koru', level: 2 },
+    { type: 'paragraph', html: 'Her turda sonsuz zaman harcayan o oyuncuyu hepimiz biliriz. Oyun zamanlayıcısı, her oyun stiline uygun modlarla adil ve eğlenceli zaman sınırları belirlemeni sağlar - basit bir ortak geri sayımdan Fischer artırımı veya Bronstein gecikmeli satranç sistemlerine kadar. Bölünmüş ekranlı iki oyunculu düellolar veya merkezi kontrollü sekiz oyuncuya kadar gruplar için çalışır. Oyun bittiğinde, zaman ve oyun temposu hakkında ayrıntılı istatistikleri görüntüleyebilirsin.' },
+    { type: 'title', text: 'Gizlilik Önceliklidir: Tüm Verilerin Cihazında Kalır', level: 2 },
+    { type: 'paragraph', html: 'Bu kütüphanenin en büyük avantajlarından biri, tüm işlemenin tarayıcında gerçekleşmesidir. Hiçbir veri sunucuya gönderilmez, izleme çerezi yoktur, e-posta veya kayıt gerekmez. Araçları çevrimdışı kullan, ekranını masayla paylaş veya bir televizyona yansıt - oyunun kendisi dışında endişelenecek bir şey yok. Ve masa oyuncularının hayatını kolaylaştırmak için her zaman tasarlanmış daha fazla araç yolda.' },
+    { type: 'stats', items: [
+      { label: 'Araçlar', value: '2+', icon: 'mdi:tools' },
+      { label: 'Oyuncular', value: '2-8', icon: 'mdi:account-group' },
+      { label: 'Diller', value: '15', icon: 'mdi:translate' },
+      { label: 'Gizlilik', value: '%100 Yerel', icon: 'mdi:shield-check' },
+    ] },
   ],
 };
