@@ -1,5 +1,5 @@
 {
-    "name": "@game-bob/jjlmoya-utils-tabletop",
+    "name": "@jjlmoya/utils-tabletop",
     "version": "1.2.0",
     "type": "module",
     "main": "./src/index.ts",

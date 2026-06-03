@@ -9,7 +9,7 @@ const inNodeModules = libDir.includes('node_modules');
 if (!inNodeModules) process.exit(0);
 
 const projectRoot = join(libDir, '../../../..');
-const categoryKey = JSON.parse(readFileSync(join(libDir, '../package.json'), 'utf8')).name.replace('@game-bob/jjlmoya-utils-', '');
+const categoryKey = JSON.parse(readFileSync(join(libDir, '../package.json'), 'utf8')).name.replace('@jjlmoya/utils-', '');
 const destDir = join(projectRoot, `public/styles/lib/${categoryKey}`);
 
 mkdirSync(destDir, { recursive: true });
@@ -22,6 +22,6 @@ for (const tool of tools) {
     catch { continue; }
     for (const file of files) {
         writeFileSync(join(destDir, file), readFileSync(join(toolDir, file)));
-        console.log(`[@game-bob/jjlmoya-utils-${categoryKey}] copied ${file}`);
+        console.log(`[@jjlmoya/utils-${categoryKey}] copied ${file}`);
     }
 }
