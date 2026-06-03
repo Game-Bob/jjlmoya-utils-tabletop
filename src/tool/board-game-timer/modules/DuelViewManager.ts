@@ -67,6 +67,24 @@ export class DuelViewManager {
     this.update();
   }
 
+  private updateSide(p: { id: string }, t: { remaining: number; status: string; roundsPlayed: number }, els: { side: HTMLElement; time: HTMLElement; status: HTMLElement }) {
+    const prev = els.time.textContent;
+    els.time.textContent = formatTime(t.remaining);
+    if (prev !== els.time.textContent) spawnDigitSparkle(els.time);
+
+    const rotated = els.side.classList.contains('rotated');
+    els.side.className = `duel-player-side ${t.status}`;
+    if (rotated) els.side.classList.add('rotated');
+    if (this.state.engine.activeTimerId === p.id) els.side.classList.add('active');
+
+    els.status.textContent = t.status.toUpperCase();
+    els.status.className = 'side-status-badge';
+    if (t.status === 'overtime') {
+      els.status.classList.add('warning');
+      spawnExpiredBurst(els.side);
+    }
+  }
+
   public update() {
     const p1 = this.state.players[0];
     const p2 = this.state.players[1];
@@ -74,41 +92,14 @@ export class DuelViewManager {
     const t2 = this.state.engine.getTimer(p2.id);
     if (!t1 || !t2) return;
 
-    const time1El = document.getElementById('duel-p1-timer') as HTMLElement;
-    const time2El = document.getElementById('duel-p2-timer') as HTMLElement;
-    const prev1 = time1El.textContent;
-    const prev2 = time2El.textContent;
-    time1El.textContent = formatTime(t1.remaining);
-    time2El.textContent = formatTime(t2.remaining);
-    if (prev1 !== time1El.textContent) spawnDigitSparkle(time1El);
-    if (prev2 !== time2El.textContent) spawnDigitSparkle(time2El);
+    const d1 = document.getElementById('duel-p1') as HTMLElement;
+    const d2 = document.getElementById('duel-p2') as HTMLElement;
 
     document.getElementById('duel-p1-rounds')!.textContent = `Turns: ${t1.roundsPlayed}`;
     document.getElementById('duel-p2-rounds')!.textContent = `Turns: ${t2.roundsPlayed}`;
-    const d1 = document.getElementById('duel-p1') as HTMLElement;
-    const d2 = document.getElementById('duel-p2') as HTMLElement;
-    const d1Rotated = d1.classList.contains('rotated');
-    const d2Rotated = d2.classList.contains('rotated');
-    d1.className = `duel-player-side ${t1.status}`;
-    d2.className = `duel-player-side ${t2.status}`;
-    if (d1Rotated) d1.classList.add('rotated');
-    if (d2Rotated) d2.classList.add('rotated');
-    if (this.state.engine.activeTimerId === p1.id) d1.classList.add('active');
-    if (this.state.engine.activeTimerId === p2.id) d2.classList.add('active');
-    const s1 = document.getElementById('duel-p1-status') as HTMLElement;
-    const s2 = document.getElementById('duel-p2-status') as HTMLElement;
-    s1.textContent = t1.status.toUpperCase();
-    s2.textContent = t2.status.toUpperCase();
-    s1.className = 'side-status-badge';
-    s2.className = 'side-status-badge';
-    if (t1.status === 'overtime') {
-      s1.classList.add('warning');
-      spawnExpiredBurst(d1);
-    }
-    if (t2.status === 'overtime') {
-      s2.classList.add('warning');
-      spawnExpiredBurst(d2);
-    }
+
+    this.updateSide(p1, t1, { side: d1, time: document.getElementById('duel-p1-timer') as HTMLElement, status: document.getElementById('duel-p1-status') as HTMLElement });
+    this.updateSide(p2, t2, { side: d2, time: document.getElementById('duel-p2-timer') as HTMLElement, status: document.getElementById('duel-p2-status') as HTMLElement });
   }
 
   public triggerWarning(playerId: string) {

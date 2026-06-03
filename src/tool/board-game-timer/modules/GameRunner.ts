@@ -89,6 +89,19 @@ export class GameRunner {
     this.setupPanel.style.display = 'flex';
   }
 
+  private handleExpired(id: string) {
+    this.state.sound.playTimeUp();
+    this.state.stats.end();
+    if (this.state.activeMode === 'duel') {
+      this.duelView.triggerExpired(id);
+    } else {
+      this.multiView.triggerExpired(id);
+    }
+    const panel = this.state.activeMode === 'duel' ? this.duelPanel : this.multiPanel;
+    spawnConfetti(panel, 30);
+    setTimeout(() => this.statsModalManager.show(this.state.roundNumber), 1200);
+  }
+
   private bindCallbacks() {
     this.state.engine.onTick((id) => {
       if (this.state.activeMode === 'duel') {
@@ -105,20 +118,7 @@ export class GameRunner {
         this.multiView.triggerWarning(id);
       }
     });
-    this.state.engine.onExpired((id) => {
-      this.state.sound.playTimeUp();
-      this.state.stats.end();
-      if (this.state.activeMode === 'duel') {
-        this.duelView.triggerExpired(id);
-      } else {
-        this.multiView.triggerExpired(id);
-      }
-      const panel = this.state.activeMode === 'duel' ? this.duelPanel : this.multiPanel;
-      spawnConfetti(panel, 30);
-      setTimeout(() => {
-        this.statsModalManager.show(this.state.roundNumber);
-      }, 1200);
-    });
+    this.state.engine.onExpired((id) => this.handleExpired(id));
   }
 
   private checkAudioTriggers(id: string) {

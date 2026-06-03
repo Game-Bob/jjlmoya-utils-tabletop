@@ -120,29 +120,35 @@ export class MultiplayerViewManager {
 
   private syncCard(p: PlayerConfig, t: TimerState, idx: number) {
     const card = document.getElementById(`multi-card-${p.id}`);
-    if (card) {
-      card.className = `multi-player-card ${t.status}`;
-      if (this.state.engine.activeTimerId === p.id) {
-        card.classList.add('active');
-        this.state.activePlayerIndex = idx;
-      }
-    }
-    const timerVal = document.getElementById(`timer-val-${p.id}`) as HTMLElement;
-    const prevTime = timerVal?.textContent;
-    if (timerVal) {
-      timerVal.textContent = formatTime(t.remaining);
-      if (prevTime && prevTime !== timerVal.textContent) spawnDigitSparkle(timerVal);
-    }
-    const timerFill = document.getElementById(`timer-fill-${p.id}`) as HTMLElement;
-    if (timerFill) {
-      const pct = p.time > 0 ? (t.remaining / p.time) * 100 : 0;
-      timerFill.style.width = `${pct}%`;
-    }
+    if (card) this.updateCardStyles(card, p, t, idx);
+    this.updateCardTimer(p, t);
+    this.updateCardFill(p, t);
     const roundsVal = document.getElementById(`rounds-val-${p.id}`);
     if (roundsVal) roundsVal.textContent = `Turns: ${t.roundsPlayed}`;
-    if (t.status === 'overtime' && card) {
-      spawnExpiredBurst(card);
+    if (t.status === 'overtime' && card) spawnExpiredBurst(card);
+  }
+
+  private updateCardStyles(card: HTMLElement, p: PlayerConfig, t: TimerState, idx: number) {
+    card.className = `multi-player-card ${t.status}`;
+    if (this.state.engine.activeTimerId === p.id) {
+      card.classList.add('active');
+      this.state.activePlayerIndex = idx;
     }
+  }
+
+  private updateCardTimer(p: PlayerConfig, t: TimerState) {
+    const el = document.getElementById(`timer-val-${p.id}`) as HTMLElement;
+    if (!el) return;
+    const prev = el.textContent;
+    el.textContent = formatTime(t.remaining);
+    if (prev && prev !== el.textContent) spawnDigitSparkle(el);
+  }
+
+  private updateCardFill(p: PlayerConfig, t: TimerState) {
+    const el = document.getElementById(`timer-fill-${p.id}`) as HTMLElement;
+    if (!el) return;
+    const pct = p.time > 0 ? (t.remaining / p.time) * 100 : 0;
+    el.style.width = `${pct}%`;
   }
 
   public triggerWarning(playerId: string) {
