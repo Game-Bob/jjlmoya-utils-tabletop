@@ -48,8 +48,8 @@ export class DuelViewManager {
 
   public initView() {
     this.duelPanel.style.display = 'grid';
-    const p1 = this.state.players[0];
-    const p2 = this.state.players[1];
+    const p1 = this.state.players[0]!;
+    const p2 = this.state.players[1]!;
     const d1 = document.getElementById('duel-p1') as HTMLElement;
     const d2 = document.getElementById('duel-p2') as HTMLElement;
     d1.setAttribute('data-player-id', p1.id);
@@ -86,8 +86,8 @@ export class DuelViewManager {
   }
 
   public update() {
-    const p1 = this.state.players[0];
-    const p2 = this.state.players[1];
+    const p1 = this.state.players[0]!;
+    const p2 = this.state.players[1]!;
     const t1 = this.state.engine.getTimer(p1.id);
     const t2 = this.state.engine.getTimer(p2.id);
     if (!t1 || !t2) return;

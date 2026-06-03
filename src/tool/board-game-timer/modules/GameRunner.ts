@@ -45,7 +45,7 @@ export class GameRunner {
       this.state.activeMode = 'multi';
       this.multiView.initView();
     }
-    const firstPlayer = this.state.players[0];
+    const firstPlayer = this.state.players[0]!;
     this.state.engine.start(firstPlayer.id);
     this.state.stats.startTurn();
   }

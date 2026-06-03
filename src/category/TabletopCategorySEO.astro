@@ -1,14 +1,9 @@
 ---
 import { SEORenderer } from '@jjlmoya/utils-shared';
 import { tabletopCategory } from './index';
-import type { KnownLocale } from '../types';
 
-interface Props {
-  locale?: string;
-}
-
-const { locale = 'es' } = Astro.props;
-const categoryContent = await tabletopCategory.i18n[locale as KnownLocale]?.();
+const locale: string = Astro.props.locale ?? 'es';
+const categoryContent = await tabletopCategory.i18n[locale as keyof typeof tabletopCategory.i18n]?.();
 ---
 
 {categoryContent && <SEORenderer content={{ locale, sections: categoryContent.seo }} />}

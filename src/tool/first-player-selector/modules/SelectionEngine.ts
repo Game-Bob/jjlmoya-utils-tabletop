@@ -42,36 +42,56 @@ export class SelectionEngine {
     this.contacts = contacts;
 
     if (this.mode === 'finger') {
-      if (this.state === 'celebration') {
-        if (contacts.length === 0) {
-          this.reset();
-        } else if (contacts.length > prevCount) {
-          this.reset();
-          this.contacts = contacts;
-          this.prevContactsCount = contacts.length;
-          this.setState('countdown');
-          this.countdownTimer = 0;
-          this.onCountdownStart();
-        }
-        return;
-      }
-
-      if (contacts.length < 2) {
-        if (this.state !== 'idle') {
-          this.setState('idle');
-          this.countdownTimer = 0;
-        }
-      } else {
-        if (this.state === 'countdown' && contacts.length !== prevCount) {
-          this.countdownTimer = 0;
-          this.onCountdownStart();
-        } else if (this.state === 'idle') {
-          this.setState('countdown');
-          this.countdownTimer = 0;
-          this.onCountdownStart();
-        }
-      }
+      this.handleFingerContacts(contacts, prevCount);
     }
+  }
+
+  private handleFingerContacts(contacts: ContactPoint[], prevCount: number): void {
+    if (this.state === 'celebration') {
+      this.handleCelebrationContacts(contacts, prevCount);
+      return;
+    }
+    this.handleActiveContacts(contacts, prevCount);
+  }
+
+  private handleCelebrationContacts(contacts: ContactPoint[], prevCount: number): void {
+    if (contacts.length === 0) {
+      this.reset();
+    } else if (contacts.length > prevCount) {
+      this.restartCountdown(contacts);
+    }
+  }
+
+  private handleActiveContacts(contacts: ContactPoint[], prevCount: number): void {
+    if (contacts.length < 2) {
+      if (this.state !== 'idle') {
+        this.setState('idle');
+        this.countdownTimer = 0;
+      }
+      return;
+    }
+
+    if (this.state === 'countdown' && contacts.length !== prevCount) {
+      this.countdownTimer = 0;
+      this.onCountdownStart();
+    } else if (this.state === 'idle') {
+      this.startCountdown();
+    }
+  }
+
+  private restartCountdown(contacts: ContactPoint[]): void {
+    this.reset();
+    this.contacts = contacts;
+    this.prevContactsCount = contacts.length;
+    this.setState('countdown');
+    this.countdownTimer = 0;
+    this.onCountdownStart();
+  }
+
+  private startCountdown(): void {
+    this.setState('countdown');
+    this.countdownTimer = 0;
+    this.onCountdownStart();
   }
 
   public startWheelSelection(): void {
@@ -86,30 +106,38 @@ export class SelectionEngine {
 
   public update(dt: number): void {
     if (this.mode === 'finger') {
-      if (this.state === 'countdown') {
-        const prevSec = Math.floor(this.countdownTimer / 500);
-        this.countdownTimer += dt;
-        const currSec = Math.floor(this.countdownTimer / 500);
-
-        if (currSec > prevSec && this.countdownTimer < this.countdownDuration) {
-          this.onTick();
-        }
-
-        if (this.countdownTimer >= this.countdownDuration) {
-          this.chooseFingerWinner();
-        }
-      }
+      this.updateFinger(dt);
     } else if (this.mode === 'wheel') {
-      if (this.state === 'selecting' && this.isSpinning) {
-        this.wheelAngle += this.wheelSpeed * (dt / 16.666);
-        this.wheelSpeed *= Math.pow(0.97, dt / 16.666);
+      this.updateWheel(dt);
+    }
+  }
 
-        if (this.wheelSpeed < 0.002) {
-          this.isSpinning = false;
-          this.wheelSpeed = 0;
-          this.chooseWheelWinner();
-        }
-      }
+  private updateFinger(dt: number): void {
+    if (this.state !== 'countdown') return;
+
+    const prevSec = Math.floor(this.countdownTimer / 500);
+    this.countdownTimer += dt;
+    const currSec = Math.floor(this.countdownTimer / 500);
+
+    if (currSec > prevSec && this.countdownTimer < this.countdownDuration) {
+      this.onTick();
+    }
+
+    if (this.countdownTimer >= this.countdownDuration) {
+      this.chooseFingerWinner();
+    }
+  }
+
+  private updateWheel(dt: number): void {
+    if (this.state !== 'selecting' || !this.isSpinning) return;
+
+    this.wheelAngle += this.wheelSpeed * (dt / 16.666);
+    this.wheelSpeed *= Math.pow(0.97, dt / 16.666);
+
+    if (this.wheelSpeed < 0.002) {
+      this.isSpinning = false;
+      this.wheelSpeed = 0;
+      this.chooseWheelWinner();
     }
   }
 
@@ -153,7 +181,7 @@ export class SelectionEngine {
     }
 
     const winnerIndex = Math.floor(Math.random() * this.contacts.length);
-    const winContact = this.contacts[winnerIndex];
+    const winContact = this.contacts[winnerIndex]!;
     winContact.isWinner = true;
     this.winner = winContact;
     this.setState('celebration');
@@ -166,23 +194,31 @@ export class SelectionEngine {
       return;
     }
 
-    const angle = (this.wheelAngle % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
+    const angle = this.normalizeAngle(this.wheelAngle);
     const pointerAngle = 3 * Math.PI / 2;
+    const centroid = this.getCentroid();
 
-    let closestContact = this.contacts[0];
+    const closestContact = this.findClosestContact(angle, pointerAngle, centroid);
+
+    closestContact.isWinner = true;
+    this.winner = closestContact;
+    this.setState('celebration');
+    this.onWinnerChosen(closestContact);
+  }
+
+  private normalizeAngle(a: number): number {
+    return ((a % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+  }
+
+  private findClosestContact(angle: number, pointerAngle: number, centroid: { x: number; y: number }): ContactPoint {
+    let closestContact = this.contacts[0]!;
     let minDiff = Infinity;
 
-    this.contacts.forEach((c) => {
-      const cAngle = (c.isWinner ? 0 : 0); 
-    });
-
-    const centroid = this.getCentroid();
     this.contacts.forEach((c) => {
       const dx = c.x - centroid.x;
       const dy = c.y - centroid.y;
       let contactAngle = Math.atan2(dy, dx);
-      contactAngle = (contactAngle + angle) % (2 * Math.PI);
-      if (contactAngle < 0) contactAngle += 2 * Math.PI;
+      contactAngle = ((contactAngle + angle) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
 
       let diff = Math.abs(contactAngle - pointerAngle);
       if (diff > Math.PI) {
@@ -195,10 +231,7 @@ export class SelectionEngine {
       }
     });
 
-    closestContact.isWinner = true;
-    this.winner = closestContact;
-    this.setState('celebration');
-    this.onWinnerChosen(closestContact);
+    return closestContact;
   }
 
   public getCentroid(): { x: number; y: number } {

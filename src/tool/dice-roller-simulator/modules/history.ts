@@ -81,7 +81,7 @@ export function renderHistory(refs: HistoryUIRefs, onDrawChart: (totals: number[
   setText(refs.totalVal, history.length.toString());
   setText(refs.badge, history.length.toString());
   setText(refs.averageVal, (sum / history.length).toFixed(1));
-  setText(refs.lastVal, history[history.length - 1].total.toString());
+  setText(refs.lastVal, history[history.length - 1]!.total.toString());
 
   onDrawChart(totals);
 }

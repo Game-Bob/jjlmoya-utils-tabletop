@@ -26,7 +26,7 @@ export interface TimerConfig {
 export interface PlayerConfig {
   id: string;
   name: string;
-  color: string;
+  color: PlayerColor;
   avatar?: string;
   time: number;
 }

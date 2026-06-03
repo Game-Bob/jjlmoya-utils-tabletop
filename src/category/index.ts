@@ -1,5 +1,6 @@
 import { diceRollerSimulator } from '../tool/dice-roller-simulator/entry';
 import { boardGameTimer } from '../tool/board-game-timer/entry';
+import type { CategoryLocaleContent, KnownLocale } from '../types';
 
 export const tabletopCategory = {
   icon: 'mdi:dice-multiple-outline',
@@ -23,5 +24,5 @@ export const tabletopCategory = {
     sv: () => import('./i18n/sv').then((m) => m.content),
     tr: () => import('./i18n/tr').then((m) => m.content),
     zh: () => import('./i18n/zh').then((m) => m.content),
-  },
+  } as Partial<Record<KnownLocale, () => Promise<CategoryLocaleContent>>>,
 };

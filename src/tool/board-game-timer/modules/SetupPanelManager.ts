@@ -138,7 +138,7 @@ export class SetupPanelManager {
     const name = this.nameInput.value.trim();
     if (!name) return;
     this.state.players.push({
-      id: `p-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+      id: `p-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
       name,
       color: this.state.selectedColor,
       time: this.getBaseDuration()

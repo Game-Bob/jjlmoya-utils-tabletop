@@ -1,5 +1,4 @@
 import type { SEOSection } from '@jjlmoya/utils-shared';
-import type { WithContext, Thing } from 'schema-dts';
 
 export type { SEOSection };
 
@@ -32,7 +31,7 @@ export interface ToolLocaleContent<TUI extends Record<string, string> = Record<s
   faq: FAQItem[];
   bibliography: BibliographyEntry[];
   howTo: HowToStep[];
-  schemas: WithContext<Thing>[];
+  schemas: Record<string, unknown>[];
 }
 
 export interface CategoryLocaleContent {

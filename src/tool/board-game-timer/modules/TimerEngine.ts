@@ -136,7 +136,7 @@ export class TimerEngineImpl extends TimerEngineClock implements TimerEngine {
 
   public switchToNextPlayer(playerIds: string[], currentIndex: number) {
     const nextIndex = (currentIndex + 1) % playerIds.length;
-    const nextId = playerIds[nextIndex];
+    const nextId = playerIds[nextIndex]!;
     return { nextId, nextIndex };
   }
 

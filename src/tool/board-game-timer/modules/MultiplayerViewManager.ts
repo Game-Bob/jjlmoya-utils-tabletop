@@ -21,7 +21,7 @@ export class MultiplayerViewManager {
   private handleGiantButtonClick() {
     if (this.state.isPaused) return;
     this.state.sound.playTurn();
-    const currPlayer = this.state.players[this.state.activePlayerIndex];
+    const currPlayer = this.state.players[this.state.activePlayerIndex]!;
     this.state.stats.endTurn(currPlayer.id, this.state.roundNumber);
     this.state.activePlayerIndex = (this.state.activePlayerIndex + 1) % this.state.players.length;
     if (this.state.activePlayerIndex === 0) {
@@ -29,7 +29,7 @@ export class MultiplayerViewManager {
       const roundEl = document.getElementById('multi-round-number');
       if (roundEl) roundEl.textContent = this.state.roundNumber.toString();
     }
-    const nextPlayer = this.state.players[this.state.activePlayerIndex];
+    const nextPlayer = this.state.players[this.state.activePlayerIndex]!;
     this.state.engine.switchTurn(nextPlayer.id);
     this.state.stats.startTurn();
     this.update();

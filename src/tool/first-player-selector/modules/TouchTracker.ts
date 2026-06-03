@@ -61,7 +61,7 @@ export class TouchTracker {
     const activeIds = new Set<string>();
 
     for (let i = 0; i < e.touches.length; i++) {
-      const touch = e.touches[i];
+      const touch = e.touches[i]!;
       const id = `touch-${touch.identifier}`;
       activeIds.add(id);
 
@@ -70,8 +70,8 @@ export class TouchTracker {
 
       const existingIndex = this.contacts.findIndex((c) => c.id === id);
       if (existingIndex > -1) {
-        this.contacts[existingIndex].x = x;
-        this.contacts[existingIndex].y = y;
+        this.contacts[existingIndex]!.x = x;
+        this.contacts[existingIndex]!.y = y;
       } else {
         const color = this.getNextColor();
         this.contacts.push({ id, x, y, color });
@@ -88,7 +88,7 @@ export class TouchTracker {
 
     const rect = this.canvas.getBoundingClientRect();
     for (let i = 0; i < e.touches.length; i++) {
-      const touch = e.touches[i];
+      const touch = e.touches[i]!;
       const id = `touch-${touch.identifier}`;
       const contact = this.contacts.find((c) => c.id === id);
       if (contact) {
@@ -105,7 +105,7 @@ export class TouchTracker {
 
     const activeIds = new Set<string>();
     for (let i = 0; i < e.touches.length; i++) {
-      activeIds.add(`touch-${e.touches[i].identifier}`);
+      activeIds.add(`touch-${e.touches[i]!.identifier}`);
     }
 
     this.contacts = this.contacts.filter((c) => c.id.startsWith('sim-') || activeIds.has(c.id));

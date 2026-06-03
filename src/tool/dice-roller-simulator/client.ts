@@ -185,14 +185,14 @@ function rollDiceTumble(selectedDice: { type: string; max: number }[], visualDic
   return new Promise((resolve) => {
     const intervalId = setInterval(() => {
       visualDiceEls.forEach((el, index) => {
-        const d = selectedDice[index];
+        const d = selectedDice[index]!;
         el.textContent = (Math.floor(Math.random() * d.max) + 1).toString();
       });
     }, 60);
     setTimeout(() => {
       clearInterval(intervalId);
       const results = visualDiceEls.map((el, index) => {
-        const d = selectedDice[index];
+        const d = selectedDice[index]!;
         el.classList.remove('rolling-pulse');
         const val = Math.floor(Math.random() * d.max) + 1;
         if (val === d.max) {
