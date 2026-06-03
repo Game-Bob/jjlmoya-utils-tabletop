@@ -2,6 +2,7 @@ import type { GameState } from './GameState';
 import { DuelViewManager } from './DuelViewManager';
 import { MultiplayerViewManager } from './MultiplayerViewManager';
 import { StatsModalManager } from './StatsModalManager';
+import { spawnConfetti } from './particles';
 
 export class GameRunner {
   private state: GameState;
@@ -97,10 +98,26 @@ export class GameRunner {
       }
       this.checkAudioTriggers(id);
     });
-    this.state.engine.onExpired(() => {
+    this.state.engine.onWarning((id) => {
+      if (this.state.activeMode === 'duel') {
+        this.duelView.triggerWarning(id);
+      } else {
+        this.multiView.triggerWarning(id);
+      }
+    });
+    this.state.engine.onExpired((id) => {
       this.state.sound.playTimeUp();
       this.state.stats.end();
-      this.statsModalManager.show(this.state.roundNumber);
+      if (this.state.activeMode === 'duel') {
+        this.duelView.triggerExpired(id);
+      } else {
+        this.multiView.triggerExpired(id);
+      }
+      const panel = this.state.activeMode === 'duel' ? this.duelPanel : this.multiPanel;
+      spawnConfetti(panel, 30);
+      setTimeout(() => {
+        this.statsModalManager.show(this.state.roundNumber);
+      }, 1200);
     });
   }
 

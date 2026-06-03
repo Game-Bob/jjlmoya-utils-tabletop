@@ -2,6 +2,7 @@ import type { GameState } from './GameState';
 import type { PlayerConfig } from '../types';
 
 import { formatTime, formatFullTime } from './FormatHelper';
+import { spawnConfetti } from './particles';
 
 export class StatsModalManager {
   private state: GameState;
@@ -38,6 +39,9 @@ export class StatsModalManager {
     document.getElementById('stats-slowest-player')!.textContent = slowestPlayer ? slowestPlayer.name : '-';
 
     this.renderRankingList();
+
+    const statsCard = this.statsModal.querySelector('.stats-modal-card') as HTMLElement;
+    if (statsCard) spawnConfetti(statsCard, 60);
   }
 
   private renderRankingList() {

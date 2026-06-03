@@ -1,6 +1,7 @@
 import type { GameState } from './GameState';
 import { getContrastColorForBackground } from './ColorHelper';
 import { formatTime } from './FormatHelper';
+import { spawnTurnBurst, spawnExpiredBurst, spawnRippleEffect, spawnDigitSparkle, spawnWarningFlash } from './particles';
 
 export class DuelViewManager {
   private state: GameState;
@@ -36,6 +37,12 @@ export class DuelViewManager {
       }
       this.state.stats.startTurn();
       this.update();
+
+      const nextSide = document.getElementById(`duel-p${nextIdx + 1}`) as HTMLElement;
+      if (nextSide) {
+        spawnTurnBurst(nextSide, `var(--color-${this.state.players[nextIdx].color})`);
+        spawnRippleEffect(nextSide.querySelector('.duel-ripple-effect') || nextSide);
+      }
     }
   }
 
@@ -66,17 +73,57 @@ export class DuelViewManager {
     const t1 = this.state.engine.getTimer(p1.id);
     const t2 = this.state.engine.getTimer(p2.id);
     if (!t1 || !t2) return;
-    (document.getElementById('duel-p1-timer') as HTMLElement).textContent = formatTime(t1.remaining);
-    (document.getElementById('duel-p2-timer') as HTMLElement).textContent = formatTime(t2.remaining);
+
+    const time1El = document.getElementById('duel-p1-timer') as HTMLElement;
+    const time2El = document.getElementById('duel-p2-timer') as HTMLElement;
+    const prev1 = time1El.textContent;
+    const prev2 = time2El.textContent;
+    time1El.textContent = formatTime(t1.remaining);
+    time2El.textContent = formatTime(t2.remaining);
+    if (prev1 !== time1El.textContent) spawnDigitSparkle(time1El);
+    if (prev2 !== time2El.textContent) spawnDigitSparkle(time2El);
+
     document.getElementById('duel-p1-rounds')!.textContent = `Turns: ${t1.roundsPlayed}`;
     document.getElementById('duel-p2-rounds')!.textContent = `Turns: ${t2.roundsPlayed}`;
     const d1 = document.getElementById('duel-p1') as HTMLElement;
     const d2 = document.getElementById('duel-p2') as HTMLElement;
+    const d1Rotated = d1.classList.contains('rotated');
+    const d2Rotated = d2.classList.contains('rotated');
     d1.className = `duel-player-side ${t1.status}`;
     d2.className = `duel-player-side ${t2.status}`;
+    if (d1Rotated) d1.classList.add('rotated');
+    if (d2Rotated) d2.classList.add('rotated');
     if (this.state.engine.activeTimerId === p1.id) d1.classList.add('active');
     if (this.state.engine.activeTimerId === p2.id) d2.classList.add('active');
-    document.getElementById('duel-p1-status')!.textContent = t1.status.toUpperCase();
-    document.getElementById('duel-p2-status')!.textContent = t2.status.toUpperCase();
+    const s1 = document.getElementById('duel-p1-status') as HTMLElement;
+    const s2 = document.getElementById('duel-p2-status') as HTMLElement;
+    s1.textContent = t1.status.toUpperCase();
+    s2.textContent = t2.status.toUpperCase();
+    s1.className = 'side-status-badge';
+    s2.className = 'side-status-badge';
+    if (t1.status === 'overtime') {
+      s1.classList.add('warning');
+      spawnExpiredBurst(d1);
+    }
+    if (t2.status === 'overtime') {
+      s2.classList.add('warning');
+      spawnExpiredBurst(d2);
+    }
+  }
+
+  public triggerWarning(playerId: string) {
+    if (this.state.players[0]?.id === playerId) {
+      spawnWarningFlash(document.getElementById('duel-p1') as HTMLElement);
+    } else if (this.state.players[1]?.id === playerId) {
+      spawnWarningFlash(document.getElementById('duel-p2') as HTMLElement);
+    }
+  }
+
+  public triggerExpired(playerId: string) {
+    if (this.state.players[0]?.id === playerId) {
+      spawnExpiredBurst(document.getElementById('duel-p1') as HTMLElement);
+    } else if (this.state.players[1]?.id === playerId) {
+      spawnExpiredBurst(document.getElementById('duel-p2') as HTMLElement);
+    }
   }
 }

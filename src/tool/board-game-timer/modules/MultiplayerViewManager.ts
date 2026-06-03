@@ -2,6 +2,7 @@ import type { GameState } from './GameState';
 import type { PlayerConfig, TimerState } from '../types';
 import { getContrastColorForBackground } from './ColorHelper';
 import { formatTime } from './FormatHelper';
+import { spawnTurnBurst, spawnParticle, spawnDigitSparkle, spawnWarningFlash, spawnExpiredBurst } from './particles';
 
 export class MultiplayerViewManager {
   private state: GameState;
@@ -25,12 +26,16 @@ export class MultiplayerViewManager {
     this.state.activePlayerIndex = (this.state.activePlayerIndex + 1) % this.state.players.length;
     if (this.state.activePlayerIndex === 0) {
       this.state.roundNumber++;
-      document.getElementById('multi-round-number')!.textContent = this.state.roundNumber.toString();
+      const roundEl = document.getElementById('multi-round-number');
+      if (roundEl) roundEl.textContent = this.state.roundNumber.toString();
     }
     const nextPlayer = this.state.players[this.state.activePlayerIndex];
     this.state.engine.switchTurn(nextPlayer.id);
     this.state.stats.startTurn();
     this.update();
+
+    const giantBtn = document.getElementById('giant-next-turn-btn') as HTMLElement;
+    if (giantBtn) spawnTurnBurst(giantBtn, `var(--color-${nextPlayer.color})`);
   }
 
   public initView() {
@@ -82,11 +87,17 @@ export class MultiplayerViewManager {
       e.stopPropagation();
       this.state.engine.addTime(id, 30);
       this.update();
+      const timerEl = document.getElementById(`timer-val-${id}`);
+      if (timerEl) spawnDigitSparkle(timerEl);
+      spawnParticle({ parent: card, text: '+30s', x: 20 + Math.random() * 60, y: 30, variant: 'success' });
     });
     card.querySelector('.sub-btn')?.addEventListener('click', (e) => {
       e.stopPropagation();
       this.state.engine.removeTime(id, 30);
       this.update();
+      const timerEl = document.getElementById(`timer-val-${id}`);
+      if (timerEl) spawnDigitSparkle(timerEl);
+      spawnParticle({ parent: card, text: '-30s', x: 20 + Math.random() * 60, y: 30, variant: 'warning' });
     });
   }
 
@@ -116,8 +127,12 @@ export class MultiplayerViewManager {
         this.state.activePlayerIndex = idx;
       }
     }
-    const timerVal = document.getElementById(`timer-val-${p.id}`);
-    if (timerVal) timerVal.textContent = formatTime(t.remaining);
+    const timerVal = document.getElementById(`timer-val-${p.id}`) as HTMLElement;
+    const prevTime = timerVal?.textContent;
+    if (timerVal) {
+      timerVal.textContent = formatTime(t.remaining);
+      if (prevTime && prevTime !== timerVal.textContent) spawnDigitSparkle(timerVal);
+    }
     const timerFill = document.getElementById(`timer-fill-${p.id}`) as HTMLElement;
     if (timerFill) {
       const pct = p.time > 0 ? (t.remaining / p.time) * 100 : 0;
@@ -125,5 +140,18 @@ export class MultiplayerViewManager {
     }
     const roundsVal = document.getElementById(`rounds-val-${p.id}`);
     if (roundsVal) roundsVal.textContent = `Turns: ${t.roundsPlayed}`;
+    if (t.status === 'overtime' && card) {
+      spawnExpiredBurst(card);
+    }
+  }
+
+  public triggerWarning(playerId: string) {
+    const card = document.getElementById(`multi-card-${playerId}`);
+    if (card) spawnWarningFlash(card);
+  }
+
+  public triggerExpired(playerId: string) {
+    const card = document.getElementById(`multi-card-${playerId}`);
+    if (card) spawnExpiredBurst(card);
   }
 }

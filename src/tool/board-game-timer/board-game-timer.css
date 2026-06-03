@@ -46,6 +46,8 @@
   flex-direction: column;
   gap: 2rem;
   min-height: 550px;
+  background-size: 200% 200%;
+  animation: bg-shift 8s ease-in-out infinite alternate;
 }
 
 .timer-setup-panel {
@@ -385,6 +387,7 @@
 .color-dot.active {
   border-color: var(--text-base);
   transform: scale(1.2);
+  box-shadow: 0 0 0 3px var(--text-base), 0 0 12px rgba(59, 130, 246, 0.4);
 }
 
 .color-blue { background: #3b82f6; }
@@ -471,7 +474,8 @@
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem;
-  animation: slide-in 0.25s ease;
+  animation: timer-slide-up 0.3s ease forwards;
+  opacity: 0;
 }
 
 .player-info-meta {
@@ -620,6 +624,7 @@
 
 .duel-player-side.active {
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .duel-player-side.active::before {
@@ -627,7 +632,8 @@
 }
 
 .duel-player-side.expired {
-  background: rgba(239, 68, 68, 0.15);
+  animation: flash 0.6s ease-in-out 3;
+  background: rgba(239, 68, 68, 0.25);
 }
 
 .duel-player-container {
@@ -683,6 +689,7 @@
   font-weight: 900;
   font-variant-numeric: tabular-nums;
   line-height: 1;
+  transition: color 0.3s ease;
 }
 
 .side-meta {
@@ -844,8 +851,8 @@
 }
 
 .multi-player-card.active {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   border-color: var(--accent);
 }
 
@@ -884,6 +891,8 @@
   height: 100%;
   border-radius: 2px;
   transition: width 0.3s linear;
+  background-size: 200% auto;
+  animation: shimmer-slide 3s linear infinite;
 }
 
 .multi-card-actions {
@@ -932,6 +941,7 @@
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
   min-width: 280px;
+  animation: heartbeat 2s ease-in-out infinite;
 }
 
 .giant-next-btn:hover {
@@ -978,7 +988,7 @@
   align-items: center;
   gap: 1.5rem;
   max-width: 320px;
-  animation: modal-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: timer-bounce-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .overlay-card h3 {
@@ -1028,7 +1038,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  animation: modal-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: timer-bounce-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .modal-header {
@@ -1149,6 +1159,8 @@
   height: 100%;
   border-radius: 99px;
   transition: width 0.8s cubic-bezier(0.1, 0.8, 0.2, 1);
+  background-size: 200% auto;
+  animation: shimmer-slide 3s linear infinite;
 }
 
 .modal-footer {
@@ -1221,4 +1233,383 @@
   border-radius: 50%;
   display: inline-block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================================================== */
+/* PARTICLE EFFECTS — styling for particles.ts DOM elements        */
+/* =============================================================== */
+
+.timer-particle {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: 900;
+  pointer-events: none;
+  z-index: 999;
+  animation: particle-float 0.9s ease-out forwards;
+}
+.timer-particle-accent { color: var(--accent); }
+.timer-particle-warning { color: var(--color-timer-warning); }
+.timer-particle-danger  { color: var(--color-timer-danger); }
+.timer-particle-success { color: var(--color-timer-success); }
+
+@keyframes particle-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.4);
+  }
+}
+
+.timer-pop-burst {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 900;
+  pointer-events: none;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  animation: pop-burst 1.2s ease-out forwards;
+}
+
+@keyframes pop-burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, calc(-50% - 20px)) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 50px)) scale(1.5);
+  }
+}
+
+.timer-expired-particle {
+  position: absolute;
+  font-weight: 900;
+  font-size: 1.5rem;
+  pointer-events: none;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  animation: expired-burst 1s ease-out forwards;
+  color: var(--color);
+}
+
+@keyframes expired-burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.3);
+  }
+}
+
+.timer-turn-particle {
+  position: absolute;
+  font-weight: 900;
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  animation: turn-burst 0.8s ease-out forwards;
+  color: var(--accent);
+}
+
+@keyframes turn-burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.5);
+  }
+}
+
+/* Confetti celebration */
+.timer-confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: confetti-fall 2.5s ease-in forwards;
+  border-radius: 2px;
+}
+.timer-confetti-round {
+  border-radius: 50%;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(500px) rotate(720deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* =============================================================== */
+/* NEW KEYFRAME ANIMATIONS                                          */
+/* =============================================================== */
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(59, 130, 246, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.5), 0 0 50px rgba(59, 130, 246, 0.15); }
+}
+
+@keyframes pulse-glow-warning {
+  0%, 100% { box-shadow: 0 0 8px rgba(245, 158, 11, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.6), 0 0 50px rgba(245, 158, 11, 0.2); }
+}
+
+@keyframes pulse-glow-danger {
+  0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.6), 0 0 50px rgba(239, 68, 68, 0.2); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes timer-bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes timer-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes timer-digit-pop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer-slide {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes ripple-expand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.12); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.06); }
+  60% { transform: scale(1); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes glow-expand {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* =============================================================== */
+/* ANIMATION UTILITY CLASSES                                        */
+/* =============================================================== */
+
+.active-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.warning-glow {
+  animation: pulse-glow-warning 1.2s ease-in-out infinite;
+}
+.danger-glow {
+  animation: pulse-glow-danger 0.8s ease-in-out infinite;
+}
+.danger-shake {
+  animation: shake 0.5s ease-in-out;
+}
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+.breathe-anim {
+  animation: breathe 2s ease-in-out infinite;
+}
+.timer-digit-update {
+  animation: timer-digit-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.bounce-in {
+  animation: timer-bounce-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.slide-up {
+  animation: timer-slide-up 0.3s ease forwards;
+}
+.heartbeat {
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+/* Duel: overtime shake + danger glow */
+.duel-player-side.overtime {
+  animation: shake 0.5s ease-in-out, pulse-glow-danger 1.2s ease-in-out infinite;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* Staggered entrance for player rows in setup */
+.player-row:nth-child(1) { animation-delay: 0s; }
+.player-row:nth-child(2) { animation-delay: 0.04s; }
+.player-row:nth-child(3) { animation-delay: 0.08s; }
+.player-row:nth-child(4) { animation-delay: 0.12s; }
+.player-row:nth-child(5) { animation-delay: 0.16s; }
+.player-row:nth-child(6) { animation-delay: 0.20s; }
+.player-row:nth-child(7) { animation-delay: 0.24s; }
+.player-row:nth-child(8) { animation-delay: 0.28s; }
+
+/* Start button gentle pulse */
+.start-hero-btn:not(:disabled) {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Warning state badge */
+.side-status-badge.warning {
+  animation: flash 0.8s ease-in-out infinite;
+  background: var(--color-timer-warning);
+  color: var(--text-base);
+}
+
+/* Ripple layer inside duel sides */
+.duel-ripple-effect {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.duel-ripple-effect .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  animation: ripple-expand 0.7s ease-out forwards;
+  pointer-events: none;
+}
+
+/* =============================================================== */
+/* AMBIENT BACKGROUND EFFECTS                                       */
+/* =============================================================== */
+
+@keyframes bg-shift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.theme-light .timer-main-wrapper {
+  background: linear-gradient(135deg, var(--bg-surface), #f8fafc, var(--bg-surface));
+  background-size: 200% 200%;
+}
+
+.theme-dark .timer-main-wrapper {
+  background: linear-gradient(135deg, var(--bg-surface), #1e1e2e, var(--bg-surface));
+  background-size: 200% 200%;
+}
+
+/* Subtle floating sparkle dots in background (shown on hover of wrapper) */
+.timer-bg-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  animation: sparkle-float 4s ease-in-out infinite;
+}
+
+@keyframes sparkle-float {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 0.15;
+    transform: translateY(-20px) scale(1);
+  }
 }
