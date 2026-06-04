@@ -1,4 +1,5 @@
-import interact from 'interactjs';
+import * as interactModule from 'interactjs';
+const interact = (interactModule.default || interactModule) as unknown as typeof interactModule.default;
 import { state } from './dom';
 import { getHighlightPath } from './logic';
 import { drawConnections } from './renderer';

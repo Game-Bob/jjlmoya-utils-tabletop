@@ -48,7 +48,7 @@ function drawSegments(c: CanvasCtx, segments: WheelSegment[], currentAngle: numb
     const seg = segments[i];
     const weight = seg.weight || 1;
     const sliceAngle = (weight / totalWeight) * 2 * Math.PI;
-    const startAngle = accumulatedAngle + currentAngle - Math.PI / 2;
+    const startAngle = accumulatedAngle + (currentAngle * Math.PI) / 180 - Math.PI / 2;
     const endAngle = startAngle + sliceAngle;
 
     ctx.beginPath();
