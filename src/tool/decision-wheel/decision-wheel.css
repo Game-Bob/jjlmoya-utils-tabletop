@@ -260,13 +260,15 @@
 }
 
 .preset-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .preset-btn {
-  padding: 0.55rem 0.75rem;
+  flex: 1 1 auto;
+  min-width: fit-content;
+  padding: 0.55rem 0.85rem;
   border: 1px solid var(--border-color);
   border-radius: 0.6rem;
   background: var(--bg-surface);
@@ -276,6 +278,7 @@
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
+  white-space: nowrap;
 }
 
 .preset-btn:hover {
@@ -283,6 +286,13 @@
   color: var(--color-white);
   border-color: var(--wheel-accent);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--wheel-glow);
+}
+
+.preset-btn.active {
+  background: var(--wheel-accent);
+  color: var(--color-white);
+  border-color: var(--wheel-accent);
   box-shadow: 0 4px 12px var(--wheel-glow);
 }
 

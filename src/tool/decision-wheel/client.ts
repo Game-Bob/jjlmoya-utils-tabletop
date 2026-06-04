@@ -197,6 +197,8 @@ addBtn.addEventListener('click', () => {
 document.querySelectorAll('.preset-btn').forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const el = e.currentTarget as HTMLButtonElement;
+    document.querySelectorAll('.preset-btn').forEach((b) => b.classList.remove('active'));
+    el.classList.add('active');
     const key = el.dataset.preset as PresetKey;
     loadPreset(key);
   });
