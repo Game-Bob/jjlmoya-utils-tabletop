@@ -10,6 +10,8 @@ export { initiativeTracker } from './tool/rpg-initiative-tracker/entry';
 export type { InitiativeTrackerUI, InitiativeTrackerLocaleContent } from './tool/rpg-initiative-tracker/entry';
 export { fantasyRunesTranslator } from './tool/fantasy-runes-translator/entry';
 export type { FantasyRunesTranslatorUI, FantasyRunesTranslatorLocaleContent } from './tool/fantasy-runes-translator/entry';
+export { investigationBoard } from './tool/investigation-board/entry';
+export type { InvestigationBoardUI, InvestigationBoardLocaleContent } from './tool/investigation-board/entry';
 export { tabletopCategory } from './category';
 
 import { diceRollerSimulator } from './tool/dice-roller-simulator/entry';
@@ -19,5 +21,7 @@ import { scoreTracker } from './tool/score-tracker/entry';
 import { initiativeTracker } from './tool/rpg-initiative-tracker/entry';
 import { fantasyRunesTranslator } from './tool/fantasy-runes-translator/entry';
 import { decisionWheel } from './tool/decision-wheel/entry';
+import { investigationBoard } from './tool/investigation-board/entry';
 
-export const ALL_ENTRIES = [diceRollerSimulator, boardGameTimer, firstPlayerSelector, scoreTracker, initiativeTracker, fantasyRunesTranslator, decisionWheel];
+export const ALL_ENTRIES = [diceRollerSimulator, boardGameTimer, firstPlayerSelector, scoreTracker, initiativeTracker, fantasyRunesTranslator, decisionWheel, investigationBoard];
+

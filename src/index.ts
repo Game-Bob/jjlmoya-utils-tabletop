@@ -4,6 +4,8 @@ export const tabletopCategorySEO = () => import('./category/TabletopCategorySEO.
 export { diceRollerSimulator, DICE_ROLLER_SIMULATOR_TOOL } from './tool/dice-roller-simulator';
 export { boardGameTimer, BOARD_GAME_TIMER_TOOL } from './tool/board-game-timer';
 export { fantasyRunesTranslator, FANTASY_RUNES_TRANSLATOR_TOOL } from './tool/fantasy-runes-translator';
+export { investigationBoard, INVESTIGATION_BOARD_TOOL } from './tool/investigation-board';
+
 
 export type {
   KnownLocale,

@@ -17,7 +17,7 @@
         "access": "public"
     },
     "scripts": {
-        "dev": "astro dev",
+        "dev": "astro dev --host",
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
@@ -42,9 +42,11 @@
         "@iconify-json/mdi": "^1.2.3",
         "@jjlmoya/prompagate": "^1.1.0",
         "@jjlmoya/utils-shared": "1.2.0",
+        "@panzoom/panzoom": "^4.6.2",
         "astro": "^6.1.2",
         "astro-icon": "^1.1.0",
-        "html2canvas": "^1.4.1"
+        "html2canvas": "^1.4.1",
+        "interactjs": "^1.10.27"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.8",
