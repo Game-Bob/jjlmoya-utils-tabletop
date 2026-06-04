@@ -106,7 +106,9 @@ function animateSpin(targetIndex: number): Promise<void> {
     const targetAngle = startAngleSeg + (endAngleSeg - startAngleSeg) / 2;
 
     const fullSpins = 4 + Math.floor(Math.random() * 3);
-    const totalRotation = fullSpins * 360 + (360 - targetAngle);
+    const currentNormalize = currentAngle % 360;
+    const angleDiff = (360 - targetAngle - currentNormalize) % 360;
+    const totalRotation = fullSpins * 360 + (angleDiff >= 0 ? angleDiff : angleDiff + 360);
     const duration = 2500 + fullSpins * 300;
 
     const state: SpinState = {
