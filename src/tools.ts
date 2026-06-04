@@ -8,6 +8,7 @@ import { INITIATIVE_TRACKER_TOOL } from './tool/rpg-initiative-tracker';
 import { FANTASY_RUNES_TRANSLATOR_TOOL } from './tool/fantasy-runes-translator';
 import { DECISION_WHEEL_TOOL } from './tool/decision-wheel';
 import { INVESTIGATION_BOARD_TOOL } from './tool/investigation-board';
+import { LUNAR_TIDE_TRACKER_TOOL } from './tool/lunar-tide-tracker';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   DICE_ROLLER_SIMULATOR_TOOL,
@@ -18,5 +19,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   FANTASY_RUNES_TRANSLATOR_TOOL,
   DECISION_WHEEL_TOOL,
   INVESTIGATION_BOARD_TOOL,
+  LUNAR_TIDE_TRACKER_TOOL,
 ];
 

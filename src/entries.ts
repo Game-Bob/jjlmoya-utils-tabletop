@@ -12,6 +12,8 @@ export { fantasyRunesTranslator } from './tool/fantasy-runes-translator/entry';
 export type { FantasyRunesTranslatorUI, FantasyRunesTranslatorLocaleContent } from './tool/fantasy-runes-translator/entry';
 export { investigationBoard } from './tool/investigation-board/entry';
 export type { InvestigationBoardUI, InvestigationBoardLocaleContent } from './tool/investigation-board/entry';
+export { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
+export type { LunarTideUI, LunarTideLocaleContent } from './tool/lunar-tide-tracker/entry';
 export { tabletopCategory } from './category';
 
 import { diceRollerSimulator } from './tool/dice-roller-simulator/entry';
@@ -22,6 +24,17 @@ import { initiativeTracker } from './tool/rpg-initiative-tracker/entry';
 import { fantasyRunesTranslator } from './tool/fantasy-runes-translator/entry';
 import { decisionWheel } from './tool/decision-wheel/entry';
 import { investigationBoard } from './tool/investigation-board/entry';
+import { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
 
-export const ALL_ENTRIES = [diceRollerSimulator, boardGameTimer, firstPlayerSelector, scoreTracker, initiativeTracker, fantasyRunesTranslator, decisionWheel, investigationBoard];
+export const ALL_ENTRIES = [
+  diceRollerSimulator,
+  boardGameTimer,
+  firstPlayerSelector,
+  scoreTracker,
+  initiativeTracker,
+  fantasyRunesTranslator,
+  decisionWheel,
+  investigationBoard,
+  lunarTideTracker,
+];
 
