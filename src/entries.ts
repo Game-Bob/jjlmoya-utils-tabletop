@@ -14,6 +14,8 @@ export { investigationBoard } from './tool/investigation-board/entry';
 export type { InvestigationBoardUI, InvestigationBoardLocaleContent } from './tool/investigation-board/entry';
 export { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
 export type { LunarTideUI, LunarTideLocaleContent } from './tool/lunar-tide-tracker/entry';
+export { hiddenRoleDealer } from './tool/hidden-role-dealer/entry';
+export type { HiddenRoleDealerUI, HiddenRoleDealerLocaleContent } from './tool/hidden-role-dealer/entry';
 export { tabletopCategory } from './category';
 
 import { diceRollerSimulator } from './tool/dice-roller-simulator/entry';
@@ -25,6 +27,7 @@ import { fantasyRunesTranslator } from './tool/fantasy-runes-translator/entry';
 import { decisionWheel } from './tool/decision-wheel/entry';
 import { investigationBoard } from './tool/investigation-board/entry';
 import { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
+import { hiddenRoleDealer } from './tool/hidden-role-dealer/entry';
 
 export const ALL_ENTRIES = [
   diceRollerSimulator,
@@ -36,5 +39,6 @@ export const ALL_ENTRIES = [
   decisionWheel,
   investigationBoard,
   lunarTideTracker,
+  hiddenRoleDealer,
 ];
 
