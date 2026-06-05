@@ -16,6 +16,8 @@ export { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
 export type { LunarTideUI, LunarTideLocaleContent } from './tool/lunar-tide-tracker/entry';
 export { hiddenRoleDealer } from './tool/hidden-role-dealer/entry';
 export type { HiddenRoleDealerUI, HiddenRoleDealerLocaleContent } from './tool/hidden-role-dealer/entry';
+export { scatterDirectionSelector } from './tool/scatter-direction-selector/entry';
+export type { ScatterSelectorUI, ScatterSelectorLocaleContent } from './tool/scatter-direction-selector/entry';
 export { tabletopCategory } from './category';
 
 import { diceRollerSimulator } from './tool/dice-roller-simulator/entry';
@@ -28,6 +30,7 @@ import { decisionWheel } from './tool/decision-wheel/entry';
 import { investigationBoard } from './tool/investigation-board/entry';
 import { lunarTideTracker } from './tool/lunar-tide-tracker/entry';
 import { hiddenRoleDealer } from './tool/hidden-role-dealer/entry';
+import { scatterDirectionSelector } from './tool/scatter-direction-selector/entry';
 
 export const ALL_ENTRIES = [
   diceRollerSimulator,
@@ -40,5 +43,6 @@ export const ALL_ENTRIES = [
   investigationBoard,
   lunarTideTracker,
   hiddenRoleDealer,
+  scatterDirectionSelector,
 ];
 

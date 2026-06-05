@@ -10,6 +10,7 @@ import { DECISION_WHEEL_TOOL } from './tool/decision-wheel';
 import { INVESTIGATION_BOARD_TOOL } from './tool/investigation-board';
 import { LUNAR_TIDE_TRACKER_TOOL } from './tool/lunar-tide-tracker';
 import { HIDDEN_ROLE_DEALER_TOOL } from './tool/hidden-role-dealer';
+import { SCATTER_DIRECTION_SELECTOR_TOOL } from './tool/scatter-direction-selector';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   DICE_ROLLER_SIMULATOR_TOOL,
@@ -22,5 +23,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   INVESTIGATION_BOARD_TOOL,
   LUNAR_TIDE_TRACKER_TOOL,
   HIDDEN_ROLE_DEALER_TOOL,
+  SCATTER_DIRECTION_SELECTOR_TOOL,
 ];
 
