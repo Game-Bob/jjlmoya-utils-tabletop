@@ -388,36 +388,51 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   color: var(--text-base);
-  font-size: 0.9rem;
-  padding: 0.65rem 1rem;
-  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.7rem 2.5rem 0.7rem 1rem;
+  border-radius: 10px;
   outline: none;
   cursor: pointer;
   appearance: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s, box-shadow 0.25s, background 0.2s;
 }
 
 .sds-select:hover {
   border-color: var(--sds-accent);
+  background: var(--bg-page);
 }
 
 .sds-select:focus {
   border-color: var(--sds-accent);
-  box-shadow: 0 0 10px rgba(var(--sds-accent-rgb), 0.15);
+  box-shadow: 0 0 0 3px rgba(var(--sds-accent-rgb), 0.12), inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.sds-select option {
+  background: var(--bg-surface);
+  color: var(--text-base);
+  font-weight: 500;
+  padding: 0.5rem;
 }
 
 .sds-select-wrapper::after {
-  content: '';
+  content: '\25BC';
   position: absolute;
-  right: 1rem;
+  right: 0.85rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid var(--text-muted);
+  font-size: 0.55rem;
+  color: var(--sds-accent);
   pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.sds-select-wrapper:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .sds-input {
