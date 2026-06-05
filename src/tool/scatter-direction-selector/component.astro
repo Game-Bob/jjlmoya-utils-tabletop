@@ -55,7 +55,7 @@ const { ui } = Astro.props;
             </svg>
           </div>
           <div class="sds-center-core">
-            <div id="sds-sigil-target" class="sds-sigil" style="display: none;">
+            <div id="sds-sigil-target" class="sds-sigil">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="6"></circle>
@@ -64,11 +64,10 @@ const { ui } = Astro.props;
                 <line x1="1" y1="12" x2="23" y2="12"></line>
               </svg>
             </div>
-            <div id="sds-sigil-warning" class="sds-sigil" style="display: none;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            <div id="sds-sigil-warning" class="sds-sigil">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="0.5" opacity="0.25"></circle>
+                <text id="sds-warning-dist" x="12" y="13" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="900" stroke="none" fill="currentColor">2"</text>
               </svg>
             </div>
             <div id="sds-digital-display" class="sds-digital-display">

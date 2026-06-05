@@ -180,11 +180,6 @@ class ScatterSelectorApp {
     const sp = this.root.querySelector('#sds-scatter-pointer') as HTMLElement;
     sp.style.display = 'none';
 
-    const st = this.root.querySelector('#sds-sigil-target') as HTMLElement;
-    const sw = this.root.querySelector('#sds-sigil-warning') as HTMLElement;
-    st.style.display = 'none';
-    sw.style.display = 'none';
-
     this.scatterAngle = this.settings.getMode() ? this.currentAngle : result.angle;
     const angleRad = (this.scatterAngle - 90) * (Math.PI / 180);
     const maxDist = this.getMaxDistance();
@@ -226,6 +221,8 @@ class ScatterSelectorApp {
       this.displayNums.textContent = `${result.distance}"`;
       core.classList.add('sds-warning-result');
       this.sound.play(180, 'sawtooth', 0.35);
+      const distLabel = this.root.querySelector('#sds-warning-dist');
+      if (distLabel) distLabel.textContent = `${result.distance}"`;
 
       sp.style.display = 'block';
       sp.style.transition = 'transform 0.3s ease-out';
