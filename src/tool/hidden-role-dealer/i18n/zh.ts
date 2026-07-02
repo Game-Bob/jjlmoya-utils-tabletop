@@ -13,7 +13,7 @@ const ui: HiddenRoleDealerUI = {
   presetCustom: '自定义设置',
   dealRoles: '分发秘密身份',
   clearPlayers: '清空玩家',
-  instructions: '输入玩家名称，配置秘密身份，然后点击“分发秘密身份”。',
+  instructions: '输入玩家名称，配置秘密身份，然后点击"分发秘密身份"。',
   passTo: '将设备递给',
   holdToReveal: '按住以显示',
   releasingResets: '继续按住以显示...',

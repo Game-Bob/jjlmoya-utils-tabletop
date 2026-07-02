@@ -46,7 +46,7 @@ const faq = [
   },
   {
     question: 'Doğrudan isabet olasılığı nedir?',
-    answer: 'Merminin hedeflenen noktaya herhangi bir sapma olmadan tam olarak düşme şansını temsil eder ve standart bir sapma zarında «İsabet» sonucunu simüle eder.',
+    answer: 'Merminin hedeflenen noktaya herhangi bir sapma olmadan tam olarak düşme şansını temsil eder ve standart bir sapma zarında "İsabet" sonucunu simüle eder.',
   },
   {
     question: 'Bu araç Warhammer veya Bolt Action ile uyumlu mu?',
@@ -81,7 +81,7 @@ const howTo = [
   },
   {
     name: 'Sonucu Yorumlayın',
-    text: '«DIRECT HIT» yazısıyla birlikte yeşil bir darbe sıfır sapma anlamına gelir. Mesafe etiketiyle birlikte kırmızı bir patlama, atışın saptığı anlamına gelir - şablonunuzu hedeften bu kadar inç uzağa, ok yönünde yerleştirin.',
+    text: '"DIRECT HIT" yazısıyla birlikte yeşil bir darbe sıfır sapma anlamına gelir. Mesafe etiketiyle birlikte kırmızı bir patlama, atışın saptığı anlamına gelir - şablonunuzu hedeften bu kadar inç uzağa, ok yönünde yerleştirin.',
   },
 ];
 
@@ -101,7 +101,7 @@ export const content: ScatterSelectorLocaleContent = {
     ], columns: 4 },
     { type: 'title', text: 'Yörünge Animasyonu Savaş Oyunu Kararlarını Nasıl İyileştirir', level: 3 },
     { type: 'paragraph', html: 'Geleneksel sapma araçları sayısal bir açı ve mesafe görüntüleyerek oyuncuların masadaki kaymayı zihinsel olarak canlandırmasını zorunlu kılar. Animasyonlu yörünge, nişan noktasından sapma iniş bölgesine kadar tam uçuş yolunu çizerek bu boşluğu kapatır.' },
-    { type: 'diagnostic', variant: 'success', title: 'Doğrudan İsabet', html: 'Atış isabet olasılığını geçtiğinde, pusula merkezi titreşen yeşil halkalar ve «DIRECT HIT» metin animasyonu ile aydınlanır. Mermi merkeze dönerek sıfır sapma ile mükemmel isabeti onaylar.' },
+    { type: 'diagnostic', variant: 'success', title: 'Doğrudan İsabet', html: 'Atış isabet olasılığını geçtiğinde, pusula merkezi titreşen yeşil halkalar ve "DIRECT HIT" metin animasyonu ile aydınlanır. Mermi merkeze dönerek sıfır sapma ile mükemmel isabeti onaylar.' },
     { type: 'diagnostic', variant: 'error', title: 'Sapma', html: 'Sapma sonucunda mermi, iniş noktasına kadar kesik bir yörünge izler. Bir parçacık patlaması, parlayan bir işaret ve inç cinsinden mesafe (örn. <strong>5"</strong>) çarpma noktasında belirir.' },
     { type: 'tip', title: 'İpucu: Rüzgar Sürüklenmesi Modunu Kullanma', html: 'Sapma yönünü elle döndürdüğünüz pusula açısına kilitlemek için Rüzgar Sürüklenmesini açın. Bu, baskın bir rüzgarı veya sabit bir yer değiştirme vektörünü simüle eder - güdümsüz roketler, gaz bulutları veya başarısız teleportasyonlar için idealdir.' },
   ],

@@ -46,7 +46,7 @@ const faq = [
   },
   {
     question: 'Czym jest szansa trafienia bezpośredniego?',
-    answer: 'Reprezentuje prawdopodobieństwo, że pocisk trafi dokładnie w cel bez żadnego odchylenia, symulując wynik „Trafienie" na standardowej kości rozrzutu.',
+    answer: 'Reprezentuje prawdopodobieństwo, że pocisk trafi dokładnie w cel bez żadnego odchylenia, symulując wynik "Trafienie" na standardowej kości rozrzutu.',
   },
   {
     question: 'Czy to jest zgodne z Warhammer lub Bolt Action?',
@@ -81,7 +81,7 @@ const howTo = [
   },
   {
     name: 'Zinterpretuj Wynik',
-    text: 'Zielony impuls z napisem „DIRECT HIT" oznacza zerowe odchylenie. Czerwony wybuch z etykietą odległości oznacza, że strzał się rozrzucił - umieść szablon w tej odległości od celu w kierunku wskazanym przez strzałkę.',
+    text: 'Zielony impuls z napisem "DIRECT HIT" oznacza zerowe odchylenie. Czerwony wybuch z etykietą odległości oznacza, że strzał się rozrzucił - umieść szablon w tej odległości od celu w kierunku wskazanym przez strzałkę.',
   },
 ];
 
@@ -101,7 +101,7 @@ export const content: ScatterSelectorLocaleContent = {
     ], columns: 4 },
     { type: 'title', text: 'Jak Animacja Trajektorii Poprawia Decyzje Taktyczne', level: 3 },
     { type: 'paragraph', html: 'Tradycyjne narzędzia wyświetlają numeryczny kąt i dystans, zmuszając graczy do mentalnej wizualizacji przesunięcia na stole. Animowana trajektoria wypełnia tę lukę, rysując dokładną ścieżkę lotu od punktu celowania do strefy lądowania rozrzutu.' },
-    { type: 'diagnostic', variant: 'success', title: 'Trafienie Bezpośrednie', html: 'Gdy rzut przekroczy szansę trafienia, środek kompasu rozbłyska pulsującymi zielonymi pierścieniami i animacją tekstu „DIRECT HIT". Pocisk wraca do środka, potwierdzając idealne trafienie bez odchylenia.' },
+    { type: 'diagnostic', variant: 'success', title: 'Trafienie Bezpośrednie', html: 'Gdy rzut przekroczy szansę trafienia, środek kompasu rozbłyska pulsującymi zielonymi pierścieniami i animacją tekstu "DIRECT HIT". Pocisk wraca do środka, potwierdzając idealne trafienie bez odchylenia.' },
     { type: 'diagnostic', variant: 'error', title: 'Rozrzut', html: 'Przy wyniku rozrzutu pocisk podąża przerywaną trajektorią do punktu lądowania. Wybuch cząstek, świecący znacznik i odległość w calach (np. <strong>5"</strong>) pojawiają się w miejscu trafienia.' },
     { type: 'tip', title: 'Porada: Używanie Trybu Dryfu Wiatru', html: 'Włącz Dryf Wiatru, aby zablokować kierunek rozrzutu na ręcznie ustawiony kąt kompasu. Symuluje to dominujący wiatr lub stały wektor przesunięcia - idealne dla niekierowanych rakiet, chmur gazowych czy nieudanych teleportacji.' },
   ],

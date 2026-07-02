@@ -10,7 +10,7 @@ export const content: ToolLocaleContent = {
     rollButton: '投掷骰子',
     clearButton: '清除历史记录',
     historyTitle: '投掷历史',
-    noHistory: '暂无投掷记录。请添加骰子并点击“投掷骰子”开始。',
+    noHistory: '暂无投掷记录。请添加骰子并点击"投掷骰子"开始。',
     totalRolls: '总投掷次数',
     averageRoll: '平均投掷结果',
     lastRoll: '最近投掷总和',
@@ -126,7 +126,7 @@ export const content: ToolLocaleContent = {
       title: '赌徒谬误：骰子本身没有记忆',
       icon: 'mdi:information-outline',
       badge: 'PROBABILITY TIP',
-      html: 'TRPG跑团和桌游中常见的误区是认为之前的投掷结果会影响接下来的出目。如果在D20判定中连续投出了三次“1”，玩家往往会觉得下一次应该“出大数”了。然而实际上，每一次投掷都是独立事件。下一次投出20的概率依然是精确的5%。理性认识这一点能帮助玩家做出更客观的战术决策。',
+      html: 'TRPG跑团和桌游中常见的误区是认为之前的投掷结果会影响接下来的出目。如果在D20判定中连续投出了三次"1"，玩家往往会觉得下一次应该"出大数"了。然而实际上，每一次投掷都是独立事件。下一次投出20的概率依然是精确的5%。理性认识这一点能帮助玩家做出更客观的战术决策。',
     },
     {
       type: 'title',
@@ -205,7 +205,7 @@ export const content: ToolLocaleContent = {
     },
     {
       name: '投掷并查看统计',
-      text: '点击“投掷骰子”按钮以触发投掷动画、投掷历史记录和实时的概率分布图。',
+      text: '点击"投掷骰子"按钮以触发投掷动画、投掷历史记录和实时的概率分布图。',
     },
   ],
   schemas: [
@@ -297,7 +297,7 @@ export const content: ToolLocaleContent = {
         {
           '@type': 'HowToStep',
           'name': '投掷并查看统计',
-          'text': '点击“投掷骰子”按钮以触发投掷动画、投掷历史记录和实时的概率分布图。'
+          'text': '点击"投掷骰子"按钮以触发投掷动画、投掷历史记录和实时的概率分布图。'
         }
       ]
     }

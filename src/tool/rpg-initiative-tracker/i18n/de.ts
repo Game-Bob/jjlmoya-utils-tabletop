@@ -60,7 +60,7 @@ export const content: ToolLocaleContent<InitiativeTrackerUI> = {
     {
       type: 'tip',
       title: 'Tipps zur Initiative am Spieltisch',
-      html: 'Würfle die Initiative für alle Monster vor der Sitzung aus, um während des Kampfes Zeit zu sparen. Füge einem Kämpfer häufige Statuseffekte wie Betäubt oder Vergiftet hinzu, sobald sie angewendet werden. So verhinderst du, dass eine Bedingung vergessen wird, wenn der betroffene Charakter an der Reihe ist. Verwende den Button „Vorheriger Zug", um nachzusehen, was passiert ist, falls du eine Regelentscheidung aus einer früheren Runde überprüfen musst.',
+      html: 'Würfle die Initiative für alle Monster vor der Sitzung aus, um während des Kampfes Zeit zu sparen. Füge einem Kämpfer häufige Statuseffekte wie Betäubt oder Vergiftet hinzu, sobald sie angewendet werden. So verhinderst du, dass eine Bedingung vergessen wird, wenn der betroffene Charakter an der Reihe ist. Verwende den Button "Vorheriger Zug", um nachzusehen, was passiert ist, falls du eine Regelentscheidung aus einer früheren Runde überprüfen musst.',
     },
     {
       type: 'title',

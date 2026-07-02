@@ -219,7 +219,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
     },
     {
       name: '启动并交替回合',
-      text: '开始游戏。在双人模式中，点击你的屏幕半区以结束回合。在多人模式中，点击中央巨大的“结束回合”按钮。',
+      text: '开始游戏。在双人模式中，点击你的屏幕半区以结束回合。在多人模式中，点击中央巨大的"结束回合"按钮。',
     },
   ],
   schemas: [
@@ -295,7 +295,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
         {
           '@type': 'HowToStep',
           'name': '启动并交替回合',
-          'text': '开始游戏。在双人模式中，点击你的屏幕半区以结束回合。在多人模式中，点击中央巨大的“结束回合”按钮。'
+          'text': '开始游戏。在双人模式中，点击你的屏幕半区以结束回合。在多人模式中，点击中央巨大的"结束回合"按钮。'
         }
       ]
     }

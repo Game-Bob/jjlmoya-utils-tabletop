@@ -122,7 +122,7 @@ export const content: InvestigationBoardLocaleContent = {
     }
   ],
   faq: [
-    { question: "如何添加连接线？", answer: "点击控制面板中的“添加连接”，或点击卡片上的链接图标，然后选择目标卡片。" },
+    { question: "如何添加连接线？", answer: "点击控制面板中的'添加连接'，或点击卡片上的链接图标，然后选择目标卡片。" },
     { question: "我可以在手机上拖动卡片吗？", answer: "可以，画板支持触摸手势，可在智能手机和平板电脑上流畅地拖动和移动卡片。" },
     { question: "我可以使用自定义的卡片颜色吗？", answer: "可以。双击卡片，在类别下选择 Custom，然后选择高亮颜色。" },
     { question: "画板会保存我的工作吗？", answer: "会。您的进度会自动保存在浏览器的本地存储中，保存在当前画板名称下。" },
@@ -151,7 +151,7 @@ export const content: InvestigationBoardLocaleContent = {
           'name': "如何添加连接线？",
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': "点击控制面板中的“添加连接”，或点击卡片上的链接图标，然后选择目标卡片。"
+            'text': "点击控制面板中的'添加连接'，或点击卡片上的链接图标，然后选择目标卡片。"
           }
         },
         {
