@@ -1027,3 +1027,64 @@
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
+
+@media (max-width: 600px) {
+  .score-main-wrapper,
+  .player-setup-panel,
+  .round-scoring-panel,
+  .leaderboard-panel,
+  .score-history-panel {
+    min-width: 0;
+  }
+
+  .score-main-wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .player-setup-panel,
+  .round-scoring-panel,
+  .leaderboard-panel,
+  .score-history-panel {
+    padding: 1rem;
+  }
+
+  .add-player-row,
+  .round-header,
+  .score-row,
+  .score-footer-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-player-input {
+    min-width: 0;
+  }
+
+  .score-header-actions,
+  .score-round-actions,
+  .tabs-nav-score {
+    flex-wrap: wrap;
+  }
+
+  .btn-score-action,
+  .tab-score-btn {
+    flex: 1 1 auto;
+  }
+
+  .score-row-controls {
+    justify-content: space-between;
+  }
+
+  .leaderboard-name,
+  .player-card-name,
+  .history-player-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .rename-popup-content {
+    min-width: 0;
+    width: calc(100% - 2rem);
+  }
+}
