@@ -604,6 +604,28 @@
 }
 
 @media (max-width: 600px) {
+  main:has(.hrd-card),
+  .tool-page:has(.hrd-card),
+  .section-tool:has(.hrd-card),
+  .tool-page:has(.hrd-card) .utility-header,
+  .tool-page:has(.hrd-card) .utility-header-title,
+  .tool-page:has(.hrd-card) .utility-header-base,
+  .tool-page:has(.hrd-card) .utility-header-highlight,
+  .tool-page:has(.hrd-card) .utility-header-description {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  main:has(.hrd-card) {
+    overflow-x: hidden;
+  }
+
+  .tool-page:has(.hrd-card) .utility-header-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: 0;
+  }
+
   .hrd-card {
     padding: 1rem;
     border-radius: 1rem;

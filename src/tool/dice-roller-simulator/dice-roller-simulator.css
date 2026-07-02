@@ -1307,6 +1307,28 @@
 }
 
 @media (max-width: 600px) {
+  main:has(.tabletop-gaming-dashboard),
+  .tool-page:has(.tabletop-gaming-dashboard),
+  .section-tool:has(.tabletop-gaming-dashboard),
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header,
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header-title,
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header-base,
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header-highlight,
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header-description {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  main:has(.tabletop-gaming-dashboard) {
+    overflow-x: hidden;
+  }
+
+  .tool-page:has(.tabletop-gaming-dashboard) .utility-header-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: 0;
+  }
+
   .tabletop-gaming-dashboard {
     padding: 1rem;
     gap: 1.25rem;

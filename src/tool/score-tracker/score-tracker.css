@@ -1029,6 +1029,28 @@
 }
 
 @media (max-width: 600px) {
+  main:has(.score-main-wrapper),
+  .tool-page:has(.score-main-wrapper),
+  .section-tool:has(.score-main-wrapper),
+  .tool-page:has(.score-main-wrapper) .utility-header,
+  .tool-page:has(.score-main-wrapper) .utility-header-title,
+  .tool-page:has(.score-main-wrapper) .utility-header-base,
+  .tool-page:has(.score-main-wrapper) .utility-header-highlight,
+  .tool-page:has(.score-main-wrapper) .utility-header-description {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  main:has(.score-main-wrapper) {
+    overflow-x: hidden;
+  }
+
+  .tool-page:has(.score-main-wrapper) .utility-header-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: 0;
+  }
+
   .score-main-wrapper,
   .player-setup-panel,
   .round-scoring-panel,

@@ -814,6 +814,28 @@
 }
 
 @media (max-width: 600px) {
+  main:has(.sds-container),
+  .tool-page:has(.sds-container),
+  .section-tool:has(.sds-container),
+  .tool-page:has(.sds-container) .utility-header,
+  .tool-page:has(.sds-container) .utility-header-title,
+  .tool-page:has(.sds-container) .utility-header-base,
+  .tool-page:has(.sds-container) .utility-header-highlight,
+  .tool-page:has(.sds-container) .utility-header-description {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  main:has(.sds-container) {
+    overflow-x: hidden;
+  }
+
+  .tool-page:has(.sds-container) .utility-header-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: 0;
+  }
+
   .sds-container {
     padding: 1rem;
     border-radius: 1rem;

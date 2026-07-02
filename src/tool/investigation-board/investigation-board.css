@@ -792,6 +792,28 @@
 }
 
 @media (max-width: 768px) {
+  main:has(.investigation-board-main),
+  .tool-page:has(.investigation-board-main),
+  .section-tool:has(.investigation-board-main),
+  .tool-page:has(.investigation-board-main) .utility-header,
+  .tool-page:has(.investigation-board-main) .utility-header-title,
+  .tool-page:has(.investigation-board-main) .utility-header-base,
+  .tool-page:has(.investigation-board-main) .utility-header-highlight,
+  .tool-page:has(.investigation-board-main) .utility-header-description {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  main:has(.investigation-board-main) {
+    overflow-x: hidden;
+  }
+
+  .tool-page:has(.investigation-board-main) .utility-header-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: 0;
+  }
+
   .investigation-board-main {
     height: 520px;
     min-height: 520px;

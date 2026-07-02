@@ -29,7 +29,7 @@ const ui: InitiativeTrackerUI = {
 
 export const content: ToolLocaleContent<InitiativeTrackerUI> = {
   slug: 'suivi-initiative',
-  title: 'Suivi d\'Initiative RPG : Ordre des Tours & Gestionnaire d\'Initiative',
+  title: 'Suivi d\'Initiative RPG: Ordre des Tours & Gestionnaire d\'Initiative',
   description: 'Suivez l\'ordre d\'initiative pour tout RPG de table. Ajoutez des combattants, lancez l\'initiative, gérez les effets de statut et naviguez dans les tours de combat.',
   ui,
   seo: [
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<InitiativeTrackerUI> = {
         },
         {
           term: 'Effet de Statut',
-          definition: 'Un état temporaire qui modifie les capacités d\'un personnage. Exemples : Étourdi (ne peut pas agir), Empoisonné (désavantage aux jets), et Aveuglé (attaques désavantagées).',
+          definition: 'Un état temporaire qui modifie les capacités d\'un personnage. Exemples: Étourdi (ne peut pas agir), Empoisonné (désavantage aux jets), et Aveuglé (attaques désavantagées).',
         },
         {
           term: 'PNJ',
@@ -245,7 +245,7 @@ export const content: ToolLocaleContent<InitiativeTrackerUI> = {
         {
           '@type': 'HowToStep',
           'name': 'Ajouter des combattants',
-          'text': 'Entrez les détails du personnage : nom, jet d\'initiative et modificateur. Basculez entre Joueur et PNJ avant d\'ajouter.',
+          'text': 'Entrez les détails du personnage: nom, jet d\'initiative et modificateur. Basculez entre Joueur et PNJ avant d\'ajouter.',
         },
         {
           '@type': 'HowToStep',

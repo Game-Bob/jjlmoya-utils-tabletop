@@ -96,7 +96,7 @@ const ui: HiddenRoleDealerUI = {
   teamImpostor: 'Imposteur',
   teamCrewmate: 'Équipier',
   impostorSharedSecretLabel: 'Information Secrète Partagée',
-  impostorSharedSecretPlaceholder: 'ex. Lieu : Restaurant, ou Mot : Pomme',
+  impostorSharedSecretPlaceholder: 'ex. Lieu: Restaurant, ou Mot: Pomme',
   impostorModeLabel: 'Mode de Calcul des Imposteurs',
   impostorModeFixed: 'Nombre Fixe',
   impostorModePercentage: 'Pourcentage',
@@ -116,7 +116,7 @@ const ui: HiddenRoleDealerUI = {
   impostorWriterDescHost: 'L\'hôte non-joueur utilise un mot aléatoire ou prédéfini.',
   impostorWriterDescPreround: 'Le pré-tour permet à tous les joueurs d\'écrire des mots en secret, puis en choisit un au hasard.',
   impostorWriterDescPlayer: 'Le joueur sélectionné écrit le mot et ne peut pas être imposteur.',
-  preroundPassTitle: 'Pré-tour : Passez l\'appareil à',
+  preroundPassTitle: 'Pré-tour: Passez l\'appareil à',
   preroundInputPrompt: 'Écrivez secrètement un mot ou un lieu :',
   preroundPassHint: 'Gardez le mot secret pour les autres joueurs !',
   btnSubmitWord: 'Envoyer le Mot',
@@ -154,7 +154,7 @@ const howTo = [
 
 export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   slug: 'distributeur-roles-caches-secrets',
-  title: 'Distributeur de Rôles Cachés : Attribution Secrète d\'Identités',
+  title: 'Distributeur de Rôles Cachés: Attribution Secrète d\'Identités',
   description: 'Distribuez les rôles secrets localement pour vos jeux de société comme Loup-Garou, Avalon, Secret Hitler ou Imposteur sans cartes physiques.',
   ui,
   seo: [

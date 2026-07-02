@@ -49,7 +49,7 @@ export const content: LunarTideLocaleContent = {
     { type: 'title', text: 'À quoi sert le champ Décalage de départ', level: 2 },
     { type: 'paragraph', html: 'Le <strong>Décalage de départ</strong> décale la phase initiale d\'une lune au jour 0 de campagne. Un décalage de 0 commence à la nouvelle lune. Un décalage égal à la moitié de la période orbitale commence à la pleine lune. Utilisez-le pour reproduire la phase décrite dans votre scène d\'ouverture ou pour que deux lunes ne commencent pas alignées.' },
     { type: 'title', text: 'Ce que le niveau de marée signifie pour votre partie', level: 2 },
-    { type: 'paragraph', html: 'Le niveau de marée combine l\'attraction gravitationnelle de toutes les lunes actives selon leurs phases actuelles. Une <strong>vive-eau</strong> (au-dessus de 75%) se produit quand les lunes sont presque alignées. Une <strong>morte-eau</strong> (en dessous de 30%) survient quand les lunes sont en phases opposées. Liez cela à n\'importe quel système mécanique : bonus aux jets de sauvegarde, seuils de métamorphose lycanthropique ou sévérité des tempêtes.' },
+    { type: 'paragraph', html: 'Le niveau de marée combine l\'attraction gravitationnelle de toutes les lunes actives selon leurs phases actuelles. Une <strong>vive-eau</strong> (au-dessus de 75%) se produit quand les lunes sont presque alignées. Une <strong>morte-eau</strong> (en dessous de 30%) survient quand les lunes sont en phases opposées. Liez cela à n\'importe quel système mécanique: bonus aux jets de sauvegarde, seuils de métamorphose lycanthropique ou sévérité des tempêtes.' },
     {
       type: 'comparative',
       items: [
@@ -102,10 +102,10 @@ export const content: LunarTideLocaleContent = {
     {
       type: 'diagnostic',
       variant: 'info',
-      title: 'Conseil : Configurer une phase précise pour la session 1',
+      title: 'Conseil: Configurer une phase précise pour la session 1',
       icon: 'mdi:information-outline',
       badge: 'CONSEIL DE CONFIGURATION',
-      html: 'Si votre campagne commence sous un croissant de lune, réglez le décalage à environ 20% de la période orbitale. Pour une pleine lune, utilisez 50% de la période comme décalage. Exemple : lune de 28 jours débutant pleine, décalage 14. Avancez le compteur au jour actuel de campagne et la prévision affichera automatiquement les 10 prochains jours.'
+      html: 'Si votre campagne commence sous un croissant de lune, réglez le décalage à environ 20% de la période orbitale. Pour une pleine lune, utilisez 50% de la période comme décalage. Exemple: lune de 28 jours débutant pleine, décalage 14. Avancez le compteur au jour actuel de campagne et la prévision affichera automatiquement les 10 prochains jours.'
     }
   ],
   faq: [
@@ -116,7 +116,7 @@ export const content: LunarTideLocaleContent = {
     { question: 'Puis-je l\'utiliser pour L\'Appel de Cthulhu ou des campagnes d\'horreur ?', answer: 'Oui. Utilisez une lune de 29 jours et réglez le décalage pour que la pleine lune tombe sur le climax de la session. Le suivi de marée peut représenter l\'influence du Mythe ou des pics de sensibilité psychique.' },
     { question: 'Comment fonctionne la prévision sur 10 jours ?', answer: 'La prévision affiche la phase lunaire de chaque lune active sous forme de point coloré pour chacun des 10 prochains jours de campagne. Le pourcentage indiqué est le niveau de marée combiné. Les jours avec des valeurs élevées sont de bons candidats pour des rencontres dramatiques.' },
     { question: 'Puis-je suivre une lune avec un cycle très court, comme 7 jours ?', answer: 'Oui. Réglez la période orbitale sur 7. La lune accomplira un cycle complet chaque semaine de temps de jeu. Utile pour les mondes où la magie lunaire se réinitialise chaque semaine.' },
-    { question: 'Comment reproduire la phase lunaire d\'un module d\'aventure publié ?', answer: 'Notez la phase décrite et comptez combien de jours du cycle cela représente. Divisez par la période orbitale et utilisez ce résultat comme décalage. Exemple : premier quartier au jour 0 d\'un cycle de 28 jours signifie un décalage de 7.' }
+    { question: 'Comment reproduire la phase lunaire d\'un module d\'aventure publié ?', answer: 'Notez la phase décrite et comptez combien de jours du cycle cela représente. Divisez par la période orbitale et utilisez ce résultat comme décalage. Exemple: premier quartier au jour 0 d\'un cycle de 28 jours signifie un décalage de 7.' }
   ],
   bibliography,
   howTo: [

@@ -19,7 +19,7 @@ export const content: ToolLocaleContent = {
     selectDice: 'Sélectionnez les dés à lancer',
   },
   seo: [
-    { type: 'title', text: 'Maîtriser les probabilités : Comment les statistiques des dés influencent votre jeu', level: 2 },
+    { type: 'title', text: 'Maîtriser les probabilités: Comment les statistiques des dés influencent votre jeu', level: 2 },
     { type: 'paragraph', html: 'Les dés polyédriques sont au cœur des jeux de rôle et des jeux de société modernes. Que vous visiez un jet de sauvegarde réussi dans Dungeons & Dragons ou que vous lanciez pour obtenir des ressources, le résultat est régi par des probabilités mathématiques. Comprendre comment la combinaison de différents types de dés affecte vos chances est crucial pour prendre des décisions tactiques en cours de partie.' },
     {
       type: 'stats',
@@ -30,9 +30,9 @@ export const content: ToolLocaleContent = {
       ],
       columns: 3,
     },
-    { type: 'title', text: 'La mathématique derrière plusieurs dés : Pourquoi 3d6 est plus sûr que 1d20', level: 2 },
+    { type: 'title', text: 'La mathématique derrière plusieurs dés: Pourquoi 3d6 est plus sûr que 1d20', level: 2 },
     { type: 'paragraph', html: "Lorsque vous lancez un seul D20, chaque résultat de 1 à 20 a une chance égale de 5%, ce qui donne une distribution de probabilité plate. Cependant, en lançant plusieurs dés comme 3d6, les résultats se regroupent autour de la valeur moyenne de 10.5. Cette courbe de Gauss (ou courbe en cloche) signifie que vous êtes beaucoup plus susceptible d'obtenir un résultat modéré que des valeurs extrêmes, ce qui apporte de la régularité et réduit l'aspect aléatoire d'un dé unique." },
-    { type: 'title', text: 'Probabilités du D20 : Coups critiques, pires échecs et impact des modificateurs', level: 2 },
+    { type: 'title', text: 'Probabilités du D20: Coups critiques, pires échecs et impact des modificateurs', level: 2 },
     { type: 'paragraph', html: "Un simple modificateur de plus deux peut modifier considérablement les probabilités de réussite, transformant des tâches difficiles en défis gérables. Dans de nombreux systèmes de jeu, un 20 naturel représente un coup critique automatique (5% de chance), tandis qu'un 1 naturel est un échec critique (une pifia). Visualiser ces résultats permet de démystifier le hasard et de planifier vos actions tactiques avec un appui statistique." },
     {
       type: 'title',
@@ -123,7 +123,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'diagnostic',
       variant: 'info',
-      title: 'Le sophisme du joueur : Pourquoi les dés n\'ont pas de mémoire',
+      title: 'Le sophisme du joueur: Pourquoi les dés n\'ont pas de mémoire',
       icon: 'mdi:information-outline',
       badge: 'PROBABILITY TIP',
       html: 'Une erreur courante dans le jeu de rôle est de croire que les jets passés influencent les futurs. Si vous faites trois "1" d\'affilée sur un D20, vous pouvez penser qu\'un score élevé est "dû". En réalité, chaque jet est un événement indépendant. La probabilité d\'obtenir un 20 au jet suivant est toujours d\'exactement 5%. Savoir cela aide à prendre des décisions tactiques objectives.',
@@ -170,7 +170,7 @@ export const content: ToolLocaleContent = {
     },
     {
       question: 'Quels dés sont pris en charge ?',
-      answer: 'Tous les dés polyédriques couramment utilisés dans les JdR et jeux de société : D4, D6, D8, D10, D12, D20 et D100.',
+      answer: 'Tous les dés polyédriques couramment utilisés dans les JdR et jeux de société: D4, D6, D8, D10, D12, D20 et D100.',
     },
     {
       question: 'Qu\'est-ce qu\'un modificateur et comment cela fonctionne-t-il ?',
@@ -234,7 +234,7 @@ export const content: ToolLocaleContent = {
           'name': 'Quels dés sont pris en charge ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Tous les dés polyédriques couramment utilisés dans les JdR et jeux de société : D4, D6, D8, D10, D12, D20 et D100.'
+            'text': 'Tous les dés polyédriques couramment utilisés dans les JdR et jeux de société: D4, D6, D8, D10, D12, D20 et D100.'
           }
         },
         {

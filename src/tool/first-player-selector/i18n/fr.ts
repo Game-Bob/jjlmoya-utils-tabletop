@@ -79,11 +79,11 @@ const howTo = [
 
 export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
   slug: 'selecteur-premier-joueur',
-  title: 'Sélecteur de Premier Joueur : Choix au Doigt & Roulette de Tour',
+  title: 'Sélecteur de Premier Joueur: Choix au Doigt & Roulette de Tour',
   description: 'Choisissez qui commence dans vos jeux de société avec ce spectaculaire choix au doigt et cette roulette de tour interactive.',
   ui,
   seo: [
-    { type: 'title', text: 'Équité et Stratégie : Résoudre l\'Avantage du Premier Joueur dans les Jeux de Société', level: 2 },
+    { type: 'title', text: 'Équité et Stratégie: Résoudre l\'Avantage du Premier Joueur dans les Jeux de Société', level: 2 },
     { type: 'paragraph', html: 'Déterminer le premier joueur lors des sessions de jeux de société peut fortement influencer la dynamique de la partie. En théorie des jeux, l\'Avantage du Premier Joueur (FPA) désigne l\'avantage statistique dont bénéficie le joueur qui agit en premier par rapport à ses adversaires. Dans les parties d\'échecs stratégiques, les wargames et les Eurogames modernes comme Agricola ou Puerto Rico, agir en premier permet de sécuriser des ressources critiques ou de positionner ses pièces avant que les adversaires ne puissent réagir. Pour atténuer le FPA et garantir un terrain de jeu équilibré, une méthode de sélection fiable et impartiale est essentielle. Notre sélecteur de premier joueur numérique garantit un caractère aléatoire absolu, permettant aux groupes de joueurs d\'établir l\'ordre de tour instantanément et de commencer à jouer sans attendre.' },
     {
       type: 'stats',
@@ -94,7 +94,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
       ],
       columns: 3,
     },
-    { type: 'title', text: 'Règles de Société vs. Générateurs Aléatoires Numériques : La Révolution Tactile', level: 2 },
+    { type: 'title', text: 'Règles de Société vs. Générateurs Aléatoires Numériques: La Révolution Tactile', level: 2 },
     { type: 'paragraph', html: 'De nombreux livrets de règles de jeux de société modernes incluent des règles thématiques pour désigner le premier joueur, comme « le joueur le plus jeune commence », « la dernière personne à avoir visité une ferme commence » ou « le joueur le plus grand commence ». Bien qu\'amusantes lors des premières parties, ces règles deviennent rapidement répétitives, statiques et injustes pour les groupes de jeu réguliers. Les générateurs aléatoires physiques comme les jets de dés ou les tirages de cartes ajoutent du temps de préparation et sont sujets aux biais humains ou à un mauvais mélange. Le mécanisme de choix au doigt résout ce problème en offrant un générateur aléatoire rapide, tactile et instantané qui sélectionne un premier joueur en quelques secondes sans nécessiter de cartes ou dés supplémentaires.' },
     {
       type: 'table',
@@ -113,7 +113,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
     },
     {
       type: 'title',
-      text: 'Choisir Votre Outil : Sélecteur Tactile au Doigt vs. Roulette à Piger',
+      text: 'Choisir Votre Outil: Sélecteur Tactile au Doigt vs. Roulette à Piger',
       level: 3,
     },
     {
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
     },
     {
       type: 'title',
-      text: 'Optimisation Visuelle : Toiles Multitactiles vs. Roues à Décélération',
+      text: 'Optimisation Visuelle: Toiles Multitactiles vs. Roues à Décélération',
       level: 3,
     },
     {

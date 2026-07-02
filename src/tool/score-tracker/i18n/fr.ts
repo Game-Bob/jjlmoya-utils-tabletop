@@ -40,7 +40,7 @@ export const content: ToolLocaleContent<ScoreTrackerUI> = {
   description: 'Suivez les scores de n importe quel jeu de société. Ajoutez des joueurs, enregistrez les points manche par manche et regardez le classement se mettre à jour en temps réel avec des classements automatiques.',
   ui,
   seo: [
-    { type: 'title', text: 'Comptage de Points aux Jeux de Société : Comment Éviter les Erreurs', level: 2 },
+    { type: 'title', text: 'Comptage de Points aux Jeux de Société: Comment Éviter les Erreurs', level: 2 },
     { type: 'paragraph', html: 'Compter les points aux jeux de société semble simple jusqu à ce que vous soyez à cinq manches d une partie et que quelqu un réalise qu il s est trompé. Que vous jouiez à Wingspan, Terraforming Mars, Catan ou à tout jeu à points de victoire, un comptage précis fait la différence entre une partie équitable et une dispute. Un compteur de points numérique élimine les erreurs de calcul, affiche les classements en direct et conserve un historique complet de chaque manche pour vérifier le total final.' },
     {
       type: 'stats',
@@ -91,7 +91,7 @@ export const content: ToolLocaleContent<ScoreTrackerUI> = {
       items: [
         {
           title: 'Jeux à Points de Victoire',
-          description: 'La plupart des eurogames utilisent des points de victoire attribués tout au long de la partie. Le défi est de suivre plusieurs sources de PV : ressources, accomplissements, bonus de fin de partie. Un tracker numérique vous permet de saisir les points au fur et à mesure et de voir le total courrant.',
+          description: 'La plupart des eurogames utilisent des points de victoire attribués tout au long de la partie. Le défi est de suivre plusieurs sources de PV: ressources, accomplissements, bonus de fin de partie. Un tracker numérique vous permet de saisir les points au fur et à mesure et de voir le total courrant.',
           icon: 'mdi:chess-queen',
           highlight: true,
           points: [

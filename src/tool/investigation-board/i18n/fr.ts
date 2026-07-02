@@ -3,7 +3,7 @@ import type { InvestigationBoardLocaleContent } from '../entry';
 
 export const content: InvestigationBoardLocaleContent = {
   slug: "createur-de-tableau-de-conspiration",
-  title: "Créateur de Tableau de Conspiration : Cartes d'Enquête RPG de Détective en Ligne",
+  title: "Créateur de Tableau de Conspiration: Cartes d'Enquête RPG de Détective en Ligne",
   description: "Concevez des tableaux de conspiration interactifs et des cartes d'enquête pour vos jeux de rôle. Connectez des personnages, indices et lieux avec des fils colorés.",
   ui: {
   "title": "Créateur de Tableau de Conspiration",
@@ -39,7 +39,7 @@ export const content: InvestigationBoardLocaleContent = {
   "immersive": "Plein écran"
 },
   seo: [
-    { type: 'title', text: "Créateur de Tableau de Conspiration en Ligne : Organisez les Indices de JdR", level: 2 },
+    { type: 'title', text: "Créateur de Tableau de Conspiration en Ligne: Organisez les Indices de JdR", level: 2 },
     { type: 'paragraph', html: "Démêler un réseau complexe de mensonges, suivre les alibis des suspects et relier les indices d'une scène de crime peut rapidement submerger un groupe de jeu de rôle. Que vous meniez une campagne de L'Appel de Cthulhu, un mystère cyberpunk, une enquête policière dans D&D ou que vous écriviez un thriller, notre créateur de tableau de conspiration en ligne est l'outil ultime. Glissez, déposez, catégorisez et reliez les indices, les PNJ et les preuves matérielles sur un tableau de liège numérique infini. Utilisez des fils de relation colorés pour voir instantanément comment les suspects sont liés aux scènes de crime, aux alibis et aux motivations secrètes, éliminant les notes papier et gardant les joueurs immergés." },
     {
       type: 'stats',
@@ -107,7 +107,7 @@ export const content: InvestigationBoardLocaleContent = {
       type: 'glossary',
       items: [
         { term: "Nœud d'enquête", definition: "Toute carte sur le tableau représentant une personne, un lieu, un indice ou un objet." },
-        { term: "Fil de relation", definition: "Une ligne colorée reliant deux cartes pour indiquer leur lien (ex : Suspect, Alibi, Propriétaire)." },
+        { term: "Fil de relation", definition: "Une ligne colorée reliant deux cartes pour indiquer leur lien (ex: Suspect, Alibi, Propriétaire)." },
         { term: "Mode Immersif", definition: "Un affichage plein écran qui masque les menus de contrôle pour maximiser l'espace sur mobile ou tablette." },
         { term: "Chemin mis en valeur", definition: "Un chemin visuel affichant uniquement les nœuds et les lignes connectés à la carte sélectionnée, estompant le reste." }
       ]
@@ -137,7 +137,7 @@ export const content: InvestigationBoardLocaleContent = {
     {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
-      'name': "Créateur de Tableau de Conspiration : Cartes d'Enquête RPG de Détective en Ligne",
+      'name': "Créateur de Tableau de Conspiration: Cartes d'Enquête RPG de Détective en Ligne",
       'operatingSystem': 'All',
       'applicationCategory': 'UtilitiesApplication',
       'browserRequirements': 'Requires HTML5 SVG support. Requires JavaScript.'

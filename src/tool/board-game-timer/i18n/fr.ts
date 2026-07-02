@@ -99,7 +99,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
     },
     {
       type: 'proscons',
-      title: 'Avantages et inconvénients : Incrément Fischer vs Retard Bronstein',
+      title: 'Avantages et inconvénients: Incrément Fischer vs Retard Bronstein',
       items: [
         {
           pro: 'L\'incrément Fischer récompense la rapidité en accumulant du temps pour les tours futurs.',
@@ -211,7 +211,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
   howTo: [
     {
       name: 'Configurer la partie',
-      text: 'Sélectionnez un préréglage (Casual, Blitz, Stratégique, Sablier) ou définissez vos paramètres personnalisés : temps de base, incrément/retard, et seuil d\'alerte.',
+      text: 'Sélectionnez un préréglage (Casual, Blitz, Stratégique, Sablier) ou définissez vos paramètres personnalisés: temps de base, incrément/retard, et seuil d\'alerte.',
     },
     {
       name: 'Ajouter et organiser les joueurs',
@@ -285,7 +285,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
         {
           '@type': 'HowToStep',
           'name': 'Configurer la partie',
-          'text': 'Sélectionnez un préréglage (Casual, Blitz, Stratégique, Sablier) ou définissez vos paramètres personnalisés : temps de base, incrément/retard, et seuil d\'alerte.'
+          'text': 'Sélectionnez un préréglage (Casual, Blitz, Stratégique, Sablier) ou définissez vos paramètres personnalisés: temps de base, incrément/retard, et seuil d\'alerte.'
         },
         {
           '@type': 'HowToStep',
