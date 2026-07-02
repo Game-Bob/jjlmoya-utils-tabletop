@@ -675,6 +675,7 @@
     gap: 1.5rem;
     border-radius: 1rem;
     min-width: 0;
+    overflow: hidden;
   }
 
   .wheel-layout,
@@ -688,21 +689,50 @@
 
   .canvas-card,
   .tab-container {
-    padding: 1rem;
+    width: 100%;
+    padding: 0.75rem;
     border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .wheel-canvas-section {
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .wheel-canvas-container {
+    width: 100%;
+    max-width: 100%;
   }
 
   .wheel-canvas {
-    width: min(320px, calc(100vw - 6rem));
-    height: min(320px, calc(100vw - 6rem));
+    width: min(240px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
   }
 
   .spin-button {
+    align-self: stretch;
+    width: 100%;
+    max-width: 100%;
     min-height: 3.5rem;
     height: auto;
     padding: 0.85rem;
     font-size: 1rem;
     white-space: normal;
+  }
+
+  .mute-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .result-placeholder {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
   }
 
   .tab-headers,
