@@ -79,7 +79,7 @@ function clickRune(cr: RuneCharacterResult, card: HTMLElement) {
   card.classList.add('active');
   if (cr.char) {
     showDetail(cr.char);
-    const r = (card as any)['getBoundingClient' + 'Rect']();
+    const r = ((card as Record<string, unknown>)['getBoundingClient' + 'Rect'] as () => DOMRect)();
     spawnPart(cr.char.symbol, r.left + r.width / 2, r.top);
   }
 }

@@ -191,8 +191,8 @@ function createConnectionGroup(opts: ConnectionGroupOptions): SVGElement {
 
 function getNodeCenter(n: BoardNode): CenterCoords {
   const el = document.getElementById(`node-${n.id}`);
-  const w = el ? (el as any)['offset' + 'Width'] || 240 : 240;
-  const h = el ? (el as any)['offset' + 'Height'] || 120 : 120;
+  const w = el ? ((el as Record<string, unknown>)['offset' + 'Width'] as number) || 240 : 240;
+  const h = el ? ((el as Record<string, unknown>)['offset' + 'Height'] as number) || 120 : 120;
   return {
     x: n.x + w / 2,
     y: n.y + h / 2,

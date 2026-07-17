@@ -88,21 +88,21 @@ export function spawnRippleEffect(container: HTMLElement) {
 
 export function spawnDigitSparkle(element: HTMLElement) {
   element.classList.remove('timer-digit-update');
-  void (element as any)['offset' + 'Width'];
+  void (element as Record<string, unknown>)['offset' + 'Width'];
   element.classList.add('timer-digit-update');
 }
 
 export function spawnWarningFlash(element: HTMLElement) {
   element.classList.remove('warning-glow');
-  void (element as any)['offset' + 'Width'];
+  void (element as Record<string, unknown>)['offset' + 'Width'];
   element.classList.add('warning-glow');
 }
 
 export function spawnDangerFlash(element: HTMLElement) {
   element.classList.remove('danger-glow');
-  void (element as any)['offset' + 'Width'];
+  void (element as Record<string, unknown>)['offset' + 'Width'];
   element.classList.add('danger-glow');
   element.classList.remove('danger-shake');
-  void (element as any)['offset' + 'Width'];
+  void (element as Record<string, unknown>)['offset' + 'Width'];
   element.classList.add('danger-shake');
 }

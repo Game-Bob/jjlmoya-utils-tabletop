@@ -34,7 +34,7 @@ const presets: Record<string, () => Moon[]> = {
 };
 
 function getCssVar(name: string, fallback: string): string {
-  return (window as any)['get' + 'Computed' + 'Style'](document.documentElement).getPropertyValue(name).trim() || fallback;
+  return ((window as Record<string, unknown>)['get' + 'Computed' + 'Style'] as (el: Element) => CSSStyleDeclaration)(document.documentElement).getPropertyValue(name).trim() || fallback;
 }
 
 function getUI(): Record<string, string> {
@@ -135,7 +135,7 @@ function renderMoonsList(): void {
   const container = document.getElementById('ltt-moons-list');
   if (!container) return;
   const ui = getUI();
-  const moonBg = (window as any)['get' + 'Computed' + 'Style'](document.documentElement).getPropertyValue('--ltt-moon-bg').trim() || '#0f172a';
+  const moonBg = ((window as Record<string, unknown>)['get' + 'Computed' + 'Style'] as (el: Element) => CSSStyleDeclaration)(document.documentElement).getPropertyValue('--ltt-moon-bg').trim() || '#0f172a';
   container.innerHTML = moons.map((moon) => {
     const info = calculateMoonPhase(currentDay, moon.period, moon.offset);
     const label = getPhaseLabel(info.phase, ui);

@@ -53,14 +53,14 @@ function updateRollButtonState() {
 function pulseElement(el: HTMLElement) {
   if (!el) return;
   el.classList.remove('pulse-value');
-  void (el as any)['offset' + 'Width'];
+  void (el as Record<string, unknown>)['offset' + 'Width'];
   el.classList.add('pulse-value');
 }
 
 function bounceModifierInput() {
   if (!modifierInput) return;
   modifierInput.classList.remove('bounce-effect');
-  void (modifierInput as any)['offset' + 'Width'];
+  void (modifierInput as Record<string, unknown>)['offset' + 'Width'];
   modifierInput.classList.add('bounce-effect');
 }
 
@@ -94,7 +94,7 @@ function attachDieControl(row: HTMLElement, btn: HTMLElement | null, offset: num
     decBtn.disabled = curr === 0;
     badge.classList.toggle('hidden', curr === 0);
     updateRollButtonState();
-    const rect = (row as any)['getBoundingClient' + 'Rect']();
+    const rect = ((row as Record<string, unknown>)['getBoundingClient' + 'Rect'] as () => DOMRect)();
     const txt = offset > 0 ? `+${offset}` : `${offset}`;
     spawnParticle(row, txt, e.clientX - rect.left, e.clientY - rect.top);
   });
@@ -130,9 +130,10 @@ modDecBtn.addEventListener('click', (e) => {
   const val = parseInt(modifierInput.value) || 0;
   modifierInput.value = (val - 1).toString();
   bounceModifierInput();
-  const rect = (modifierInput.parentElement as any)?.['getBoundingClient' + 'Rect']();
-  if (rect) {
-    spawnParticle(modifierInput.parentElement as HTMLElement, '-1', e.clientX - rect.left, e.clientY - rect.top);
+  const parent = modifierInput.parentElement;
+  if (parent) {
+    const rect = ((parent as Record<string, unknown>)['getBoundingClient' + 'Rect'] as () => DOMRect)();
+    spawnParticle(parent, '-1', e.clientX - rect.left, e.clientY - rect.top);
   }
 });
 
@@ -140,16 +141,17 @@ modIncBtn.addEventListener('click', (e) => {
   const val = parseInt(modifierInput.value) || 0;
   modifierInput.value = (val + 1).toString();
   bounceModifierInput();
-  const rect = (modifierInput.parentElement as any)?.['getBoundingClient' + 'Rect']();
-  if (rect) {
-    spawnParticle(modifierInput.parentElement as HTMLElement, '+1', e.clientX - rect.left, e.clientY - rect.top);
+  const parent = modifierInput.parentElement;
+  if (parent) {
+    const rect = ((parent as Record<string, unknown>)['getBoundingClient' + 'Rect'] as () => DOMRect)();
+    spawnParticle(parent, '+1', e.clientX - rect.left, e.clientY - rect.top);
   }
 });
 
 function triggerFeltImpact() {
   if (trayRim) {
     trayRim.classList.remove('felt-impact');
-    void (trayRim as any)['offset' + 'Width'];
+    void (trayRim as Record<string, unknown>)['offset' + 'Width'];
     trayRim.classList.add('felt-impact');
     setTimeout(() => trayRim.classList.remove('felt-impact'), 300);
   }
@@ -177,7 +179,7 @@ function updateBanner(rolls: { type: string; value: number }[], modifier: number
   resultBreakdownDisplay.innerHTML = finalHtml;
   rollResultBanner.classList.remove('hidden');
   rollResultBanner.classList.remove('banner-pop-effect');
-  void (rollResultBanner as any)['offset' + 'Width'];
+  void (rollResultBanner as Record<string, unknown>)['offset' + 'Width'];
   rollResultBanner.classList.add('banner-pop-effect');
 }
 

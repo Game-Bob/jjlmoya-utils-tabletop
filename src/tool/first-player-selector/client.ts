@@ -87,7 +87,7 @@ function updateMode(mode: SelectorMode, tracker: TouchTracker, engine: Selection
 }
 
 function resizeCanvas(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D): void {
-  const rect = (canvas as any)['getBoundingClient' + 'Rect']();
+  const rect = ((canvas as Record<string, unknown>)['getBoundingClient' + 'Rect'] as () => DOMRect)();
   canvas.width = rect.width * window.devicePixelRatio;
   canvas.height = rect.height * window.devicePixelRatio;
   ctx.scale(window.devicePixelRatio, window.devicePixelRatio);

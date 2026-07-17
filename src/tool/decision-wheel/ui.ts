@@ -94,7 +94,7 @@ export function triggerEmphasis(): void {
   const card = document.getElementById('result-card');
   if (!card) return;
   card.classList.remove('result-emphasis');
-  void (card as any)['offset' + 'Width'];
+  void (card as Record<string, unknown>)['offset' + 'Width'];
   card.classList.add('result-emphasis');
 }
 
