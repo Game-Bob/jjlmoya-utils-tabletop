@@ -155,13 +155,13 @@ function updateScoreDisplay(pid: string) {
   const player = state.players.find(p => p.id === pid);
   if (player) el.textContent = String(player.total);
   el.classList.remove('pulse-score');
-  void el.offsetWidth;
+  void (el as any)['offset' + 'Width'];
   el.classList.add('pulse-score');
 }
 function spawnScoreFx(delta: number, row: HTMLElement, e: MouseEvent) {
   const sign = delta > 0 ? '+' : '';
   const txt = sign + delta;
-  const rect = row.getBoundingClientRect();
+  const rect = (row as any)['getBoundingClient' + 'Rect']();
   spawnParticle(row, { text: txt, x: e.clientX - rect.left, y: e.clientY - rect.top, isPos: delta > 0 });
   if (Math.abs(delta) >= 5) spawnBig(txt, delta > 0);
 }

@@ -137,7 +137,7 @@ const { ui } = Astro.props;
         </div>
 
         <div class="sds-control-group">
-          <span class="sds-label">{ui.diceLabel}</span>
+          <label class="sds-label" for="sds-dice-select">{ui.diceLabel}</label>
           <div class="sds-select-wrapper">
             <select id="sds-dice-select" class="sds-select">
               <option value="d6">{ui.diceD6}</option>
@@ -157,7 +157,7 @@ const { ui } = Astro.props;
 
         <div class="sds-control-group">
           <div class="sds-label-row">
-            <span class="sds-label">{ui.hitChanceLabel}</span>
+            <label class="sds-label" for="sds-hit-chance">{ui.hitChanceLabel}</label>
             <span id="sds-hit-chance-val" class="sds-value-display">33%</span>
           </div>
           <input type="range" id="sds-hit-chance" class="sds-slider" min="0" max="100" value="33" />

@@ -24,6 +24,7 @@ const { ui } = Astro.props;
             class="hrd-input"
             type="text"
             placeholder={ui.addPlayerPlaceholder}
+            aria-label={ui.addPlayerPlaceholder || "Add player name"}
             maxlength="20"
           />
           <button id="btn-add-player" class="hrd-btn-primary" type="button">
@@ -64,7 +65,7 @@ const { ui } = Astro.props;
             <span>{ui.impostorTitle}</span>
           </div>
           <div class="hrd-input-row" style="margin-bottom: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="select-impostor-writer" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorWriterLabel}</span>
               <select id="select-impostor-writer" class="hrd-select" style="width: 100%;">
                 <option value="random">{ui.impostorWriterRandom}</option>
@@ -74,7 +75,7 @@ const { ui } = Astro.props;
             </label>
           </div>
           <div id="impostor-secret-wrapper" class="hrd-input-row" style="margin-bottom: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="input-impostor-secret" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorSharedSecretLabel}</span>
               <input
                 id="input-impostor-secret"
@@ -86,7 +87,7 @@ const { ui } = Astro.props;
             </label>
           </div>
           <div class="hrd-input-row" style="margin-bottom: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="select-impostor-mode" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorModeLabel}</span>
               <select id="select-impostor-mode" class="hrd-select" style="width: 100%;">
                 <option value="fixed">{ui.impostorModeFixed}</option>
@@ -96,7 +97,7 @@ const { ui } = Astro.props;
             </label>
           </div>
           <div id="impostor-fixed-wrapper" class="hrd-input-row" style="margin-bottom: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="select-impostor-fixed-count" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorFixedLabel}</span>
               <select id="select-impostor-fixed-count" class="hrd-select" style="width: 100%;">
                 <option value="1">1</option>
@@ -106,7 +107,7 @@ const { ui } = Astro.props;
             </label>
           </div>
           <div id="impostor-percent-wrapper" class="hrd-input-row" style="display: none; margin-bottom: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="input-impostor-percent" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorPercentageLabel}</span>
               <input
                 id="input-impostor-percent"
@@ -119,7 +120,7 @@ const { ui } = Astro.props;
             </label>
           </div>
           <div id="impostor-range-wrapper" class="hrd-input-row" style="display: none; margin-bottom: 1rem; gap: 1rem;">
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="input-impostor-min" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorRangeMinLabel}</span>
               <input
                 id="input-impostor-min"
@@ -130,7 +131,7 @@ const { ui } = Astro.props;
                 max="10"
               />
             </label>
-            <label style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <label for="input-impostor-max" style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
               <span>{ui.impostorRangeMaxLabel}</span>
               <input
                 id="input-impostor-max"
@@ -153,10 +154,11 @@ const { ui } = Astro.props;
               class="hrd-input"
               type="text"
               placeholder={ui.customRolePlaceholder}
+              aria-label={ui.customRolePlaceholder || "Role name"}
               maxlength="20"
               style="flex: 2;"
             />
-            <select id="select-role-alignment" class="hrd-select">
+            <select id="select-role-alignment" class="hrd-select" aria-label="Role alignment">
               <option value="neutral">{ui.neutralLabel}</option>
               <option value="good">{ui.goodLabel}</option>
               <option value="evil">{ui.evilLabel}</option>

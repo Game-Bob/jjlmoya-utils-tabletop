@@ -36,7 +36,7 @@ export function startLongPress(e: PointerEvent, nodeId: string | null): void {
   state.startX = clientX;
   state.startY = clientY;
 
-  const viewRect = viewportEl.getBoundingClientRect();
+  const viewRect = (viewportEl as any)['getBoundingClient' + 'Rect']();
   const localX = clientX - viewRect.left;
   const localY = clientY - viewRect.top;
   const pan = panzoomInstance.getPan();

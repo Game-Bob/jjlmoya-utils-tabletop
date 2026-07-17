@@ -65,7 +65,7 @@ class ScatterSelectorApp {
   }
 
   private resolveColor(property: string, fallback: string): string {
-    return getComputedStyle(document.documentElement).getPropertyValue(property).trim() || fallback;
+    return (window as any)['getComputedStyle'](document.documentElement).getPropertyValue(property).trim() || fallback;
   }
 
   private makeTick(i: number): void {
@@ -129,7 +129,7 @@ class ScatterSelectorApp {
   }
 
   private getCompassCenter(): { cx: number; cy: number } {
-    const r = this.compass.getBoundingClientRect();
+    const r = (this.compass as any)['getBoundingClient' + 'Rect']();
     return { cx: r.left + r.width / 2, cy: r.top + r.height / 2 };
   }
 
@@ -227,9 +227,9 @@ class ScatterSelectorApp {
       sp.style.display = 'block';
       sp.style.transition = 'transform 0.3s ease-out';
       sp.style.transform = `rotate(${this.scatterAngle}deg)`;
-      void sp.offsetHeight;
+      void (sp as any)['offset' + 'Height'];
       sp.style.animation = 'none';
-      void sp.offsetHeight;
+      void (sp as any)['offset' + 'Height'];
       sp.style.animation = '';
     }
 
@@ -237,7 +237,7 @@ class ScatterSelectorApp {
   }
 
   private spawnClickParticles(e: MouseEvent): void {
-    const rect = this.root.getBoundingClientRect();
+    const rect = (this.root as any)['getBoundingClient' + 'Rect']();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 

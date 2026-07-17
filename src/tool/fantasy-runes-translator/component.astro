@@ -25,7 +25,7 @@ const { ui } = Astro.props;
   <div class="seed-drawer" id="seed-drawer">
     <div class="seed-inner">
       <div class="seed-field">
-        <input type="number" id="runes-seed" placeholder={ui.seedPlaceholder} min="1" max="999999" />
+        <input type="number" id="runes-seed" placeholder={ui.seedPlaceholder} aria-label={ui.seedPlaceholder || "Seed"} min="1" max="999999" />
         <button type="button" class="seed-shuffle" id="seed-shuffle-btn">&#x21BB;</button>
       </div>
       <span class="seed-tag" id="seed-tag">{ui.seedApplied}</span>
@@ -34,7 +34,7 @@ const { ui } = Astro.props;
   </div>
 
   <div class="runes-input-area">
-    <input type="text" id="runes-input" placeholder={ui.inputPlaceholder} autocomplete="off" />
+    <input type="text" id="runes-input" placeholder={ui.inputPlaceholder} aria-label={ui.inputPlaceholder || "Input text"} autocomplete="off" />
   </div>
 
   <div class="runes-output" id="runes-output">

@@ -14,6 +14,7 @@ const { labels } = Astro.props;
       class="add-player-input"
       id="add-player-input"
       placeholder={labels.playerNamePlaceholder}
+      aria-label={labels.playerNamePlaceholder || "Player name"}
       autocomplete="off"
     />
     <button type="button" class="btn-score-action primary" id="add-player-btn">
