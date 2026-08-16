@@ -60,6 +60,8 @@ const faq = [
     question: '我可以禁用动画以更快获得结果吗？',
     answer: '动画持续约两秒，之后最终结果显示在中央，罗盘箭头锁定。目前没有跳过选项，但该延迟设计为与掷物理骰子的节奏相匹配。',
   },
+  { question: '散布方向如何确定？', answer: '工具会结合所选扇区系统、骰子结果和设定的偏差距离进行计算。' },
+  { question: '可以使用风向模式吗？', answer: '可以，风向模式会跟随指南针角度，同时让距离保持随机。' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: '直接命中', html: '当掷骰超过命中概率时，罗盘中心会爆发脉动的绿色光环和"DIRECT HIT"文字动画。抛射物返回中心，确认完美命中且零偏差。' },
     { type: 'diagnostic', variant: 'error', title: '散布', html: '在散布结果中，抛射物沿虚线轨迹移动到着陆点。粒子爆炸、发光标记和距离（英寸）（例如 <strong>5"</strong>）出现在撞击位置。' },
     { type: 'tip', title: '专业提示: 使用风偏模式', html: '启用风偏可将散布方向锁定到您手动旋转的罗盘角度。这模拟了盛行风或固定位移矢量 - 非常适合无制导火箭、毒气云或传送事故。' },
+    { type: 'title', text: '处理桌面战棋中的散布', level: 2 },
+    { type: 'paragraph', html: '许多战棋用偏差来模拟炮火、风向或失败的传送效果。' },
+    { type: 'table', headers: ['处理桌面战棋中的散布', '管理风向与偏差', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: '管理风向与偏差', level: 2 },
+    { type: 'paragraph', html: '命中概率可以帮助判断单位的可靠程度，并加快游戏中的测量过程。' },
+    { type: 'comparative', items: [{ title: '处理桌面战棋中的散布', description: '许多战棋用偏差来模拟炮火、风向或失败的传送效果。', icon: 'mdi:compass-outline', highlight: true, points: ['管理风向与偏差'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: '管理风向与偏差', definition: '命中概率可以帮助判断单位的可靠程度，并加快游戏中的测量过程。' }] },
   ],
   faq,
   bibliography,

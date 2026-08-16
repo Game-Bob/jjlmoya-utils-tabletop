@@ -127,6 +127,9 @@ const faq = [
     question: 'Come funziona il Distributore Ruoli Segreti?',
     answer: 'Il Distributore consente di assegnare ruoli segreti per giochi di deduzione sociale localmente su un singolo dispositivo. Inserisci i nomi dei giocatori, selezioni un modello o personalizzi i ruoli, e poi passi il dispositivo a ciascun giocatore. Ognuno tiene premuto il pulsante di rivelazione per visualizzare il proprio ruolo in privato.',
   },
+  { question: 'Come si mantiene l\'equilibrio?', answer: 'Scegliete un set di ruoli adatto al numero di giocatori e controllate il rapporto tra le squadre.' },
+  { question: 'Posso creare ruoli personalizzati?', answer: 'Sì, la configurazione personalizzata permette di definire nomi, squadre e descrizioni.' },
+  { question: 'I ruoli vengono inviati a un server?', answer: 'No, la distribuzione avviene localmente sul dispositivo.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Bilanciamento delle Squadre nei Giochi di Deduzione Sociale', level: 2 },
     { type: 'paragraph', html: 'Una delle sfide principali di Lupo Mannaro, Avalon o Secret Hitler è bilanciare il numero di ruoli del bene e del male. Una proporzione non corretta può rendere il gioco troppo facile per una fazione e frustrante per l\'altra.' },
+    { type: 'table', headers: ['Bilanciare le squadre', 'Configurare Spyfall e Impostor senza moderatore', 'Passare il dispositivo con discrezione'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Bilanciare le squadre', level: 2 },
+    { type: 'paragraph', html: 'Un rapporto equilibrato tra ruoli buoni e cattivi mantiene avvincenti i giochi di deduzione sociale.' },
+    { type: 'title', text: 'Configurare Spyfall e Impostor senza moderatore', level: 2 },
+    { type: 'paragraph', html: 'Un solo schermo può distribuire parole e luoghi lasciando tutti liberi di giocare.' },
+    { type: 'comparative', items: [{ title: 'Bilanciare le squadre', description: 'Un rapporto equilibrato tra ruoli buoni e cattivi mantiene avvincenti i giochi di deduzione sociale.', icon: 'mdi:account-group', highlight: true, points: ['Fate girare il dispositivo sempre nello stesso verso e proteggete lo schermo dagli sguardi vicini.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Consiglio sulla privacy', definition: 'Fate girare il dispositivo sempre nello stesso verso e proteggete lo schermo dagli sguardi vicini.' }] },
   ],
   faq,
   bibliography,

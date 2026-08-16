@@ -127,6 +127,9 @@ const faq = [
     question: '비밀 역할 분배기는 어떻게 작동하나요?',
     answer: '비밀 역할 분배기는 정체 은닉 게임을 즐길 때 한 대의 기기로 역할을 비밀리에 나눌 수 있게 해주는 도구입니다. 플레이어 이름을 입력하고 템플릿을 선택하거나 역할을 커스텀한 뒤, 기기를 차례로 넘겨가며 확인 버튼을 길게 눌러 역할을 확인합니다.',
   },
+  { question: '역할을 공정하게 배분하려면 어떻게 하나요?', answer: '플레이어 수에 맞는 역할 세트를 고르고 배분 전에 팀 비율을 확인하세요.' },
+  { question: '사용자 역할을 만들 수 있나요?', answer: '네, 사용자 설정에서 역할 이름과 팀, 설명을 직접 정할 수 있습니다.' },
+  { question: '역할이 서버로 전송되나요?', answer: '아니요. 역할 배분과 표시는 기기에서 로컬로 처리됩니다.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: '정체 은닉 게임에서의 진영 밸런스 조정 방법', level: 2 },
     { type: 'paragraph', html: '마피아 게임의 재미는 인원수에 따른 시민 진영과 마피아 진영의 완벽한 성비 조율에서 결정됩니다. 본 툴은 최적의 밸런스를 자동으로 계산해 줍니다.' },
+    { type: 'table', headers: ['팀 균형 맞추기', '진행자 없이 Spyfall과 Impostor 설정하기', '기기를 안전하게 전달하기'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: '팀 균형 맞추기', level: 2 },
+    { type: 'paragraph', html: '선한 역할과 악한 역할의 비율을 맞추면 추리 게임의 긴장감이 오래 유지됩니다.' },
+    { type: 'title', text: '진행자 없이 Spyfall과 Impostor 설정하기', level: 2 },
+    { type: 'paragraph', html: '한 화면으로 단어와 장소를 배분하면 모두가 플레이어로 참여할 수 있습니다.' },
+    { type: 'comparative', items: [{ title: '팀 균형 맞추기', description: '선한 역할과 악한 역할의 비율을 맞추면 추리 게임의 긴장감이 오래 유지됩니다.', icon: 'mdi:account-group', highlight: true, points: ['항상 같은 방향으로 기기를 넘기고 주변 사람이 화면을 보지 못하게 하세요.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: '개인정보 보호 팁', definition: '항상 같은 방향으로 기기를 넘기고 주변 사람이 화면을 보지 못하게 하세요.' }] },
   ],
   faq,
   bibliography,

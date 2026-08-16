@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Cara Menggunakan Roda Keputusan', level: 2 },
     { type: 'paragraph', html: 'Pilih prasetel atau buat segmen Anda sendiri dengan bobot untuk menyesuaikan probabilitas setiap pilihan.' },
+    { type: 'title', text: "Skenario tambahan", level: 3 },
+    { type: 'paragraph', html: "Gunakan roda untuk pemungutan suara, pertemuan acak, dan aksi permainan." },
+    { type: 'title', text: "Preset permainan meja", level: 3 },
+    { type: 'paragraph', html: "Preset memuat keputusan umum permainan meja dengan cepat." },
+    { type: 'title', text: "Mengatur bobot hasil", level: 3 },
+    { type: 'paragraph', html: "Bobot membuat hasil tertentu lebih sering atau lebih jarang muncul." },
+    { type: 'title', text: "Meninjau riwayat", level: 3 },
+    { type: 'paragraph', html: "Riwayat menyimpan putaran terbaru untuk ditinjau bersama." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Apakah saya bisa mengubah warna dan nama?',
       answer: 'Ya, Anda bebas menambah segmen, mengubah teks label, memilih warna, dan mengubah bobot dari 1 hingga 5.',
+    },
+    {
+      question: "Bisakah peluang diubah?",
+      answer: "Bisa, ubah bobot segmen.",
+    },
+    {
+      question: "Berapa banyak segmen yang tersedia?",
+      answer: "Hingga 16 segmen dapat digunakan dan minimal dua diperlukan.",
+    },
+    {
+      question: "Preset apa yang tersedia?",
+      answer: "Ya atau Tidak, Angka, Aksi, pilihan sendiri, D20, Keselarasan, dan Jarahan.",
+    },
+    {
+      question: "Apakah putaran sebelumnya terlihat?",
+      answer: "Ya, browser menampilkan sepuluh hasil terakhir.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Putar Roda Keputusan',
       text: 'Klik tombol putar untuk melihat animasi putaran dengan deselerasi fisik yang realistis.',
+    },
+    {
+      name: "Periksa hasil",
+      text: "Setelah roda berhenti, periksa segmen pemenang dan riwayat putaran.",
     },
   ],
   schemas: [

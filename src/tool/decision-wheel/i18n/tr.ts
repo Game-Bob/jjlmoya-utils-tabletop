@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Karar Çarkı Nasıl Kullanılır', level: 2 },
     { type: 'paragraph', html: 'Hazır bir şablon seçin veya olasılıkları ayarlamak için farklı ağırlıklara sahip kendi dilimlerinizi oluşturun.' },
+    { type: 'title', text: "Ek karar senaryolari", level: 3 },
+    { type: 'paragraph', html: "Carki oylama, rastgele karsilasma ve oyun eylemleri icin kullanin." },
+    { type: 'title', text: "Masaustu oyun sablonlari", level: 3 },
+    { type: 'paragraph', html: "Sablonlar masaustu oyunlarindaki yaygin secimleri hizla yukler." },
+    { type: 'title', text: "Sonuc agirliklarini ayarlama", level: 3 },
+    { type: 'paragraph', html: "Agirliklar bazi sonuclari daha sik veya seyrek yapar." },
+    { type: 'title', text: "Gecmisi inceleme", level: 3 },
+    { type: 'paragraph', html: "Gecmis son cevirmeleri grup icin saklar." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Renkleri ve adları özelleştirebilir miyim?',
       answer: 'Evet, yeni dilim ekleyebilir, etiketleri düzenleyebilir, renk atayabilir ve ağırlıklarını 1 ila 5 arasında ayarlayabilirsiniz.',
+    },
+    {
+      question: "Olasilik degistirilebilir mi?",
+      answer: "Evet, bir segmentin agirligini degistirin.",
+    },
+    {
+      question: "Kac segment kullanilabilir?",
+      answer: "En fazla 16; en az iki secenek gerekir.",
+    },
+    {
+      question: "Hangi sablonlar var?",
+      answer: "Evet veya Hayir, Sayilar, Eylemler, ozel secenekler, D20, Hizalanma ve Ganimet.",
+    },
+    {
+      question: "Onceki cevirmeler gorunur mu?",
+      answer: "Evet, tarayici son on sonucu gosterir.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Çarkı Çevirin',
       text: 'Düğmeye tıklayarak gerçekçi yavaşlama efektine sahip çark dönme animasyonunu başlatın.',
+    },
+    {
+      name: "Sonucu kontrol et",
+      text: "Cark durdugunda kazanan segmenti ve son cevirme gecmisini inceleyin.",
     },
   ],
   schemas: [

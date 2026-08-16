@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Jak Używać Koła Decyzyjnego', level: 2 },
     { type: 'paragraph', html: 'Wybierz gotowy szablon lub stwórz własne wycinki z wagami określającymi szansę wylosowania każdej opcji.' },
+    { type: 'title', text: "Dodatkowe scenariusze", level: 3 },
+    { type: 'paragraph', html: "Użyj koła do głosowań, losowych spotkań i wyboru działań w grze." },
+    { type: 'title', text: "Szablony do gier planszowych", level: 3 },
+    { type: 'paragraph', html: "Szablony szybko wczytują typowe wybory w grach planszowych." },
+    { type: 'title', text: "Ustawianie wag", level: 3 },
+    { type: 'paragraph', html: "Wagi sprawiają, że wyniki pojawiają się częściej lub rzadziej." },
+    { type: 'title', text: "Sprawdzanie historii", level: 3 },
+    { type: 'paragraph', html: "Historia zachowuje ostatnie losowania dla całej grupy." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Czy mogę dostosować kolory i nazwy?',
       answer: 'Tak, możesz dodawać wycinki, zmieniać ich teksty, dobierać kolory oraz modyfikować wagę od 1 do 5.',
+    },
+    {
+      question: "Czy można zmienić prawdopodobieństwo?",
+      answer: "Tak, zmień wagę segmentu.",
+    },
+    {
+      question: "Ile segmentów jest możliwych?",
+      answer: "Maksymalnie 16; potrzebne są co najmniej dwa.",
+    },
+    {
+      question: "Jakie szablony są dostępne?",
+      answer: "Tak lub Nie, Liczby, Działania, własne opcje, D20, Charakter i Łupy.",
+    },
+    {
+      question: "Czy poprzednie losowania są widoczne?",
+      answer: "Tak, przeglądarka pokazuje dziesięć ostatnich wyników.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Zakręć Kołem',
       text: 'Kliknij przycisk zakręcenia, aby uruchomić animację obrotu z fizyką naturalnego hamowania.',
+    },
+    {
+      name: "Sprawdź wynik",
+      text: "Po zatrzymaniu sprawdź zwycięski segment oraz historię ostatnich losowań.",
     },
   ],
   schemas: [

@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Comment Utiliser la Roue de Décision', level: 2 },
     { type: 'paragraph', html: 'Choisissez un modèle prédéfini ou créez vos propres options avec des poids personnalisés pour ajuster les probabilités de chaque secteur.' },
+    { type: 'title', text: "Autres scénarios de décision", level: 3 },
+    { type: 'paragraph', html: "Utilisez la roue pour les votes, les rencontres aléatoires et les actions de partie." },
+    { type: 'title', text: "Modèles pour les jeux de plateau", level: 3 },
+    { type: 'paragraph', html: "Les modèles chargent rapidement les décisions courantes des jeux de plateau." },
+    { type: 'title', text: "Régler les pondérations", level: 3 },
+    { type: 'paragraph', html: "Les pondérations rendent certains résultats plus ou moins fréquents." },
+    { type: 'title', text: "Consulter l'historique", level: 3 },
+    { type: 'paragraph', html: "L'historique conserve les derniers tours pour le groupe." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Peut-on modifier les couleurs et les étiquettes?',
       answer: 'Oui, vous pouvez éditer librement le nom, la couleur et le poids de chaque option présente sur la roue.',
+    },
+    {
+      question: "Puis-je modifier les probabilités ?",
+      answer: "Oui, modifiez le poids d'un segment.",
+    },
+    {
+      question: "Combien de segments sont possibles ?",
+      answer: "La roue accepte jusqu'à 16 segments et en nécessite au moins deux.",
+    },
+    {
+      question: "Quels modèles sont disponibles ?",
+      answer: "Oui ou Non, Nombres, Actions, options personnelles, D20, Alignement et Butin.",
+    },
+    {
+      question: "Les tours précédents restent-ils visibles ?",
+      answer: "Oui, le navigateur affiche les dix derniers résultats.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Lancer le Tour',
       text: 'Cliquez sur le bouton de rotation pour lancer la roue animée avec ralentissement réaliste.',
+    },
+    {
+      name: "Vérifier le résultat",
+      text: "À l'arrêt, vérifiez le segment gagnant puis l'historique des tours.",
     },
   ],
   schemas: [

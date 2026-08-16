@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Como Usar a Roleta de Decisões', level: 2 },
     { type: 'paragraph', html: 'Selecione uma configuração padrão ou crie fatias com pesos diferentes para alterar as chances de vitória.' },
+    { type: 'title', text: "Mais cenários de decisão", level: 3 },
+    { type: 'paragraph', html: "Use a roda para votações, encontros aleatórios e ações durante a partida." },
+    { type: 'title', text: "Predefinições para jogos de mesa", level: 3 },
+    { type: 'paragraph', html: "As predefinições carregam rapidamente escolhas comuns dos jogos de mesa." },
+    { type: 'title', text: "Ajustar os pesos", level: 3 },
+    { type: 'paragraph', html: "Os pesos tornam certos resultados mais ou menos frequentes." },
+    { type: 'title', text: "Consultar o histórico", level: 3 },
+    { type: 'paragraph', html: "O histórico guarda os giros recentes para o grupo." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Posso personalizar cores e nomes?',
       answer: 'Sim, você pode adicionar fatias, mudar os nomes de exibição, escolher cores e definir pesos de 1 a 5.',
+    },
+    {
+      question: "Posso alterar as probabilidades?",
+      answer: "Sim, altere o peso de um segmento.",
+    },
+    {
+      question: "Quantos segmentos são possíveis?",
+      answer: "Até 16; são necessárias pelo menos duas opções.",
+    },
+    {
+      question: "Que predefinições existem?",
+      answer: "Sim ou Não, Números, Ações, opções próprias, D20, Alinhamento e Saque.",
+    },
+    {
+      question: "Os giros anteriores ficam visíveis?",
+      answer: "Sim, o navegador mostra os dez resultados mais recentes.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Girar a Roleta',
       text: 'Clique para acionar a rotação e aguarde a roleta parar por completo com física realista.',
+    },
+    {
+      name: "Verificar o resultado",
+      text: "Depois de parar, verifique o segmento vencedor e o histórico dos giros recentes.",
     },
   ],
   schemas: [

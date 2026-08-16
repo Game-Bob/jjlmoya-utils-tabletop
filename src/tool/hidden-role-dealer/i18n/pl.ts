@@ -127,6 +127,9 @@ const faq = [
     question: 'Jak działa Rozdający Ukryte Role?',
     answer: 'Narzędzie pozwala rozdać tajne role w grach dedukcyjnych lokalnie na jednym urządzeniu. Wpisujesz nazwy graczy, wybierasz szablon lub własną pulę ról i przekazujesz telefon kolejnym osobom. Każdy gracz trzyma przycisk ujawniania, by zobaczyć swoją rolę.',
   },
+  { question: 'Jak zachować równowagę drużyn?', answer: 'Wybierz zestaw ról odpowiedni dla liczby graczy i sprawdź proporcje przed rozdaniem.' },
+  { question: 'Czy mogę tworzyć własne role?', answer: 'Tak, konfiguracja niestandardowa pozwala określić nazwy, drużyny i opisy.' },
+  { question: 'Czy role trafiają na serwer?', answer: 'Nie, rozdawanie i wyświetlanie ról odbywa się lokalnie na urządzeniu.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Balansowanie Drużyn w Grach Towarzyskich', level: 2 },
     { type: 'paragraph', html: 'Prawidłowe zbalansowanie proporcji między graczami dobra i zła jest kluczem do udanej rozgrywki.' },
+    { type: 'table', headers: ['Równoważenie drużyn', 'Konfiguracja Spyfall i Impostora bez prowadzącego', 'Bezpieczne przekazywanie urządzenia'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Równoważenie drużyn', level: 2 },
+    { type: 'paragraph', html: 'Dobra proporcja ról dobrych i złych utrzymuje napięcie w grach dedukcji społecznej.' },
+    { type: 'title', text: 'Konfiguracja Spyfall i Impostora bez prowadzącego', level: 2 },
+    { type: 'paragraph', html: 'Jeden ekran może rozdawać słowa i lokacje, a każdy nadal pozostaje graczem.' },
+    { type: 'comparative', items: [{ title: 'Równoważenie drużyn', description: 'Dobra proporcja ról dobrych i złych utrzymuje napięcie w grach dedukcji społecznej.', icon: 'mdi:account-group', highlight: true, points: ['Podawaj urządzenie w jednym kierunku i zasłoń ekran przed spojrzeniami innych osób.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Wskazówka prywatności', definition: 'Podawaj urządzenie w jednym kierunku i zasłoń ekran przed spojrzeniami innych osób.' }] },
   ],
   faq,
   bibliography,

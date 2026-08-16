@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Cómo Usar la Ruleta de Decisiones', level: 2 },
     { type: 'paragraph', html: 'La ruleta facilita elegir al azar entre un conjunto de opciones. Elige un preajuste o crea tus propias secciones con diferentes pesos para ajustar las probabilidades.' },
+    { type: 'title', text: "Más escenarios de decisión", level: 3 },
+    { type: 'paragraph', html: "Usa la ruleta para votaciones, encuentros aleatorios y acciones de la partida." },
+    { type: 'title', text: "Plantillas para juegos de mesa", level: 3 },
+    { type: 'paragraph', html: "Las plantillas cargan rápidamente decisiones habituales de juegos de mesa." },
+    { type: 'title', text: "Ajustar pesos de resultado", level: 3 },
+    { type: 'paragraph', html: "Los pesos hacen que determinados resultados aparezcan más o menos veces." },
+    { type: 'title', text: "Revisar el historial", level: 3 },
+    { type: 'paragraph', html: "El historial conserva los últimos giros para que el grupo los revise." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: '¿Puedo personalizar los colores y nombres?',
       answer: 'Sí, puedes añadir secciones, cambiar las etiquetas de texto, asignar colores personalizados y ajustar su peso del 1 al 5.',
+    },
+    {
+      question: "¿Puedo cambiar las probabilidades?",
+      answer: "Sí, modifica el peso de un segmento.",
+    },
+    {
+      question: "¿Cuántos segmentos admite?",
+      answer: "Admite hasta 16 segmentos y necesita al menos dos.",
+    },
+    {
+      question: "¿Qué plantillas hay disponibles?",
+      answer: "Sí o No, Números, Acciones, opciones propias, D20, Alineamiento y Botín.",
+    },
+    {
+      question: "¿Se conservan los giros anteriores?",
+      answer: "Sí, el navegador muestra los diez últimos resultados.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Girar la Ruleta',
       text: 'Haz clic en el botón de girar y observa la animación con físicas de deceleración realista.',
+    },
+    {
+      name: "Comprueba el resultado",
+      text: "Cuando se detenga, revisa el segmento ganador y el historial de giros.",
     },
   ],
   schemas: [

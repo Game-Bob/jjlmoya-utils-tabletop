@@ -60,6 +60,8 @@ const faq = [
     question: 'Hur visas spridningsavståndet visuellt?',
     answer: 'Avståndet i tum visas som en flytande etikett vid nedslagspunkten, placerad längs avvikelseriktningen. Den röda kompasspilen låses också till den slutliga vinkeln för snabb mallutriktning.',
   },
+  { question: 'Hur bestäms spridningsriktningen?', answer: 'Verktyget kombinerar det valda sektorsystemet med tärningskastet och den inställda avvikelsen.' },
+  { question: 'Kan jag använda vindläget?', answer: 'Ja, vindläget följer kompassens vinkel medan avståndet förblir slumpmässigt.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Direktträff', html: 'När kastet slår träffsannolikheten, briserar kompassens mitt med pulserande gröna ringar och en "DIRECT HIT" textanimation. Projektilet återvänder till mitten och bekräftar en perfekt träff utan avvikelse.' },
     { type: 'diagnostic', variant: 'error', title: 'Spridning', html: 'Vid ett spridningsresultat följer projektilen en streckad bana till sin landningsplats. En partikelexplosion, en lysande markör och avståndet i tum (t.ex. <strong>5"</strong>) visas på landningsplatsen.' },
     { type: 'tip', title: 'Proffstips: Använd Vinddrift Läge', html: 'Aktivera Vinddrift för att låsa spridningsriktningen till din manuellt roterade kompassvinkel. Simulerar en rådande vind eller en fast förskjutningsvektor  -  idealisk för ostyrda raketer, gasmoln eller misslyckade teleporteringar.' },
+    { type: 'title', text: 'Hantera spridning i figurspel', level: 2 },
+    { type: 'paragraph', html: 'Många krigsspel använder avvikelser för att simulera artilleri, vind eller misslyckad teleportering.' },
+    { type: 'table', headers: ['Hantera spridning i figurspel', 'Styra vind och avvikelse', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Styra vind och avvikelse', level: 2 },
+    { type: 'paragraph', html: 'Träffsannolikheten visar hur pålitlig en enhet är och gör mätningarna snabbare under spelet.' },
+    { type: 'comparative', items: [{ title: 'Hantera spridning i figurspel', description: 'Många krigsspel använder avvikelser för att simulera artilleri, vind eller misslyckad teleportering.', icon: 'mdi:compass-outline', highlight: true, points: ['Styra vind och avvikelse'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Styra vind och avvikelse', definition: 'Träffsannolikheten visar hur pålitlig en enhet är och gör mätningarna snabbare under spelet.' }] },
   ],
   faq,
   bibliography,

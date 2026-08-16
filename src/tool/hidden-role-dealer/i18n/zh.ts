@@ -127,6 +127,9 @@ const faq = [
     question: '秘密身份分发器是如何工作的？',
     answer: '秘密身份分发器允许您在一台设备上本地为社交推理解密游戏分配身份。输入玩家名字，选择模板或自定义身份，然后依次传递设备。玩家需要按住确认按钮来查看自己的身份。',
   },
+  { question: '如何保持队伍平衡？', answer: '根据玩家人数选择合适的角色池，并在发牌前检查双方队伍比例。' },
+  { question: '可以创建自定义角色吗？', answer: '可以，自定义设置支持填写角色名称、队伍和说明。' },
+  { question: '角色会上传到服务器吗？', answer: '不会，角色分配和显示都在设备本地完成。' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: '桌游身份分发中的阵营平衡策略', level: 2 },
     { type: 'paragraph', html: '在狼人杀或阿瓦隆中，根据玩家人数合理配置好人与坏人的比例非常关键。本工具提供标准的配比参考以确保游戏平衡。' },
+    { type: 'table', headers: ['平衡队伍配置', '无主持人设置 Spyfall 和 Impostor', '安全传递设备'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: '平衡队伍配置', level: 2 },
+    { type: 'paragraph', html: '合理分配好人和坏人角色，能让社交推理游戏保持紧张感。' },
+    { type: 'title', text: '无主持人设置 Spyfall 和 Impostor', level: 2 },
+    { type: 'paragraph', html: '使用同一块屏幕即可分配词语和地点，让所有人都能参与游戏。' },
+    { type: 'comparative', items: [{ title: '平衡队伍配置', description: '合理分配好人和坏人角色，能让社交推理游戏保持紧张感。', icon: 'mdi:account-group', highlight: true, points: ['沿固定方向传递设备，并调整屏幕角度，避免其他玩家看到角色。'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: '隐私提示', definition: '沿固定方向传递设备，并调整屏幕角度，避免其他玩家看到角色。' }] },
   ],
   faq,
   bibliography,

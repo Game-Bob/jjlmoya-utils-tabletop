@@ -127,6 +127,9 @@ const faq = [
     question: 'Bagaimana cara kerja Pembagi Peran Tersembunyi?',
     answer: 'Alat ini memungkinkan Anda membagikan peran rahasia untuk game deduksi sosial secara lokal di satu perangkat. Anda memasukkan nama, memilih preset, lalu mengoper perangkat dari pemain ke pemain. Setiap pemain menahan tombol untuk melihat peran mereka.',
   },
+  { question: 'Bagaimana membagi peran secara adil?', answer: 'Pilih kumpulan peran sesuai jumlah pemain dan periksa perbandingan tim sebelum membagikannya.' },
+  { question: 'Bisakah saya membuat peran sendiri?', answer: 'Ya, mode khusus memungkinkan Anda menentukan nama, tim, dan deskripsi setiap peran.' },
+  { question: 'Apakah peran disimpan di server?', answer: 'Tidak. Peran dibuat dan ditampilkan secara lokal di perangkat.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Keseimbangan Tim dalam Game Deduksi Sosial', level: 2 },
     { type: 'paragraph', html: 'Menyeimbangkan rasio peran baik dan jahat sangat penting untuk memastikan permainan berjalan adil dan seru.' },
+    { type: 'table', headers: ['Menyeimbangkan tim', 'Menyiapkan Spyfall dan Impostor tanpa host', 'Membagikan perangkat dengan aman'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Menyeimbangkan tim', level: 2 },
+    { type: 'paragraph', html: 'Perbandingan peran baik dan jahat yang seimbang membuat permainan deduksi sosial tetap menegangkan.' },
+    { type: 'title', text: 'Menyiapkan Spyfall dan Impostor tanpa host', level: 2 },
+    { type: 'paragraph', html: 'Satu layar dapat membagikan kata dan lokasi tanpa mengharuskan seorang pemain menjadi moderator.' },
+    { type: 'comparative', items: [{ title: 'Menyeimbangkan tim', description: 'Perbandingan peran baik dan jahat yang seimbang membuat permainan deduksi sosial tetap menegangkan.', icon: 'mdi:account-group', highlight: true, points: ['Edarkan perangkat ke arah yang sama dan miringkan layar agar peran tidak terlihat pemain lain.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Tips privasi', definition: 'Edarkan perangkat ke arah yang sama dan miringkan layar agar peran tidak terlihat pemain lain.' }] },
   ],
   faq,
   bibliography,

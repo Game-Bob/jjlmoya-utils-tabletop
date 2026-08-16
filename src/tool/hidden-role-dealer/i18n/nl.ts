@@ -127,6 +127,9 @@ const faq = [
     question: 'Hoe werkt de Geheime Rollenverdeler?',
     answer: 'Het tool maakt het mogelijk om geheime rollen voor social deduction spellen lokaal op één apparaat te verdelen. U voert de spelersnamen in, kiest een preset of past de rollen aan, en geeft het apparaat vervolgens door. Elke speler houdt de reveal-knop ingedrukt om zijn rol privé te bekijken.',
   },
+  { question: 'Hoe houd ik de teams in balans?', answer: 'Kies een rollenpakket dat bij het aantal spelers past en controleer de verhouding voordat je deelt.' },
+  { question: 'Kan ik eigen rollen maken?', answer: 'Ja, met de aangepaste configuratie bepaal je zelf namen, teams en beschrijvingen.' },
+  { question: 'Worden rollen naar een server gestuurd?', answer: 'Nee, de verdeling en weergave gebeuren lokaal op het apparaat.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Teambalance in Social Deduction Spellen', level: 2 },
     { type: 'paragraph', html: 'Het correct uitbalanceren van de verhouding tussen goede en slechte rollen is essentieel voor een eerlijke en spannende spelervaring.' },
+    { type: 'table', headers: ['Teams eerlijk verdelen', 'Spyfall en Impostor zonder spelleider instellen', 'Het apparaat discreet doorgeven'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Teams eerlijk verdelen', level: 2 },
+    { type: 'paragraph', html: 'Een goede verhouding tussen goede en slechte rollen houdt sociale deductiespellen spannend.' },
+    { type: 'title', text: 'Spyfall en Impostor zonder spelleider instellen', level: 2 },
+    { type: 'paragraph', html: 'Met één scherm kun je woorden en locaties verdelen zonder dat iemand de ronde hoeft te leiden.' },
+    { type: 'comparative', items: [{ title: 'Teams eerlijk verdelen', description: 'Een goede verhouding tussen goede en slechte rollen houdt sociale deductiespellen spannend.', icon: 'mdi:account-group', highlight: true, points: ['Geef het apparaat steeds dezelfde kant op en scherm het tegen nieuwsgierige blikken af.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Privacytip', definition: 'Geef het apparaat steeds dezelfde kant op en scherm het tegen nieuwsgierige blikken af.' }] },
   ],
   faq,
   bibliography,

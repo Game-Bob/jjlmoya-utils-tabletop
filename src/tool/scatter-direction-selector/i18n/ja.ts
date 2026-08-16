@@ -60,6 +60,8 @@ const faq = [
     question: '結果を早く得るためにアニメーションを無効にできますか？',
     answer: 'アニメーションは約2秒間続き、その後最終結果が中央に表示され、コンパス矢印がロックされます。現在スキップオプションはありませんが、この遅延は物理的なダイスを振るペースに合わせて設計されています。',
   },
+  { question: '散布方向はどのように決まりますか？', answer: '選択したセクター方式とダイス結果、設定した偏差距離を組み合わせて計算します。' },
+  { question: '風モードは使えますか？', answer: 'はい。風モードではコンパスの角度に沿って方向を固定し、距離だけをランダムにします。' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: '直撃', html: 'ロールが直撃確率を超えると、コンパス中央が脈動する緑のリングと「DIRECT HIT」テキストアニメーションで噴出します。発射物は中央に戻り、偏差ゼロの完全な衝撃を確認します。' },
     { type: 'diagnostic', variant: 'error', title: '散乱', html: '散乱結果の場合、発射物は破線の軌道に沿って着弾点に移動します。粒子の爆発、発光マーカー、距離（例: <strong>5"</strong>）が着弾位置に表示されます。' },
     { type: 'tip', title: 'プロのコツ: 風ドリフトモードの使用', html: '風ドリフトを有効にすると、散乱方向が手動で回転させたコンパス角度に固定されます。これは卓越風や固定変位ベクトルをシミュレートします - 無誘導ロケット、ガス雲、テレポーテーション事故などに最適です。' },
+    { type: 'title', text: 'ウォーゲームの散布を解決する', level: 2 },
+    { type: 'paragraph', html: '多くのウォーゲームでは、砲撃や風、失敗したテレポートを偏差で表現します。' },
+    { type: 'table', headers: ['ウォーゲームの散布を解決する', '風と偏差を管理する', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: '風と偏差を管理する', level: 2 },
+    { type: 'paragraph', html: '命中確率を設定すると部隊の信頼性を判断でき、ゲーム中の測定も速くなります。' },
+    { type: 'comparative', items: [{ title: 'ウォーゲームの散布を解決する', description: '多くのウォーゲームでは、砲撃や風、失敗したテレポートを偏差で表現します。', icon: 'mdi:compass-outline', highlight: true, points: ['風と偏差を管理する'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: '風と偏差を管理する', definition: '命中確率を設定すると部隊の信頼性を判断でき、ゲーム中の測定も速くなります。' }] },
   ],
   faq,
   bibliography,

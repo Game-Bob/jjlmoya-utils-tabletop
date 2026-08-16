@@ -60,6 +60,8 @@ const faq = [
     question: 'Posso disattivare l\u2019animazione per ottenere risultati più veloci?',
     answer: 'L\u2019animazione dura circa due secondi, dopo i quali il risultato finale viene mostrato al centro e la freccia della bussola si blocca. Al momento non c\u2019è un\u2019opzione per saltarla, ma il ritardo è studiato per riprodurre il ritmo del lancio fisico dei dadi.',
   },
+  { question: 'Come viene determinata la direzione della dispersione?', answer: 'Lo strumento combina il sistema di settori scelto con il tiro e la distanza di deviazione impostata.' },
+  { question: 'Posso usare la modalità vento?', answer: 'Sì, la modalità vento segue l\'angolo della bussola lasciando casuale la distanza.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Impatto Diretto', html: 'Quando il tiro supera la probabilità d\u2019impatto, il centro della bussola si illumina con anelli verdi pulsanti e un\u2019animazione "DIRECT HIT". Il proiettile torna al centro, confermando un impatto perfetto senza deviazione.' },
     { type: 'diagnostic', variant: 'error', title: 'Deviazione', html: 'Su un risultato di deviazione, il proiettile segue una traiettoria tratteggiata fino al punto d\u2019atterraggio. Un\u2019esplosione di particelle, un indicatore luminoso e la distanza in pollici (es. <strong>5"</strong>) appaiono nel punto d\u2019impatto.' },
     { type: 'tip', title: 'Consiglio: Usare la Modalità Deriva del Vento', html: 'Attiva la Deriva del Vento per bloccare la direzione di deviazione sull\u2019angolo della bussola impostato manualmente. Simula un vento prevalente o un vettore di spostamento fisso  -  ideale per razzi non guidati, nubi di gas o incidenti di teletrasporto.' },
+    { type: 'title', text: 'Gestire la dispersione nei wargame', level: 2 },
+    { type: 'paragraph', html: 'Molti wargame usano la deviazione per simulare artiglieria, vento o teletrasporti falliti.' },
+    { type: 'table', headers: ['Gestire la dispersione nei wargame', 'Controllare vento e deviazione', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Controllare vento e deviazione', level: 2 },
+    { type: 'paragraph', html: 'La probabilità di colpire aiuta a valutare l\'affidabilità di un\'unità e velocizza le misurazioni in partita.' },
+    { type: 'comparative', items: [{ title: 'Gestire la dispersione nei wargame', description: 'Molti wargame usano la deviazione per simulare artiglieria, vento o teletrasporti falliti.', icon: 'mdi:compass-outline', highlight: true, points: ['Controllare vento e deviazione'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Controllare vento e deviazione', definition: 'La probabilità di colpire aiuta a valutare l\'affidabilità di un\'unità e velocizza le misurazioni in partita.' }] },
   ],
   faq,
   bibliography,

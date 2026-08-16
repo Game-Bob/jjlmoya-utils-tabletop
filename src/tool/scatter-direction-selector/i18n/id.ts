@@ -60,6 +60,8 @@ const faq = [
     question: 'Bisakah saya menonaktifkan animasi untuk mendapatkan hasil lebih cepat?',
     answer: 'Animasi berlangsung sekitar dua detik, setelah itu hasil akhir ditampilkan di tengah dan panah kompas terkunci. Saat ini tidak ada opsi lewati, tetapi penundaan ini dirancang agar sesuai dengan kecepatan melempar dadu fisik.',
   },
+  { question: 'Bagaimana arah sebaran ditentukan?', answer: 'Alat ini menggabungkan sistem sektor yang dipilih dengan lemparan dadu dan jarak deviasi.' },
+  { question: 'Bisakah saya memakai mode angin?', answer: 'Ya, mode angin mengikuti sudut kompas dan membuat jaraknya tetap acak.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Pukulan Langsung', html: 'Saat lemparan melebihi probabilitas pukulan, pusat kompas meletup dengan cincin hijau berdenyut dan animasi teks "DIRECT HIT". Proyektil kembali ke pusat, mengonfirmasi tumbukan sempurna tanpa deviasi.' },
     { type: 'diagnostic', variant: 'error', title: 'Hamburan', html: 'Pada hasil hamburan, proyektil mengikuti lintasan putus-putus ke titik pendaratannya. Ledakan partikel, penanda bercahaya, dan jarak dalam inci (mis. <strong>5"</strong>) muncul di lokasi tumbukan.' },
     { type: 'tip', title: 'Tips: Menggunakan Mode Hanyutan Angin', html: 'Aktifkan Hanyutan Angin untuk mengunci arah hamburan ke sudut kompas yang Anda atur secara manual. Ini mensimulasikan angin kencang atau vektor perpindahan tetap - ideal untuk roket tanpa kendali, awan gas, atau kecelakaan teleportasi.' },
+    { type: 'title', text: 'Menyelesaikan deviasi dalam wargame', level: 2 },
+    { type: 'paragraph', html: 'Banyak wargame memakai deviasi untuk mensimulasikan artileri, angin, atau teleportasi yang gagal.' },
+    { type: 'table', headers: ['Menyelesaikan deviasi dalam wargame', 'Mengelola angin dan deviasi', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Mengelola angin dan deviasi', level: 2 },
+    { type: 'paragraph', html: 'Peluang mengenai sasaran membantu menilai keandalan unit dan mempercepat pengukuran selama permainan.' },
+    { type: 'comparative', items: [{ title: 'Menyelesaikan deviasi dalam wargame', description: 'Banyak wargame memakai deviasi untuk mensimulasikan artileri, angin, atau teleportasi yang gagal.', icon: 'mdi:compass-outline', highlight: true, points: ['Mengelola angin dan deviasi'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Mengelola angin dan deviasi', definition: 'Peluang mengenai sasaran membantu menilai keandalan unit dan mempercepat pengukuran selama permainan.' }] },
   ],
   faq,
   bibliography,

@@ -60,6 +60,8 @@ const faq = [
     question: 'Posso desativar a animaç\u00e3o para obter resultados mais rápidos?',
     answer: 'A animaç\u00e3o dura aproximadamente dois segundos, após os quais o resultado final é exibido no centro e a seta da bússola trava. Atualmente n\u00e3o há opç\u00e3o de pular, mas o atraso foi projetado para acompanhar o ritmo de rolar dados físicos.',
   },
+  { question: 'Como a direção da dispersão é determinada?', answer: 'A ferramenta combina o sistema de setores escolhido com a rolagem e a distância de desvio configurada.' },
+  { question: 'Posso usar o modo de vento?', answer: 'Sim, esse modo segue o ângulo da bússola e mantém a distância aleatória.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Acerto Direto', html: 'Quando a rolagem supera a probabilidade de acerto, o centro da bússola explode com anéis verdes pulsantes e uma animaç\u00e3o de texto "DIRECT HIT". O projétil retorna ao centro, confirmando um impacto perfeito sem desvio.' },
     { type: 'diagnostic', variant: 'error', title: 'Desvio', html: 'Em um resultado de desvio, o projétil segue uma trajetória tracejada até seu ponto de aterrissagem. Uma explos\u00e3o de partículas, um marcador brilhante e a dist\u00e2ncia em polegadas (ex. <strong>5"</strong>) aparecem no local do impacto.' },
     { type: 'tip', title: 'Dica: Usar o Modo Deriva do Vento', html: 'Ative a Deriva do Vento para travar a direç\u00e3o de desvio no \u00e2ngulo da bússola ajustado manualmente. Isso simula um vento predominante ou um vetor de deslocamento fixo  -  ideal para foguetes n\u00e3o guiados, nuvens de gás ou acidentes de teletransporte.' },
+    { type: 'title', text: 'Resolver a dispersão em wargames', level: 2 },
+    { type: 'paragraph', html: 'Muitos wargames usam desvios para simular artilharia, vento ou teletransportes malsucedidos.' },
+    { type: 'table', headers: ['Resolver a dispersão em wargames', 'Gerenciar vento e desvio', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Gerenciar vento e desvio', level: 2 },
+    { type: 'paragraph', html: 'A probabilidade de acerto ajuda a avaliar a confiabilidade da unidade e agiliza as medições durante a partida.' },
+    { type: 'comparative', items: [{ title: 'Resolver a dispersão em wargames', description: 'Muitos wargames usam desvios para simular artilharia, vento ou teletransportes malsucedidos.', icon: 'mdi:compass-outline', highlight: true, points: ['Gerenciar vento e desvio'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Gerenciar vento e desvio', definition: 'A probabilidade de acerto ajuda a avaliar a confiabilidade da unidade e agiliza as medições durante a partida.' }] },
   ],
   faq,
   bibliography,

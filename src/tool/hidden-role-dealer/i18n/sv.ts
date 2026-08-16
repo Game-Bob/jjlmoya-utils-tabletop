@@ -127,6 +127,9 @@ const faq = [
     question: 'Hur fungerar den Hemliga Rollfördelaren?',
     answer: 'Verktyget gör det möjligt att fördela hemliga roller för social deduction-spel lokalt på en enhet. Du skriver in spelarnas namn, väljer en mall eller anpassar rollerna, och skickar sedan enheten vidare. Varje spelare håller in visningsknappen för att se sin roll privat.',
   },
+  { question: 'Hur håller jag lagen balanserade?', answer: 'Välj en rolluppsättning som passar antalet spelare och kontrollera fördelningen före utdelningen.' },
+  { question: 'Kan jag skapa egna roller?', answer: 'Ja, med den anpassade konfigurationen bestämmer du namn, lag och beskrivningar.' },
+  { question: 'Skickas rollerna till en server?', answer: 'Nej, utdelningen och visningen sker lokalt på enheten.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Teambalans i Social Deduction-spel', level: 2 },
     { type: 'paragraph', html: 'Att justera förhållandet mellan goda och onda roller är grundläggande för en rättvis och spännande spelupplevelse.' },
+    { type: 'table', headers: ['Balansera lagen', 'Ställ in Spyfall och Impostor utan spelledare', 'Skicka enheten diskret'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Balansera lagen', level: 2 },
+    { type: 'paragraph', html: 'En jämn fördelning mellan goda och onda roller håller sociala deduktionsspel spännande.' },
+    { type: 'title', text: 'Ställ in Spyfall och Impostor utan spelledare', level: 2 },
+    { type: 'paragraph', html: 'En gemensam skärm kan dela ut ord och platser utan att någon behöver stå utanför spelet.' },
+    { type: 'comparative', items: [{ title: 'Balansera lagen', description: 'En jämn fördelning mellan goda och onda roller håller sociala deduktionsspel spännande.', icon: 'mdi:account-group', highlight: true, points: ['Skicka enheten åt samma håll och vinkla skärmen så att andra inte kan tjuvkika.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Sekretessråd', definition: 'Skicka enheten åt samma håll och vinkla skärmen så att andra inte kan tjuvkika.' }] },
   ],
   faq,
   bibliography,

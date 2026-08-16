@@ -60,6 +60,8 @@ const faq = [
     question: 'Daha hızlı sonuç almak için animasyonu devre dışı bırakabilir miyim?',
     answer: 'Animasyon yaklaşık iki saniye sürer, ardından nihai sonuç merkezde görüntülenir ve pusula oku kilitlenir. Şu anda atlama seçeneği yoktur, ancak gecikme fiziksel zar atma temposuna uyacak şekilde tasarlanmıştır.',
   },
+  { question: 'Saçılma yönü nasıl belirlenir?', answer: 'Araç, seçilen sektör sistemini zar atışı ve ayarlanan sapma mesafesiyle birleştirir.' },
+  { question: 'Rüzgâr modunu kullanabilir miyim?', answer: 'Evet, rüzgâr modu pusulanın açısını izler ve mesafeyi rastgele bırakır.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Doğrudan İsabet', html: 'Atış isabet olasılığını geçtiğinde, pusula merkezi titreşen yeşil halkalar ve "DIRECT HIT" metin animasyonu ile aydınlanır. Mermi merkeze dönerek sıfır sapma ile mükemmel isabeti onaylar.' },
     { type: 'diagnostic', variant: 'error', title: 'Sapma', html: 'Sapma sonucunda mermi, iniş noktasına kadar kesik bir yörünge izler. Bir parçacık patlaması, parlayan bir işaret ve inç cinsinden mesafe (örn. <strong>5"</strong>) çarpma noktasında belirir.' },
     { type: 'tip', title: 'İpucu: Rüzgar Sürüklenmesi Modunu Kullanma', html: 'Sapma yönünü elle döndürdüğünüz pusula açısına kilitlemek için Rüzgar Sürüklenmesini açın. Bu, baskın bir rüzgarı veya sabit bir yer değiştirme vektörünü simüle eder - güdümsüz roketler, gaz bulutları veya başarısız teleportasyonlar için idealdir.' },
+    { type: 'title', text: 'Masaüstü savaş oyunlarında saçılmayı çözmek', level: 2 },
+    { type: 'paragraph', html: 'Birçok savaş oyunu topçu ateşini, rüzgârı ve başarısız ışınlanmayı sapma ile simüle eder.' },
+    { type: 'table', headers: ['Masaüstü savaş oyunlarında saçılmayı çözmek', 'Rüzgâr ve sapmayı yönetmek', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Rüzgâr ve sapmayı yönetmek', level: 2 },
+    { type: 'paragraph', html: 'İsabet olasılığı birimin güvenilirliğini değerlendirmeye ve oyun sırasında ölçümleri hızlandırmaya yardımcı olur.' },
+    { type: 'comparative', items: [{ title: 'Masaüstü savaş oyunlarında saçılmayı çözmek', description: 'Birçok savaş oyunu topçu ateşini, rüzgârı ve başarısız ışınlanmayı sapma ile simüle eder.', icon: 'mdi:compass-outline', highlight: true, points: ['Rüzgâr ve sapmayı yönetmek'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Rüzgâr ve sapmayı yönetmek', definition: 'İsabet olasılığı birimin güvenilirliğini değerlendirmeye ve oyun sırasında ölçümleri hızlandırmaya yardımcı olur.' }] },
   ],
   faq,
   bibliography,

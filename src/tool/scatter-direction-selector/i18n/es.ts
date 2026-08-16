@@ -60,6 +60,8 @@ const faq = [
     question: '¿Puedo desactivar la animación para obtener resultados más rápidos?',
     answer: 'La animación dura aproximadamente dos segundos, tras los cuales el resultado final se muestra en el centro y la flecha de la brújula se bloquea. Actualmente no hay opción de salto, pero la demora está diseñada para igualar el ritmo de tirar dados físicos.',
   },
+  { question: '¿Cómo se determina la dirección de dispersión?', answer: 'La herramienta combina el sistema de sectores elegido con la tirada y la distancia de desviación configurada.' },
+  { question: '¿Puedo usar el modo de viento?', answer: 'Sí, el modo de viento fija la dirección al compás girado y mantiene aleatoria la distancia.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Impacto Directo', html: 'Cuando la tirada supera la probabilidad de impacto, el centro de la brújula estalla con anillos verdes pulsantes y una animación de texto "DIRECT HIT". El proyectil regresa al centro, confirmando un impacto perfecto sin desviación.' },
     { type: 'diagnostic', variant: 'error', title: 'Desviación', html: 'En un resultado de desviación, el proyectil sigue una trayectoria discontinua hasta su punto de aterrizaje. Una explosión de partículas, un marcador brillante y la distancia en pulgadas (ej. <strong>5"</strong>) aparecen en el lugar del impacto.' },
     { type: 'tip', title: 'Consejo: Usar el Modo de Deriva del Viento', html: 'Activa la Deriva del Viento para bloquear la dirección de desviación al ángulo de la brújula que ajustes manualmente. Simula viento predominante o un vector de desplazamiento fijo  -  ideal para cohetes no guiados, nubes de gas o teletransportaciones fallidas.' },
+    { type: 'title', text: 'Resolver la dispersión en wargames', level: 2 },
+    { type: 'paragraph', html: 'Muchos wargames usan desviaciones para representar artillería, viento o teletransportes fallidos de forma imprevisible.' },
+    { type: 'table', headers: ['Resolver la dispersión en wargames', 'Gestionar el viento y la desviación', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Gestionar el viento y la desviación', level: 2 },
+    { type: 'paragraph', html: 'La probabilidad de impacto ayuda a valorar la fiabilidad de una unidad y agiliza las mediciones durante la partida.' },
+    { type: 'comparative', items: [{ title: 'Resolver la dispersión en wargames', description: 'Muchos wargames usan desviaciones para representar artillería, viento o teletransportes fallidos de forma imprevisible.', icon: 'mdi:compass-outline', highlight: true, points: ['Gestionar el viento y la desviación'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Gestionar el viento y la desviación', definition: 'La probabilidad de impacto ayuda a valorar la fiabilidad de una unidad y agiliza las mediciones durante la partida.' }] },
   ],
   faq,
   bibliography,

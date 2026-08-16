@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Come Usare la Ruota delle Decisioni', level: 2 },
     { type: 'paragraph', html: 'Scegli un set preimpostato o crea i tuoi spicchi personali impostando pesi diversi per calibrare le probabilità.' },
+    { type: 'title', text: "Altri scenari decisionali", level: 3 },
+    { type: 'paragraph', html: "Usa la ruota per votazioni, incontri casuali e azioni durante la partita." },
+    { type: 'title', text: "Preset per giochi da tavolo", level: 3 },
+    { type: 'paragraph', html: "I preset caricano rapidamente le decisioni comuni dei giochi da tavolo." },
+    { type: 'title', text: "Regolare i pesi", level: 3 },
+    { type: 'paragraph', html: "I pesi rendono alcuni risultati più o meno frequenti." },
+    { type: 'title', text: "Consultare la cronologia", level: 3 },
+    { type: 'paragraph', html: "La cronologia conserva gli ultimi giri per il gruppo." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Posso personalizzare colori e testi?',
       answer: 'Sì, puoi aggiungere nuovi spicchi, rinominarli, scegliere un colore e impostare un peso tra 1 e 5.',
+    },
+    {
+      question: "Posso cambiare le probabilità?",
+      answer: "Sì, modifica il peso di un segmento.",
+    },
+    {
+      question: "Quanti segmenti sono possibili?",
+      answer: "Sono supportati fino a 16 segmenti e ne servono almeno due.",
+    },
+    {
+      question: "Quali preset sono disponibili?",
+      answer: "Sì o No, Numeri, Azioni, opzioni proprie, D20, Allineamento e Bottino.",
+    },
+    {
+      question: "I giri precedenti restano visibili?",
+      answer: "Sì, il browser mostra gli ultimi dieci risultati.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Girare la Ruota',
       text: 'Fai clic sul pulsante di avvio e guarda la ruota rallentare con fisica realistica fino a fermarsi.',
+    },
+    {
+      name: "Controllare il risultato",
+      text: "Dopo l'arresto, controlla il segmento vincente e la cronologia dei giri.",
     },
   ],
   schemas: [

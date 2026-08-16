@@ -60,6 +60,8 @@ const faq = [
     question: 'Czy mogę wyłączyć animację, aby uzyskać szybsze wyniki?',
     answer: 'Animacja trwa około dwóch sekund, po czym wynik końcowy wyświetla się na środku, a strzałka kompasu się blokuje. Obecnie nie ma opcji pominięcia, ale opóźnienie ma odpowiadać tempu rzucania fizycznymi kośćmi.',
   },
+  { question: 'Jak wyznaczany jest kierunek rozrzutu?', answer: 'Narzędzie łączy wybrany system sektorów z rzutem i ustawioną odległością odchylenia.' },
+  { question: 'Czy mogę używać trybu wiatru?', answer: 'Tak, tryb wiatru podąża za kątem kompasu, a odległość pozostaje losowa.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Trafienie Bezpośrednie', html: 'Gdy rzut przekroczy szansę trafienia, środek kompasu rozbłyska pulsującymi zielonymi pierścieniami i animacją tekstu "DIRECT HIT". Pocisk wraca do środka, potwierdzając idealne trafienie bez odchylenia.' },
     { type: 'diagnostic', variant: 'error', title: 'Rozrzut', html: 'Przy wyniku rozrzutu pocisk podąża przerywaną trajektorią do punktu lądowania. Wybuch cząstek, świecący znacznik i odległość w calach (np. <strong>5"</strong>) pojawiają się w miejscu trafienia.' },
     { type: 'tip', title: 'Porada: Używanie Trybu Dryfu Wiatru', html: 'Włącz Dryf Wiatru, aby zablokować kierunek rozrzutu na ręcznie ustawiony kąt kompasu. Symuluje to dominujący wiatr lub stały wektor przesunięcia - idealne dla niekierowanych rakiet, chmur gazowych czy nieudanych teleportacji.' },
+    { type: 'title', text: 'Rozwiązywanie rozrzutu w grach wojennych', level: 2 },
+    { type: 'paragraph', html: 'Wiele gier wojennych używa odchylenia do symulowania artylerii, wiatru i nieudanych teleportacji.' },
+    { type: 'table', headers: ['Rozwiązywanie rozrzutu w grach wojennych', 'Zarządzanie wiatrem i odchyleniem', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Zarządzanie wiatrem i odchyleniem', level: 2 },
+    { type: 'paragraph', html: 'Szansa trafienia pomaga ocenić niezawodność jednostki i przyspiesza pomiary podczas rozgrywki.' },
+    { type: 'comparative', items: [{ title: 'Rozwiązywanie rozrzutu w grach wojennych', description: 'Wiele gier wojennych używa odchylenia do symulowania artylerii, wiatru i nieudanych teleportacji.', icon: 'mdi:compass-outline', highlight: true, points: ['Zarządzanie wiatrem i odchyleniem'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Zarządzanie wiatrem i odchyleniem', definition: 'Szansa trafienia pomaga ocenić niezawodność jednostki i przyspiesza pomiary podczas rozgrywki.' }] },
   ],
   faq,
   bibliography,

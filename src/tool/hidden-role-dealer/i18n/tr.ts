@@ -127,6 +127,9 @@ const faq = [
     question: 'Gizli Rol Dağıtıcı nasıl çalışır?',
     answer: 'Bu araç, sosyal çıkarım oyunları için gizli rolleri tek bir cihazda yerel olarak dağıtmanızı sağlar. Oyuncu adlarını girer, şablonu seçer ve cihazı sırayla oyunculara iletirsiniz. Her oyuncu kendi rolünü gizlice görmek için göster butonunu basılı tutar.',
   },
+  { question: 'Takımlar nasıl dengelenir?', answer: 'Oyuncu sayısına uygun bir rol havuzu seçin ve dağıtımdan önce takım oranını kontrol edin.' },
+  { question: 'Özel roller oluşturabilir miyim?', answer: 'Evet, özel ayarlar rol adlarını, takımları ve açıklamaları belirlemenizi sağlar.' },
+  { question: 'Roller bir sunucuya gönderilir mi?', answer: 'Hayır, dağıtım ve görüntüleme cihazda yerel olarak yapılır.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Sosyal Çıkarım Oyunlarında Takım Dengesi', level: 2 },
     { type: 'paragraph', html: 'İyi ve kötü rollerin oranını doğru şekilde dengelemek adil ve heyecan verici bir oyun deneyimi için temeldir.' },
+    { type: 'table', headers: ['Takımları dengelemek', 'Spyfall ve Impostor oyunlarını sunucusuz kurmak', 'Cihazı güvenle aktarmak'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Takımları dengelemek', level: 2 },
+    { type: 'paragraph', html: 'İyi ve kötü roller arasındaki dengeli oran sosyal çıkarım oyunlarını heyecanlı tutar.' },
+    { type: 'title', text: 'Spyfall ve Impostor oyunlarını sunucusuz kurmak', level: 2 },
+    { type: 'paragraph', html: 'Tek bir ekran, herkesin oyuncu kalmasını sağlayarak kelimeleri ve konumları dağıtabilir.' },
+    { type: 'comparative', items: [{ title: 'Takımları dengelemek', description: 'İyi ve kötü roller arasındaki dengeli oran sosyal çıkarım oyunlarını heyecanlı tutar.', icon: 'mdi:account-group', highlight: true, points: ['Cihazı aynı yönde dolaştırın ve ekranı yanınızdaki oyuncuların göremeyeceği şekilde tutun.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Gizlilik ipucu', definition: 'Cihazı aynı yönde dolaştırın ve ekranı yanınızdaki oyuncuların göremeyeceği şekilde tutun.' }] },
   ],
   faq,
   bibliography,

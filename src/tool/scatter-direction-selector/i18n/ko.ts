@@ -60,6 +60,8 @@ const faq = [
     question: '더 빠른 결과를 위해 애니메이션을 비활성화할 수 있나요?',
     answer: '애니메이션은 약 2초간 지속되며, 그 후 최종 결과가 중앙에 표시되고 나침반 화살표가 고정됩니다. 현재 건너뛰기 옵션은 없지만, 이 지연은 실제 주사위를 굴리는 속도에 맞게 설계되었습니다.',
   },
+  { question: '산란 방향은 어떻게 정하나요?', answer: '선택한 섹터 방식과 주사위 결과, 설정한 편차 거리를 조합해 계산합니다.' },
+  { question: '바람 모드를 사용할 수 있나요?', answer: '네, 바람 모드는 나침반 각도를 따르며 거리는 무작위로 유지합니다.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: '직격', html: '롤이 직격 확률을 초과하면 나침반 중앙이 맥동하는 녹색 링과 "DIRECT HIT" 텍스트 애니메이션으로 폭발합니다. 발사체는 중앙으로 돌아와 편차 없는 완벽한 충돌을 확인합니다.' },
     { type: 'diagnostic', variant: 'error', title: '산탄', html: '산탄 결과의 경우 발사체가 점선 궤적을 따라 착륙 지점으로 이동합니다. 입자 폭발, 발광 마커, 거리(인치) (예: <strong>5"</strong>)가 충돌 위치에 나타납니다.' },
     { type: 'tip', title: '전문가 팁: 바람 표류 모드 사용하기', html: '바람 표류를 활성화하면 산탄 방향이 수동으로 회전한 나침반 각도에 고정됩니다. 이는 우세풍이나 고정 변위 벡터를 시뮬레이션합니다 - 무유도 로켓, 가스 구름, 순간이동 사고 등에 이상적입니다.' },
+    { type: 'title', text: '워게임의 산란 해결하기', level: 2 },
+    { type: 'paragraph', html: '많은 워게임은 포격, 바람, 실패한 순간이동을 편차로 표현합니다.' },
+    { type: 'table', headers: ['워게임의 산란 해결하기', '바람과 편차 관리하기', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: '바람과 편차 관리하기', level: 2 },
+    { type: 'paragraph', html: '명중 확률을 설정하면 유닛의 신뢰성을 판단하고 게임 중 측정을 빠르게 할 수 있습니다.' },
+    { type: 'comparative', items: [{ title: '워게임의 산란 해결하기', description: '많은 워게임은 포격, 바람, 실패한 순간이동을 편차로 표현합니다.', icon: 'mdi:compass-outline', highlight: true, points: ['바람과 편차 관리하기'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: '바람과 편차 관리하기', definition: '명중 확률을 설정하면 유닛의 신뢰성을 판단하고 게임 중 측정을 빠르게 할 수 있습니다.' }] },
   ],
   faq,
   bibliography,

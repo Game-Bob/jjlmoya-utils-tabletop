@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: '결정 휠 사용법', level: 2 },
     { type: 'paragraph', html: '준비된 프리셋을 불러오거나 직접 항목을 만들고 가중치를 조절해 당첨 확률을 다르게 구성할 수 있습니다.' },
+    { type: 'title', text: "추가 시나리오", level: 3 },
+    { type: 'paragraph', html: "투표, 무작위 만남, 게임 행동 선택에 룰렛을 사용할 수 있습니다." },
+    { type: 'title', text: "테이블탑 게임 프리셋", level: 3 },
+    { type: 'paragraph', html: "프리셋으로 테이블탑 게임의 일반적인 선택지를 빠르게 불러옵니다." },
+    { type: 'title', text: "결과 가중치 조정", level: 3 },
+    { type: 'paragraph', html: "가중치를 바꾸면 결과가 나올 가능성을 조절할 수 있습니다." },
+    { type: 'title', text: "회전 기록 확인", level: 3 },
+    { type: 'paragraph', html: "기록에는 최근 회전 결과가 남아 그룹이 확인할 수 있습니다." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: '색상과 이름을 바꿀 수 있나요?',
       answer: '네, 라벨 이름과 색상뿐만 아니라 각 세그먼트의 가중치 값을 1부터 5까지 조절할 수 있습니다.',
+    },
+    {
+      question: "확률을 바꿀 수 있나요?",
+      answer: "네. 세그먼트의 가중치를 변경합니다.",
+    },
+    {
+      question: "세그먼트는 몇 개까지 가능한가요?",
+      answer: "최대 16개이며 작동하려면 2개 이상 필요합니다.",
+    },
+    {
+      question: "어떤 프리셋이 있나요?",
+      answer: "예 또는 아니요, 숫자, 행동, 사용자 지정, D20, 성향, 전리품입니다.",
+    },
+    {
+      question: "이전 회전이 표시되나요?",
+      answer: "네. 브라우저에 최근 10개가 표시됩니다.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: '휠 돌리기',
       text: '휠 돌리기를 실행하면 감속 물리가 적용된 부드러운 회전 애니메이션이 실행됩니다.',
+    },
+    {
+      name: "결과 확인",
+      text: "룰렛이 멈춘 뒤 당첨 세그먼트와 최근 회전 기록을 확인합니다.",
     },
   ],
   schemas: [

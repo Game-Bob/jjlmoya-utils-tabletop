@@ -127,6 +127,9 @@ const faq = [
     question: '秘密の役割配信ツールはどのように動作しますか？',
     answer: 'このツールは、正体隠匿系ゲームの秘密の役割を1台のデバイスでローカルに配布するためのものです。プレイヤー名を入力し、テンプレートを選択するか役割をカスタマイズして、順番にデバイスを回しながら表示ボタンを長押しして役割を確認します。',
   },
+  { question: '役割を公平に配るにはどうしますか？', answer: '参加人数に合う役割セットを選び、配布前にチームの比率を確認します。' },
+  { question: 'オリジナルの役割を作れますか？', answer: 'はい。カスタム設定で役割名、チーム、説明を指定できます。' },
+  { question: '役割はサーバーに送信されますか？', answer: 'いいえ。役割の配布と表示は端末内で行われます。' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: '正体隠匿ゲームにおける陣営バランスの調整方法', level: 2 },
     { type: 'paragraph', html: '人狼やシークレットヒトラーのようなゲームでは、プレイヤー数に応じて市民側と人狼側のバランスを調整することが最も重要です。バランスが崩れると一方的な展開になり、楽しさが半減してしまいます。本ツールは最適な推奨比率を自動で調整します。' },
+    { type: 'table', headers: ['チームの人数を調整する', '司会者なしでSpyfallとImpostorを設定する', '端末を安全に回す'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'チームの人数を調整する', level: 2 },
+    { type: 'paragraph', html: '善の役割と悪の役割の比率を整えると、正体隠匿ゲームの緊張感を保てます。' },
+    { type: 'title', text: '司会者なしでSpyfallとImpostorを設定する', level: 2 },
+    { type: 'paragraph', html: '1台の画面で単語や場所を配り、全員がプレイヤーとして参加できます。' },
+    { type: 'comparative', items: [{ title: 'チームの人数を調整する', description: '善の役割と悪の役割の比率を整えると、正体隠匿ゲームの緊張感を保てます。', icon: 'mdi:account-group', highlight: true, points: ['端末を同じ方向に渡し、周囲から画面が見えない角度で操作します。'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'プライバシーのヒント', definition: '端末を同じ方向に渡し、周囲から画面が見えない角度で操作します。' }] },
   ],
   faq,
   bibliography,

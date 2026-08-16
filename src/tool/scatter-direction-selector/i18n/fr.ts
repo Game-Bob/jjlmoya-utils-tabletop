@@ -60,6 +60,8 @@ const faq = [
     question: 'Puis-je désactiver l\u2019animation pour obtenir des résultats plus rapides\u00a0?',
     answer: 'L\u2019animation dure environ deux secondes, après quoi le résultat final s\u2019affiche au centre et la flèche de la boussole se verrouille. Il n\u2019y a pas d\u2019option de saut actuellement, mais le délai est conçu pour correspondre au rythme du lancer de dés physiques.',
   },
+  { question: 'Comment la direction de dispersion est-elle calculée ?', answer: 'L\'outil combine le système de secteurs choisi avec le lancer et la distance de déviation configurée.' },
+  { question: 'Puis-je utiliser le mode de vent ?', answer: 'Oui, ce mode suit l\'angle du compas tout en gardant la distance aléatoire.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Impact Direct', html: 'Quand le jet dépasse la probabilité d\u2019impact, le centre de la boussole s\u2019illumine d\u2019anneaux verts pulsants avec une animation "DIRECT HIT". Le projectile retourne au centre, confirmant un impact parfait sans déviation.' },
     { type: 'diagnostic', variant: 'error', title: 'Déviation', html: 'Sur un résultat de déviation, le projectile suit une trajectoire en pointillés jusqu\u2019à son point d\u2019atterrissage. Une explosion de particules, un marqueur lumineux et la distance en pouces (ex. <strong>5"</strong>) apparaissent sur le lieu d\u2019impact.' },
     { type: 'tip', title: 'Astuce\u00a0: Utiliser le Mode Dérive du Vent', html: 'Active la Dérive du Vent pour verrouiller la direction de déviation sur l\u2019angle de boussole réglé manuellement. Cela simule un vent dominant ou un vecteur de déplacement fixe  -  idéal pour les roquettes non guidées, les nuages de gaz ou les incidents de téléportation.' },
+    { type: 'title', text: 'Résoudre la dispersion dans les wargames', level: 2 },
+    { type: 'paragraph', html: 'De nombreux wargames utilisent la déviation pour représenter l\'artillerie, le vent ou les téléportations ratées.' },
+    { type: 'table', headers: ['Résoudre la dispersion dans les wargames', 'Gérer le vent et la déviation', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Gérer le vent et la déviation', level: 2 },
+    { type: 'paragraph', html: 'La probabilité de toucher aide à évaluer la fiabilité d\'une unité et accélère les mesures pendant la partie.' },
+    { type: 'comparative', items: [{ title: 'Résoudre la dispersion dans les wargames', description: 'De nombreux wargames utilisent la déviation pour représenter l\'artillerie, le vent ou les téléportations ratées.', icon: 'mdi:compass-outline', highlight: true, points: ['Gérer le vent et la déviation'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Gérer le vent et la déviation', definition: 'La probabilité de toucher aide à évaluer la fiabilité d\'une unité et accélère les mesures pendant la partie.' }] },
   ],
   faq,
   bibliography,

@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Hur du Använder Beslutshjulet', level: 2 },
     { type: 'paragraph', html: 'Välj en mall eller skapa dina egna segment med vikter för att justera chanserna för varje val.' },
+    { type: 'title', text: "Fler beslutsscenarier", level: 3 },
+    { type: 'paragraph', html: "Använd hjulet för omröstningar, slumpmöten och handlingsval i spelet." },
+    { type: 'title', text: "Mallar för sällskapsspel", level: 3 },
+    { type: 'paragraph', html: "Mallar laddar vanliga val för sällskapsspel snabbt." },
+    { type: 'title', text: "Justera resultatvikter", level: 3 },
+    { type: 'paragraph', html: "Vikter gör vissa resultat vanligare eller mer sällsynta." },
+    { type: 'title', text: "Granska historiken", level: 3 },
+    { type: 'paragraph', html: "Historiken sparar de senaste snurren för gruppen." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Kan jag ändra färger och namn?',
       answer: 'Ja, du kan lägga till segment, ändra namnen, välja egna färger och ställa in vikten från 1 till 5.',
+    },
+    {
+      question: "Kan jag ändra sannolikheten?",
+      answer: "Ja, ändra segmentets vikt.",
+    },
+    {
+      question: "Hur många segment är möjliga?",
+      answer: "Upp till 16; minst två alternativ krävs.",
+    },
+    {
+      question: "Vilka mallar finns?",
+      answer: "Ja eller Nej, Siffror, Handlingar, egna alternativ, D20, Justering och Byte.",
+    },
+    {
+      question: "Visas tidigare snurr?",
+      answer: "Ja, webbläsaren visar de tio senaste resultaten.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Snurra Hjulet',
       text: 'Klicka på snurra-knappen för att starta hjulet med realistisk friktionsinbromsning.',
+    },
+    {
+      name: "Kontrollera resultatet",
+      text: "När hjulet stannar kontrollerar du det vinnande segmentet och historiken.",
     },
   ],
   schemas: [

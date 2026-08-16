@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'So Verwenden Sie das Entscheidungsrad', level: 2 },
     { type: 'paragraph', html: 'Wählen Sie eine Vorlage oder erstellen Sie eigene Segmente mit Gewichtungen, um die Gewinnwahrscheinlichkeiten anzupassen.' },
+    { type: 'title', text: "Weitere Szenarien", level: 3 },
+    { type: 'paragraph', html: "Nutzen Sie das Rad für Abstimmungen, Zufallsbegegnungen und Spielaktionen." },
+    { type: 'title', text: "Vorlagen nutzen", level: 3 },
+    { type: 'paragraph', html: "Vorlagen laden häufige Entscheidungen für Brettspiele sofort." },
+    { type: 'title', text: "Gewichtungen einstellen", level: 3 },
+    { type: 'paragraph', html: "Gewichtungen machen einzelne Ergebnisse häufiger oder seltener." },
+    { type: 'title', text: "Verlauf prüfen", level: 3 },
+    { type: 'paragraph', html: "Der Verlauf hält die letzten Drehungen für die Gruppe fest." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Kann ich Farben und Namen anpassen?',
       answer: 'Ja, Sie können beliebig Segmente hinzufügen, Namen ändern, Farben wählen und die Gewichtung von 1 bis 5 anpassen.',
+    },
+    {
+      question: "Kann ich Ergebniswahrscheinlichkeiten ändern?",
+      answer: "Ja, ändern Sie das Gewicht eines Segments.",
+    },
+    {
+      question: "Wie viele Segmente sind möglich?",
+      answer: "Bis zu 16 Segmente sind möglich; mindestens zwei werden benötigt.",
+    },
+    {
+      question: "Welche Vorlagen gibt es?",
+      answer: "Ja oder Nein, Zahlen, Aktionen, eigene Optionen, D20, Gesinnung und Beute.",
+    },
+    {
+      question: "Bleiben frühere Drehungen sichtbar?",
+      answer: "Ja, die letzten zehn Ergebnisse werden im Browser angezeigt.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Das Rad Drehen',
       text: 'Klicken Sie auf Drehen und warten Sie, bis das Rad mit realistischer Verzögerung stoppt.',
+    },
+    {
+      name: "Ergebnis prüfen",
+      text: "Nach dem Stopp wird das Gewinnersegment hervorgehoben. Prüfen Sie den Verlauf der letzten Drehungen.",
     },
   ],
   schemas: [

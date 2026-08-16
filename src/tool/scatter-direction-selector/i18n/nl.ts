@@ -60,6 +60,8 @@ const faq = [
     question: 'Hoe wordt de afwijkingsafstand visueel weergegeven?',
     answer: 'De afstand in inch verschijnt als een zwevend label op de inslagplaats, gepositioneerd langs de afwijkingsrichting. De rode kompaspijl vergrendelt ook op de uiteindelijke hoek voor snelle sjabloonuitlijning.',
   },
+  { question: 'Hoe wordt de spreidingsrichting bepaald?', answer: 'De tool combineert het gekozen sectorsysteem met de worp en de ingestelde afwijkingsafstand.' },
+  { question: 'Kan ik de windmodus gebruiken?', answer: 'Ja, de windmodus volgt de kompasrichting terwijl de afstand willekeurig blijft.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Directe Treffer', html: 'Wanneer de worp de trefkans overtreft, barst het kompascentrum uit met pulserende groene ringen en een "DIRECT HIT" tekstanimatie. Het projectiel keert terug naar het centrum, wat een perfecte inslag zonder afwijking bevestigt.' },
     { type: 'diagnostic', variant: 'error', title: 'Afwijking', html: 'Bij een afwijkingsresultaat volgt het projectiel een gestreepte baan naar zijn landingsplaats. Een deeltjesuitbarsting, een gloeiende markering en de afstand in inch (bijv. <strong>5"</strong>) verschijnen op de landingsplaats.' },
     { type: 'tip', title: 'Pro Tip: Winddrift Modus Gebruiken', html: 'Schakel Winddrift in om de afwijkingsrichting te vergrendelen op uw handmatig gedraaide kompashoek. Simuleert een heersende wind of een vaste verplaatsingsvector  -  ideaal voor ongeleide raketten, gaswolken of mislukte teleportaties.' },
+    { type: 'title', text: 'Spreiding in tabletop wargames oplossen', level: 2 },
+    { type: 'paragraph', html: 'Veel wargames gebruiken afwijkingen voor artillerie, wind of mislukte teleportatie.' },
+    { type: 'table', headers: ['Spreiding in tabletop wargames oplossen', 'Wind en afwijking beheren', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Wind en afwijking beheren', level: 2 },
+    { type: 'paragraph', html: 'Met een trefferkans beoordeel je de betrouwbaarheid van een eenheid en verkort je metingen tijdens het spel.' },
+    { type: 'comparative', items: [{ title: 'Spreiding in tabletop wargames oplossen', description: 'Veel wargames gebruiken afwijkingen voor artillerie, wind of mislukte teleportatie.', icon: 'mdi:compass-outline', highlight: true, points: ['Wind en afwijking beheren'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Wind en afwijking beheren', definition: 'Met een trefferkans beoordeel je de betrouwbaarheid van een eenheid en verkort je metingen tijdens het spel.' }] },
   ],
   faq,
   bibliography,

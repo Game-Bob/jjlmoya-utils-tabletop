@@ -131,6 +131,8 @@ const faq = [
     question: 'Was ist der Zweck des Gedrückthaltens beim Offenbaren?',
     answer: 'Um zu verhindern, dass Spieler versehentlich die Rollen anderer sehen, muss der Reveal-Button gedrückt gehalten werden. Sobald er losgelassen wird, blendet sich die Rolle sofort wieder aus.',
   },
+  { question: 'Wie werden die Rollen fair verteilt?', answer: 'Wählen Sie einen passenden Rollenpool für die Spielerzahl und prüfen Sie das Verhältnis der Teams vor dem Austeilen.' },
+  { question: 'Kann ich eigene Rollen verwenden?', answer: 'Ja, mit dem benutzerdefinierten Setup können Sie Rollen, Teams und Beschreibungen selbst festlegen.' },
 ];
 
 const howTo = [
@@ -156,6 +158,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Teambalance in Social-Deduction-Spielen', level: 2 },
     { type: 'paragraph', html: 'Die größte Herausforderung bei Werwolf, Avalon oder Secret Hitler besteht darin, das Verhältnis von guten und bösen Rollen basierend auf der Spieleranzahl auszubalancieren. Ein falsches Verhältnis kann das Spiel für eine Seite zu einfach und für die andere frustrierend machen. Durch die Verwendung von empfohlenen Community-Ratios stellen Sie eine faire Spielrunde sicher.' },
+    { type: 'table', headers: ['Rollen', 'Gut', 'Böse'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Rollenverhältnisse fair planen', level: 2 },
+    { type: 'paragraph', html: 'Ein ausgewogenes Verhältnis zwischen guten und bösen Rollen hält soziale Deduktionsspiele spannend.' },
+    { type: 'title', text: 'Spyfall und Impostor ohne Spielleiter einrichten', level: 2 },
+    { type: 'paragraph', html: 'Ein gemeinsamer Bildschirm kann Wörter und Orte sicher verteilen, ohne dass ein Spieler die Runde moderieren muss.' },
+    { type: 'comparative', items: [{ title: 'Rollenverhältnisse', description: 'Geben Sie das Gerät in einer festen Richtung weiter.', icon: 'mdi:account-group', highlight: true, points: ['Sichtschutz beachten'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Sicherheitstipp', definition: 'Geben Sie das Gerät in einer festen Richtung weiter.' }] },
   ],
   faq,
   bibliography,

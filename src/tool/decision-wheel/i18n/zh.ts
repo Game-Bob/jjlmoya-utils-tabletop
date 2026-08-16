@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: '如何使用决策轮盘', level: 2 },
     { type: 'paragraph', html: '选择预设方案，或创建自定义分块并设置权重，以按需调整各选项的被选中概率。' },
+    { type: 'title', text: "更多决策场景", level: 3 },
+    { type: 'paragraph', html: "转盘适合投票、随机遭遇和游戏中的行动选择。" },
+    { type: 'title', text: "桌游预设", level: 3 },
+    { type: 'paragraph', html: "预设可以快速载入桌游中常见的选择。" },
+    { type: 'title', text: "调整结果权重", level: 3 },
+    { type: 'paragraph', html: "调整权重可以让结果更常出现或更少出现。" },
+    { type: 'title', text: "查看旋转历史", level: 3 },
+    { type: 'paragraph', html: "历史记录会保存最近的旋转，方便团队查看。" },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: '可以自定义颜色和文字吗？',
       answer: '可以。您可以自由添加选项、更改文本标签、选择背景颜色并将权重在 1 至 5 之间进行调整。',
+    },
+    {
+      question: "可以修改概率吗？",
+      answer: "可以，修改分区的权重即可。",
+    },
+    {
+      question: "最多可以有多少个分区？",
+      answer: "最多16个，并且至少需要两个选项。",
+    },
+    {
+      question: "有哪些预设？",
+      answer: "是或否、数字、行动、自定义、D20、阵营和战利品。",
+    },
+    {
+      question: "之前的旋转会显示吗？",
+      answer: "会，浏览器会显示最近十个结果。",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: '转动决策轮盘',
       text: '点击转动按钮，轮盘将伴随逼真的物理摩擦阻尼减速动画进行旋转。',
+    },
+    {
+      name: "检查结果",
+      text: "转盘停止后，检查获胜分区和最近的旋转历史。",
     },
   ],
   schemas: [

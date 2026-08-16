@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: 'Hoe het Beslissingsrad te Gebruiken', level: 2 },
     { type: 'paragraph', html: 'Kies een voorinstelling of maak uw eigen segmenten met gewichten om de kansen per keuze te bepalen.' },
+    { type: 'title', text: "Meer beslisscenario's", level: 3 },
+    { type: 'paragraph', html: "Gebruik het rad voor stemmingen, willekeurige ontmoetingen en spelacties." },
+    { type: 'title', text: "Sjablonen voor bordspellen", level: 3 },
+    { type: 'paragraph', html: "Sjablonen laden veelvoorkomende keuzes voor bordspellen snel." },
+    { type: 'title', text: "Uitkomsten wegen", level: 3 },
+    { type: 'paragraph', html: "Met gewichten maak je uitkomsten vaker of zeldzamer." },
+    { type: 'title', text: "De geschiedenis bekijken", level: 3 },
+    { type: 'paragraph', html: "De geschiedenis bewaart recente draaien voor de groep." },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: 'Kan ik kleuren en namen aanpassen?',
       answer: 'Ja, u kunt segmenten toevoegen, labels bewerken, kleuren kiezen en het gewicht van 1 tot 5 instellen.',
+    },
+    {
+      question: "Kan ik kansen wijzigen?",
+      answer: "Ja, wijzig het gewicht van een segment.",
+    },
+    {
+      question: "Hoeveel segmenten zijn mogelijk?",
+      answer: "Maximaal 16; er zijn minstens twee opties nodig.",
+    },
+    {
+      question: "Welke sjablonen zijn er?",
+      answer: "Ja of Nee, Getallen, Acties, eigen opties, D20, Uitlijning en Buit.",
+    },
+    {
+      question: "Blijven eerdere draaien zichtbaar?",
+      answer: "Ja, de browser toont de tien recentste resultaten.",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'Draai aan het Rad',
       text: 'Klik op de knop om de rotatie-animatie met realistische vertraging te starten.',
+    },
+    {
+      name: "Het resultaat controleren",
+      text: "Controleer na het stoppen het winnende segment en de recente draaigeschiedenis.",
     },
   ],
   schemas: [

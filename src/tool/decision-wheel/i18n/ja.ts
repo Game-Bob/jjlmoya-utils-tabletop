@@ -41,6 +41,14 @@ export const content: DecisionWheelLocaleContent = {
     },
     { type: 'title', text: '意思決定ホイールの使い方', level: 2 },
     { type: 'paragraph', html: 'プリセットを選ぶか、独自の項目を作成して重みを設定し、当選確率を自由にコントロールできます。' },
+    { type: 'title', text: "その他のシナリオ", level: 3 },
+    { type: 'paragraph', html: "投票、ランダムイベント、ゲーム中の行動選択にホイールを使えます。" },
+    { type: 'title', text: "卓上ゲームのプリセット", level: 3 },
+    { type: 'paragraph', html: "プリセットで卓上ゲームの一般的な選択肢をすぐに読み込めます。" },
+    { type: 'title', text: "重みを調整する", level: 3 },
+    { type: 'paragraph', html: "重みを変えると結果の出やすさを調整できます。" },
+    { type: 'title', text: "履歴を確認する", level: 3 },
+    { type: 'paragraph', html: "履歴には最近のスピンが残り、グループで確認できます。" },
   ],
   faq: [
     {
@@ -50,6 +58,22 @@ export const content: DecisionWheelLocaleContent = {
     {
       question: '色や名前は変更できますか？',
       answer: 'はい。セグメントを追加し、名前や色、1から5までの重要度の重みを自由に変更可能です。',
+    },
+    {
+      question: "確率を変更できますか？",
+      answer: "はい。セグメントの重みを変更します。",
+    },
+    {
+      question: "セグメントはいくつ置けますか？",
+      answer: "最大16個で、動作には2個以上必要です。",
+    },
+    {
+      question: "どんなプリセットがありますか？",
+      answer: "はい・いいえ、数字、アクション、カスタム、D20、属性、戦利品です。",
+    },
+    {
+      question: "以前のスピンは表示されますか？",
+      answer: "はい。ブラウザーに直近10件が表示されます。",
     },
   ],
   bibliography,
@@ -61,6 +85,10 @@ export const content: DecisionWheelLocaleContent = {
     {
       name: 'ホイールをスピン',
       text: 'スタートボタンをクリックすると、リアルな摩擦減速アニメーションを伴ってホイールが回転します。',
+    },
+    {
+      name: "結果を確認する",
+      text: "停止後に当選セグメントと最近のスピン履歴を確認します。",
     },
   ],
   schemas: [

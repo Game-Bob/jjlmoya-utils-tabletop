@@ -127,6 +127,9 @@ const faq = [
     question: 'Como funciona o Distribuidor de Papéis Secretos?',
     answer: 'O Distribuidor permite atribuir papéis para jogos de dedução social localmente em um único dispositivo. Introduz os nomes, escolhe um modelo ou personaliza papéis, e depois passa o dispositivo a cada jogador. O botão de revelação requer ser pressionado para mostrar o papel de forma privada.',
   },
+  { question: 'Como manter as equipes equilibradas?', answer: 'Escolha um conjunto de papéis adequado ao número de jogadores e confira a proporção antes de distribuir.' },
+  { question: 'Posso criar papéis personalizados?', answer: 'Sim, a configuração personalizada permite definir nomes, equipes e descrições.' },
+  { question: 'Os papéis são enviados para um servidor?', answer: 'Não, a distribuição e a exibição acontecem localmente no dispositivo.' },
 ];
 
 const howTo = [
@@ -152,6 +155,13 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
   seo: [
     { type: 'title', text: 'Equilíbrio de Equipas em Jogos de Dedução Social', level: 2 },
     { type: 'paragraph', html: 'Ajustar a proporção de papéis de bem e mal é fundamental para uma partida competitiva.' },
+    { type: 'table', headers: ['Equilibrar as equipes', 'Configurar Spyfall e Impostor sem anfitrião', 'Passar o dispositivo com discrição'], rows: [['3', '2', '1'], ['6', '4', '2'], ['9', '6', '3']] },
+    { type: 'title', text: 'Equilibrar as equipes', level: 2 },
+    { type: 'paragraph', html: 'Uma proporção equilibrada entre papéis bons e maus mantém a tensão dos jogos de dedução social.' },
+    { type: 'title', text: 'Configurar Spyfall e Impostor sem anfitrião', level: 2 },
+    { type: 'paragraph', html: 'Uma única tela distribui palavras e locais sem obrigar ninguém a ficar de fora da partida.' },
+    { type: 'comparative', items: [{ title: 'Equilibrar as equipes', description: 'Uma proporção equilibrada entre papéis bons e maus mantém a tensão dos jogos de dedução social.', icon: 'mdi:account-group', highlight: true, points: ['Passe o dispositivo sempre na mesma direção e proteja a tela dos olhares ao redor.'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Dica de privacidade', definition: 'Passe o dispositivo sempre na mesma direção e proteja a tela dos olhares ao redor.' }] },
   ],
   faq,
   bibliography,

@@ -60,6 +60,8 @@ const faq = [
     question: 'Wie wird die Streudistanz visuell dargestellt?',
     answer: 'Die Distanz in Zoll erscheint als schwebende Markierung am Einschlagpunkt entlang der Abweichungsrichtung. Der rote Kompasspfeil fixiert sich auf den endgültigen Winkel für eine schnelle Schablonenausrichtung.',
   },
+  { question: 'Wie wird die Streurichtung bestimmt?', answer: 'Das Tool kombiniert das gewählte Sektorsystem mit dem Würfelwurf und der eingestellten Abweichungsdistanz.' },
+  { question: 'Kann ich Winddrift verwenden?', answer: 'Ja, im Winddrift-Modus folgt die Richtung dem gedrehten Kompass, während die Entfernung zufällig bleibt.' },
 ];
 
 const howTo = [
@@ -104,6 +106,13 @@ export const content: ScatterSelectorLocaleContent = {
     { type: 'diagnostic', variant: 'success', title: 'Direkttreffer', html: 'Wenn der Wurf die Trefferwahrscheinlichkeit übertrifft, erstrahlt die Kompassmitte in pulsierenden grünen Ringen und einer "DIRECT HIT"-Textanimation. Das Projektil kehrt zur Mitte zurück und bestätigt einen perfekten Treffer ohne Abweichung.' },
     { type: 'diagnostic', variant: 'error', title: 'Streuung', html: 'Bei einem Streuergebnis folgt das Projektil einer gestrichelten Bahn zum Einschlagspunkt. Eine Partikelexplosion, eine leuchtende Markierung und die Distanz in Zoll (z. B. <strong>5"</strong>) erscheinen am Landeort.' },
     { type: 'tip', title: 'Profi Tipp: Winddrift Modus nutzen', html: 'Aktiviere Winddrift, um die Streurichtung auf den manuell eingestellten Kompasswinkel zu fixieren. Simuliert vorherrschenden Wind oder einen festen Verschiebungsvektor  -  ideal für ungelenkte Raketen, Gaswolken oder fehlgeschlagene Teleportationen.' },
+    { type: 'title', text: 'Streuung in Tabletop Spielen auflösen', level: 2 },
+    { type: 'paragraph', html: 'Viele Wargames verwenden Abweichungen, um Artillerie, Winddrift oder fehlgeschlagene Teleportationen unvorhersehbar zu machen.' },
+    { type: 'table', headers: ['Streuung in Tabletop Spielen auflösen', 'Taktischer Umgang mit Wind und Abweichung', 'Resultado'], rows: [['1', 'D6', 'Desviación'], ['2', '2D6', 'Distancia']] },
+    { type: 'title', text: 'Taktischer Umgang mit Wind und Abweichung', level: 2 },
+    { type: 'paragraph', html: 'Eine Trefferwahrscheinlichkeit hilft, die Zuverlässigkeit einer Einheit einzuschätzen und die Messung am Spieltisch zu beschleunigen.' },
+    { type: 'comparative', items: [{ title: 'Streuung in Tabletop Spielen auflösen', description: 'Viele Wargames verwenden Abweichungen, um Artillerie, Winddrift oder fehlgeschlagene Teleportationen unvorhersehbar zu machen.', icon: 'mdi:compass-outline', highlight: true, points: ['Taktischer Umgang mit Wind und Abweichung'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Taktischer Umgang mit Wind und Abweichung', definition: 'Eine Trefferwahrscheinlichkeit hilft, die Zuverlässigkeit einer Einheit einzuschätzen und die Messung am Spieltisch zu beschleunigen.' }] },
   ],
   faq,
   bibliography,

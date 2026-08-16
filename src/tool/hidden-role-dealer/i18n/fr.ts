@@ -135,6 +135,7 @@ const faq = [
     question: 'Existe-t-il des modèles pour les jeux connus ?',
     answer: 'Oui. L\'outil propose des modèles prêts à l\'emploi pour Loup-Garou, Avalon et Secret Hitler, adaptant automatiquement la réserve de rôles selon le nombre de joueurs.',
   },
+  { question: 'Comment garder une partie équilibrée ?', answer: 'Choisissez un ensemble de rôles adapté au nombre de joueurs et vérifiez la proportion des équipes avant la distribution.' },
 ];
 
 const howTo = [
@@ -176,6 +177,8 @@ export const content: ToolLocaleContent<HiddenRoleDealerUI> = {
     { type: 'paragraph', html: 'Pour animer des jeux d\'association de mots comme Spyfall ou Imposteur de manière fluide sur un seul écran, la distribution des rôles doit rester impartiale. Si un joueur agit en tant qu\'Hôte désigné, il saisit le mot et devient automatiquement un Équipier. Alternativement, l\'Hôte non-joueur laisse l\'application attribuer les mots automatiquement. Pour un mystère complet, le Pré-tour Secret permet à trois joueurs de saisir des mots en toute discrétion et en sélectionne un de manière aléatoire.' },
     { type: 'title', text: 'Bonnes Pratiques pour le Jeu sur Appareil Partagé', level: 2 },
     { type: 'paragraph', html: 'Partager un écran pour distribuer des identités secrètes est pratique mais sensible aux regards indiscrets. Pour préserver le secret absolu, l\'animateur doit faire passer l\'appareil toujours dans le même sens, et les joueurs doivent incliner l\'écran lors du dévoilement de leur rôle.' },
+    { type: 'comparative', items: [{ title: 'Équipes équilibrées', description: 'Faites circuler l\'appareil dans un sens constant.', icon: 'mdi:account-group', highlight: true, points: ['Protéger les rôles'] }], columns: 1 },
+    { type: 'glossary', items: [{ term: 'Conseil de confidentialité', definition: 'Faites circuler l\'appareil dans un sens constant.' }] },
   ],
   faq,
   bibliography,
