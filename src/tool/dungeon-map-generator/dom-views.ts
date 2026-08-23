@@ -11,15 +11,16 @@ interface RenderContext {
 
 const CELL = 20;
 
-export function buildMapSvg(map: DungeonMap, standalone = false): string {
+export function buildMapSvg(map: DungeonMap, standalone = false, isPrint = false): string {
   const width = map.config.columns * CELL;
   const height = map.config.rows * CELL;
+  const style = isPrint ? 'print' : map.config.style;
   const cells = map.tiles.flatMap((row, y) =>
-    row.map((tile, x) => tileSvg(tile, x, y, map.config.style))).join('');
-  const palette = standalone ? standaloneStyle(map.config.style) : '';
+    row.map((tile, x) => tileSvg(tile, x, y, style))).join('');
+  const palette = standalone ? standaloneStyle(style) : '';
   const doors = map.doors.map(doorSvg).join('');
   const hitGrid = standalone ? '' : interactionGridSvg(map);
-  return `<svg class="dmg-map dmg-map-${map.config.style}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Generated dungeon map" xmlns="http://www.w3.org/2000/svg">${palette}<rect class="dmg-map-void" width="${width}" height="${height}"/>${cells}${doors}${compassSvg(width, height)}${hitGrid}</svg>`;
+  return `<svg class="dmg-map dmg-map-${style}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Generated dungeon map" xmlns="http://www.w3.org/2000/svg">${palette}<rect class="dmg-map-void" width="${width}" height="${height}"/>${cells}${doors}${compassSvg(width, height)}${hitGrid}</svg>`;
 }
 
 function tileSvg(tile: Tile, x: number, y: number, style: string): string {
@@ -52,6 +53,9 @@ function interactionGridSvg(map: DungeonMap): string {
 }
 
 function standaloneStyle(style: string): string {
+  if (style === 'print') {
+    return `<style>.dmg-map-void{fill:#ffffff}.dmg-map-floor{fill:#ffffff;stroke:#333333;stroke-width:.6}.dmg-map-door line{stroke:#000000;stroke-width:4}.dmg-map-door circle{fill:#000000}.dmg-map-compass circle{fill:#ffffff;stroke:#000000;stroke-width:1}.dmg-map-compass path{fill:#000000}</style>`;
+  }
   const floor = style === 'scifi' ? '#d9f6f0' : '#ead9b7';
   const door = style === 'cavern' ? '#d7774f' : '#b98142';
   return `<style>.dmg-map-void{fill:#171b22}.dmg-map-floor{fill:${floor};stroke:#6d6253;stroke-width:.7}.dmg-map-door line{stroke:${door};stroke-width:4}.dmg-map-door circle{fill:#fff}.dmg-map-compass circle{fill:#171b22;stroke:#c5a25c;stroke-width:1}.dmg-map-compass path{fill:#c5a25c}</style>`;
@@ -91,14 +95,15 @@ function downloadBlob(blob: Blob, filename: string): void {
   URL.revokeObjectURL(url);
 }
 
-function filename(map: DungeonMap, extension: string): string {
+function filename(map: DungeonMap, extension: string, suffix = ''): string {
   const seed = map.config.seed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return `dungeon-${seed || 'map'}.${extension}`;
+  return `dungeon-${seed || 'map'}${suffix}.${extension}`;
 }
 
-export function exportSvg(map: DungeonMap): void {
-  const blob = new Blob([buildMapSvg(map, true)], { type: 'image/svg+xml;charset=utf-8' });
-  downloadBlob(blob, filename(map, 'svg'));
+export function exportSvg(map: DungeonMap, isPrint = false): void {
+  const svg = buildMapSvg(map, true, isPrint);
+  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+  downloadBlob(blob, filename(map, 'svg', isPrint ? '-print' : ''));
 }
 
 export function exportJson(map: DungeonMap, edits: DungeonEdit[]): void {
@@ -106,18 +111,18 @@ export function exportJson(map: DungeonMap, edits: DungeonEdit[]): void {
   downloadBlob(new Blob([data], { type: 'application/json' }), filename(map, 'json'));
 }
 
-export async function exportPng(map: DungeonMap): Promise<void> {
-  const svg = buildMapSvg(map, true);
+export async function exportPng(map: DungeonMap, isPrint = false): Promise<void> {
+  const svg = buildMapSvg(map, true, isPrint);
   const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
   const source = URL.createObjectURL(blob);
   try {
-    await drawPng(map, source);
+    await drawPng(map, source, isPrint ? '-print' : '');
   } finally {
     URL.revokeObjectURL(source);
   }
 }
 
-async function drawPng(map: DungeonMap, source: string): Promise<void> {
+async function drawPng(map: DungeonMap, source: string, suffix = ''): Promise<void> {
   const image = await loadImage(source);
   const canvas = document.createElement('canvas');
   canvas.width = map.config.columns * CELL * 2;
@@ -126,7 +131,7 @@ async function drawPng(map: DungeonMap, source: string): Promise<void> {
   if (!context) return;
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));
-  if (blob) downloadBlob(blob, filename(map, 'png'));
+  if (blob) downloadBlob(blob, filename(map, 'png', suffix));
 }
 
 function loadImage(source: string): Promise<HTMLImageElement> {

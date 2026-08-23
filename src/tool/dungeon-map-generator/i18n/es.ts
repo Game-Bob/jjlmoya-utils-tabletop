@@ -42,6 +42,7 @@ const ui: DungeonMapGeneratorUI = {
   linkCopied: 'Enlace copiado',
   exportPng: 'Descargar PNG',
   exportSvg: 'Descargar SVG',
+  exportPrint: 'Imprimir',
   exportJson: 'Guardar JSON',
   importJson: 'Abrir JSON',
   importError: 'Este archivo no contiene una configuración válida de mapa de mazmorra.',

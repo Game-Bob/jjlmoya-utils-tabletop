@@ -200,15 +200,52 @@ function carvePoint(grid: Tile[][], point: Point, style: DungeonStyle, isDoor: b
   if (style === 'scifi' && nextRow?.[point.x] !== undefined) nextRow[point.x] = 1;
 }
 
+function isRoomCorner(point: Point, rooms: Room[]): boolean {
+  return rooms.some((r) => (point.x === r.x || point.x === r.x + r.width - 1)
+    && (point.y === r.y || point.y === r.y + r.height - 1));
+}
+
+function tileAt(grid: Tile[][], x: number, y: number): Tile {
+  return grid[y]?.[x] ?? 0;
+}
+
+function isVerticalDoorFrame(grid: Tile[][], x: number, y: number): boolean {
+  const isWallPair = tileAt(grid, x, y - 1) === 0 && tileAt(grid, x, y + 1) === 0;
+  const isFloorPair = tileAt(grid, x - 1, y) !== 0 && tileAt(grid, x + 1, y) !== 0;
+  return isWallPair && isFloorPair;
+}
+
+function isHorizontalDoorFrame(grid: Tile[][], x: number, y: number): boolean {
+  const isWallPair = tileAt(grid, x - 1, y) === 0 && tileAt(grid, x + 1, y) === 0;
+  const isFloorPair = tileAt(grid, x, y - 1) !== 0 && tileAt(grid, x, y + 1) !== 0;
+  return isWallPair && isFloorPair;
+}
+
+function hasDoorWallFrame(grid: Tile[][], point: Point): boolean {
+  return isVerticalDoorFrame(grid, point.x, point.y) || isHorizontalDoorFrame(grid, point.x, point.y);
+}
+
+function filterValidDoors(grid: Tile[][], rooms: Room[], candidateDoors: Door[]): Door[] {
+  const validDoors: Door[] = [];
+  for (const door of uniqueDoors(candidateDoors)) {
+    if (isRoomCorner(door, rooms) || !hasDoorWallFrame(grid, door)) {
+      if (grid[door.y]?.[door.x] !== undefined) grid[door.y]![door.x] = 1;
+    } else {
+      validDoors.push(door);
+    }
+  }
+  return validDoors;
+}
+
 function connectRooms(grid: Tile[][], rooms: Room[], config: DungeonConfig, random: RandomSource): Door[] {
   const ordered = [...rooms].sort((a, b) => center(a).x - center(b).x);
-  const doors: Door[] = [];
+  const candidateDoors: Door[] = [];
   for (let index = 1; index < ordered.length; index += 1) {
     const from = center(ordered[index - 1]!);
     const to = center(ordered[index]!);
-    doors.push(...carvePath(grid, corridorPoints(from, to, random), config.style));
+    candidateDoors.push(...carvePath(grid, corridorPoints(from, to, random), config.style));
   }
-  return uniqueDoors(doors);
+  return filterValidDoors(grid, rooms, candidateDoors);
 }
 
 function uniqueDoors(doors: Door[]): Door[] {
@@ -232,14 +269,7 @@ export function generateDungeon(input: Partial<DungeonConfig>): DungeonMap {
   const rooms = placeRooms(config, random);
   rooms.forEach((room) => carveRoom(tiles, room, config, random));
   const doors = connectRooms(tiles, rooms, config, random);
-  return {
-    config,
-    tiles,
-    rooms,
-    doors,
-    doorCount: doors.length,
-    floorCount: countTiles(tiles, 1) + countTiles(tiles, 2),
-  };
+  return { config, tiles, rooms, doors, doorCount: doors.length, floorCount: countTiles(tiles, 1) + countTiles(tiles, 2) };
 }
 
 export function encodeConfig(config: DungeonConfig): string {
@@ -247,9 +277,5 @@ export function encodeConfig(config: DungeonConfig): string {
 }
 
 export function decodeConfig(value: string): DungeonConfig | undefined {
-  try {
-    return normalizeConfig(JSON.parse(value) as Partial<DungeonConfig>);
-  } catch {
-    return undefined;
-  }
+  try { return normalizeConfig(JSON.parse(value) as Partial<DungeonConfig>); } catch { return undefined; }
 }

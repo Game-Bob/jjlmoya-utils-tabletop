@@ -39,6 +39,7 @@ export interface DungeonMapGeneratorUI {
   linkCopied: string;
   exportPng: string;
   exportSvg: string;
+  exportPrint: string;
   exportJson: string;
   importJson: string;
   importError: string;

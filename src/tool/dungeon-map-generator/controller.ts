@@ -102,6 +102,7 @@ function bindActions(state: GeneratorState): void {
   state.root.querySelector('[data-copy-link]')?.addEventListener('click', () => void copyLink(state));
   state.root.querySelector('[data-export-svg]')?.addEventListener('click', () => exportSvg(state.map));
   state.root.querySelector('[data-export-png]')?.addEventListener('click', () => void exportPng(state.map));
+  state.root.querySelector('[data-export-print]')?.addEventListener('click', () => void exportPng(state.map, true));
   state.root.querySelector('[data-export-json]')?.addEventListener('click', () => exportJson(state.map, state.edits));
   state.root.querySelector<HTMLInputElement>('[data-import-json]')?.addEventListener('change', (event) => {
     void importJson(state, event.currentTarget as HTMLInputElement);
