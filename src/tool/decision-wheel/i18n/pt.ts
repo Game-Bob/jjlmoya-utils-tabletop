@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Roleta de Decisões para Jogos de Tabuleiro e Atividades', level: 2 },
-    { type: 'paragraph', html: 'A roleta de decisões é uma ferramenta versátil para jogos de mesa. Personalize as fatias com seus textos e cores e gire.' },
+    { type: 'paragraph', html: 'A roleta de decisões é uma ferramenta digital versátil para jogos de tabuleiro, RPGs e dinâmicas de grupo. Ela permite sortear opções de forma rápida, justa e totalmente aleatória. Cada fatia pode ser personalizada com seus próprios textos, cores e pesos configuráveis para ajustar as probabilidades exatas do seu jogo.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Como Usar a Roleta de Decisões', level: 2 },
-    { type: 'paragraph', html: 'Selecione uma configuração padrão ou crie fatias com pesos diferentes para alterar as chances de vitória.' },
-    { type: 'title', text: "Mais cenários de decisão", level: 3 },
-    { type: 'paragraph', html: "Use a roda para votações, encontros aleatórios e ações durante a partida." },
-    { type: 'title', text: "Predefinições para jogos de mesa", level: 3 },
-    { type: 'paragraph', html: "As predefinições carregam rapidamente escolhas comuns dos jogos de mesa." },
-    { type: 'title', text: "Ajustar os pesos", level: 3 },
-    { type: 'paragraph', html: "Os pesos tornam certos resultados mais ou menos frequentes." },
-    { type: 'title', text: "Consultar o histórico", level: 3 },
-    { type: 'paragraph', html: "O histórico guarda os giros recentes para o grupo." },
+    { type: 'paragraph', html: 'Escolha uma das predefinições prontas como Sim/Não, D20, Alinhamento ou Saque de Tesouros, ou crie sua própria lista personalizada. Ajuste os pesos de 1 a 5 para alterar a frequência com que cada opção é sorteada. O motor de física simula a inércia e o atrito de rotação para trazer emoção a cada giro.' },
+    { type: 'title', text: 'Mais cenários de decisão', level: 3 },
+    { type: 'paragraph', html: 'Use a roda para organizar votações rápidas no grupo, gerar encontros aleatórios em jogos de RPG, distribuir os turnos de jogo ou escolher qual jogador escolhe o personagem primeiro.' },
+    { type: 'title', text: 'Predefinições para jogos de mesa', level: 3 },
+    { type: 'paragraph', html: 'As predefinições permitem carregar decisões frequentes em segundos, economizando tempo precioso durante suas sessões de jogo e evitando discussões desnecessárias à mesa.' },
+    { type: 'title', text: 'Ajustar os pesos', level: 3 },
+    { type: 'paragraph', html: 'Os pesos permitem balancear ou direcionar os resultados. Aumentar o peso de uma fatia fará com que ela ocupe um arco proporcionalmente maior na roleta, aumentando a chance de ser sorteada.' },
+    { type: 'title', text: 'Consultar o histórico', level: 3 },
+    { type: 'paragraph', html: 'O painel de histórico guarda os dez giros mais recentes para que todos os jogadores possam verificar os resultados anteriores com total transparência ao longo da partida.' },
   ],
   faq: [
     {

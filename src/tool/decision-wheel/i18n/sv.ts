@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Beslutshjul för Brädspel och Gruppaktiviteter', level: 2 },
-    { type: 'paragraph', html: 'Beslutshjulet är ett mångsidigt verktyg för brädspel. Anpassa segmenten med dina egna texter och färger.' },
+    { type: 'paragraph', html: 'Beslutshjulet är ett mångsidigt digitalt verktyg för brädspel, rollspel och gruppaktiviteter. Det gör det möjligt att avgöra val snabbt, rättvist och helt slumpmässigt. Varje segment kan anpassas med egna etiketter, färger och sannolikhetsvikter för att passa just ditt spel.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Hur du Använder Beslutshjulet', level: 2 },
-    { type: 'paragraph', html: 'Välj en mall eller skapa dina egna segment med vikter för att justera chanserna för varje val.' },
-    { type: 'title', text: "Fler beslutsscenarier", level: 3 },
-    { type: 'paragraph', html: "Använd hjulet för omröstningar, slumpmöten och handlingsval i spelet." },
-    { type: 'title', text: "Mallar för sällskapsspel", level: 3 },
-    { type: 'paragraph', html: "Mallar laddar vanliga val för sällskapsspel snabbt." },
-    { type: 'title', text: "Justera resultatvikter", level: 3 },
-    { type: 'paragraph', html: "Vikter gör vissa resultat vanligare eller mer sällsynta." },
-    { type: 'title', text: "Granska historiken", level: 3 },
-    { type: 'paragraph', html: "Historiken sparar de senaste snurren för gruppen." },
+    { type: 'paragraph', html: 'Välj en färdig mall som Ja/Nej, D20, Alignment eller Bytesskatter, eller skapa din egen anpassade lista. Justera vikterna från 1 till 5 för att ändra hur ofta varje alternativ dras. Fysikmotorn simulerar friktion och inbromsning för att ge spänning åt varje snurr.' },
+    { type: 'title', text: 'Fler beslutsscenarier', level: 3 },
+    { type: 'paragraph', html: 'Använd hjulet för snabba omröstningar i gruppen, slumpmässiga möten i rollspel, fördelning av spelturer eller för att välja vilken spelare som väljer karaktär först.' },
+    { type: 'title', text: 'Mallar för sällskapsspel', level: 3 },
+    { type: 'paragraph', html: 'De inbyggda mallarna låter dig ladda vanliga beslut på ett par sekunder, vilket sparar värdefull tid under spelsessioner och undviker onödiga diskussioner runt bordet.' },
+    { type: 'title', text: 'Justera resultatvikter', level: 3 },
+    { type: 'paragraph', html: 'Genom att ändra vikter kan du balansera eller styra dragningschanserna. En högre vikt ger segmentet en större yta på hjulet, vilket ökar sannolikheten att det väljs.' },
+    { type: 'title', text: 'Granska historiken', level: 3 },
+    { type: 'paragraph', html: 'Historikpanelen sparar de senaste tio snurren så att alla spelare kan kontrollera tidigare resultat i full transparens under spelets gång.' },
   ],
   faq: [
     {

@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Koło Decyzyjne do Gier Planszowych i Zabaw Grupowych', level: 2 },
-    { type: 'paragraph', html: 'Koło decyzyjne to uniwersalne narzędzie do gier planszowych. Dostosuj wycinki za pomocą własnych etykiet i kolorów.' },
+    { type: 'paragraph', html: 'Koło decyzyjne to uniwersalne cyfrowe narzędzie do gier planszowych, RPG oraz zabaw grupowych. Pozwala na szybkie, sprawiedliwe i całkowicie losowe wybieranie opcji. Każdy wycinek można dostosować za pomocą własnych etykiet, kolorów i wag prawdopodobieństwa dopasowanych do zasad Waszej gry.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Jak Używać Koła Decyzyjnego', level: 2 },
-    { type: 'paragraph', html: 'Wybierz gotowy szablon lub stwórz własne wycinki z wagami określającymi szansę wylosowania każdej opcji.' },
-    { type: 'title', text: "Dodatkowe scenariusze", level: 3 },
-    { type: 'paragraph', html: "Użyj koła do głosowań, losowych spotkań i wyboru działań w grze." },
-    { type: 'title', text: "Szablony do gier planszowych", level: 3 },
-    { type: 'paragraph', html: "Szablony szybko wczytują typowe wybory w grach planszowych." },
-    { type: 'title', text: "Ustawianie wag", level: 3 },
-    { type: 'paragraph', html: "Wagi sprawiają, że wyniki pojawiają się częściej lub rzadziej." },
-    { type: 'title', text: "Sprawdzanie historii", level: 3 },
-    { type: 'paragraph', html: "Historia zachowuje ostatnie losowania dla całej grupy." },
+    { type: 'paragraph', html: 'Wybierz gotowy szablon taki jak Tak/Nie, D20, Charakter czy Łupy, albo stwórz własną listę opcji. Ustaw wagi od 1 do 5, aby modyfikować częstotliwość pojawiania się poszczególnych wyników. Fizyczna animacja obrotu symuluje tarcie i zwalnianie dla maksymalnych emocji.' },
+    { type: 'title', text: 'Dodatkowe scenariusze', level: 3 },
+    { type: 'paragraph', html: 'Użyj koła do szybkich głosowań w grupie, losowych spotkań w grach fabularnych, przydzielania kolejności graczy lub wyznaczania wyzwań na imprezie.' },
+    { type: 'title', text: 'Szablony do gier planszowych', level: 3 },
+    { type: 'paragraph', html: 'Wbudowane szablony pozwalają wczytać najczęstsze wybory planszowe w kilka sekund, oszczędzając czas i zapobiegając niepotrzebnym dyskusjom przy stole.' },
+    { type: 'title', text: 'Ustawianie wag', level: 3 },
+    { type: 'paragraph', html: 'Modyfikacja wag pozwala zbalansować szanse. Wyższa waga zwiększa łuk wycinka na kole, podnosząc prawdopodobieństwo jego wylosowania.' },
+    { type: 'title', text: 'Sprawdzanie historii', level: 3 },
+    { type: 'paragraph', html: 'Panel historii zachowuje 10 ostatnich losowań, aby wszyscy gracze mogli przejrzyście weryfikować wcześniejsze wyniki w trakcie rozgrywki.' },
   ],
   faq: [
     {

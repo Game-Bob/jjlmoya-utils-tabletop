@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: '보드게임 및 그룹 모임을 위한 결정 휠 선택기', level: 2 },
-    { type: 'paragraph', html: '결정 휠은 보드게임에 유용한 다목적 랜덤 선택 툴입니다. 자신만의 라벨과 색상으로 휠을 자유롭게 디자인해보세요.' },
+    { type: 'paragraph', html: '결정 휠은 보드게임, TRPG, 파티 모임에서 유용한 디지털 무작위 추첨 도구입니다. 공정하고 완전히 무작위로 선택지를 결정할 수 있습니다. 항목별 라벨, 색상, 당첨 확률 가중치를 자유롭게 설정해 플레이 규칙에 맞게 맞춤형 휠을 구성할 수 있습니다.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: '결정 휠 사용법', level: 2 },
-    { type: 'paragraph', html: '준비된 프리셋을 불러오거나 직접 항목을 만들고 가중치를 조절해 당첨 확률을 다르게 구성할 수 있습니다.' },
-    { type: 'title', text: "추가 시나리오", level: 3 },
-    { type: 'paragraph', html: "투표, 무작위 만남, 게임 행동 선택에 룰렛을 사용할 수 있습니다." },
-    { type: 'title', text: "테이블탑 게임 프리셋", level: 3 },
-    { type: 'paragraph', html: "프리셋으로 테이블탑 게임의 일반적인 선택지를 빠르게 불러옵니다." },
-    { type: 'title', text: "결과 가중치 조정", level: 3 },
-    { type: 'paragraph', html: "가중치를 바꾸면 결과가 나올 가능성을 조절할 수 있습니다." },
-    { type: 'title', text: "회전 기록 확인", level: 3 },
-    { type: 'paragraph', html: "기록에는 최근 회전 결과가 남아 그룹이 확인할 수 있습니다." },
+    { type: 'paragraph', html: '예/아니오, D20, 성향, 전리품 등 미리 준비된 템플릿을 선택하거나 나만의 무작위 항목을 생성해보세요. 가중치를 1부터 5까지 조정하여 특정 선택지가 당첨될 확률을 세밀하게 제어할 수 있습니다. 감속 물리가 적용된 부드러운 회전 애니메이션이 긴장감을 더해줍니다.' },
+    { type: 'title', text: '추가 시나리오', level: 3 },
+    { type: 'paragraph', html: '모임 내 빠른 투표, TRPG 무작위 인카운터 결정, 플레이 순서 정하기, 벌칙 수행자 선정 등 다양한 상황에서 편리하게 활용할 수 있습니다.' },
+    { type: 'title', text: '테이블탑 게임 프리셋', level: 3 },
+    { type: 'paragraph', html: '자주 쓰이는 결정 템플릿이 미리 준비되어 있어 게임 준비 시간을 단축하고 세션을 매끄럽게 진행할 수 있습니다.' },
+    { type: 'title', text: '결과 가중치 조정', level: 3 },
+    { type: 'paragraph', html: '가중치를 높이면 휠에서 차지하는 영역이 넓어져 해당 항목이 선택될 확률이 높아집니다.' },
+    { type: 'title', text: '회전 기록 확인', level: 3 },
+    { type: 'paragraph', html: '최근 10회의 회전 기록이 저장되므로 그룹 구성원 모두가 결과를 투명하게 확인할 수 있습니다.' },
   ],
   faq: [
     {

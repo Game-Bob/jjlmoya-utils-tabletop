@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Beslissingsrad voor Bordspellen en Groepsactiviteiten', level: 2 },
-    { type: 'paragraph', html: 'Het beslissingsrad is een veelzijdige tool voor bordspellen en groepen. Pas segmenten aan met uw eigen labels en kleuren.' },
+    { type: 'paragraph', html: 'Het beslissingsrad is een veelzijdige digitale tool voor bordspellen, RPGs en groepsactiviteiten. Het maakt het mogelijk om snel, eerlijk en volkomen willekeurig keuzes te maken. Elk segment kan worden aangepast met uw eigen teksten, kleuren en gewichten om de exacte kansen per optie in te stellen.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Hoe het Beslissingsrad te Gebruiken', level: 2 },
-    { type: 'paragraph', html: 'Kies een voorinstelling of maak uw eigen segmenten met gewichten om de kansen per keuze te bepalen.' },
-    { type: 'title', text: "Meer beslisscenario's", level: 3 },
-    { type: 'paragraph', html: "Gebruik het rad voor stemmingen, willekeurige ontmoetingen en spelacties." },
-    { type: 'title', text: "Sjablonen voor bordspellen", level: 3 },
-    { type: 'paragraph', html: "Sjablonen laden veelvoorkomende keuzes voor bordspellen snel." },
-    { type: 'title', text: "Uitkomsten wegen", level: 3 },
-    { type: 'paragraph', html: "Met gewichten maak je uitkomsten vaker of zeldzamer." },
-    { type: 'title', text: "De geschiedenis bekijken", level: 3 },
-    { type: 'paragraph', html: "De geschiedenis bewaart recente draaien voor de groep." },
+    { type: 'paragraph', html: 'Kies een kant-en-klare voorinstelling zoals Ja/Nee, D20, Alignment of Buit, of stel uw eigen aangepaste lijst samen. Pas het gewicht aan van 1 tot 5 om de frequentie van elke optie te beïnvloeden. De natuurkundige animatie simuleert wrijving en vertraging voor extra spanning bij elke draai.' },
+    { type: 'title', text: 'Meer beslisscenarios', level: 3 },
+    { type: 'paragraph', html: 'Gebruik het rad voor snelle stemmingen in de groep, willekeurige ontmoetingen in rollenspellen, het verdelen van beurten of het kiezen van een startspeler.' },
+    { type: 'title', text: 'Sjablonen voor bordspellen', level: 3 },
+    { type: 'paragraph', html: 'Met de ingebouwde sjablonen laadt u veelvoorkomende spelbeslissingen in enkele seconden, wat tijd bespaart tijdens spelsessies en discussies aan tafel voorkomt.' },
+    { type: 'title', text: 'Uitkomsten wegen', level: 3 },
+    { type: 'paragraph', html: 'Door gewichten aan te passen kunt u de kansen van uitkomsten beïnvloeden. Een hoger gewicht vergroot het oppervlak op het rad, waardoor de kans dat die optie wordt gekozen toeneemt.' },
+    { type: 'title', text: 'De geschiedenis bekijken', level: 3 },
+    { type: 'paragraph', html: 'Het geschiedenispaneel bewaart de laatste tien draaien zodat alle spelers eerdere uitkomsten in volledige transparantie kunnen controleren.' },
   ],
   faq: [
     {

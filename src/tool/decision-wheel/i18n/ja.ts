@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'ボードゲームやグループ活動で使える意思決定ホイール', level: 2 },
-    { type: 'paragraph', html: '意思決定ホイールは、ボードゲームやグループのアクティビティで役立つ多目的ツールです。項目と色を自由に設定できます。' },
+    { type: 'paragraph', html: '意思決定ホイールは、ボードゲーム、TRPG、グループのアクティビティで役立つデジタル抽選ツールです。公正かつ完全なランダムで選択肢を決定できます。セグメントごとにラベル、カラー、当選確率の重み（ウェイト）を自由自在にカスタマイズ可能です。' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: '意思決定ホイールの使い方', level: 2 },
-    { type: 'paragraph', html: 'プリセットを選ぶか、独自の項目を作成して重みを設定し、当選確率を自由にコントロールできます。' },
-    { type: 'title', text: "その他のシナリオ", level: 3 },
-    { type: 'paragraph', html: "投票、ランダムイベント、ゲーム中の行動選択にホイールを使えます。" },
-    { type: 'title', text: "卓上ゲームのプリセット", level: 3 },
-    { type: 'paragraph', html: "プリセットで卓上ゲームの一般的な選択肢をすぐに読み込めます。" },
-    { type: 'title', text: "重みを調整する", level: 3 },
-    { type: 'paragraph', html: "重みを変えると結果の出やすさを調整できます。" },
-    { type: 'title', text: "履歴を確認する", level: 3 },
-    { type: 'paragraph', html: "履歴には最近のスピンが残り、グループで確認できます。" },
+    { type: 'paragraph', html: '「はい/いいえ」「D20」「属性」「戦利品」などの便利なプリセットを選択するか、オリジナルの項目を自由に作成してください。重みを1から5まで調整することで、特定の選択肢が出やすくなる確率を細かくコントロールできます。物理シミュレーションによる回転アニメーションが緊張感を高めます。' },
+    { type: 'title', text: 'その他のシナリオ', level: 3 },
+    { type: 'paragraph', html: 'グループでのクイック投票、TRPGでのランダムエンカウント決定、プレイヤーの順番決め、罰ゲームの選定など、幅広い用途で活用いただけます。' },
+    { type: 'title', text: '卓上ゲームのプリセット', level: 3 },
+    { type: 'paragraph', html: 'よく使われる判定用プリセットが最初から用意されているため、ゲーム準備の時間を短縮し、ゲームセッションをスムーズに進行できます。' },
+    { type: 'title', text: '重みを調整する', level: 3 },
+    { type: 'paragraph', html: '重み（ウェイト）を増やすと、ホイール上の面積が大きくなり、その項目が選ばれる確率が比例して高くなります。' },
+    { type: 'title', text: '履歴を確認する', level: 3 },
+    { type: 'paragraph', html: 'スピン履歴パネルには直近10回の結果が保存されるため、グループ全員で過去の抽選結果を透明性をもって確認できます。' },
   ],
   faq: [
     {

@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Roue de Décision pour Jeux de Société et Activités de Groupe', level: 2 },
-    { type: 'paragraph', html: 'La roue de décision est un outil polyvalent pour les jeux de rôle et de plateau. Personnalisez les textes et couleurs des segments et lancez la roue.' },
+    { type: 'paragraph', html: 'La roue de décision est un outil numérique polyvalent pour les jeux de rôle, jeux de plateau et animations de groupe. Elle permet de tirer au sort des options de manière rapide, équitable et totalement aléatoire. Personnalisez chaque secteur avec vos propres textes, couleurs et poids configurables pour adapter les probabilités exactes aux règles de votre partie.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Comment Utiliser la Roue de Décision', level: 2 },
-    { type: 'paragraph', html: 'Choisissez un modèle prédéfini ou créez vos propres options avec des poids personnalisés pour ajuster les probabilités de chaque secteur.' },
-    { type: 'title', text: "Autres scénarios de décision", level: 3 },
-    { type: 'paragraph', html: "Utilisez la roue pour les votes, les rencontres aléatoires et les actions de partie." },
-    { type: 'title', text: "Modèles pour les jeux de plateau", level: 3 },
-    { type: 'paragraph', html: "Les modèles chargent rapidement les décisions courantes des jeux de plateau." },
-    { type: 'title', text: "Régler les pondérations", level: 3 },
-    { type: 'paragraph', html: "Les pondérations rendent certains résultats plus ou moins fréquents." },
-    { type: 'title', text: "Consulter l'historique", level: 3 },
-    { type: 'paragraph', html: "L'historique conserve les derniers tours pour le groupe." },
+    { type: 'paragraph', html: 'Choisissez un modèle prédéfini comme Oui/Non, D20, Alignements ou Butin, ou créez votre propre liste personnalisée. Réglez les poids de 1 à 5 pour modifier la fréquence d apparition de chaque résultat. Le moteur physique simule l inertie et le frottement de rotation pour ajouter du suspense à chaque tirage.' },
+    { type: 'title', text: 'Autres scénarios de décision', level: 3 },
+    { type: 'paragraph', html: 'Utilisez la roue pour organiser des votes rapides au sein du groupe, générer des rencontres aléatoires en jeu de rôle, distribuer les tours de jeu ou désigner le joueur qui choisit son personnage en premier.' },
+    { type: 'title', text: 'Modèles pour les jeux de plateau', level: 3 },
+    { type: 'paragraph', html: 'Les modèles préconçus vous permettent de charger les décisions fréquentes en quelques secondes, ce qui gagne un temps précieux pendant vos soirées jeux et évite les hésitations inutiles.' },
+    { type: 'title', text: 'Régler les pondérations', level: 3 },
+    { type: 'paragraph', html: 'Les pondérations vous permettent de balancer ou d orienter les tirages. En augmentant le poids d un segment, celui-ci occupe un arc proportionnellement plus grand sur la roue, augmentant sa chance d être désigné.' },
+    { type: 'title', text: 'Consulter l historique', level: 3 },
+    { type: 'paragraph', html: 'L historique conserve les dix derniers tirages pour que l ensemble des joueurs puisse vérifier les résultats précédents en toute transparence au fil de la session.' },
   ],
   faq: [
     {

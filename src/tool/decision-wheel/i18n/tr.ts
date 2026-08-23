@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Masa Oyunları ve Grup Etkinlikleri İçin Karar Çarkı', level: 2 },
-    { type: 'paragraph', html: 'Karar çarkı, masa oyunları için çok yönlü bir rastgele seçim aracıdır. Dilimleri kendi etiketlerinizle özelleştirin.' },
+    { type: 'paragraph', html: 'Karar çarkı, masa oyunları, RPG oyunları ve grup etkinlikleri için çok yönlü bir dijital rastgele seçim aracıdır. Seçenekler arasında hızlı, adil ve tamamen tarafsız bir çekiliş yapmanızı sağlar. Her dilimi kendi etiketleriniz, renkleriniz ve oyun kurallarınıza uygun olasılık ağırlıklarıyla özelleştirebilirsiniz.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Karar Çarkı Nasıl Kullanılır', level: 2 },
-    { type: 'paragraph', html: 'Hazır bir şablon seçin veya olasılıkları ayarlamak için farklı ağırlıklara sahip kendi dilimlerinizi oluşturun.' },
-    { type: 'title', text: "Ek karar senaryolari", level: 3 },
-    { type: 'paragraph', html: "Carki oylama, rastgele karsilasma ve oyun eylemleri icin kullanin." },
-    { type: 'title', text: "Masaustu oyun sablonlari", level: 3 },
-    { type: 'paragraph', html: "Sablonlar masaustu oyunlarindaki yaygin secimleri hizla yukler." },
-    { type: 'title', text: "Sonuc agirliklarini ayarlama", level: 3 },
-    { type: 'paragraph', html: "Agirliklar bazi sonuclari daha sik veya seyrek yapar." },
-    { type: 'title', text: "Gecmisi inceleme", level: 3 },
-    { type: 'paragraph', html: "Gecmis son cevirmeleri grup icin saklar." },
+    { type: 'paragraph', html: 'Evet/Hayır, D20, Hizalanma veya Ganimet gibi hazır şablonlardan birini seçin ya da kendi özel listenizi oluşturun. Seçeneklerin çıkma sıklığını değiştirmek için ağırlıkları 1 ile 5 arasında ayarlayın. Fizik motoru, her çevirmede heyecan katmak için sürtünme ve yavaşlama efektini simüle eder.' },
+    { type: 'title', text: 'Ek karar senaryoları', level: 3 },
+    { type: 'paragraph', html: 'Çarkı grupta hızlı oylamalar yapmak, rol yapma oyunlarında rastgele karşılaşmalar oluşturmak, oyuncu sıralamasını belirlemek veya eğlenceli görevler seçmek için kullanabilirsiniz.' },
+    { type: 'title', text: 'Masaüstü oyun şablonları', level: 3 },
+    { type: 'paragraph', html: 'Hazır şablonlar, masa oyunlarında sık kullanılan seçimleri saniyeler içinde yüklemenizi sağlayarak oyun zamanından tasarruf etmenize yardımcı olur.' },
+    { type: 'title', text: 'Sonuç ağırlıklarını ayarlama', level: 3 },
+    { type: 'paragraph', html: 'Ağırlıkları değiştirmek olasılıkları dengeler. Bir dilimin ağırlığını artırmak, onun çarktaki alanını büyüterek seçilme şansını yükseltir.' },
+    { type: 'title', text: 'Geçmişi inceleme', level: 3 },
+    { type: 'paragraph', html: 'Geçmiş paneli son 10 çevirmenin sonucunu saklar; böylece gruptaki herkes geçmiş çekilişleri şeffaf bir şekilde inceleyebilir.' },
   ],
   faq: [
     {

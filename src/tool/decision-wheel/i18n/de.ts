@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Entscheidungsrad für Brettspiele und Gruppenaktivitäten', level: 2 },
-    { type: 'paragraph', html: 'Das Entscheidungsrad ist ein vielseitiges Werkzeug für Brettspiele und Gruppenaktivitäten. Passen Sie die Segmente mit eigenen Namen und Farben an.' },
+    { type: 'paragraph', html: 'Das Entscheidungsrad ist ein vielseitiges Werkzeug für Brettspiele, Rollenspiele und Gruppenentscheidungen am Spieltisch. Mit diesem Zufallsgenerator lassen sich beliebige Optionen rasch und fair auslosen. Sie können jedes Segment mit individuellen Bezeichnungen, Farben und Gewichtungen gestalten, um Wahrscheinlichkeiten exakt an Ihre Spielregeln anzupassen.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'So Verwenden Sie das Entscheidungsrad', level: 2 },
-    { type: 'paragraph', html: 'Wählen Sie eine Vorlage oder erstellen Sie eigene Segmente mit Gewichtungen, um die Gewinnwahrscheinlichkeiten anzupassen.' },
-    { type: 'title', text: "Weitere Szenarien", level: 3 },
-    { type: 'paragraph', html: "Nutzen Sie das Rad für Abstimmungen, Zufallsbegegnungen und Spielaktionen." },
-    { type: 'title', text: "Vorlagen nutzen", level: 3 },
-    { type: 'paragraph', html: "Vorlagen laden häufige Entscheidungen für Brettspiele sofort." },
-    { type: 'title', text: "Gewichtungen einstellen", level: 3 },
-    { type: 'paragraph', html: "Gewichtungen machen einzelne Ergebnisse häufiger oder seltener." },
-    { type: 'title', text: "Verlauf prüfen", level: 3 },
-    { type: 'paragraph', html: "Der Verlauf hält die letzten Drehungen für die Gruppe fest." },
+    { type: 'paragraph', html: 'Wählen Sie eine der vordefinierten Vorlagen wie Ja/Nein, D20, Gesinnungen oder Beuteseltenheit, oder erstellen Sie eine komplett benutzerdefinierte Liste. Über die Gewichtung von 1 bis 5 steuern Sie die Chance für jedes einzelne Feld. Ein Physikmodell simuliert Schwung und Reibung beim Drehen des Rades.' },
+    { type: 'title', text: 'Weitere Szenarien', level: 3 },
+    { type: 'paragraph', html: 'Nutzen Sie das Rad für spontane Gruppenabstimmungen, zufällige Begegnungen in Rollenspielen, die Vergabe von Spielzügen oder die zufällige Verteilung von Aufgaben und Beute unter den Spielern.' },
+    { type: 'title', text: 'Vorlagen nutzen', level: 3 },
+    { type: 'paragraph', html: 'Die integrierten Vorlagen laden häufig benötigte Brettspiel- und Pen-and-Paper-Entscheidungen mit einem einzigen Klick. Das spart wertvolle Vorbereitungszeit beim Spielabend.' },
+    { type: 'title', text: 'Gewichtungen einstellen', level: 3 },
+    { type: 'paragraph', html: 'Mit der Gewichtungsfunktion bestimmen Sie, wie groß einzelne Abschnitte auf dem Rad dargestellt werden. Höhere Werte erhöhen die Wahrscheinlichkeit, dass die Nadel auf diesem Segment landet.' },
+    { type: 'title', text: 'Verlauf prüfen', level: 3 },
+    { type: 'paragraph', html: 'Der integrierte Drehverlauf speichert die letzten Ergebnisse für alle Mitspieler transparent ab. Dadurch lässt sich jederzeit nachvollziehen, welche Entscheidungen in vorangegangenen Runden getroffen wurden.' },
   ],
   faq: [
     {

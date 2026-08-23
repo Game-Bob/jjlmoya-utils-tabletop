@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Roda Keputusan untuk Permainan Papan and Aktivitas Kelompok', level: 2 },
-    { type: 'paragraph', html: 'Roda keputusan adalah alat serbaguna untuk permainan papan. Sesuaikan label dan warna segmen, lalu putar untuk memilih hasil secara acak.' },
+    { type: 'paragraph', html: 'Roda keputusan adalah alat digital serbaguna untuk permainan papan, RPG tabletop, dan aktivitas kelompok. Alat ini memungkinkan Anda menentukan pilihan acak secara cepat, adil, dan tanpa prasangka. Setiap segmen dapat disesuaikan dengan nama kustom, warna, dan bobot probabilitas yang dapat diatur sesuai kebutuhan permainan Anda.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Cara Menggunakan Roda Keputusan', level: 2 },
-    { type: 'paragraph', html: 'Pilih prasetel atau buat segmen Anda sendiri dengan bobot untuk menyesuaikan probabilitas setiap pilihan.' },
-    { type: 'title', text: "Skenario tambahan", level: 3 },
-    { type: 'paragraph', html: "Gunakan roda untuk pemungutan suara, pertemuan acak, dan aksi permainan." },
-    { type: 'title', text: "Preset permainan meja", level: 3 },
-    { type: 'paragraph', html: "Preset memuat keputusan umum permainan meja dengan cepat." },
-    { type: 'title', text: "Mengatur bobot hasil", level: 3 },
-    { type: 'paragraph', html: "Bobot membuat hasil tertentu lebih sering atau lebih jarang muncul." },
-    { type: 'title', text: "Meninjau riwayat", level: 3 },
-    { type: 'paragraph', html: "Riwayat menyimpan putaran terbaru untuk ditinjau bersama." },
+    { type: 'paragraph', html: 'Pilih salah satu prasetel siap pakai seperti Ya/Tidak, D20, Aliansi, atau Kelangkaan Jarahan, atau buat daftar kustom Anda sendiri. Atur bobot dari 1 hingga 5 untuk menentukan frekuensi kemunculan setiap opsi. Mesin simulasi fisik memberikan sensasi putaran yang realistis saat roda berputar.' },
+    { type: 'title', text: 'Skenario tambahan', level: 3 },
+    { type: 'paragraph', html: 'Gunakan roda acak ini untuk voting kelompok dengan cepat, menentukan pertemuan acak dalam permainan peran (RPG), membagikan giliran pemain, atau memilih tantangan seru secara adil.' },
+    { type: 'title', text: 'Preset permainan meja', level: 3 },
+    { type: 'paragraph', html: 'Prasetel bawaan memungkinkan Anda memuat keputusan umum dalam hitungan detik, menghemat waktu persiapan permainan dan menghindari perdebatan antar pemain.' },
+    { type: 'title', text: 'Mengatur bobot hasil', level: 3 },
+    { type: 'paragraph', html: 'Fitur bobot memungkinkan Anda menyesuaikan peluang setiap segmen. Menambah bobot akan memperbesar area segmen pada roda, meningkatkan probabilitas segmen tersebut terpilih saat roda berhenti.' },
+    { type: 'title', text: 'Meninjau riwayat', level: 3 },
+    { type: 'paragraph', html: 'Panel riwayat menyimpan sepuluh putaran terakhir secara transparan agar seluruh pemain dapat memverifikasi hasil-hasil sebelumnya selama sesi permainan berlangsung.' },
   ],
   faq: [
     {

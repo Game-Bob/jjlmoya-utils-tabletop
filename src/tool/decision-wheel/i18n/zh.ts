@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: '适用于桌游及团队聚会的随机决策轮盘', level: 2 },
-    { type: 'paragraph', html: '决策轮盘是一个用于桌游多用途的随机选择工具。可自由定制各分块的内容和颜色。' },
+    { type: 'paragraph', html: '决策轮盘是一个用于桌面游戏、TRPG跑团和团队聚会的多用途数字随机选择工具。它可以帮助您快速、公正且完全随机地决定各种选项。每个扇区都可以自定义文本、背景颜色以及中奖概率权重，以完美契合您的游戏规则。' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: '如何使用决策轮盘', level: 2 },
-    { type: 'paragraph', html: '选择预设方案，或创建自定义分块并设置权重，以按需调整各选项的被选中概率。' },
-    { type: 'title', text: "更多决策场景", level: 3 },
-    { type: 'paragraph', html: "转盘适合投票、随机遭遇和游戏中的行动选择。" },
-    { type: 'title', text: "桌游预设", level: 3 },
-    { type: 'paragraph', html: "预设可以快速载入桌游中常见的选择。" },
-    { type: 'title', text: "调整结果权重", level: 3 },
-    { type: 'paragraph', html: "调整权重可以让结果更常出现或更少出现。" },
-    { type: 'title', text: "查看旋转历史", level: 3 },
-    { type: 'paragraph', html: "历史记录会保存最近的旋转，方便团队查看。" },
+    { type: 'paragraph', html: '选择内置预设方案（如是/否、D20、阵营或战利品掉落），或者创建您专属的自定义选项列表。通过将权重调整为 1 到 5，您可以灵活改变每个选项抽中的概率。逼真的物理阻尼旋转动画将为每一次抽取增添紧张刺激的体验。' },
+    { type: 'title', text: '更多决策场景', level: 3 },
+    { type: 'paragraph', html: '您可以使用决策轮盘在团队中快速发起投票、决定跑团中的随机遭遇、分配玩家行动顺序，或者在派对游戏中抽取惩罚项目。' },
+    { type: 'title', text: '桌游预设', level: 3 },
+    { type: 'paragraph', html: '内置桌游预设让您能在数秒内加载常见决策，节省游戏准备时间，避免桌上无谓的争议。' },
+    { type: 'title', text: '调整结果权重', level: 3 },
+    { type: 'paragraph', html: '调整权重可以平衡或倾斜抽取概率。提高某项权重会增大该分块在轮盘上的扇形面积，从而提升中奖几率。' },
+    { type: 'title', text: '查看旋转历史', level: 3 },
+    { type: 'paragraph', html: '历史记录面板会保存最近 10 次的旋转结果，方便全场所有玩家在游戏过程中透明地复核先前的抽签记录。' },
   ],
   faq: [
     {

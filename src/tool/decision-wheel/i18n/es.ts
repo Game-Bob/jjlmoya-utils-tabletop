@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Ruleta de Decisiones para Juegos de Mesa y Actividades', level: 2 },
-    { type: 'paragraph', html: 'La ruleta de decisiones es una herramienta versátil para juegos de mesa y actividades grupales. Personaliza las secciones con tus propios textos y colores, luego gira para seleccionar un resultado aleatorio.' },
+    { type: 'paragraph', html: 'La ruleta de decisiones es una herramienta digital versátil para juegos de mesa, rol y dinámicas de grupo. Permite sortear opciones de manera rápida, imparcial y totalmente aleatoria. Puedes personalizar cada sección con textos, colores y pesos configurables para adaptar las probabilidades exactas a las reglas de tu partida.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Cómo Usar la Ruleta de Decisiones', level: 2 },
-    { type: 'paragraph', html: 'La ruleta facilita elegir al azar entre un conjunto de opciones. Elige un preajuste o crea tus propias secciones con diferentes pesos para ajustar las probabilidades.' },
-    { type: 'title', text: "Más escenarios de decisión", level: 3 },
-    { type: 'paragraph', html: "Usa la ruleta para votaciones, encuentros aleatorios y acciones de la partida." },
-    { type: 'title', text: "Plantillas para juegos de mesa", level: 3 },
-    { type: 'paragraph', html: "Las plantillas cargan rápidamente decisiones habituales de juegos de mesa." },
-    { type: 'title', text: "Ajustar pesos de resultado", level: 3 },
-    { type: 'paragraph', html: "Los pesos hacen que determinados resultados aparezcan más o menos veces." },
-    { type: 'title', text: "Revisar el historial", level: 3 },
-    { type: 'paragraph', html: "El historial conserva los últimos giros para que el grupo los revise." },
+    { type: 'paragraph', html: 'Selecciona una de las plantillas integradas como Sí/No, D20, Alineamientos o Botín, o construye tu propia lista personalizada. Ajusta los pesos de 1 a 5 para modificar la frecuencia con la que aparece cada resultado. El motor de físicas simula la inercia y fricción de giro para dar emoción a cada tirada.' },
+    { type: 'title', text: 'Más escenarios de decisión', level: 3 },
+    { type: 'paragraph', html: 'Utiliza la ruleta para organizar votaciones rápidas en el grupo, generar encuentros aleatorios en partidas de rol, repartir turnos de juego o decidir qué jugador escoge primero su personaje.' },
+    { type: 'title', text: 'Plantillas para juegos de mesa', level: 3 },
+    { type: 'paragraph', html: 'Las plantillas prediseñadas te permiten cargar decisiones frecuentes en segundos, ahorrando tiempo durante tus sesiones de juego de mesa y reduciendo las discusiones en la mesa.' },
+    { type: 'title', text: 'Ajustar pesos de resultado', level: 3 },
+    { type: 'paragraph', html: 'Los pesos permiten equilibrar o sesgar los resultados de la ruleta. Al aumentar el peso de una sección, esta ocupará un arco proporcionalmente mayor en el círculo, incrementando la probabilidad de ser seleccionada.' },
+    { type: 'title', text: 'Revisar el historial', level: 3 },
+    { type: 'paragraph', html: 'El panel de historial conserva los últimos giros para que todos los jugadores puedan comprobar los resultados anteriores con total transparencia durante la partida.' },
   ],
   faq: [
     {

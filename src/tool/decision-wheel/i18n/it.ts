@@ -29,7 +29,7 @@ export const content: DecisionWheelLocaleContent = {
   },
   seo: [
     { type: 'title', text: 'Ruota delle Decisioni per Giochi da Tavolo e Attività di Gruppo', level: 2 },
-    { type: 'paragraph', html: 'La ruota delle decisioni è uno strumento versatile per giochi di ruolo e da tavolo. Personalizza gli spicchi con testi e colori.' },
+    { type: 'paragraph', html: 'La ruota delle decisioni è uno strumento digitale versatile per giochi da tavolo, RPG e attività di gruppo. Permette di sorteggiare opzioni casuali in modo rapido, equo e completamente imparziale. Ogni spicchio può essere personalizzato con testi, colori e pesi di probabilità configurabili secondo le regole del tuo gioco.' },
     {
       type: 'stats',
       items: [
@@ -40,15 +40,15 @@ export const content: DecisionWheelLocaleContent = {
       columns: 3,
     },
     { type: 'title', text: 'Come Usare la Ruota delle Decisioni', level: 2 },
-    { type: 'paragraph', html: 'Scegli un set preimpostato o crea i tuoi spicchi personali impostando pesi diversi per calibrare le probabilità.' },
-    { type: 'title', text: "Altri scenari decisionali", level: 3 },
-    { type: 'paragraph', html: "Usa la ruota per votazioni, incontri casuali e azioni durante la partita." },
-    { type: 'title', text: "Preset per giochi da tavolo", level: 3 },
-    { type: 'paragraph', html: "I preset caricano rapidamente le decisioni comuni dei giochi da tavolo." },
-    { type: 'title', text: "Regolare i pesi", level: 3 },
-    { type: 'paragraph', html: "I pesi rendono alcuni risultati più o meno frequenti." },
-    { type: 'title', text: "Consultare la cronologia", level: 3 },
-    { type: 'paragraph', html: "La cronologia conserva gli ultimi giri per il gruppo." },
+    { type: 'paragraph', html: 'Scegli uno dei preset pronti all uso come Sì/No, D20, Allineamenti o Bottino, oppure crea la tua lista personalizzata. Regola i pesi da 1 a 5 per modificare la frequenza di comparsa di ciascun risultato. Il motore fisico simula inerzia e attrito di rotazione per aggiungere suspense a ogni tiro.' },
+    { type: 'title', text: 'Altri scenari decisionali', level: 3 },
+    { type: 'paragraph', html: 'Utilizza la ruota per organizzare votazioni rapide del gruppo, generare incontri casuali nei giochi di ruolo, distribuire i turni di gioco o scegliere quale giocatore seleziona per primo il personaggio.' },
+    { type: 'title', text: 'Preset per giochi da tavolo', level: 3 },
+    { type: 'paragraph', html: 'I preset predefiniti ti consentono di caricare decisioni comuni in pochi secondi, risparmiando tempo prezioso durante le serate di gioco ed evitando discussioni al tavolo.' },
+    { type: 'title', text: 'Regolare i pesi', level: 3 },
+    { type: 'paragraph', html: 'I pesi ti permettono di bilanciare o orientare i risultati. Aumentando il peso di uno spicchio, questo occuperà un arco proporzionalmente maggiore sulla ruota, incrementando la probabilità di selezione.' },
+    { type: 'title', text: 'Consultare la cronologia', level: 3 },
+    { type: 'paragraph', html: 'Il pannello della cronologia conserva i dieci giri recenti affinché tutti i giocatori possano verificare i risultati precedenti in totale trasparenza durante la sessione.' },
   ],
   faq: [
     {
