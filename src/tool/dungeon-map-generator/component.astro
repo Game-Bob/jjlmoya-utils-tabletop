@@ -16,12 +16,12 @@ const initialEvaluation = evaluateMap(initialMap, ui);
 <div class="dmg" data-dungeon-generator data-style="dungeon">
   <script is:inline type="application/json" data-ui set:html={JSON.stringify(ui)} />
   <section class="dmg-controls" aria-label={ui.styleLabel}>
-    <div class="dmg-seed-row">
-      <label class="dmg-field dmg-field--seed">
-        <span>{ui.seedLabel}</span>
-        <input name="seed" type="text" value={DEFAULT_CONFIG.seed} maxlength="48" spellcheck="false" />
-      </label>
-      <button class="dmg-shuffle" type="button" data-random-seed>{ui.randomSeed}</button>
+    <div class="dmg-field dmg-field-seed">
+      <label for="dmg-seed-input">{ui.seedLabel}</label>
+      <div class="dmg-seed-input-group">
+        <input id="dmg-seed-input" name="seed" type="text" value={DEFAULT_CONFIG.seed} maxlength="48" spellcheck="false" />
+        <button class="dmg-shuffle" type="button" data-random-seed>{ui.randomSeed}</button>
+      </div>
     </div>
 
     <fieldset class="dmg-styles">
