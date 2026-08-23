@@ -1,6 +1,7 @@
 import { diceRollerSimulator } from '../tool/dice-roller-simulator/entry';
 import { boardGameTimer } from '../tool/board-game-timer/entry';
 import { dungeonMapGenerator } from '../tool/dungeon-map-generator/entry';
+import { encounterDifficultyCalculator } from '../tool/encounter-difficulty-calculator/entry';
 import type { CategoryLocaleContent, KnownLocale } from '../types';
 
 export const tabletopCategory = {
@@ -9,6 +10,7 @@ export const tabletopCategory = {
     diceRollerSimulator,
     boardGameTimer,
     dungeonMapGenerator,
+    encounterDifficultyCalculator,
   ],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),
