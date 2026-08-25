@@ -13,6 +13,7 @@ import { HIDDEN_ROLE_DEALER_TOOL } from './tool/hidden-role-dealer';
 import { SCATTER_DIRECTION_SELECTOR_TOOL } from './tool/scatter-direction-selector';
 import { DUNGEON_MAP_GENERATOR_TOOL } from './tool/dungeon-map-generator';
 import { ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL } from './tool/encounter-difficulty-calculator';
+import { TOKEN_STAMP_STUDIO_TOOL } from './tool/token-stamp-studio';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   DICE_ROLLER_SIMULATOR_TOOL,
@@ -28,5 +29,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   SCATTER_DIRECTION_SELECTOR_TOOL,
   DUNGEON_MAP_GENERATOR_TOOL,
   ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL,
+  TOKEN_STAMP_STUDIO_TOOL,
 ];
 

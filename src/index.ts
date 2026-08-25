@@ -7,6 +7,7 @@ export { fantasyRunesTranslator, FANTASY_RUNES_TRANSLATOR_TOOL } from './tool/fa
 export { investigationBoard, INVESTIGATION_BOARD_TOOL } from './tool/investigation-board';
 export { lunarTideTracker, LUNAR_TIDE_TRACKER_TOOL } from './tool/lunar-tide-tracker';
 export { dungeonMapGenerator, DUNGEON_MAP_GENERATOR_TOOL } from './tool/dungeon-map-generator';
+export { tokenStampStudio, TOKEN_STAMP_STUDIO_TOOL } from './tool/token-stamp-studio';
 
 
 export type {

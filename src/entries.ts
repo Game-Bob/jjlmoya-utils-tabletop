@@ -35,6 +35,7 @@ import { hiddenRoleDealer } from './tool/hidden-role-dealer/entry';
 import { scatterDirectionSelector } from './tool/scatter-direction-selector/entry';
 import { dungeonMapGenerator } from './tool/dungeon-map-generator/entry';
 import { encounterDifficultyCalculator } from './tool/encounter-difficulty-calculator/entry';
+import { tokenStampStudio } from './tool/token-stamp-studio/entry';
 
 export const ALL_ENTRIES = [
   diceRollerSimulator,
@@ -50,5 +51,6 @@ export const ALL_ENTRIES = [
   scatterDirectionSelector,
   dungeonMapGenerator,
   encounterDifficultyCalculator,
+  tokenStampStudio,
 ];
 
