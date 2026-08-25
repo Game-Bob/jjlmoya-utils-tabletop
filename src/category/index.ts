@@ -4,6 +4,7 @@ import { dungeonMapGenerator } from '../tool/dungeon-map-generator/entry';
 import { encounterDifficultyCalculator } from '../tool/encounter-difficulty-calculator/entry';
 import { tokenStampStudio } from '../tool/token-stamp-studio/entry';
 import { musScoreboard } from '../tool/mus-scoreboard/entry';
+import { rpgSettlementExplorationMapGenerator } from '../tool/rpg-settlement-exploration-map-generator/entry';
 import type { CategoryLocaleContent, KnownLocale } from '../types';
 
 export const tabletopCategory = {
@@ -15,6 +16,7 @@ export const tabletopCategory = {
     encounterDifficultyCalculator,
     tokenStampStudio,
     musScoreboard,
+    rpgSettlementExplorationMapGenerator,
   ],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),

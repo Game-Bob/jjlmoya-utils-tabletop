@@ -10,11 +10,7 @@ describe('Locale Completeness Validation', () => {
           it('bibliography should be defined when faq items exist', async () => {
             const loader = tool.entry.i18n[locale as keyof typeof tool.entry.i18n];
             const content = (await loader?.()) as ToolLocaleContent;
-
-            expect(
-              content.bibliography,
-              `Tool "${tool.entry.id}" locale "${locale}" is missing bibliography`,
-            ).toBeDefined();
+            expect(content.bibliography, `Tool "${tool.entry.id}" locale "${locale}" is missing bibliography`).toBeDefined();
           });
         });
       });
@@ -22,9 +18,6 @@ describe('Locale Completeness Validation', () => {
   });
 
   it('all tools registered', () => {
-    expect(ALL_TOOLS.length).toBe(15);
+    expect(ALL_TOOLS.length).toBe(16);
   });
-
-
 });
-

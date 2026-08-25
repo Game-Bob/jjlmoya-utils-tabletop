@@ -20,6 +20,8 @@ export { scatterDirectionSelector } from './tool/scatter-direction-selector/entr
 export type { ScatterSelectorUI, ScatterSelectorLocaleContent } from './tool/scatter-direction-selector/entry';
 export { dungeonMapGenerator } from './tool/dungeon-map-generator/entry';
 export type { DungeonMapGeneratorUI, DungeonMapGeneratorLocaleContent } from './tool/dungeon-map-generator/entry';
+export { rpgSettlementExplorationMapGenerator } from './tool/rpg-settlement-exploration-map-generator/entry';
+export type { SettlementMapUI, SettlementMapLocaleContent } from './tool/rpg-settlement-exploration-map-generator/entry';
 export { tabletopCategory } from './category';
 
 import { diceRollerSimulator } from './tool/dice-roller-simulator/entry';
@@ -37,6 +39,7 @@ import { dungeonMapGenerator } from './tool/dungeon-map-generator/entry';
 import { encounterDifficultyCalculator } from './tool/encounter-difficulty-calculator/entry';
 import { tokenStampStudio } from './tool/token-stamp-studio/entry';
 import { musScoreboard } from './tool/mus-scoreboard/entry';
+import { rpgSettlementExplorationMapGenerator } from './tool/rpg-settlement-exploration-map-generator/entry';
 
 export const ALL_ENTRIES = [
   diceRollerSimulator,
@@ -54,5 +57,6 @@ export const ALL_ENTRIES = [
   encounterDifficultyCalculator,
   tokenStampStudio,
   musScoreboard,
+  rpgSettlementExplorationMapGenerator,
 ];
 

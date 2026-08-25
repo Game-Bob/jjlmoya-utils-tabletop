@@ -15,6 +15,7 @@ import { DUNGEON_MAP_GENERATOR_TOOL } from './tool/dungeon-map-generator';
 import { ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL } from './tool/encounter-difficulty-calculator';
 import { TOKEN_STAMP_STUDIO_TOOL } from './tool/token-stamp-studio';
 import { MUS_SCOREBOARD_TOOL } from './tool/mus-scoreboard';
+import { RPG_SETTLEMENT_EXPLORATION_MAP_GENERATOR_TOOL } from './tool/rpg-settlement-exploration-map-generator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   DICE_ROLLER_SIMULATOR_TOOL,
@@ -32,5 +33,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL,
   TOKEN_STAMP_STUDIO_TOOL,
   MUS_SCOREBOARD_TOOL,
+  RPG_SETTLEMENT_EXPLORATION_MAP_GENERATOR_TOOL,
 ];
 

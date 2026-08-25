@@ -5,9 +5,8 @@ import { tabletopCategory } from '../data';
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
     it('should have tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(15);
+      expect(ALL_TOOLS.length).toBe(16);
     });
-
 
     it('tabletopCategory should be defined', () => {
       expect(tabletopCategory).toBeDefined();
