@@ -4,15 +4,7 @@ export type SettlementStyle = 'timber' | 'stone' | 'coastal' | 'highland' | 'med
 export type ServiceType = string;
 export type EditTool = 'select' | 'building' | 'path' | 'water' | 'tree' | 'erase';
 
-export interface SettlementConfig {
-  seed: string;
-  environment: Environment;
-  size: SettlementSize;
-  style: SettlementStyle;
-  homes: number;
-  services: ServiceType[];
-}
-
+export interface SettlementConfig { seed: string; environment: Environment; size: SettlementSize; style: SettlementStyle; homes: number; services: ServiceType[]; }
 export interface Point { x: number; y: number }
 export interface Building { id: string; x: number; y: number; width: number; height: number; service: ServiceType | null }
 export interface PathRoute { points: Point[] }
@@ -89,11 +81,7 @@ function buildingCells(buildings: Building[], plaza: Plaza): Set<string> {
   return cells;
 }
 
-function getWildChance(env: Environment): number {
-  if (env === 'forest') return 0.12;
-  if (env === 'mountain') return 0.09;
-  return 0.07;
-}
+function getWildChance(env: Environment): number { return env === 'forest' ? 0.12 : env === 'mountain' ? 0.09 : 0.07; }
 
 interface WildContext { config: SettlementConfig; dimensions: { width: number; height: number }; random: RandomSource; water: Set<string>; buildings: Building[]; plaza: Plaza }
 
@@ -119,21 +107,13 @@ const buildingCenter = (b: Building): Point => ({ x: b.x + Math.floor(b.width / 
 interface GridContext { spots: Point[]; size: SettlementSize; dimensions: { width: number; height: number }; plaza: Plaza; homes: number; variant: number }
 
 function calcStagger(size: SettlementSize, variant: number, row: number, col: number): number {
-  if (size === 'town') {
-    return variant === 1 ? row % 2 : 0;
-  }
-  if (variant === 2) {
-    return col % 2;
-  }
-  return row % 2;
+  if (size === 'town') return variant === 1 ? row % 2 : 0;
+  return variant === 2 ? col % 2 : row % 2;
 }
 
-function calcSpotY(startY: number, row: number, yStep: number, variant: number, col: number, yBias: number): number {
-  const extra = variant === 2 ? col % 2 : yBias;
-  return startY + row * yStep + extra;
-}
+interface LayoutMetrics { columns: number; xStep: number; yStep: number; startX: number; startY: number; xBias: number; yBias: number }
 
-function addGridSpots(ctx: GridContext): void {
+function getLayoutMetrics(ctx: GridContext): LayoutMetrics {
   const columns = ctx.size === 'hamlet' ? 4 : ctx.size === 'village' ? 6 : 7;
   const xStep = ctx.size === 'hamlet' ? 6 : 5;
   const yStep = ctx.size === 'hamlet' ? 7 : ctx.size === 'village' ? 5 : 4;
@@ -142,31 +122,30 @@ function addGridSpots(ctx: GridContext): void {
   const startY = Math.max(2, Math.floor(plazaCenter(ctx.plaza).y - ((rows - 1) * yStep + 3) / 2));
   const xBias = [0, 1, -1][ctx.variant % 3]!;
   const yBias = [0, -1, 1][(ctx.variant + 1) % 3]!;
+  return { columns, xStep, yStep, startX, startY, xBias, yBias };
+}
+
+function addGridSpots(ctx: GridContext): void {
+  const m = getLayoutMetrics(ctx);
+  const rows = Math.ceil(Math.max(ctx.homes, m.columns) / m.columns);
   for (let r = 0; r < rows; r += 1) {
-    for (let c = 0; c < columns; c += 1) {
+    for (let c = 0; c < m.columns; c += 1) {
       const stagger = calcStagger(ctx.size, ctx.variant, r, c);
-      const spotY = calcSpotY(startY, r, yStep, ctx.variant, c, yBias);
-      const spot = { x: startX + c * xStep + stagger + xBias, y: spotY };
+      const extraY = ctx.variant === 2 ? c % 2 : m.yBias;
+      const spot = { x: m.startX + c * m.xStep + stagger + m.xBias, y: m.startY + r * m.yStep + extraY };
       if (spot.x + 4 < ctx.dimensions.width - 1 && spot.y + 3 < ctx.dimensions.height - 1) ctx.spots.push(spot);
     }
   }
 }
 
 function getHamletAnchors(plaza: Plaza, variant: number): Point[] {
-  const raw = [
-    { x: plaza.x - 5, y: plaza.y - 4 },
-    { x: plaza.x + plaza.width + 1, y: plaza.y - 4 },
-    { x: plaza.x - 5, y: plaza.y + plaza.height + 1 },
-    { x: plaza.x + plaza.width + 1, y: plaza.y + plaza.height + 1 },
-  ];
+  const raw = [{ x: plaza.x - 5, y: plaza.y - 4 }, { x: plaza.x + plaza.width + 1, y: plaza.y - 4 }, { x: plaza.x - 5, y: plaza.y + plaza.height + 1 }, { x: plaza.x + plaza.width + 1, y: plaza.y + plaza.height + 1 }];
   return raw.map((_, i) => raw[(i + variant) % raw.length]!);
 }
 
 function candidateSpots(ctx: Omit<GridContext, 'spots'>): Point[] {
   const spots: Point[] = [];
-  if (ctx.size === 'hamlet') {
-    spots.push(...getHamletAnchors(ctx.plaza, ctx.variant));
-  }
+  if (ctx.size === 'hamlet') spots.push(...getHamletAnchors(ctx.plaza, ctx.variant));
   addGridSpots({ ...ctx, spots });
   return spots;
 }
