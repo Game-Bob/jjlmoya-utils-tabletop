@@ -81,7 +81,11 @@ function buildingCells(buildings: Building[], plaza: Plaza): Set<string> {
   return cells;
 }
 
-function getWildChance(env: Environment): number { return env === 'forest' ? 0.12 : env === 'mountain' ? 0.09 : 0.07; }
+function getWildChance(env: Environment): number {
+  if (env === 'forest') return 0.12;
+  if (env === 'mountain') return 0.09;
+  return 0.07;
+}
 
 interface WildContext { config: SettlementConfig; dimensions: { width: number; height: number }; random: RandomSource; water: Set<string>; buildings: Building[]; plaza: Plaza }
 
@@ -108,15 +112,19 @@ interface GridContext { spots: Point[]; size: SettlementSize; dimensions: { widt
 
 function calcStagger(size: SettlementSize, variant: number, row: number, col: number): number {
   if (size === 'town') return variant === 1 ? row % 2 : 0;
-  return variant === 2 ? col % 2 : row % 2;
+  if (variant === 2) return col % 2;
+  return row % 2;
 }
 
 interface LayoutMetrics { columns: number; xStep: number; yStep: number; startX: number; startY: number; xBias: number; yBias: number }
 
 function getLayoutMetrics(ctx: GridContext): LayoutMetrics {
-  const columns = ctx.size === 'hamlet' ? 4 : ctx.size === 'village' ? 6 : 7;
-  const xStep = ctx.size === 'hamlet' ? 6 : 5;
-  const yStep = ctx.size === 'hamlet' ? 7 : ctx.size === 'village' ? 5 : 4;
+  let columns = 7;
+  let xStep = 5;
+  let yStep = 4;
+  if (ctx.size === 'hamlet') { columns = 4; xStep = 6; yStep = 7; }
+  else if (ctx.size === 'village') { columns = 6; xStep = 5; yStep = 5; }
+
   const rows = Math.ceil(Math.max(ctx.homes, columns) / columns);
   const startX = Math.max(2, Math.floor(plazaCenter(ctx.plaza).x - ((columns - 1) * xStep + 4) / 2));
   const startY = Math.max(2, Math.floor(plazaCenter(ctx.plaza).y - ((rows - 1) * yStep + 3) / 2));
