@@ -14,6 +14,7 @@ import { SCATTER_DIRECTION_SELECTOR_TOOL } from './tool/scatter-direction-select
 import { DUNGEON_MAP_GENERATOR_TOOL } from './tool/dungeon-map-generator';
 import { ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL } from './tool/encounter-difficulty-calculator';
 import { TOKEN_STAMP_STUDIO_TOOL } from './tool/token-stamp-studio';
+import { MUS_SCOREBOARD_TOOL } from './tool/mus-scoreboard';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   DICE_ROLLER_SIMULATOR_TOOL,
@@ -30,5 +31,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   DUNGEON_MAP_GENERATOR_TOOL,
   ENCOUNTER_DIFFICULTY_CALCULATOR_TOOL,
   TOKEN_STAMP_STUDIO_TOOL,
+  MUS_SCOREBOARD_TOOL,
 ];
 
