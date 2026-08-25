@@ -28,6 +28,34 @@
   --n-roof-edo: #413b3a;
   --n-house-sahelian: #d9ad76;
   --n-roof-sahelian: #a66d45;
+  --n-tree-coastal-fill: #6f9b82;
+  --n-tree-coastal-stroke: #416c60;
+  --n-tree-highland-fill: #718b68;
+  --n-tree-highland-stroke: #4d6652;
+  --n-tree-edo-fill: #6f896c;
+  --n-tree-edo-stroke: #4b624f;
+  --n-tree-edo-pink-fill: #d99aa9;
+  --n-tree-edo-pink-stroke: #9f6678;
+  --n-tree-edo-green-fill: #8eaf83;
+  --n-tree-edo-green-stroke: #5d795d;
+  --n-tree-sahelian-fill: #b58a55;
+  --n-tree-sahelian-stroke: #8b6540;
+  --n-tree-medieval-fill: #7f8d65;
+  --n-tree-medieval-stroke: #5c684d;
+  --n-house-frame-stroke: #6f4e3f;
+  --n-house-slats-stroke: #77564a;
+  --n-house-masonry-stroke: #947d69;
+  --n-sunband-stroke: #8d583d;
+  --n-dark-house-body-stroke: #a89278;
+  --n-dark-house-roof-stroke: #b6a087;
+  --n-dark-window-fill: #79a5a3;
+  --n-dark-window-stroke: #342d29;
+  --n-dark-door-fill: #c77c62;
+  --n-dark-door-stroke: #342d29;
+  --n-dark-plaque-fill: #332b27;
+  --n-dark-plaque-stroke: #c4ab8d;
+  --n-dark-glyph-fill: #f1dfc3;
+  --n-dark-glyph-stroke: #332b27;
 
   color: var(--n-ink);
   background: var(--n-paper);
@@ -414,32 +442,32 @@
   stroke-width: 0.08;
 }
 .rsm-tree-coastal path:not(:first-child) {
-  fill: #6f9b82;
-  stroke: #416c60;
+  fill: var(--n-tree-coastal-fill);
+  stroke: var(--n-tree-coastal-stroke);
 }
 .rsm-tree-highland path:not(:first-child) {
-  fill: #718b68;
-  stroke: #4d6652;
+  fill: var(--n-tree-highland-fill);
+  stroke: var(--n-tree-highland-stroke);
 }
 .rsm-tree-edo path:not(:first-child) {
-  fill: #6f896c;
-  stroke: #4b624f;
+  fill: var(--n-tree-edo-fill);
+  stroke: var(--n-tree-edo-stroke);
 }
 .rsm-tree-edo-pink path:not(:first-child) {
-  fill: #d99aa9;
-  stroke: #9f6678;
+  fill: var(--n-tree-edo-pink-fill);
+  stroke: var(--n-tree-edo-pink-stroke);
 }
 .rsm-tree-edo-green path:not(:first-child) {
-  fill: #8eaf83;
-  stroke: #5d795d;
+  fill: var(--n-tree-edo-green-fill);
+  stroke: var(--n-tree-edo-green-stroke);
 }
 .rsm-tree-sahelian path:not(:first-child) {
-  fill: #b58a55;
-  stroke: #8b6540;
+  fill: var(--n-tree-sahelian-fill);
+  stroke: var(--n-tree-sahelian-stroke);
 }
 .rsm-tree-medieval path:not(:first-child) {
-  fill: #7f8d65;
-  stroke: #5c684d;
+  fill: var(--n-tree-medieval-fill);
+  stroke: var(--n-tree-medieval-stroke);
 }
 .rsm-building .rsm-house-body {
   fill: var(--n-house);
@@ -475,16 +503,16 @@
   stroke-width: 0.08;
 }
 .rsm-house-frame {
-  stroke: #6f4e3f;
+  stroke: var(--n-house-frame-stroke);
   stroke-width: 0.12;
 }
 .rsm-house-wood-slats {
-  stroke: #77564a;
+  stroke: var(--n-house-slats-stroke);
   stroke-width: 0.07;
   opacity: 0.8;
 }
 .rsm-house-masonry {
-  stroke: #947d69;
+  stroke: var(--n-house-masonry-stroke);
   stroke-width: 0.07;
   stroke-dasharray: 0.55 0.12;
   opacity: 0.78;
@@ -493,6 +521,7 @@
   fill: var(--n-paper);
   stroke: var(--n-ink);
   stroke-width: 0.05;
+  opacity: 0.94;
 }
 .rsm-house-style-timber .rsm-house-body {
   fill: var(--n-house-timber);
@@ -543,7 +572,7 @@
   fill: var(--n-roof-sahelian);
 }
 .rsm-house-style-sahelian .rsm-house-sunband {
-  stroke: #8d583d;
+  stroke: var(--n-sunband-stroke);
   stroke-width: 0.14;
 }
 .rsm-building-glyph {
@@ -567,34 +596,30 @@
   stroke: var(--n-line);
   stroke-width: 0.07;
 }
-.rsm-service-plaque {
-  fill: var(--n-paper);
-  opacity: 0.94;
-}
 .theme-dark .rsm-building .rsm-house-body {
-  stroke: #a89278;
+  stroke: var(--n-dark-house-body-stroke);
 }
 .theme-dark .rsm-building .rsm-house-roof {
-  stroke: #b6a087;
+  stroke: var(--n-dark-house-roof-stroke);
 }
 .theme-dark .rsm-house-window {
-  fill: #79a5a3;
-  stroke: #342d29;
+  fill: var(--n-dark-window-fill);
+  stroke: var(--n-dark-window-stroke);
 }
 .theme-dark .rsm-house-door {
-  fill: #c77c62;
-  stroke: #342d29;
+  fill: var(--n-dark-door-fill);
+  stroke: var(--n-dark-door-stroke);
 }
 .theme-dark .rsm-service-plaque {
-  fill: #332b27;
-  stroke: #c4ab8d;
+  fill: var(--n-dark-plaque-fill);
+  stroke: var(--n-dark-plaque-stroke);
 }
 .theme-dark .rsm-service-stem {
-  stroke: #c4ab8d;
+  stroke: var(--n-dark-plaque-stroke);
 }
 .theme-dark .rsm-service-sign .rsm-building-glyph {
-  fill: #f1dfc3;
-  stroke: #332b27;
+  fill: var(--n-dark-glyph-fill);
+  stroke: var(--n-dark-glyph-stroke);
 }
 .rsm-building:hover .rsm-house-body {
   fill: var(--n-paper);
