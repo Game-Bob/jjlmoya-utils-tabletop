@@ -29,6 +29,22 @@ function buildingDetails(building: Building, style: string): string {
   return `<path class="rsm-house-chimney" d="M${building.x + building.width - 0.8} ${building.y - 0.35}V${building.y + 0.2}H${building.x + building.width - 0.42}V${building.y - 0.25}" />`;
 }
 
+function getSignFontSize(size?: string): number {
+  if (size === 'town') return 1.05;
+  if (size === 'village') return 0.92;
+  return 0.84;
+}
+
+function serviceSignSvg(building: Building, map: SettlementMap, service: string): string {
+  if (!service) return '';
+  const signFontSize = getSignFontSize(map.config.size);
+  const signWidth = Math.min(8, Math.max(2.1, service.length * signFontSize * 0.58 + 0.72));
+  const signX = building.x + building.width / 2 - signWidth / 2;
+  const signHeight = signFontSize + 0.34;
+  const signY = building.y - signHeight - 0.58;
+  return `<g class="rsm-service-sign rsm-service-sign-${map.config.size}"><path class="rsm-service-stem" d="M${building.x + building.width / 2} ${signY + signHeight}V${building.y - 0.49}" /><rect class="rsm-service-plaque" x="${signX}" y="${signY}" width="${signWidth}" height="${signHeight}" rx="0.12" /><text class="rsm-building-glyph" x="${building.x + building.width / 2}" y="${signY + signHeight / 2}" font-size="${signFontSize}" dominant-baseline="middle">${service}</text></g>`;
+}
+
 function buildingSvg(building: Building, map: SettlementMap, ui: SettlementMapUI): string {
   const style = map.config.style ?? 'medieval';
   const roof = roofSvg(building, style);
@@ -41,12 +57,7 @@ function buildingSvg(building: Building, map: SettlementMap, ui: SettlementMapUI
   const details = buildingDetails(building, style);
   const service = building.service ? escapeSvgText(serviceLabel(building.service, ui)) : '';
   const title = building.service ? `<title>${serviceLabel(building.service, ui)}</title>` : '<title>Home</title>';
-  const signFontSize = map.config.size === 'town' ? 1.05 : map.config.size === 'village' ? 0.92 : 0.84;
-  const signWidth = service ? Math.min(8, Math.max(2.1, service.length * signFontSize * 0.58 + 0.72)) : 0;
-  const signX = building.x + building.width / 2 - signWidth / 2;
-  const signHeight = signFontSize + 0.34;
-  const signY = building.y - signHeight - 0.58;
-  const serviceMark = service ? `<g class="rsm-service-sign rsm-service-sign-${map.config.size}"><path class="rsm-service-stem" d="M${building.x + building.width / 2} ${signY + signHeight}V${building.y - 0.49}" /><rect class="rsm-service-plaque" x="${signX}" y="${signY}" width="${signWidth}" height="${signHeight}" rx="0.12" /><text class="rsm-building-glyph" x="${building.x + building.width / 2}" y="${signY + signHeight / 2}" font-size="${signFontSize}" dominant-baseline="middle">${service}</text></g>` : '';
+  const serviceMark = serviceSignSvg(building, map, service);
   return `<g class="rsm-building rsm-house-style-${style}" data-building-id="${building.id}" data-cell-x="${building.x}" data-cell-y="${building.y}">${title}<rect class="rsm-house-body" x="${building.x + 0.12}" y="${building.y + 0.35}" width="${building.width - 0.24}" height="${building.height - 0.35}" rx="0.18" />${roof}${details}${windows}<rect class="rsm-house-door" x="${doorX}" y="${doorY}" width="0.46" height="0.8" rx="0.06" />${serviceMark}</g>`;
 }
 
@@ -115,10 +126,16 @@ function pathSvg(map: SettlementMap): string {
   return [...roadNetwork(map).values()].map((cell) => `<path class="rsm-road-base" d="${roadCellPath(cell)}" /><path class="rsm-road-line" d="${roadCellPath(cell)}" />`).join('');
 }
 
+function getTreeStyle(env: string, style?: string): string {
+  if (env === 'coast') return 'coastal';
+  if (env === 'mountain') return 'highland';
+  return style ?? 'medieval';
+}
+
 function treeSvg(point: Point, map: SettlementMap): string {
   const x = point.x + 0.5;
   const y = point.y + 0.5;
-  const style = map.config.environment === 'coast' ? 'coastal' : map.config.environment === 'mountain' ? 'highland' : map.config.style ?? 'medieval';
+  const style = getTreeStyle(map.config.environment, map.config.style);
   const edoBlossom = (point.x * 7 + point.y * 11) % 3 === 0 ? 'green' : 'pink';
   const shapes: Record<string, string> = {
     coastal: '<path d="M0 .65V.05" /><path d="M0 .08C-.16-.2-.58-.27-.62-.52M0 .08C.16-.2.58-.27.62-.52M0 .08C-.05-.22.1-.5.22-.7" />',

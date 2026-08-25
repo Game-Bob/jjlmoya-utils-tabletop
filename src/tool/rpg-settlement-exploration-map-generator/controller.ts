@@ -34,13 +34,18 @@ function randomName(): string {
 
 function selectedServices(root: HTMLElement): ServiceType[] { return [...root.querySelectorAll<HTMLInputElement>('[data-service-option]:checked')].map((input) => input.value); }
 
+function activeData<T extends string>(root: HTMLElement, attr: string, fallback: T): T {
+  const element = root.querySelector<HTMLElement>(`[data-${attr}].is-active`);
+  return (element?.dataset[attr] as T | undefined) ?? fallback;
+}
+
 function readConfig(root: HTMLElement): SettlementConfig {
   const seed = root.querySelector<HTMLInputElement>('[name="seed"]')?.value ?? DEFAULT_CONFIG.seed;
-  const environment = root.querySelector<HTMLElement>('[data-environment].is-active')?.dataset.environment as Environment | undefined;
-  const size = root.querySelector<HTMLElement>('[data-size].is-active')?.dataset.size as SettlementSize | undefined;
-  const style = root.querySelector<HTMLElement>('[data-style].is-active')?.dataset.style as SettlementStyle | undefined;
+  const environment = activeData(root, 'environment', DEFAULT_CONFIG.environment);
+  const size = activeData(root, 'size', DEFAULT_CONFIG.size);
+  const style = activeData(root, 'style', DEFAULT_CONFIG.style);
   const homes = Number(root.querySelector<HTMLInputElement>('[data-homes]')?.value ?? DEFAULT_CONFIG.homes);
-  return normalizeConfig({ seed, environment: environment ?? DEFAULT_CONFIG.environment, size: size ?? DEFAULT_CONFIG.size, style: style ?? DEFAULT_CONFIG.style, homes, services: selectedServices(root) });
+  return normalizeConfig({ seed, environment, size, style, homes, services: selectedServices(root) });
 }
 
 function setPressed(root: HTMLElement, selector: string, value: string): void {

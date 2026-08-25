@@ -36,37 +36,45 @@ function openContextMenu(root: HTMLElement, menu: HTMLElement, event: MouseEvent
   return cell;
 }
 
+interface PointerFlags {
+  ignoreNextContext: boolean;
+  ignoreNextClick: boolean;
+}
+
+function bindPointerEvents(host: HTMLElement, root: HTMLElement, menu: HTMLElement, flags: PointerFlags, onOpen: (cell: CellPoint | null) => void): void {
+  let timer: number | undefined;
+  host.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse') return;
+    timer = window.setTimeout(() => {
+      flags.ignoreNextContext = true;
+      flags.ignoreNextClick = true;
+      onOpen(openContextMenu(root, menu, event));
+    }, 520);
+  });
+  const cancel = () => { if (timer) window.clearTimeout(timer); timer = undefined; };
+  host.addEventListener('pointerup', cancel);
+  host.addEventListener('pointercancel', cancel);
+  host.addEventListener('pointerleave', cancel);
+}
+
 export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void {
   const host = root.querySelector<HTMLElement>('[data-map-host]');
   const menu = root.querySelector<HTMLElement>('[data-context-menu]');
   if (!host || !menu) return;
   let selected: CellPoint | null = null;
-  let longPressTimer: number | undefined;
-  let ignoreNextContext = false;
-  let ignoreNextClick = false;
+  const flags: PointerFlags = { ignoreNextContext: false, ignoreNextClick: false };
   host.addEventListener('contextmenu', (event) => {
     event.preventDefault();
-    if (ignoreNextContext) { ignoreNextContext = false; return; }
+    if (flags.ignoreNextContext) { flags.ignoreNextContext = false; return; }
     selected = openContextMenu(root, menu, event);
   });
-  host.addEventListener('pointerdown', (event) => {
-    if (event.pointerType === 'mouse') return;
-    longPressTimer = window.setTimeout(() => {
-      ignoreNextContext = true;
-      ignoreNextClick = true;
-      selected = openContextMenu(root, menu, event);
-    }, 520);
-  });
-  const cancelLongPress = () => { if (longPressTimer) window.clearTimeout(longPressTimer); longPressTimer = undefined; };
-  host.addEventListener('pointerup', cancelLongPress);
-  host.addEventListener('pointercancel', cancelLongPress);
-  host.addEventListener('pointerleave', cancelLongPress);
-  menu.querySelectorAll<HTMLButtonElement>('[data-context-tool]').forEach((button) => button.addEventListener('click', () => {
-    if (selected) onEdit(selected, button.dataset.contextTool as EditTool);
+  bindPointerEvents(host, root, menu, flags, (cell) => { selected = cell; });
+  menu.querySelectorAll<HTMLButtonElement>('[data-context-tool]').forEach((btn) => btn.addEventListener('click', () => {
+    if (selected) onEdit(selected, btn.dataset.contextTool as EditTool);
     menu.hidden = true;
   }));
   document.addEventListener('click', (event) => {
-    if (ignoreNextClick) { ignoreNextClick = false; return; }
+    if (flags.ignoreNextClick) { flags.ignoreNextClick = false; return; }
     if (!menu.contains(event.target as Node)) menu.hidden = true;
   });
   window.addEventListener('resize', () => { menu.hidden = true; });
