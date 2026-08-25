@@ -118,6 +118,21 @@ const buildingCenter = (b: Building): Point => ({ x: b.x + Math.floor(b.width / 
 
 interface GridContext { spots: Point[]; size: SettlementSize; dimensions: { width: number; height: number }; plaza: Plaza; homes: number; variant: number }
 
+function calcStagger(size: SettlementSize, variant: number, row: number, col: number): number {
+  if (size === 'town') {
+    return variant === 1 ? row % 2 : 0;
+  }
+  if (variant === 2) {
+    return col % 2;
+  }
+  return row % 2;
+}
+
+function calcSpotY(startY: number, row: number, yStep: number, variant: number, col: number, yBias: number): number {
+  const extra = variant === 2 ? col % 2 : yBias;
+  return startY + row * yStep + extra;
+}
+
 function addGridSpots(ctx: GridContext): void {
   const columns = ctx.size === 'hamlet' ? 4 : ctx.size === 'village' ? 6 : 7;
   const xStep = ctx.size === 'hamlet' ? 6 : 5;
@@ -129,19 +144,28 @@ function addGridSpots(ctx: GridContext): void {
   const yBias = [0, -1, 1][(ctx.variant + 1) % 3]!;
   for (let r = 0; r < rows; r += 1) {
     for (let c = 0; c < columns; c += 1) {
-      const stagger = ctx.size === 'town' ? (ctx.variant === 1 ? r % 2 : 0) : (ctx.variant === 2 ? c % 2 : r % 2);
-      const spotY = startY + r * yStep + (ctx.variant === 2 ? c % 2 : yBias);
+      const stagger = calcStagger(ctx.size, ctx.variant, r, c);
+      const spotY = calcSpotY(startY, r, yStep, ctx.variant, c, yBias);
       const spot = { x: startX + c * xStep + stagger + xBias, y: spotY };
       if (spot.x + 4 < ctx.dimensions.width - 1 && spot.y + 3 < ctx.dimensions.height - 1) ctx.spots.push(spot);
     }
   }
 }
 
+function getHamletAnchors(plaza: Plaza, variant: number): Point[] {
+  const raw = [
+    { x: plaza.x - 5, y: plaza.y - 4 },
+    { x: plaza.x + plaza.width + 1, y: plaza.y - 4 },
+    { x: plaza.x - 5, y: plaza.y + plaza.height + 1 },
+    { x: plaza.x + plaza.width + 1, y: plaza.y + plaza.height + 1 },
+  ];
+  return raw.map((_, i) => raw[(i + variant) % raw.length]!);
+}
+
 function candidateSpots(ctx: Omit<GridContext, 'spots'>): Point[] {
   const spots: Point[] = [];
   if (ctx.size === 'hamlet') {
-    const anchors = [{ x: ctx.plaza.x - 5, y: ctx.plaza.y - 4 }, { x: ctx.plaza.x + ctx.plaza.width + 1, y: ctx.plaza.y - 4 }, { x: ctx.plaza.x - 5, y: ctx.plaza.y + ctx.plaza.height + 1 }, { x: ctx.plaza.x + ctx.plaza.width + 1, y: ctx.plaza.y + ctx.plaza.height + 1 }];
-    anchors.forEach((_, i) => spots.push(anchors[(i + ctx.variant) % anchors.length]!));
+    spots.push(...getHamletAnchors(ctx.plaza, ctx.variant));
   }
   addGridSpots({ ...ctx, spots });
   return spots;
