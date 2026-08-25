@@ -1,4 +1,4 @@
-import { addBuilding, addPath, addTree, addWater, DEFAULT_CONFIG, eraseAt, generateSettlement, homeRange, normalizeConfig, settlementPreset, type EditTool, type Environment, type ServiceType, type SettlementConfig, type SettlementMap, type SettlementSize, type SettlementStyle } from './logic';
+import { addBuilding, addPath, addTree, addWater, DEFAULT_CONFIG, eraseAt, generateSettlement, homeRange, normalizeConfig, settlementPreset, type EditTool, type ServiceType, type SettlementConfig, type SettlementMap, type SettlementSize } from './logic';
 import { buildMapSvg, downloadFile, svgToDataUrl, updateMapHost } from './dom-views';
 import { bindContextEditor } from './editor';
 import { evaluateSettlement } from './evaluator';

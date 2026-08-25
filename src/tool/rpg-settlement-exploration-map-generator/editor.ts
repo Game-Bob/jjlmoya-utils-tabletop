@@ -36,25 +36,28 @@ function openContextMenu(root: HTMLElement, menu: HTMLElement, event: MouseEvent
   return cell;
 }
 
-interface PointerFlags {
-  ignoreNextContext: boolean;
-  ignoreNextClick: boolean;
+interface PointerOptions {
+  host: HTMLElement;
+  root: HTMLElement;
+  menu: HTMLElement;
+  flags: PointerFlags;
+  onOpen: (cell: CellPoint | null) => void;
 }
 
-function bindPointerEvents(host: HTMLElement, root: HTMLElement, menu: HTMLElement, flags: PointerFlags, onOpen: (cell: CellPoint | null) => void): void {
+function bindPointerEvents(opts: PointerOptions): void {
   let timer: number | undefined;
-  host.addEventListener('pointerdown', (event) => {
+  opts.host.addEventListener('pointerdown', (event) => {
     if (event.pointerType === 'mouse') return;
     timer = window.setTimeout(() => {
-      flags.ignoreNextContext = true;
-      flags.ignoreNextClick = true;
-      onOpen(openContextMenu(root, menu, event));
+      opts.flags.ignoreNextContext = true;
+      opts.flags.ignoreNextClick = true;
+      opts.onOpen(openContextMenu(opts.root, opts.menu, event));
     }, 520);
   });
   const cancel = () => { if (timer) window.clearTimeout(timer); timer = undefined; };
-  host.addEventListener('pointerup', cancel);
-  host.addEventListener('pointercancel', cancel);
-  host.addEventListener('pointerleave', cancel);
+  opts.host.addEventListener('pointerup', cancel);
+  opts.host.addEventListener('pointercancel', cancel);
+  opts.host.addEventListener('pointerleave', cancel);
 }
 
 export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void {
@@ -68,7 +71,7 @@ export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void 
     if (flags.ignoreNextContext) { flags.ignoreNextContext = false; return; }
     selected = openContextMenu(root, menu, event);
   });
-  bindPointerEvents(host, root, menu, flags, (cell) => { selected = cell; });
+  bindPointerEvents({ host, root, menu, flags, onOpen: (cell) => { selected = cell; } });
   menu.querySelectorAll<HTMLButtonElement>('[data-context-tool]').forEach((btn) => btn.addEventListener('click', () => {
     if (selected) onEdit(selected, btn.dataset.contextTool as EditTool);
     menu.hidden = true;

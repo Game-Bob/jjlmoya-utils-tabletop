@@ -14,16 +14,7 @@ export interface SettlementConfig {
 }
 
 export interface Point { x: number; y: number }
-
-export interface Building {
-  id: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  service: ServiceType | null;
-}
-
+export interface Building { id: string; x: number; y: number; width: number; height: number; service: ServiceType | null }
 export interface PathRoute { points: Point[] }
 export interface Plaza { x: number; y: number; width: number; height: number }
 
@@ -42,32 +33,10 @@ type RandomSource = () => number;
 export interface HomeRange { min: number; max: number }
 export interface SettlementPreset { homes: number; services: ServiceType[] }
 
-export const DEFAULT_CONFIG: SettlementConfig = {
-  seed: 'Willow Mere Crossing',
-  environment: 'forest',
-  size: 'village',
-  style: 'medieval',
-  homes: 14,
-  services: ['tavern', 'smithy', 'temple', 'market'],
-};
-
-const SIZE_PRESETS: Record<SettlementSize, SettlementPreset> = {
-  hamlet: { homes: 6, services: ['tavern', 'stable'] },
-  village: { homes: 14, services: ['tavern', 'smithy', 'temple', 'market'] },
-  town: { homes: 24, services: ['tavern', 'smithy', 'temple', 'market', 'stable', 'hall'] },
-};
-
-const DIMENSIONS: Record<SettlementSize, { width: number; height: number }> = {
-  hamlet: { width: 34, height: 24 },
-  village: { width: 42, height: 28 },
-  town: { width: 52, height: 34 },
-};
-
-const HOME_RANGES: Record<SettlementSize, HomeRange> = {
-  hamlet: { min: 3, max: 18 },
-  village: { min: 4, max: 28 },
-  town: { min: 6, max: 42 },
-};
+export const DEFAULT_CONFIG: SettlementConfig = { seed: 'Willow Mere Crossing', environment: 'forest', size: 'village', style: 'medieval', homes: 14, services: ['tavern', 'smithy', 'temple', 'market'] };
+const SIZE_PRESETS: Record<SettlementSize, SettlementPreset> = { hamlet: { homes: 6, services: ['tavern', 'stable'] }, village: { homes: 14, services: ['tavern', 'smithy', 'temple', 'market'] }, town: { homes: 24, services: ['tavern', 'smithy', 'temple', 'market', 'stable', 'hall'] } };
+const DIMENSIONS: Record<SettlementSize, { width: number; height: number }> = { hamlet: { width: 34, height: 24 }, village: { width: 42, height: 28 }, town: { width: 52, height: 34 } };
+const HOME_RANGES: Record<SettlementSize, HomeRange> = { hamlet: { min: 3, max: 18 }, village: { min: 4, max: 28 }, town: { min: 6, max: 42 } };
 
 export function homeRange(size: SettlementSize): HomeRange { return HOME_RANGES[size]; }
 export function settlementPreset(size: SettlementSize): SettlementPreset { return { homes: SIZE_PRESETS[size].homes, services: [...SIZE_PRESETS[size].services] }; }
@@ -81,27 +50,14 @@ export function normalizeConfig(input: Partial<SettlementConfig>): SettlementCon
   const size = isSize(input.size) ? input.size : DEFAULT_CONFIG.size;
   const range = HOME_RANGES[size];
   const services = Array.isArray(input.services) ? input.services.filter((v): v is string => typeof v === 'string' && v.trim().length > 0).map((v) => v.trim()).slice(0, 32) : DEFAULT_CONFIG.services;
-  return {
-    seed: String(input.seed || DEFAULT_CONFIG.seed).slice(0, 48),
-    environment: isEnv(input.environment) ? input.environment : DEFAULT_CONFIG.environment,
-    size,
-    style: isStyle(input.style) ? input.style : DEFAULT_CONFIG.style,
-    homes: clamp(input.homes ?? DEFAULT_CONFIG.homes, range.min, range.max),
-    services: [...new Set(services)],
-  };
+  return { seed: String(input.seed || DEFAULT_CONFIG.seed).slice(0, 48), environment: isEnv(input.environment) ? input.environment : DEFAULT_CONFIG.environment, size, style: isStyle(input.style) ? input.style : DEFAULT_CONFIG.style, homes: clamp(input.homes ?? DEFAULT_CONFIG.homes, range.min, range.max), services: [...new Set(services)] };
 }
 
 function createRandom(seed: string): RandomSource {
   let h = 2166136261;
   for (let i = 0; i < seed.length; i += 1) { h ^= seed.charCodeAt(i); h = Math.imul(h, 16777619); }
   let state = h >>> 0;
-  return () => {
-    state += 0x6d2b79f5;
-    let v = state;
-    v = Math.imul(v ^ (v >>> 15), v | 1);
-    v ^= v + Math.imul(v ^ (v >>> 7), v | 61);
-    return ((v ^ (v >>> 14)) >>> 0) / 4294967296;
-  };
+  return () => { state += 0x6d2b79f5; let v = state; v = Math.imul(v ^ (v >>> 15), v | 1); v ^= v + Math.imul(v ^ (v >>> 7), v | 61); return ((v ^ (v >>> 14)) >>> 0) / 4294967296; };
 }
 
 const randomInt = (rnd: RandomSource, min: number, max: number): number => Math.floor(rnd() * (max - min + 1)) + min;
@@ -109,10 +65,7 @@ const randomInt = (rnd: RandomSource, min: number, max: number): number => Math.
 function routeBetween(from: Point, to: Point): Point[] {
   const points: Point[] = [{ ...from }];
   let cur = { ...from };
-  while (cur.x !== to.x || cur.y !== to.y) {
-    cur = cur.x !== to.x ? { x: cur.x + Math.sign(to.x - cur.x), y: cur.y } : { x: cur.x, y: cur.y + Math.sign(to.y - cur.y) };
-    points.push({ ...cur });
-  }
+  while (cur.x !== to.x || cur.y !== to.y) { cur = cur.x !== to.x ? { x: cur.x + Math.sign(to.x - cur.x), y: cur.y } : { x: cur.x, y: cur.y + Math.sign(to.y - cur.y) }; points.push({ ...cur }); }
   return points;
 }
 
@@ -120,10 +73,7 @@ function createWater(env: Environment, w: number, h: number, rnd: RandomSource):
   const res: Point[] = [];
   if (env === 'coast') {
     const edge = rnd() < 0.5 ? w - 1 : 0;
-    for (let y = 0; y < h; y += 1) {
-      const d = 3 + Math.floor(rnd() * 3);
-      for (let o = 0; o < d; o += 1) res.push({ x: edge === 0 ? o : w - 1 - o, y });
-    }
+    for (let y = 0; y < h; y += 1) { const d = 3 + Math.floor(rnd() * 3); for (let o = 0; o < d; o += 1) res.push({ x: edge === 0 ? o : w - 1 - o, y }); }
   }
   if (env === 'river') {
     let x = Math.floor(w * (0.35 + rnd() * 0.3));
@@ -139,11 +89,17 @@ function buildingCells(buildings: Building[], plaza: Plaza): Set<string> {
   return cells;
 }
 
+function getWildChance(env: Environment): number {
+  if (env === 'forest') return 0.12;
+  if (env === 'mountain') return 0.09;
+  return 0.07;
+}
+
 interface WildContext { config: SettlementConfig; dimensions: { width: number; height: number }; random: RandomSource; water: Set<string>; buildings: Building[]; plaza: Plaza }
 
 function createWild(ctx: WildContext): Point[] {
   const res: Point[] = [];
-  const chance = ctx.config.environment === 'forest' ? 0.12 : ctx.config.environment === 'mountain' ? 0.09 : 0.07;
+  const chance = getWildChance(ctx.config.environment);
   const blocked = buildingCells(ctx.buildings, ctx.plaza);
   const seen = new Set<string>();
   const attempts = Math.floor(ctx.dimensions.width * ctx.dimensions.height * chance * 3);
@@ -162,11 +118,6 @@ const buildingCenter = (b: Building): Point => ({ x: b.x + Math.floor(b.width / 
 
 interface GridContext { spots: Point[]; size: SettlementSize; dimensions: { width: number; height: number }; plaza: Plaza; homes: number; variant: number }
 
-function getStagger(size: SettlementSize, variant: number, row: number, col: number): number {
-  if (size === 'town') return variant === 1 ? row % 2 : 0;
-  return variant === 2 ? col % 2 : row % 2;
-}
-
 function addGridSpots(ctx: GridContext): void {
   const columns = ctx.size === 'hamlet' ? 4 : ctx.size === 'village' ? 6 : 7;
   const xStep = ctx.size === 'hamlet' ? 6 : 5;
@@ -176,10 +127,13 @@ function addGridSpots(ctx: GridContext): void {
   const startY = Math.max(2, Math.floor(plazaCenter(ctx.plaza).y - ((rows - 1) * yStep + 3) / 2));
   const xBias = [0, 1, -1][ctx.variant % 3]!;
   const yBias = [0, -1, 1][(ctx.variant + 1) % 3]!;
-  for (let r = 0; r < rows; r += 1) for (let c = 0; c < columns; c += 1) {
-    const stagger = getStagger(ctx.size, ctx.variant, r, c);
-    const spot = { x: startX + c * xStep + stagger + xBias, y: startY + r * yStep + (ctx.variant === 2 ? c % 2 : yBias) };
-    if (spot.x + 4 < ctx.dimensions.width - 1 && spot.y + 3 < ctx.dimensions.height - 1) ctx.spots.push(spot);
+  for (let r = 0; r < rows; r += 1) {
+    for (let c = 0; c < columns; c += 1) {
+      const stagger = ctx.size === 'town' ? (ctx.variant === 1 ? r % 2 : 0) : (ctx.variant === 2 ? c % 2 : r % 2);
+      const spotY = startY + r * yStep + (ctx.variant === 2 ? c % 2 : yBias);
+      const spot = { x: startX + c * xStep + stagger + xBias, y: spotY };
+      if (spot.x + 4 < ctx.dimensions.width - 1 && spot.y + 3 < ctx.dimensions.height - 1) ctx.spots.push(spot);
+    }
   }
 }
 
@@ -207,18 +161,16 @@ function buildingPattern(style: SettlementStyle, index: number, variant: number)
 }
 
 function servicePlacement(service: ServiceType, rnd: RandomSource): 'center' | 'edge' | 'mixed' {
-  const n = service.toLocaleLowerCase();
-  if (n.includes('hall') || n.includes('town') || n.includes('ayunt')) return rnd() < 0.82 ? 'center' : 'mixed';
-  if (n.includes('stable') || n.includes('smith') || n.includes('forge') || n.includes('establ')) return rnd() < 0.8 ? 'edge' : 'mixed';
-  if (n.includes('temple') || n.includes('market') || n.includes('tavern')) return rnd() < 0.7 ? 'center' : 'mixed';
+  if (/hall|town|ayunt/i.test(service)) return rnd() < 0.82 ? 'center' : 'mixed';
+  if (/stable|smith|forge|establ/i.test(service)) return rnd() < 0.8 ? 'edge' : 'mixed';
+  if (/temple|market|tavern/i.test(service)) return rnd() < 0.7 ? 'center' : 'mixed';
   return 'mixed';
 }
 
 function servicePriority(service: ServiceType): number {
-  const n = service.toLocaleLowerCase();
-  if (n.includes('hall') || n.includes('town') || n.includes('ayunt')) return 0;
-  if (n.includes('temple') || n.includes('market') || n.includes('tavern')) return 1;
-  if (n.includes('stable') || n.includes('smith') || n.includes('forge') || n.includes('establ')) return 2;
+  if (/hall|town|ayunt/i.test(service)) return 0;
+  if (/temple|market|tavern/i.test(service)) return 1;
+  if (/stable|smith|forge|establ/i.test(service)) return 2;
   return 3;
 }
 
