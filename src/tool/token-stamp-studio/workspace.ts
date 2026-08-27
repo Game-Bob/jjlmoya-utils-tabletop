@@ -1,5 +1,5 @@
 import { drawTokenCanvas } from './dom-views';
-import { loadImage, readFile, cleanName, copyCanvas, downloadCanvas } from './workspace-media';
+import { canvasToBlob, cleanName, copyCanvas, downloadBlob, downloadCanvas, loadImage, readFile, zipBlobs } from './workspace-media';
 import type { StudioElements } from './controller';
 import type { SavedMarker, TokenStampState } from './types';
 import type { TokenStampUI } from './ui';
@@ -55,22 +55,53 @@ async function loadDroppedFile(file: File, context: WorkspaceContext): Promise<H
   return image;
 }
 
-async function exportBatch(files: File[], state: TokenStampState): Promise<void> {
-  for (const file of files) {
-    const source = await readFile(file);
-    const image = await loadImage(source);
-    const canvas = document.createElement('canvas');
-    drawTokenCanvas(canvas, { ...state, imageSrc: source, imageName: file.name }, image);
-    downloadCanvas(canvas, cleanName(file.name));
+async function exportBatch(files: File[], state: TokenStampState, onProgress: (current: number) => void): Promise<{ exported: number; failed: number }> {
+  const exports: Array<{ name: string; blob: Blob }> = [];
+  const names = new Set<string>();
+  let failed = 0;
+  for (const [index, file] of files.entries()) {
+    try {
+      const source = await readFile(file);
+      const image = await loadImage(source);
+      const canvas = document.createElement('canvas');
+      drawTokenCanvas(canvas, { ...state, imageSrc: source, imageName: file.name }, image);
+      const baseName = cleanName(file.name);
+      let name = `${baseName}.png`;
+      let suffix = 2;
+      while (names.has(name)) name = `${baseName}-${suffix++}.png`;
+      names.add(name);
+      exports.push({ name, blob: await canvasToBlob(canvas) });
+    } catch {
+      failed += 1;
+    }
+    onProgress(index + 1);
   }
+  if (exports.length > 0) downloadBlob(await zipBlobs(exports), 'tabletop-token-batch.zip');
+  return { exported: exports.length, failed };
 }
 
 export function attachBatchEvents(elements: StudioElements, context: WorkspaceContext): void {
   let files: File[] = [];
+  let busy = false;
   elements.batchInput.addEventListener('change', () => {
     files = Array.from(elements.batchInput.files ?? []);
+    elements.batchInput.value = '';
     elements.batchStatus.textContent = files.length ? context.ui.batchReady.replace('{count}', String(files.length)) : context.ui.batchHint;
     elements.batchDownload.disabled = files.length === 0;
   });
-  elements.batchDownload.addEventListener('click', () => void exportBatch(files, context.getState()));
+  elements.batchDownload.addEventListener('click', () => {
+    if (busy || files.length === 0) return;
+    busy = true;
+    elements.batchDownload.disabled = true;
+    elements.batchDownload.setAttribute('aria-busy', 'true');
+    void exportBatch(files, context.getState(), (current) => {
+      elements.batchStatus.textContent = `${current}/${files.length}`;
+    }).then(({ exported, failed }) => {
+      elements.batchStatus.textContent = failed ? `${exported}/${files.length}` : String(exported);
+    }).finally(() => {
+      busy = false;
+      elements.batchDownload.disabled = files.length === 0;
+      elements.batchDownload.removeAttribute('aria-busy');
+    });
+  });
 }
