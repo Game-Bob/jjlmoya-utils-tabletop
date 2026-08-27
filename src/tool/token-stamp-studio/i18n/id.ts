@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Opasitas potret',
   stageLabel: 'Arena pembuat token',
   chooseImage: 'Pilih potret',
-  clearImage: 'Hapus potret',
   positionHint: 'Geser potret atau label langsung di atas token.',
   markerName: 'Nama penanda',
   markerNamePlaceholder: 'Beri nama penanda ini',

@@ -20,7 +20,6 @@ const { ui } = Astro.props as { ui: TokenStampUI };
       <div class="stage-actions">
         <label class="button button-primary" for="token-image-input">{ui.chooseImage}</label>
         <input id="token-image-input" data-image-input type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden />
-        <button class="button button-quiet" type="button" data-clear-image>{ui.clearImage}</button>
         <button class="button button-quiet" type="button" data-copy>{ui.copy}</button>
         <button class="button button-primary" type="button" data-download>{ui.download}</button>
       </div>

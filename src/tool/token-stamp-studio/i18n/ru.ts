@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Оттенок портрета',
   stageLabel: 'Кузница жетонов',
   chooseImage: 'Выбрать портрет',
-  clearImage: 'Удалить портрет',
   positionHint: 'Перетаскивайте портрет и подписи прямо на жетоне.',
   markerName: 'Название маркера',
   markerNamePlaceholder: 'Назовите этот маркер',

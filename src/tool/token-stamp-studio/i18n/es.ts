@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Tinte de retrato',
   stageLabel: 'Forja de fichas en vivo',
   chooseImage: 'Elegir retrato',
-  clearImage: 'Quitar retrato',
   positionHint: 'Arrastra el retrato o las etiquetas directamente sobre la ficha.',
   markerName: 'Nombre del marcador',
   markerNamePlaceholder: 'Nombra este marcador',

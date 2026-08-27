@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: '头像遮罩透明度',
   stageLabel: '实时棋子锻造台',
   chooseImage: '选择头像',
-  clearImage: '清除头像',
   positionHint: '可以直接在棋子上拖动调整头像或文字标签的位置。',
   markerName: '标记名称',
   markerNamePlaceholder: '为此标记命名',

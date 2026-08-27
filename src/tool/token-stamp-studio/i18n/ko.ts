@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: '초상화 투명도',
   stageLabel: '실시간 토큰 제작소',
   chooseImage: '초상화 선택',
-  clearImage: '초상화 지우기',
   positionHint: '토큰 위에서 직접 이미지나 라벨을 드래그하여 이동하세요.',
   markerName: '마커 이름',
   markerNamePlaceholder: '마커 이름 입력',

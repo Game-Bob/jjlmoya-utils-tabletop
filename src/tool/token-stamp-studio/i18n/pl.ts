@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Odcień portretu',
   stageLabel: 'Kuźnia żetonów na żywo',
   chooseImage: 'Wybierz portret',
-  clearImage: 'Usuń portret',
   positionHint: 'Przeciągnij portret lub etykiety bezpośrednio na żetonie.',
   markerName: 'Nazwa znacznika',
   markerNamePlaceholder: 'Nazwij ten znacznik',

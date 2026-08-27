@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Portrait tint',
   stageLabel: 'Live token forge',
   chooseImage: 'Choose portrait',
-  clearImage: 'Clear portrait',
   positionHint: 'Drag the portrait or a label directly on the token.',
   markerName: 'Marker name',
   markerNamePlaceholder: 'Name this marker',

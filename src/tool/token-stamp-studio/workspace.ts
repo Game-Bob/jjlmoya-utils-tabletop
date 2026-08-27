@@ -16,12 +16,6 @@ export interface WorkspaceContext {
   setImage: (image: HTMLImageElement | null) => void;
 }
 
-function getElement<T extends Element>(root: HTMLElement, selector: string): T {
-  const element = root.querySelector<T>(selector);
-  if (!element) throw new Error(`Token stamp studio element missing: ${selector}`);
-  return element;
-}
-
 function attachLibraryEvents(elements: StudioElements, context: WorkspaceContext): void {
   elements.library.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
@@ -36,10 +30,9 @@ function attachLibraryEvents(elements: StudioElements, context: WorkspaceContext
 }
 
 export function attachWorkspaceEvents(elements: StudioElements, context: WorkspaceContext): void {
-  getElement<HTMLButtonElement>(elements.root, '[data-clear-image]').addEventListener('click', () => context.setState({ ...context.getState(), imageSrc: null, imageName: '', imageX: 0, imageY: 0 }));
   const exportCanvas = (): HTMLCanvasElement => {
     const canvas = document.createElement('canvas');
-    drawTokenCanvas(canvas, context.getState(), context.getImage(), false);
+    drawTokenCanvas(canvas, context.getState(), context.getImage());
     return canvas;
   };
   elements.download.addEventListener('click', () => downloadCanvas(exportCanvas(), cleanName(context.getState().imageName)));
@@ -67,7 +60,7 @@ async function exportBatch(files: File[], state: TokenStampState): Promise<void>
     const source = await readFile(file);
     const image = await loadImage(source);
     const canvas = document.createElement('canvas');
-    drawTokenCanvas(canvas, { ...state, imageSrc: source, imageName: file.name }, image, false);
+    drawTokenCanvas(canvas, { ...state, imageSrc: source, imageName: file.name }, image);
     downloadCanvas(canvas, cleanName(file.name));
   }
 }

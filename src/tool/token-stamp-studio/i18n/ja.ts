@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'ポートレート不透明度',
   stageLabel: 'ライブコマ作成スタジオ',
   chooseImage: '画像を選択',
-  clearImage: '画像をクリア',
   positionHint: 'コマ上で直接画像やラベルをドラッグして移動できます。',
   markerName: 'マーカー名',
   markerNamePlaceholder: 'マーカーの名前を入力',

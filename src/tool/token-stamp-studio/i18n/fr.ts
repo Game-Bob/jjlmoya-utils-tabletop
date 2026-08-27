@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Teinte du portrait',
   stageLabel: 'Forge de jetons en direct',
   chooseImage: 'Choisir un portrait',
-  clearImage: 'Effacer le portrait',
   positionHint: 'Faites glisser le portrait ou les étiquettes directement sur le jeton.',
   markerName: 'Nom du marqueur',
   markerNamePlaceholder: 'Nommer ce marqueur',

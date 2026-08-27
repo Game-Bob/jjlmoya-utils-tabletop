@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Tinta ritratto',
   stageLabel: 'Fucina token in tempo reale',
   chooseImage: 'Scegli ritratto',
-  clearImage: 'Rimuovi ritratto',
   positionHint: 'Trascina il ritratto o le etichette direttamente sul token.',
   markerName: 'Nome segnalino',
   markerNamePlaceholder: 'Assegna un nome a questo segnalino',

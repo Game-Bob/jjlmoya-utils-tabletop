@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Portrettint',
   stageLabel: 'Live token smederij',
   chooseImage: 'Kies portret',
-  clearImage: 'Portret wissen',
   positionHint: 'Sleep het portret of de labels rechtstreeks op de token.',
   markerName: 'Markernaam',
   markerNamePlaceholder: 'Geef deze marker een naam',

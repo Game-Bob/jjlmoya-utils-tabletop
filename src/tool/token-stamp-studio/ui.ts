@@ -14,7 +14,6 @@ export interface TokenStampUI {
   overlayOpacityLabel: string;
   stageLabel: string;
   chooseImage: string;
-  clearImage: string;
   positionHint: string;
   markerName: string;
   markerNamePlaceholder: string;

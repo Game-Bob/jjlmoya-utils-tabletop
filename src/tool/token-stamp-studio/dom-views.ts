@@ -34,21 +34,6 @@ function drawGeometry(ctx: CanvasRenderingContext2D, frame: FramePreset, size: n
   }
 }
 
-function drawStageGrid(ctx: CanvasRenderingContext2D, size: number): void {
-  ctx.fillStyle = '#111720';
-  ctx.fillRect(0, 0, size, size);
-  ctx.strokeStyle = 'rgba(255, 255, 255, 0.035)';
-  ctx.lineWidth = 1;
-  for (let offset = 0; offset <= size; offset += size / 8) {
-    ctx.beginPath();
-    ctx.moveTo(offset, 0);
-    ctx.lineTo(offset, size);
-    ctx.moveTo(0, offset);
-    ctx.lineTo(size, offset);
-    ctx.stroke();
-  }
-}
-
 function drawPlaceholder(ctx: CanvasRenderingContext2D, size: number): void {
   ctx.fillStyle = '#273242';
   ctx.fillRect(size * 0.26, size * 0.28, size * 0.48, size * 0.44);
@@ -89,12 +74,6 @@ function drawTextLayers(ctx: CanvasRenderingContext2D, state: TokenStampState, s
     ctx.textBaseline = 'middle';
     ctx.strokeText(text.text, text.x * size, text.y * size, size * 0.82);
     ctx.fillText(text.text, text.x * size, text.y * size, size * 0.82);
-    if (text.id === state.selectedTextId) {
-      ctx.setLineDash([8, 6]);
-      ctx.strokeStyle = '#fff4d6';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(text.x * size - size * 0.25, text.y * size - text.size * 0.7, size * 0.5, text.size * 1.4);
-    }
     ctx.restore();
   });
 }
@@ -129,27 +108,21 @@ function drawFrameIcon(canvas: HTMLCanvasElement, frame: FramePreset, state: Tok
   drawFrame(ctx, frame, { ...state, borderWidth: 7 }, size);
 }
 
-export function drawTokenCanvas(canvas: HTMLCanvasElement, state: TokenStampState, image: HTMLImageElement | null, includeStageGrid = true): void {
+export function drawTokenCanvas(canvas: HTMLCanvasElement, state: TokenStampState, image: HTMLImageElement | null): void {
   const size = 640;
-  canvas.width = size;
-  canvas.height = size;
+  canvas.width = size; canvas.height = size;
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
   const frame = getFramePreset(state.frameId);
-  if (includeStageGrid) drawStageGrid(ctx, size);
-  else ctx.clearRect(0, 0, size, size);
-  ctx.save();
-  drawGeometry(ctx, frame, size);
-  ctx.clip();
+  ctx.clearRect(0, 0, size, size);
+  ctx.save(); drawGeometry(ctx, frame, size); ctx.clip();
   ctx.fillStyle = state.background;
   ctx.fillRect(0, 0, size, size);
   drawImage(ctx, image, state, size);
   if (state.overlayOpacity > 0) {
-    ctx.fillStyle = hexToRgba(state.overlay, state.overlayOpacity);
-    ctx.fillRect(0, 0, size, size);
+    ctx.fillStyle = hexToRgba(state.overlay, state.overlayOpacity); ctx.fillRect(0, 0, size, size);
   }
-  ctx.restore();
-  drawFrame(ctx, frame, state, size);
+  ctx.restore(); drawFrame(ctx, frame, state, size);
   drawTextLayers(ctx, state, size);
 }
 
@@ -204,7 +177,7 @@ function createMarkerPreview(marker: SavedMarker): HTMLCanvasElement {
   const preview = document.createElement('canvas');
   preview.className = 'marker-card-preview';
   const drawPreview = (image: HTMLImageElement | null) => {
-    if (image?.complete && image.naturalWidth > 0) drawTokenCanvas(preview, marker.state, image, false);
+    if (image?.complete && image.naturalWidth > 0) drawTokenCanvas(preview, marker.state, image);
     else drawFrameIcon(preview, getFramePreset(marker.state.frameId), { ...marker.state, borderWidth: Math.max(5, marker.state.borderWidth / 2) });
   };
   drawPreview(null);

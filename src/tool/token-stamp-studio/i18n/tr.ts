@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Portre tonu',
   stageLabel: 'Canlı pul atölyesi',
   chooseImage: 'Portre seçin',
-  clearImage: 'Portreyi kaldır',
   positionHint: 'Portreyi veya etiketleri doğrudan pulun üzerine sürükleyin.',
   markerName: 'İşaretçi adı',
   markerNamePlaceholder: 'Bu işaretçiyi adlandırın',

@@ -17,7 +17,6 @@ const ui: TokenStampUI = {
   overlayOpacityLabel: 'Porträttönung',
   stageLabel: 'Live Token Schmiede',
   chooseImage: 'Porträt wählen',
-  clearImage: 'Porträt entfernen',
   positionHint: 'Ziehe das Porträt oder Beschriftungen direkt auf den Token.',
   markerName: 'Marker Name',
   markerNamePlaceholder: 'Marker benennen',
