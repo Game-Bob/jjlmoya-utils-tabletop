@@ -2,7 +2,7 @@ import type { CategoryLocaleContent } from '../../types';
 
 const slug = 'bordspelen';
 const title = 'Bordspel Hulpmiddelen & Utilities';
-const description = 'Gratis hulpmiddelen voor bordspellen en RPGs: gooi virtuele dobbelstenen met live statistieken, beheer beurt tijden met een multi-player timer en meer. Werkt in de browser, geen registratie, 100% privé.';
+const description = 'Gratis tools voor bordspellen en RPG\'s: virtuele dobbelstenen, statistieken en multitimer in de browser zonder registratie.';
 
 export const content: CategoryLocaleContent = {
   slug,

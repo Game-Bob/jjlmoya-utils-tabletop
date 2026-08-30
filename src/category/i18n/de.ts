@@ -2,7 +2,7 @@ import type { CategoryLocaleContent } from '../../types';
 
 const slug = 'brettspiele';
 const title = 'Brettspiel Utilities und Werkzeuge';
-const description = 'Kostenlose Werkzeuge für Brett- und Rollenspiele: würfle virtuelle Polyederwürfel mit Live-Statistiken, verwalte Zugzeiten mit einem Multiplayer-Timer und mehr. Läuft im Browser, ohne Anmeldung, 100 % privat.';
+const description = 'Kostenlose Werkzeuge für Brett- und Rollenspiele: virtuelle Würfel, Statistiken und Multiplayer-Timer im Browser, ohne Anmeldung.';
 
 export const content: CategoryLocaleContent = {
   slug,
