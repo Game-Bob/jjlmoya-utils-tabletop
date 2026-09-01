@@ -5,12 +5,14 @@ import { encounterDifficultyCalculator } from '../tool/encounter-difficulty-calc
 import { tokenStampStudio } from '../tool/token-stamp-studio/entry';
 import { musScoreboard } from '../tool/mus-scoreboard/entry';
 import { rpgSettlementExplorationMapGenerator } from '../tool/rpg-settlement-exploration-map-generator/entry';
+import { cardDrawOddsCalculator } from '../tool/card-draw-odds-calculator/entry';
 import type { CategoryLocaleContent, KnownLocale } from '../types';
 
 export const tabletopCategory = {
   icon: 'mdi:dice-multiple-outline',
   tools: [
     diceRollerSimulator,
+    cardDrawOddsCalculator,
     boardGameTimer,
     dungeonMapGenerator,
     encounterDifficultyCalculator,

@@ -1,0 +1,89 @@
+---
+import './card-draw-odds-calculator.css';
+import type { CardDrawOddsUI } from './ui';
+import { DEFAULT_INPUT } from './logic';
+
+interface Props {
+  ui: CardDrawOddsUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section class="card-draw-odds-tool" data-card-draw-tool data-ui={JSON.stringify(ui)}>
+  <form class="card-draw-controls" novalidate>
+    <div class="controls-heading">
+      <span class="section-kicker">{ui.configureLabel}</span>
+      <p>{ui.configureHint}</p>
+    </div>
+    <div class="field-grid">
+      <div class="field field-wide custom-select" data-select-key="preset" data-value="custom">
+        <label id="preset-label">{ui.presetLabel}</label>
+        <button type="button" class="select-trigger" data-select-trigger aria-expanded="false" aria-haspopup="listbox" aria-controls="preset-options" aria-labelledby="preset-label">{ui.presetCustom}</button>
+        <div id="preset-options" class="select-menu" data-select-menu role="listbox" hidden>
+          <button type="button" data-option-value="custom" role="option" aria-selected="true">{ui.presetCustom}</button>
+          <button type="button" data-option-value="standard" role="option" aria-selected="false">{ui.presetStandard}</button>
+          <button type="button" data-option-value="limited" role="option" aria-selected="false">{ui.presetLimited}</button>
+          <button type="button" data-option-value="singleton" role="option" aria-selected="false">{ui.presetSingleton}</button>
+        </div>
+      </div>
+      <label class="field">
+        <span>{ui.deckSizeLabel}</span>
+        <input data-input-key="deckSize" type="number" min="1" max="10000" value={DEFAULT_INPUT.deckSize} inputmode="numeric" />
+      </label>
+      <label class="field">
+        <span>{ui.targetCopiesLabel}</span>
+        <input data-input-key="targetCopies" type="number" min="0" max="10000" value={DEFAULT_INPUT.targetCopies} inputmode="numeric" />
+      </label>
+      <label class="field">
+        <span>{ui.openingHandLabel}</span>
+        <input data-input-key="openingHand" type="number" min="0" max="10000" value={DEFAULT_INPUT.openingHand} inputmode="numeric" />
+      </label>
+      <label class="field">
+        <span>{ui.drawsPerTurnLabel}</span>
+        <input data-input-key="drawsPerTurn" type="number" min="0" max="10000" value={DEFAULT_INPUT.drawsPerTurn} inputmode="numeric" />
+      </label>
+      <label class="field">
+        <span>{ui.throughTurnLabel}</span>
+        <input data-input-key="throughTurn" type="number" min="0" max="60" value={DEFAULT_INPUT.throughTurn} inputmode="numeric" />
+      </label>
+      <div class="field field-wide custom-select" data-select-key="mulliganMode" data-value={DEFAULT_INPUT.mulliganMode}>
+        <label id="mulligan-label">{ui.mulliganLabel}</label>
+        <button type="button" class="select-trigger" data-select-trigger aria-expanded="false" aria-haspopup="listbox" aria-controls="mulligan-options" aria-labelledby="mulligan-label">{ui.mulliganFullRedraw}</button>
+        <div id="mulligan-options" class="select-menu" data-select-menu role="listbox" hidden>
+          <button type="button" data-option-value="none" role="option" aria-selected="false">{ui.mulliganNone}</button>
+          <button type="button" data-option-value="fullRedraw" role="option" aria-selected="true">{ui.mulliganFullRedraw}</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="card-draw-results" data-result-content>
+    <div class="result-header">
+      <div>
+        <span class="section-kicker">{ui.visualLabel}</span>
+        <p>{ui.visualHint}</p>
+      </div>
+      <div class="final-result" aria-live="polite" aria-atomic="true">
+        <span>{ui.finalChanceLabel}</span>
+        <strong data-final-probability>0%</strong>
+      </div>
+    </div>
+    <div class="card-fan-stage" data-card-fan aria-hidden="true"></div>
+    <div class="result-meta">
+      <span>{ui.expectedCopiesLabel}</span>
+      <strong data-expected-copies>0.00 {ui.copyLabel}</strong>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-title-row">
+        <h2>{ui.probabilityByTurnLabel}</h2>
+        <span>{ui.explanationLabel}</span>
+      </div>
+      <div class="timeline" data-timeline></div>
+      <p class="mulligan-note" data-mulligan-note></p>
+    </div>
+  </div>
+  <div class="validation-error" data-validation-error hidden role="alert"></div>
+</section>
+
+<script src="./controller.ts"></script>

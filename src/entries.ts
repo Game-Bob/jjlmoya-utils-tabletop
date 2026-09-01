@@ -40,6 +40,7 @@ import { encounterDifficultyCalculator } from './tool/encounter-difficulty-calcu
 import { tokenStampStudio } from './tool/token-stamp-studio/entry';
 import { musScoreboard } from './tool/mus-scoreboard/entry';
 import { rpgSettlementExplorationMapGenerator } from './tool/rpg-settlement-exploration-map-generator/entry';
+import { cardDrawOddsCalculator } from './tool/card-draw-odds-calculator/entry';
 
 export const ALL_ENTRIES = [
   diceRollerSimulator,
@@ -58,5 +59,6 @@ export const ALL_ENTRIES = [
   tokenStampStudio,
   musScoreboard,
   rpgSettlementExplorationMapGenerator,
+  cardDrawOddsCalculator,
 ];
 

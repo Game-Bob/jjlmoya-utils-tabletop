@@ -18,6 +18,6 @@ describe('Locale Completeness Validation', () => {
   });
 
   it('all tools registered', () => {
-    expect(ALL_TOOLS.length).toBe(16);
+    expect(ALL_TOOLS.length).toBe(17);
   });
 });

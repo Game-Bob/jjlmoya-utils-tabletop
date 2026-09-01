@@ -1,0 +1,37 @@
+export interface CardDrawOddsUI {
+  [key: string]: string;
+  configureLabel: string;
+  configureHint: string;
+  presetLabel: string;
+  presetCustom: string;
+  presetStandard: string;
+  presetLimited: string;
+  presetSingleton: string;
+  deckSizeLabel: string;
+  targetCopiesLabel: string;
+  openingHandLabel: string;
+  drawsPerTurnLabel: string;
+  throughTurnLabel: string;
+  mulliganLabel: string;
+  mulliganNone: string;
+  mulliganFullRedraw: string;
+  visualLabel: string;
+  visualHint: string;
+  openingHandStage: string;
+  turnLabel: string;
+  cardsSeenLabel: string;
+  finalChanceLabel: string;
+  expectedCopiesLabel: string;
+  probabilityByTurnLabel: string;
+  explanationLabel: string;
+  noMulliganNote: string;
+  fullRedrawNote: string;
+  invalidInput: string;
+  invalidDeck: string;
+  invalidCopies: string;
+  invalidHand: string;
+  invalidDraws: string;
+  invalidTurns: string;
+  cardsLabel: string;
+  copyLabel: string;
+}
