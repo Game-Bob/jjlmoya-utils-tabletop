@@ -1,0 +1,40 @@
+---
+import "@jjlmoya/utils-shared/theme.css";
+
+interface Props { title: string; description: string; locale: string; image?: string; publicPath?: string; }
+const { title, description, locale, image, publicPath } = Astro.props;
+const gameBobOrigin = import.meta.env.PUBLIC_GAMEBOB_ORIGIN ?? "https://www.gamebob.dev";
+const canonical = new URL(publicPath ?? Astro.url.pathname, gameBobOrigin);
+const imageUrl = image ? new URL(image, canonical) : undefined;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale} />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    <meta name="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+    <slot name="head" />
+  </head>
+  <body class="production-page"><main><slot /></main></body>
+</html>
+
+<style is:global>
+  :root { --tabletop-accent: #10b981; --tabletop-accent-strong: #0d9488; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: var(--bg-main); color: var(--text-main); scroll-behavior: smooth; }
+  body.production-page { min-width: 320px; min-height: 100vh; margin: 0; background: var(--bg-main); color: var(--text-main); font-family: var(--font-family, Inter, system-ui, sans-serif); }
+  body.production-page main { width: 100%; min-height: 100vh; }
+</style>

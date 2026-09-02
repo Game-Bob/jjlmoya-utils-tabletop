@@ -1,0 +1,68 @@
+---
+import ProductionPage from "./ProductionPage.astro";
+import { FAQSection, UtilityHeader } from "@jjlmoya/utils-shared";
+import type { KnownLocale, ToolLocaleContent } from "../types";
+import { getCategoryPath, getUtilitiesPath, getUtilityPath } from "@jjlmoya/utils-shared/routing";
+
+interface RelatedTool { title: string; description: string; href: string; }
+interface Props { locale: KnownLocale; content: ToolLocaleContent; categoryTitle: string; categorySlug: string; categoryHref: string; relatedTools: RelatedTool[]; Component: any; SEOComponent: any; BibliographyComponent: any; }
+const { locale, content, categoryTitle, categorySlug, categoryHref, relatedTools, Component, SEOComponent, BibliographyComponent } = Astro.props;
+const words = content.title.split(/\s+/).filter(Boolean);
+const titleHighlight = words[0] ?? content.title;
+const titleBase = words.slice(1).join(" ");
+const publicPath = getUtilityPath(locale, categorySlug, content.slug);
+const publicCategoryPath = getCategoryPath(locale, categorySlug);
+---
+
+<ProductionPage title={content.title} description={content.description} {locale} {publicPath}>
+  <div class="utility-production">
+    <div class="utility-production-inner">
+      <nav class="production-breadcrumb" aria-label="Breadcrumb">
+        <a href={getUtilitiesPath(locale)}>Utilities</a><span aria-hidden="true">/</span><a href={categoryHref || publicCategoryPath}>{categoryTitle}</a><span aria-hidden="true">/</span><span aria-current="page">{content.title}</span>
+      </nav>
+      <UtilityHeader titleHighlight={titleHighlight} titleBase={titleBase} description={content.description} gradientFrom="#10b981" gradientTo="#0d9488" />
+      <section class="utility-tool-production"><Component ui={content.ui} locale={locale} /></section>
+      <div class="utility-zoom-production" aria-label="Zoom controls">
+        <button type="button" data-zoom="out" aria-label="Zoom out">−</button><button type="button" data-zoom="reset" aria-label="Reset zoom">100%</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+      </div>
+      {content.faq.length > 0 && <section class="utility-section-production"><FAQSection items={content.faq} /></section>}
+      <Fragment slot="head">
+        {(content.schemas ?? []).map((schema) => <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+      </Fragment>
+      <section class="utility-section-production"><SEOComponent locale={locale} /></section>
+      {content.bibliography.length > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}
+      {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><h2 id="related-tools-title">More tools in {categoryTitle}</h2><div class="utility-related-grid">{relatedTools.map((tool) => <a href={tool.href} class="utility-related-card"><h3>{tool.title}</h3><p>{tool.description}</p></a>)}</div></section>}
+    </div>
+  </div>
+</ProductionPage>
+
+<script>
+  const container = document.querySelector<HTMLElement>(".utility-tool-production");
+  let zoom = Number(localStorage.getItem("gamebob-utility-zoom") ?? 1);
+  const applyZoom = () => { if (container) container.style.zoom = String(zoom); };
+  document.querySelector('[data-zoom="out"]')?.addEventListener("click", () => { zoom = Math.max(0.75, zoom - 0.1); applyZoom(); localStorage.setItem("gamebob-utility-zoom", String(zoom)); });
+  document.querySelector('[data-zoom="in"]')?.addEventListener("click", () => { zoom = Math.min(1.5, zoom + 0.1); applyZoom(); localStorage.setItem("gamebob-utility-zoom", String(zoom)); });
+  document.querySelector('[data-zoom="reset"]')?.addEventListener("click", () => { zoom = 1; applyZoom(); localStorage.removeItem("gamebob-utility-zoom"); });
+  applyZoom();
+</script>
+
+<style>
+  .utility-production { min-height: 100vh; overflow-x: clip; background: radial-gradient(ellipse at top, var(--primary-10), var(--bg-surface) 50%, var(--bg-main)); }
+  .utility-production-inner { max-width: 72rem; margin: 0 auto; padding: var(--space-xl) var(--space-lg) var(--space-4xl); }
+  .production-breadcrumb { display: flex; gap: 0.6rem; align-items: center; margin-bottom: var(--space-xl); color: var(--text-muted); font-size: 0.875rem; overflow-wrap: anywhere; }
+  .production-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+  .production-breadcrumb a:hover { color: var(--tabletop-accent); }
+  .utility-tool-production { width: 100%; margin-top: var(--space-2xl); }
+  .utility-zoom-production { display: flex; justify-content: center; gap: 0.5rem; margin: var(--space-lg) 0; }
+  .utility-zoom-production button { border: 1px solid var(--border-base); border-radius: 0.5rem; padding: 0.4rem 0.7rem; background: var(--bg-surface); color: var(--text-main); cursor: pointer; }
+  .utility-zoom-production button:hover { border-color: var(--tabletop-accent); }
+  .utility-section-production, .utility-related-production { max-width: 56rem; margin: var(--space-4xl) auto 0; }
+  .utility-section-production { font-size: 1.125rem; line-height: 1.75; }
+  .utility-related-production h2 { margin: 0 0 var(--space-lg); color: var(--text-main); text-align: center; }
+  .utility-related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); }
+  .utility-related-card { padding: var(--space-md); border: 1px solid var(--border-base); border-radius: 0.75rem; background: var(--bg-surface); color: inherit; text-decoration: none; }
+  .utility-related-card:hover { border-color: var(--tabletop-accent); }
+  .utility-related-card h3 { margin: 0 0 0.5rem; color: var(--text-main); font-size: 1rem; }
+  .utility-related-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+  @media (width <= 640px) { .utility-production-inner { padding: var(--space-lg) var(--space-sm) var(--space-3xl); } }
+</style>
