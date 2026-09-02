@@ -5,6 +5,7 @@ import { LANGUAGE_CODES, type Language } from "../../../../../i18n/languages";
 import type { CategoryLocaleContent, ToolLocaleContent } from "../../../../../types";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { getCategoryNamespace, getCategoryPath, getUtilityNamespace, getUtilityPath } from "@jjlmoya/utils-shared/routing";
+import { getUtilityOgImage } from "../../../../../mfe/assets";
 
 type Loader<T> = () => Promise<{ default: T }>;
 type LoadedTool = ToolLocaleContent;
@@ -47,7 +48,7 @@ export async function getStaticPaths() {
                         language,
                         url: getUtilityPath(language, categories[language].slug, contents[language].slug),
                     })),
-                    image: `/images/utilities/${contents.en.slug}.webp`,
+                    image: getUtilityOgImage(contents.en.slug),
                 },
             });
         }

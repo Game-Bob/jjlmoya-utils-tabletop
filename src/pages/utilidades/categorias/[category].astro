@@ -3,6 +3,7 @@ import ProductionCategoryPage from "../../../layouts/ProductionCategoryPage.astr
 import { ALL_ENTRIES, tabletopCategory } from "../../../index";
 import { LANGUAGE_CODES, type Language } from "../../../i18n/languages";
 import { getCategoryPath, getUtilityPath } from "@jjlmoya/utils-shared/routing";
+import { CATEGORY_OG_IMAGE } from "../../../mfe/assets";
 
 export async function getStaticPaths() {
     const categories = Object.fromEntries(await Promise.all(
@@ -34,4 +35,4 @@ const tools = await Promise.all(ALL_ENTRIES.map(async (entry) => {
 }));
 ---
 
-<ProductionCategoryPage locale="es" {category} {tools} {alternates} image="/images/utilities/tabletop.webp" />
+<ProductionCategoryPage locale="es" {category} {tools} {alternates} image={CATEGORY_OG_IMAGE} />
