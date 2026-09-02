@@ -69,6 +69,7 @@ export function renderMap(context: RenderContext): void {
   setText(root, '[data-map-seed]', map.config.seed);
   setText(root, '[data-room-count]', String(map.rooms.length));
   setText(root, '[data-door-count]', String(map.doorCount));
+  setText(root, '[data-dimensions]', `${map.config.columns} × ${map.config.rows} ${context.ui.dimensionsUnit}`);
   renderEvaluation(context);
 }
 

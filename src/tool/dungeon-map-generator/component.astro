@@ -16,12 +16,14 @@ const initialEvaluation = evaluateMap(initialMap, ui);
 <div class="dmg" data-dungeon-generator data-style="dungeon">
   <script is:inline type="application/json" data-ui set:html={JSON.stringify(ui)} />
   <section class="dmg-controls" aria-label={ui.styleLabel}>
+    <div class="dmg-intro">{ui.intro}</div>
     <div class="dmg-field dmg-field-seed">
       <label for="dmg-seed-input">{ui.seedLabel}</label>
       <div class="dmg-seed-input-group">
         <input id="dmg-seed-input" name="seed" type="text" value={DEFAULT_CONFIG.seed} maxlength="48" spellcheck="false" />
         <button class="dmg-shuffle" type="button" data-random-seed>{ui.randomSeed}</button>
       </div>
+      <small>{ui.seedHint}</small>
     </div>
 
     <fieldset class="dmg-styles">
@@ -104,6 +106,8 @@ const initialEvaluation = evaluateMap(initialMap, ui);
         <div><dt>{ui.floorLabel}</dt><dd data-floor-percent>{initialEvaluation.coverage}%</dd></div>
       </dl>
       <div class="dmg-legend" aria-label={ui.mapReady}>
+        <span class="dmg-connected-badge">{ui.connectedBadge}</span>
+        <span class="dmg-dimensions" data-dimensions>{initialMap.config.columns} × {initialMap.config.rows} {ui.dimensionsUnit}</span>
         <span><i data-tile="floor"></i>{ui.legendFloor}</span>
         <span><i data-tile="wall"></i>{ui.legendWall}</span>
         <span><i data-tile="door"></i>{ui.legendDoor}</span>

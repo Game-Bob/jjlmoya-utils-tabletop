@@ -34,7 +34,7 @@ const faq = [
   },
   {
     question: '¿La selección es realmente aleatoria?',
-    answer: 'Sí. El algoritmo de selección utiliza Math.random() de JavaScript, de grado criptográfico, para garantizar resultados imparciales. En el modo táctil, el ganador se elige uniformemente al azar entre todos los puntos de contacto detectados. En el modo ruleta, la rueda se desacelera de forma realista usando física de fricción, y el ángulo final determina matemáticamente al ganador.',
+    answer: 'Sí. El algoritmo de selección utiliza Math.random() de JavaScript para buscar resultados imparciales. En el modo táctil, el ganador se elige al azar entre todos los puntos de contacto detectados. En el modo ruleta, la rueda se desacelera de forma realista usando física de fricción, y el ángulo final determina matemáticamente al ganador.',
   },
   {
     question: '¿Cómo elimino un pin de jugador en el modo ruleta?',
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
   ui,
   seo: [
     { type: 'title', text: 'Justicia y Estrategia: Cómo Evitar la Ventaja del Primer Jugador', level: 2 },
-    { type: 'paragraph', html: 'Determinar el jugador que comienza en las partidas de mesa puede influir enormemente en la dinámica del juego. En teoría de juegos, la Ventaja del Primer Jugador (FPA, por sus siglas en inglés) se refiere a la ventaja estadística que tiene el jugador que realiza el primer turno sobre sus oponentes. En partidas de ajedrez estratégico, wargames y Eurogames modernos como Agricola o Puerto Rico, realizar la primera acción permite asegurar recursos críticos o posicionar piezas antes de que los oponentes puedan reaccionar. Para mitigar la FPA y garantizar un campo de juego equilibrado, es esencial un método de selección fiable e imparcial. Nuestro selector digital de jugador inicial garantiza un azar absoluto, permitiendo a los grupos de juego establecer el orden de turnos al instante y pasar directamente a jugar.' },
+    { type: 'paragraph', html: 'Determinar el jugador que comienza en las partidas de mesa puede influir enormemente en la dinámica del juego. En teoría de juegos, la Ventaja del Primer Jugador (FPA, por sus siglas en inglés) se refiere a la ventaja estadística que tiene el jugador que realiza el primer turno sobre sus oponentes. En partidas de ajedrez estratégico, wargames y Eurogames modernos como Agricola o Puerto Rico, realizar la primera acción permite asegurar recursos críticos o posicionar piezas antes de que los oponentes puedan reaccionar. Para mitigar la FPA y favorecer un campo de juego equilibrado, es útil un método de selección fiable e imparcial. Nuestro selector digital de jugador inicial usa una selección aleatoria, permitiendo a los grupos de juego establecer el orden de turnos al instante y pasar directamente a jugar.' },
     {
       type: 'stats',
       items: [
@@ -109,7 +109,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
     {
       type: 'tip',
       title: 'Optimizando tu configuración de selección multitáctil',
-      html: 'Para obtener la mejor experiencia en el modo táctil, coloca tu tableta o teléfono inteligente plano en el centro de la mesa. Todos los jugadores deben colocar un dedo claramente sobre el lienzo. La cuenta atrás se reinicia si un jugador levanta o mueve el dedo, evitando selecciones accidentales y garantizando el consenso absoluto antes de que el selector se active.',
+      html: 'Para obtener la mejor experiencia en el modo táctil, coloca tu tableta o teléfono inteligente plano en el centro de la mesa. Todos los jugadores deben colocar un dedo claramente sobre el lienzo. La cuenta atrás se reinicia si un jugador levanta o mueve el dedo, evitando selecciones accidentales y dando al grupo la oportunidad de confirmar antes de que el selector se active.',
     },
     {
       type: 'title',

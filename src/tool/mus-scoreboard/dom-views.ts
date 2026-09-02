@@ -55,6 +55,11 @@ const renderHistory = (root: ParentNode, state: MusState, ui: MusScoreboardUI): 
   });
 };
 
+const renderGameCount = (root: ParentNode, team: Team, games: number, ui: MusScoreboardUI): void => {
+  setText(root, `[data-games="${team}"]`, String(games));
+  setText(root, `[data-game-unit="${team}"]`, games === 1 ? ui.gameLabel : ui.gamePlural);
+};
+
 export const renderMusState = (root: ParentNode, state: MusState, ui: MusScoreboardUI, message: string): void => {
   const felt = query<HTMLElement>(root, '[data-mus-felt]');
   felt.dataset.handTeam = String(state.hand);
@@ -73,7 +78,7 @@ export const renderMusState = (root: ParentNode, state: MusState, ui: MusScorebo
     setTeamProgress(root, index, score, state.config.targetPoints);
     renderTally(root, index, score, ui);
   });
-  state.games.forEach((games, team) => setText(root, `[data-games="${team}"]`, String(games)));
+  state.games.forEach((games, team) => renderGameCount(root, team, games, ui));
   const matchWinner = getMatchWinner(state);
   state.points.forEach((_, team) => {
     const closeButton = query<HTMLButtonElement>(root, `[data-action="close-game"][data-team="${team}"]`);

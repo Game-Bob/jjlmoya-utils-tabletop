@@ -16,7 +16,14 @@ function renderMarkers(count: number, className: string, element: string): strin
 }
 
 function renderHint(result: EncounterResult, labels: Labels): string {
-  return labels[result.difficulty + 'Hint'] ?? '';
+  const hints: Record<EncounterDifficulty, string> = {
+    belowEasy: labels.belowEasyHint ?? '',
+    easy: labels.easyHint ?? '',
+    medium: labels.mediumHint ?? '',
+    hard: labels.hardHint ?? '',
+    deadly: labels.deadlyHint ?? '',
+  };
+  return hints[result.difficulty];
 }
 
 function renderWarnings(result: EncounterResult, labels: Labels): string {

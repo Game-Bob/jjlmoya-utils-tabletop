@@ -60,7 +60,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
   ui,
   seo: [
     { type: 'title', text: 'Dominando el ritmo de juego: Cómo los controles de tiempo profesionales mejoran las partidas', level: 2 },
-    { type: 'paragraph', html: 'La gestión del tiempo es un componente vital en los juegos de mesa modernos. Ya sea que estés disputando una partida rápida o participando en un juego de estrategia complejo, regular el tiempo de reflexión garantiza que todos tengan una participación justa. El uso de métodos de cronometraje profesional como el incremento Fischer, el retraso Bronstein o el reloj de arena elimina el análisis por parálisis y añade una capa estratégica adicional al tablero.' },
+    { type: 'paragraph', html: 'La gestión del tiempo es un componente vital en los juegos de mesa modernos. Ya sea que estés disputando una partida rápida o participando en un juego de estrategia complejo, regular el tiempo de reflexión ayuda a repartir el tiempo de forma justa. El uso de métodos de cronometraje profesional como el incremento Fischer, el retraso Bronstein o el reloj de arena puede reducir el análisis por parálisis y añadir una capa estratégica adicional al tablero.' },
     {
       type: 'stats',
       items: [
@@ -147,7 +147,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
         },
         {
           title: 'Partidas competitivas en duelo',
-          description: 'Los duelos estrictos con reloj de ajedrez requieren pantallas rotables para garantizar la integridad competitiva y un reparto de tiempo equilibrado entre los jugadores.',
+          description: 'Los duelos estrictos con reloj de ajedrez requieren pantallas rotables para favorecer la integridad competitiva y un reparto de tiempo equilibrado entre los jugadores.',
           icon: 'mdi:trophy',
           highlight: false,
           points: [

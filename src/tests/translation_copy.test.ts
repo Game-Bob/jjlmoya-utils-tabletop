@@ -121,4 +121,3 @@ describe('Locales must not copy another locale wholesale', () => {
   });
 });
 
-

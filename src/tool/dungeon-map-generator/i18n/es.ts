@@ -63,7 +63,7 @@ const faq = [
   },
   {
     question: '¿Todas las salas generadas son accesibles entre sí?',
-    answer: 'Sí. Las salas se conectan mediante una ruta principal tras su colocación, garantizando que cada región transitable pertenezca a un único mapa conectado.',
+    answer: 'Sí. Las salas se conectan mediante una ruta principal tras su colocación, de modo que cada región transitable queda dentro de un único mapa conectado.',
   },
   {
     question: '¿Qué cambia entre los estilos mazmorra, cueva y ciencia ficción?',
@@ -139,7 +139,7 @@ export const content: DungeonMapGeneratorLocaleContent = {
   ui,
   seo: [
     { type: 'title', text: 'Genera un Mapa de Mazmorra Jugable mediante una Semilla Reutilizable', level: 2 },
-    { type: 'paragraph', html: 'Un generador de mapas de mazmorras aleatorios necesita ir más allá del ruido visual aleatorio. Cada cámara debe ser alcanzable mediante pasillos conectados, la cuadrícula debe adaptarse a la superficie de juego y el resultado debe poder recuperarse en cualquier momento. Este generador trata la semilla y los controles como una especificación de mapa compacta y determinista. Mantener la misma semilla, filas, columnas y estilo garantiza reconstruir exactamente la misma estructura más adelante.' },
+    { type: 'paragraph', html: 'Un generador de mapas de mazmorras aleatorios necesita ir más allá del ruido visual aleatorio. Cada cámara debe ser alcanzable mediante pasillos conectados, la cuadrícula debe adaptarse a la superficie de juego y el resultado debe poder recuperarse en cualquier momento. Este generador trata la semilla y los controles como una especificación de mapa compacta y determinista. Mantener la misma semilla, filas, columnas y estilo permite reconstruir la misma estructura más adelante.' },
     { type: 'title', text: 'Dimensiones de Cuadrícula para Impresión y Tableros Virtuales', level: 2 },
     { type: 'paragraph', html: 'Configurar el tamaño de la cuadrícula es el primer paso práctico. Una cuadrícula pequeña es fácil de imprimir en papel y resulta ideal para aventuras cortas, mientras que un mapa amplio deja espacio para exploración compleja y múltiples facciones. La imagen exportada mantiene celdas perfectamente cuadradas para alinearse sin esfuerzo con la rejilla de cualquier software de tablero virtual (VTT).' },
     {

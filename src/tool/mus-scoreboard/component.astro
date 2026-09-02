@@ -113,13 +113,13 @@ if (!ui) return null;
       <div class="mus-felt-center">
         <span class="mus-center-label">{ui.scoreLabel}</span>
         <strong><span data-score="0">0</span><i>:</i><span data-score="1">0</span></strong>
-        <span class="mus-center-status" data-status-message>{ui.matchSaved}</span>
+        <span class="mus-center-status" data-status-message>{ui.matchReady}</span>
       </div>
     </div>
 
     <div class="mus-pair-score-row">
       <article class="mus-pair-card mus-pair-card-left">
-        <header><span class="mus-pair-index">A</span><h3 data-pair-label="0"></h3><span class="mus-game-count"><span data-games="0">0</span> {ui.gameLabel}</span></header>
+        <header><span class="mus-pair-index">A</span><h3 data-pair-label="0"></h3><span class="mus-game-count"><span data-games="0">0</span> <span data-game-unit="0">{ui.gameLabel}</span></span></header>
         <p class="mus-score-breakdown" data-breakdown="0">0 {ui.amarracoPlural} + 0 {ui.stonePlural}</p>
         <p class="mus-remaining" data-remaining="0">40 {ui.pointsToGo}</p>
         <div class="mus-tally" data-tally="0" aria-label={ui.stonesLabel}></div>
@@ -130,7 +130,7 @@ if (!ui) return null;
         </div>
       </article>
       <article class="mus-pair-card mus-pair-card-right">
-        <header><span class="mus-pair-index">B</span><h3 data-pair-label="1"></h3><span class="mus-game-count"><span data-games="1">0</span> {ui.gameLabel}</span></header>
+        <header><span class="mus-pair-index">B</span><h3 data-pair-label="1"></h3><span class="mus-game-count"><span data-games="1">0</span> <span data-game-unit="1">{ui.gameLabel}</span></span></header>
         <p class="mus-score-breakdown" data-breakdown="1">0 {ui.amarracoPlural} + 0 {ui.stonePlural}</p>
         <p class="mus-remaining" data-remaining="1">40 {ui.pointsToGo}</p>
         <div class="mus-tally" data-tally="1" aria-label={ui.stonesLabel}></div>

@@ -5,6 +5,12 @@ interface CellPoint {
   y: number;
 }
 
+function bindToolButtons(root: HTMLElement, setActiveTool: (tool: EditTool) => void): void {
+  root.querySelectorAll<HTMLButtonElement>('[data-tool]').forEach((button) => button.addEventListener('click', () => {
+    setActiveTool(button.dataset.tool as EditTool);
+  }));
+}
+
 type EditHandler = (point: CellPoint, tool: EditTool) => void;
 
 function svgCell(event: MouseEvent, svg: SVGSVGElement): CellPoint | null {
@@ -60,10 +66,17 @@ function bindPointerEvents(opts: PointerOptions): void {
   opts.host.addEventListener('pointerleave', cancel);
 }
 
-export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void {
-  const host = root.querySelector<HTMLElement>('[data-map-host]');
-  const menu = root.querySelector<HTMLElement>('[data-context-menu]');
-  if (!host || !menu) return;
+function bindMapSelection(host: HTMLElement, getActiveTool: () => EditTool, onEdit: EditHandler): void {
+  host.addEventListener('click', (event) => {
+    const tool = getActiveTool();
+    if (tool === 'select') return;
+    const svg = (event.target as Element).closest<SVGSVGElement>('[data-settlement-map]');
+    const cell = svg ? svgCell(event, svg) : null;
+    if (cell) onEdit(cell, tool);
+  });
+}
+
+function bindContextMenu(root: HTMLElement, host: HTMLElement, menu: HTMLElement, onEdit: EditHandler): void {
   let selected: CellPoint | null = null;
   const flags: PointerFlags = { ignoreNextContext: false, ignoreNextClick: false };
   host.addEventListener('contextmenu', (event) => {
@@ -72,8 +85,8 @@ export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void 
     selected = openContextMenu(root, menu, event);
   });
   bindPointerEvents({ host, root, menu, flags, onOpen: (cell) => { selected = cell; } });
-  menu.querySelectorAll<HTMLButtonElement>('[data-context-tool]').forEach((btn) => btn.addEventListener('click', () => {
-    if (selected) onEdit(selected, btn.dataset.contextTool as EditTool);
+  menu.querySelectorAll<HTMLButtonElement>('[data-context-tool]').forEach((button) => button.addEventListener('click', () => {
+    if (selected) onEdit(selected, button.dataset.contextTool as EditTool);
     menu.hidden = true;
   }));
   document.addEventListener('click', (event) => {
@@ -82,4 +95,23 @@ export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void 
   });
   window.addEventListener('resize', () => { menu.hidden = true; });
   window.addEventListener('scroll', () => { menu.hidden = true; }, true);
+}
+
+export function bindContextEditor(root: HTMLElement, onEdit: EditHandler): void {
+  const host = root.querySelector<HTMLElement>('[data-map-host]');
+  const menu = root.querySelector<HTMLElement>('[data-context-menu]');
+  if (!host || !menu) return;
+  let activeTool: EditTool = 'select';
+  const toolButtons = root.querySelectorAll<HTMLButtonElement>('[data-tool]');
+  const setActiveTool = (tool: EditTool): void => {
+    activeTool = tool;
+    toolButtons.forEach((button) => {
+      const active = button.dataset.tool === tool;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  };
+  bindToolButtons(root, setActiveTool);
+  bindMapSelection(host, () => activeTool, onEdit);
+  bindContextMenu(root, host, menu, onEdit);
 }

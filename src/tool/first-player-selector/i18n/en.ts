@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FirstPlayerSelectorUI> = {
   ui,
   seo: [
     { type: 'title', text: 'Fairness and Strategy: Resolving the First-Player Advantage in Board Games', level: 2 },
-    { type: 'paragraph', html: 'Determining the starting player in tabletop sessions can heavily influence game dynamics. In game theory, the First-Player Advantage (FPA) refers to the statistical edge that the player taking the first turn has over their opponents. In strategic chess matches, wargames, and modern Eurogames like Agricola or Puerto Rico, taking the first action allows a player to secure critical resources or position pieces before opponents can react. To mitigate FPA and guarantee a balanced playing field, a reliable, unbiased selection method is essential. Our digital starting player selector guarantees absolute randomness, allowing gaming groups to establish turn order instantly and get straight to playing.' },
+    { type: 'paragraph', html: 'Determining the starting player in tabletop sessions can heavily influence game dynamics. In game theory, the First-Player Advantage (FPA) refers to the statistical edge that the player taking the first turn has over their opponents. In strategic chess matches, wargames, and modern Eurogames like Agricola or Puerto Rico, taking the first action allows a player to secure critical resources or position pieces before opponents can react. To mitigate FPA and support a balanced playing field, a reliable, unbiased selection method is useful. Our digital starting player selector uses a random selection step, allowing gaming groups to establish turn order instantly and get straight to playing.' },
     {
       type: 'stats',
       items: [

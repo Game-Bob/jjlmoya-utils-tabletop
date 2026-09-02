@@ -84,7 +84,8 @@ const confirmClose = (context: ControllerContext, team: Team): void => {
   showConfirmation(context, `${context.state.config.pairNames[team]}: ${context.ui.closeGamePrompt}`, () => {
     context.state = closeGame(context.state, team);
     const winner = context.state.games[team] >= context.state.config.gamesToWin;
-    refresh(context, winner ? context.ui.vacaWon : `${context.state.config.pairNames[team]} ${context.ui.gameClosed}`);
+    const gameMessage = `${context.state.config.pairNames[team]} ${context.ui.gameWon}`;
+    refresh(context, winner ? `${gameMessage}. ${context.ui.vacaWon}` : `${context.state.config.pairNames[team]} ${context.ui.gameClosed}`);
   });
 };
 

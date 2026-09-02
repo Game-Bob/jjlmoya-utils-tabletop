@@ -71,7 +71,7 @@ export const content: ToolLocaleContent = {
           con: 'Los resultados de D20 son muy inestables, haciendo que la habilidad del personaje dependa demasiado del azar.',
         },
         {
-          pro: 'Las curvas de campana de 3d6 priorizan los resultados medios, garantizando que los personajes hábiles rara vez fallen tareas fáciles.',
+          pro: 'Las curvas de campana de 3d6 priorizan los resultados medios, por lo que los personajes hábiles suelen fallar menos tareas fáciles.',
           con: 'Los sistemas de 3d6 exigen sumar tres dados y hacen que los impactos críticos (un 18 perfecto) sean extremadamente raros (0.46%).',
         },
       ],
@@ -182,7 +182,7 @@ export const content: ToolLocaleContent = {
     },
     {
       question: '¿Qué son los éxitos críticos y las pifias?',
-      answer: 'Un éxito crítico ocurre cuando sacas el máximo del dado (un 20 natural en D20), garantizando el éxito. Una pifia es sacar un 1 en el dado, lo que garantiza el fallo.',
+      answer: 'Un éxito crítico ocurre cuando sacas el máximo del dado (un 20 natural en D20), y suele considerarse un éxito. Una pifia es sacar un 1 en el dado, que suele considerarse un fallo.',
     },
     {
       question: '¿Cómo calcula el simulador las probabilidades de las tiradas?',
@@ -258,7 +258,7 @@ export const content: ToolLocaleContent = {
           'name': '¿Qué son los éxitos críticos y las pifias?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Un éxito crítico ocurre cuando sacas el máximo del dado (un 20 natural en D20), garantizando el éxito. Una pifia es sacar un 1 en el dado, lo que garantiza el fallo.'
+            'text': 'Un éxito crítico ocurre cuando sacas el máximo del dado (un 20 natural en D20), y suele considerarse un éxito. Una pifia es sacar un 1 en el dado, que suele considerarse un fallo.'
           }
         },
         {

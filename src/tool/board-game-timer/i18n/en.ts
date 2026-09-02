@@ -60,7 +60,7 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
   ui,
   seo: [
     { type: 'title', text: 'Mastering Tabletop Pace: How Professional Time Controls Enhance Tabletop Gaming', level: 2 },
-    { type: 'paragraph', html: 'Time management is a vital component in modern tabletop gaming. Whether you are contesting a fast-paced party challenge or engaging in a deep strategic wargame, regulating thinking time ensures that all participants have a fair share of the spotlight. Utilizing professional timing methods like Fischer increment, Bronstein delay, or Hourglass modes eliminates analysis paralysis, guarantees game pace consistency, and adds an extra layer of strategic decision-making to the game board.' },
+    { type: 'paragraph', html: 'Time management is a vital component in modern tabletop gaming. Whether you are contesting a fast-paced party challenge or engaging in a deep strategic wargame, regulating thinking time helps give all participants a fair share of the spotlight. Utilizing professional timing methods like Fischer increment, Bronstein delay, or Hourglass modes can reduce analysis paralysis, support a consistent game pace, and add an extra layer of strategic decision-making to the game board.' },
     {
       type: 'stats',
       items: [
@@ -301,4 +301,3 @@ export const content: ToolLocaleContent<BoardGameTimerUI> = {
     }
   ],
 };
-
