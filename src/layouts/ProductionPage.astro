@@ -50,7 +50,7 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <ThemeBoot />
+        <ThemeBoot defaultTheme={brand === "gamebob" ? "theme-dark" : "theme-system"} />
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
@@ -113,7 +113,70 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
     :root {
         --tabletop-accent: #10b981;
         --tabletop-accent-strong: #0d9488;
+        --color-brand-blue: #1ddabc;
+        --color-brand-dark: #000;
+        --color-brand-white: #fff;
+        --color-primary: var(--color-brand-blue);
+        --color-primary-rgb: 29, 218, 188;
+        --space-2xs: 0.125rem;
+        --space-xs: 0.25rem;
+        --space-sm: 0.5rem;
+        --space-base: 0.75rem;
+        --space-md: 1rem;
+        --space-md-lg: 1.25rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+        --space-1-5xl: 2.5rem;
+        --space-2xl: 3rem;
+        --space-3xl: 4rem;
+        --space-4xl: 6rem;
+        --space-3-5xl: 5rem;
+        --radius-base: 0.5rem;
+        --radius-lg: 1rem;
+        --radius-2xl: 2rem;
+        --radius-full: 9999px;
+        --font-family: inter, system-ui, sans-serif;
+        --font-weight-bold: 800;
         --color-white: #fff;
+    }
+
+    :root,
+    .theme-light {
+        --bg-main: #f0f4f8;
+        --bg-page: #f0f4f8;
+        --bg-surface: #fff;
+        --bg-muted: #f1f5f9;
+        --text-main: #000;
+        --text-base: #000;
+        --text-muted: #4a5568;
+        --text-dimmed: #64748b;
+        --border-base: #e2e8f0;
+        --border-color: #e2e8f0;
+        --glass-bg: rgba(0, 0, 0, 0.05);
+        --glass-border: rgba(0, 0, 0, 0.1);
+        --shadow-base: rgba(0, 0, 0, 0.05);
+        --shadow-hover: rgba(0, 0, 0, 0.1);
+        --primary: var(--color-primary);
+        --primary-10: rgba(29, 218, 188, 0.1);
+    }
+
+    .theme-dark {
+        --bg-main: #000;
+        --bg-page: #000;
+        --bg-surface: #0f172a;
+        --bg-muted: #1e293b;
+        --text-main: #fff;
+        --text-base: #fff;
+        --text-muted: #94a3b8;
+        --text-dimmed: #64748b;
+        --border-base: #1e293b;
+        --border-color: #1e293b;
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --shadow-base: rgba(0, 0, 0, 0.3);
+        --shadow-hover: rgba(0, 0, 0, 0.4);
+        --primary: var(--color-primary);
+        --primary-10: rgba(29, 218, 188, 0.1);
     }
 
     *, *::before, *::after {

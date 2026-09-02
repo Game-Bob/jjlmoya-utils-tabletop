@@ -85,7 +85,8 @@ const homeLabel = LABELS[locale];
 
     .production-breadcrumb-item a {
         overflow: hidden;
-        color: var(--text-muted);
+        color: var(--text-main);
+        font-weight: 500;
         text-decoration: none;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -113,8 +114,8 @@ const homeLabel = LABELS[locale];
     .production-breadcrumb-current {
         overflow: hidden;
         max-width: min(28rem, 70vw);
-        color: var(--text-main);
-        font-weight: 600;
+        color: var(--text-muted);
+        font-size: 0.9rem;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
