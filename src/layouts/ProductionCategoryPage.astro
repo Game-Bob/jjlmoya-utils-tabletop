@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 import { SEORenderer } from "@jjlmoya/utils-shared";
 import ProductionBreadcrumb from "../components/ProductionBreadcrumb.astro";
 import type { KnownLocale, CategoryLocaleContent } from "../types";
-import { getCategoryPath } from "@jjlmoya/utils-shared/routing";
+import { getCategoryPath } from "../mfe/routes";
 
 interface CategoryTool { id: string; icon: string; title: string; description: string; href: string; }
 interface Props { locale: KnownLocale; category: CategoryLocaleContent; tools: CategoryTool[]; alternates: { language: KnownLocale; url: string }[]; image?: string | undefined; }

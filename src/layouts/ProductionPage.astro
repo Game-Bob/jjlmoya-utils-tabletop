@@ -30,10 +30,13 @@ const origin = brand === "jjlmoya" ? "https://www.jjlmoya.es" : "https://www.gam
 const canonical = new URL(publicPath, origin).href;
 const socialImage = image ? new URL(image, canonical).href : undefined;
 const languageUi = LANGUAGE_UI[locale];
-const absoluteUrl = (language: Language, url: string): string => new URL(
-    url,
-    language === "es" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev",
-).href;
+const absoluteUrl = (language: Language, url: string): string => {
+    if (import.meta.env.DEV) return new URL(url, "http://localhost:4324").pathname;
+    return new URL(
+        url,
+        language === "es" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev",
+    ).href;
+};
 const languageLinks = alternates.map(({ language, url }) => ({
     code: language,
     name: LANGUAGE_NAMES[language],
