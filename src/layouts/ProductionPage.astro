@@ -19,11 +19,12 @@ interface Props {
     description: string;
     locale: Language;
     image?: string | undefined;
+    toolCss?: string | undefined;
     publicPath: string;
     alternates: readonly AlternateLink[];
 }
 
-const { title, description, locale, image, publicPath, alternates } = Astro.props;
+const { title, description, locale, image, toolCss, publicPath, alternates } = Astro.props;
 const brand = getBrand(locale);
 const origin = brand === "jjlmoya" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev";
 const canonical = new URL(publicPath, origin).href;
@@ -59,6 +60,7 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
         <link rel="canonical" href={canonical} />
         {alternates.map(({ language, url }) => <link rel="alternate" hreflang={language} href={absoluteUrl(language, url)} />)}
         <link rel="alternate" hreflang="x-default" href={absoluteUrl("en", xDefaultUrl)} />
+        {toolCss && <link rel="stylesheet" href={toolCss} />}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
         <meta property="og:title" content={title} />
@@ -128,6 +130,7 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
         min-width: 320px;
         min-height: 100vh;
         margin: 0;
+        padding-top: 4.5rem;
         background: var(--bg-main);
         color: var(--text-main);
         font-family: var(--font-family, Inter, system-ui, sans-serif);

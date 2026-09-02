@@ -39,6 +39,7 @@ export async function getStaticPaths() {
                 props: {
                     locale,
                     content,
+                    englishSlug: contents.en.slug,
                     category,
                     categorySlug: category.slug,
                     Component,
@@ -56,9 +57,10 @@ export async function getStaticPaths() {
     return paths;
 }
 
-const { locale, content, category, categorySlug, Component, SEOComponent, BibliographyComponent, relatedTools, alternates, image } = Astro.props as {
+const { locale, content, englishSlug, category, categorySlug, Component, SEOComponent, BibliographyComponent, relatedTools, alternates, image } = Astro.props as {
     locale: Exclude<Language, "es">;
     content: LoadedTool;
+    englishSlug: string;
     category: CategoryLocaleContent;
     categorySlug: string;
     Component: AstroComponentFactory;
@@ -74,16 +76,18 @@ const related = relatedTools ?? (await Promise.all(ALL_TOOLS.map(async ({ entry:
     const relatedContent = await loader();
     if (relatedContent.slug === content.slug) return null;
     return {
+        icon: relatedEntry.icons.fg,
         title: relatedContent.title,
         description: relatedContent.description,
         href: getUtilityPath(locale, categorySlug, relatedContent.slug),
     };
-}))).filter((tool): tool is { title: string; description: string; href: string } => tool !== null);
+}))).filter((tool): tool is { icon: string; title: string; description: string; href: string } => tool !== null);
 ---
 
 <ProductionUtilityPage
     {locale}
     {content}
+    {englishSlug}
     categoryTitle={category.title}
     {categorySlug}
     categoryHref={getCategoryPath(locale, categorySlug)}

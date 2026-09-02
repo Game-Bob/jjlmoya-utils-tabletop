@@ -3,7 +3,6 @@ import { buildMapSvg } from './dom-views';
 import { evaluateSettlement } from './evaluator';
 import { DEFAULT_CONFIG, generateSettlement } from './logic';
 import type { SettlementMapUI } from './ui';
-import './rpg-settlement-exploration-map-generator.css';
 interface Props { ui: SettlementMapUI; }
 const { ui } = Astro.props;
 const initialMap = generateSettlement(DEFAULT_CONFIG);

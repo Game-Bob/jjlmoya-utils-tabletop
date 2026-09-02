@@ -2,8 +2,9 @@
 import ProductionPage from "./ProductionPage.astro";
 import { Icon } from "astro-icon/components";
 import { SEORenderer } from "@jjlmoya/utils-shared";
+import ProductionBreadcrumb from "../components/ProductionBreadcrumb.astro";
 import type { KnownLocale, CategoryLocaleContent } from "../types";
-import { getCategoryPath, getUtilitiesPath } from "@jjlmoya/utils-shared/routing";
+import { getCategoryPath } from "@jjlmoya/utils-shared/routing";
 
 interface CategoryTool { id: string; icon: string; title: string; description: string; href: string; }
 interface Props { locale: KnownLocale; category: CategoryLocaleContent; tools: CategoryTool[]; alternates: { language: KnownLocale; url: string }[]; image?: string | undefined; }
@@ -14,15 +15,14 @@ const publicPath = getCategoryPath(locale, category.slug);
 <ProductionPage title={category.title} description={category.description} {locale} {publicPath} {alternates} {image}>
   <div class="category-production">
     <div class="category-production-inner">
-      <nav class="production-breadcrumb" aria-label="Breadcrumb">
-        <a href={getUtilitiesPath(locale)}>Utilities</a><span aria-hidden="true">/</span><span aria-current="page">{category.title}</span>
-      </nav>
+      <ProductionBreadcrumb locale={locale} currentTitle={category.title} />
       <header class="category-header-production">
         <h1>{category.title}</h1><p>{category.description}</p>
       </header>
       <div class="category-tools-grid">
-        {tools.map((tool) => (
+        {tools.map((tool, index) => (
           <a href={tool.href} class="category-tool-card">
+            <span class="category-tool-index">{String(index + 1).padStart(2, "0")}</span>
             <div class="category-tool-icon"><Icon name={tool.icon} /></div>
             <h2>{tool.title}</h2><p>{tool.description}</p>
             <span class="category-tool-cta">Use tool <span aria-hidden="true">→</span></span>
@@ -46,21 +46,6 @@ const publicPath = getCategoryPath(locale, category.slug);
     margin: 0 auto;
     padding: var(--space-xl) var(--space-md) var(--space-4xl);
   }
-
-  .production-breadcrumb {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    margin-bottom: var(--space-xl);
-    color: var(--text-muted);
-    font-size: 0.875rem;
-  }
-
-  .production-breadcrumb a {
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-  .production-breadcrumb a:hover { color: var(--tabletop-accent); }
 
   .category-header-production {
     margin-bottom: var(--space-xl);
@@ -93,34 +78,75 @@ const publicPath = getCategoryPath(locale, category.slug);
   }
 
   .category-tool-card {
+    position: relative;
     display: flex;
+    overflow: hidden;
     min-height: 230px;
     flex-direction: column;
     padding: var(--space-lg);
-    border: 1px solid var(--border-base);
-    border-radius: 1rem;
-    background: var(--bg-surface);
+    border: 1px solid color-mix(in srgb, var(--tabletop-accent) 18%, var(--border-base));
+    border-radius: 1.25rem;
+    background: linear-gradient(145deg, var(--bg-surface), color-mix(in srgb, var(--tabletop-accent) 4%, var(--bg-surface)));
     color: inherit;
     text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1rem 2rem color-mix(in srgb, var(--shadow-base, #000) 35%, transparent);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
-  .category-tool-card:hover {
+  .category-tool-card:hover,
+  .category-tool-card:focus-visible {
     border-color: var(--tabletop-accent);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
-    transform: translateY(-2px);
+    box-shadow: 0 1.25rem 2.5rem color-mix(in srgb, var(--tabletop-accent) 18%, transparent);
+    transform: translateY(-4px);
+  }
+
+  .category-tool-card:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--tabletop-accent) 55%, transparent);
+    outline-offset: 4px;
+  }
+
+  .category-tool-card::after {
+    position: absolute;
+    right: -2rem;
+    bottom: -3rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--tabletop-accent) 10%, transparent);
+    content: "";
+    pointer-events: none;
   }
 
   .category-tool-icon {
+    position: relative;
+    z-index: 1;
     display: grid;
-    width: 3rem;
-    height: 3rem;
+    width: 3.25rem;
+    height: 3.25rem;
     place-items: center;
     margin-bottom: var(--space-md);
-    border-radius: 0.75rem;
-    background: var(--tabletop-accent);
-    color: var(--color-white);
-    font-size: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--tabletop-accent) 28%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--tabletop-accent) 12%, var(--bg-surface));
+    color: var(--tabletop-accent);
+    font-size: 1.6rem;
+  }
+
+  .category-tool-index {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-lg);
+    color: var(--text-dimmed, var(--text-muted));
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .category-tool-card h2,
+  .category-tool-card p,
+  .category-tool-cta {
+    position: relative;
+    z-index: 1;
   }
 
   .category-tool-card h2 {
