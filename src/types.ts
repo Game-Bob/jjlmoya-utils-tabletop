@@ -1,5 +1,6 @@
 import type { SEOSection } from '@jjlmoya/utils-shared';
 import type { UtilityLocale } from '@jjlmoya/utils-shared/routing';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 
 export type { SEOSection };
 
@@ -60,7 +61,7 @@ export interface TabletopCategoryEntry {
 
 export interface ToolDefinition {
   entry: TabletopToolEntry;
-  Component: unknown;
-  SEOComponent: unknown;
-  BibliographyComponent: unknown;
+  Component: () => Promise<{ default: AstroComponentFactory }>;
+  SEOComponent: () => Promise<{ default: AstroComponentFactory }>;
+  BibliographyComponent: () => Promise<{ default: AstroComponentFactory }>;
 }

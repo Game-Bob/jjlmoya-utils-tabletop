@@ -6,7 +6,7 @@ Los segmentos traducidos de las URLs públicas no pertenecen a `website`,
 `jjlmoya` ni a una vertical concreta. La fuente común es la exportación
 `@jjlmoya/utils-shared/routing`.
 
-El paquete publicado en `1.4.0` contiene:
+El paquete publicado en `1.5.0` contiene:
 
 - los 15 locales de utilidades;
 - los segmentos traducidos de catálogo y categorías;
@@ -58,7 +58,10 @@ del loader. Ninguna página pública debe enlazar la ruta interna de preview
 
 ## Estado del PoC
 
-La dependencia declarada de Tabletop ya apunta a `@jjlmoya/utils-shared@1.4.0`.
-La instalación pública queda bloqueada hasta que npm distribuya esa versión; la
-validación local puede continuar con el enlace de desarrollo, sin modificar el
-manifest del paquete.
+La dependencia declarada de Tabletop apunta a `@jjlmoya/utils-shared@1.5.0` y el
+lockfile resuelve el tarball público de npm. No se usa `file:`, `link:` ni un
+symlink local.
+
+El contrato común se consume desde `@jjlmoya/utils-shared/routing`; la vertical
+no mantiene una copia de `slugMapping`. La versión se publica y actualiza con
+`npm run minor` en shared antes de instalarla en la vertical.

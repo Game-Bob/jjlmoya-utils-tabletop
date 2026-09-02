@@ -1,40 +1,139 @@
 ---
+import Footer from "@jjlmoya/identity/footer";
+import Header from "@jjlmoya/identity/header";
+import LanguageSheet from "@jjlmoya/identity/language-sheet";
+import LanguageTrigger from "@jjlmoya/identity/language-trigger";
+import ThemeBoot from "@jjlmoya/identity/theme-boot";
+import { getSiteNavigation } from "@jjlmoya/identity/navigation";
+import "@jjlmoya/identity/styles.css";
 import "@jjlmoya/utils-shared/theme.css";
+import { HEADER_UI } from "../i18n/header-ui";
+import { LANGUAGE_LOCALES, LANGUAGE_NAMES, type Language } from "../i18n/languages";
+import { LANGUAGE_UI } from "../i18n/language-ui";
+import { getBrand } from "../identity/brands";
 
-interface Props { title: string; description: string; locale: string; image?: string; publicPath?: string; }
-const { title, description, locale, image, publicPath } = Astro.props;
-const gameBobOrigin = import.meta.env.PUBLIC_GAMEBOB_ORIGIN ?? "https://www.gamebob.dev";
-const canonical = new URL(publicPath ?? Astro.url.pathname, gameBobOrigin);
-const imageUrl = image ? new URL(image, canonical) : undefined;
+interface AlternateLink { language: Language; url: string; }
+interface Props {
+    title: string;
+    description: string;
+    locale: Language;
+    image?: string | undefined;
+    publicPath: string;
+    alternates: readonly AlternateLink[];
+}
+
+const { title, description, locale, image, publicPath, alternates } = Astro.props;
+const brand = getBrand(locale);
+const origin = brand === "jjlmoya" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev";
+const canonical = new URL(publicPath, origin).href;
+const socialImage = image ? new URL(image, canonical).href : undefined;
+const languageUi = LANGUAGE_UI[locale];
+const absoluteUrl = (language: Language, url: string): string => new URL(
+    url,
+    language === "es" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev",
+).href;
+const languageLinks = alternates.map(({ language, url }) => ({
+    code: language,
+    name: LANGUAGE_NAMES[language],
+    href: absoluteUrl(language, url),
+    current: language === locale,
+}));
+const homeUrl = brand === "jjlmoya" ? "https://www.jjlmoya.es/" : `https://www.gamebob.dev/${locale}/`;
+const openGraphLocale = LANGUAGE_LOCALES[locale].replace("-", "_");
+const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ?? canonical;
 ---
 
 <!doctype html>
-<html lang={locale}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    <title>{title}</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={locale} />
-    {imageUrl && <meta property="og:image" content={imageUrl} />}
-    <meta name="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
-    <slot name="head" />
-  </head>
-  <body class="production-page"><main><slot /></main></body>
+<html lang={locale} data-brand={brand}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <ThemeBoot />
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="author" content="jjlmoya" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <link rel="canonical" href={canonical} />
+        {alternates.map(({ language, url }) => <link rel="alternate" hreflang={language} href={absoluteUrl(language, url)} />)}
+        <link rel="alternate" hreflang="x-default" href={absoluteUrl("en", xDefaultUrl)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={brand === "jjlmoya" ? "jjlmoya" : "GameBob Studio"} />
+        <meta property="og:locale" content={openGraphLocale} />
+        {socialImage && <meta property="og:image" content={socialImage} />}
+        {socialImage && <meta property="og:image:secure_url" content={socialImage} />}
+        {socialImage && <meta property="og:image:type" content="image/webp" />}
+        {socialImage && <meta property="og:image:width" content="1200" />}
+        {socialImage && <meta property="og:image:height" content="630" />}
+        {socialImage && <meta property="og:image:alt" content={description} />}
+        <meta name="twitter:card" content={socialImage ? "summary_large_image" : "summary"} />
+        <meta name="twitter:url" content={canonical} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {socialImage && <meta name="twitter:image" content={socialImage} />}
+        <script is:inline type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            url: canonical,
+            name: title,
+            description,
+            inLanguage: LANGUAGE_LOCALES[locale],
+        })} />
+        <script>
+            import { installEcosystemTracking } from "@jjlmoya/tracking";
+            installEcosystemTracking();
+        </script>
+        <slot name="head" />
+    </head>
+    <body class="production-page">
+        <Header
+            class="utilities-site-header"
+            identity={brand}
+            {homeUrl}
+            navigation={getSiteNavigation({ language: locale, activeSection: "utilities" })}
+            labels={HEADER_UI[locale]}
+        >
+            <LanguageTrigger slot="desktop-actions" label={languageUi.change} />
+            <LanguageTrigger slot="mobile-actions" label={languageUi.change} />
+        </Header>
+        <LanguageSheet links={languageLinks} title={languageUi.select} closeLabel={languageUi.close} />
+        <main><slot /></main>
+        <Footer class="utilities-site-footer" identity={brand} language={locale} />
+    </body>
 </html>
 
 <style is:global>
-  :root { --tabletop-accent: #10b981; --tabletop-accent-strong: #0d9488; }
-  *, *::before, *::after { box-sizing: border-box; }
-  html { background: var(--bg-main); color: var(--text-main); scroll-behavior: smooth; }
-  body.production-page { min-width: 320px; min-height: 100vh; margin: 0; background: var(--bg-main); color: var(--text-main); font-family: var(--font-family, Inter, system-ui, sans-serif); }
-  body.production-page main { width: 100%; min-height: 100vh; }
+    :root {
+        --tabletop-accent: #10b981;
+        --tabletop-accent-strong: #0d9488;
+        --color-white: #fff;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        background: var(--bg-main);
+        color: var(--text-main);
+        scroll-behavior: smooth;
+    }
+
+    body.production-page {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        background: var(--bg-main);
+        color: var(--text-main);
+        font-family: var(--font-family, Inter, system-ui, sans-serif);
+    }
+
+    body.production-page main {
+        width: 100%;
+        min-height: 100vh;
+    }
 </style>

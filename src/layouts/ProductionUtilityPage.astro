@@ -3,10 +3,11 @@ import ProductionPage from "./ProductionPage.astro";
 import { FAQSection, UtilityHeader } from "@jjlmoya/utils-shared";
 import type { KnownLocale, ToolLocaleContent } from "../types";
 import { getCategoryPath, getUtilitiesPath, getUtilityPath } from "@jjlmoya/utils-shared/routing";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 interface RelatedTool { title: string; description: string; href: string; }
-interface Props { locale: KnownLocale; content: ToolLocaleContent; categoryTitle: string; categorySlug: string; categoryHref: string; relatedTools: RelatedTool[]; Component: any; SEOComponent: any; BibliographyComponent: any; }
-const { locale, content, categoryTitle, categorySlug, categoryHref, relatedTools, Component, SEOComponent, BibliographyComponent } = Astro.props;
+interface Props { locale: KnownLocale; content: ToolLocaleContent; categoryTitle: string; categorySlug: string; categoryHref: string; relatedTools: RelatedTool[]; Component: AstroComponentFactory; SEOComponent: AstroComponentFactory; BibliographyComponent: AstroComponentFactory; alternates: { language: KnownLocale; url: string }[]; image?: string | undefined; }
+const { locale, content, categoryTitle, categorySlug, categoryHref, relatedTools, Component, SEOComponent, BibliographyComponent, alternates, image } = Astro.props;
 const words = content.title.split(/\s+/).filter(Boolean);
 const titleHighlight = words[0] ?? content.title;
 const titleBase = words.slice(1).join(" ");
@@ -14,7 +15,7 @@ const publicPath = getUtilityPath(locale, categorySlug, content.slug);
 const publicCategoryPath = getCategoryPath(locale, categorySlug);
 ---
 
-<ProductionPage title={content.title} description={content.description} {locale} {publicPath}>
+<ProductionPage title={content.title} description={content.description} {locale} {publicPath} {alternates} {image}>
   <div class="utility-production">
     <div class="utility-production-inner">
       <nav class="production-breadcrumb" aria-label="Breadcrumb">
@@ -47,22 +48,102 @@ const publicCategoryPath = getCategoryPath(locale, categorySlug);
 </script>
 
 <style>
-  .utility-production { min-height: 100vh; overflow-x: clip; background: radial-gradient(ellipse at top, var(--primary-10), var(--bg-surface) 50%, var(--bg-main)); }
-  .utility-production-inner { max-width: 72rem; margin: 0 auto; padding: var(--space-xl) var(--space-lg) var(--space-4xl); }
-  .production-breadcrumb { display: flex; gap: 0.6rem; align-items: center; margin-bottom: var(--space-xl); color: var(--text-muted); font-size: 0.875rem; overflow-wrap: anywhere; }
-  .production-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+  .utility-production {
+    min-height: 100vh;
+    overflow-x: clip;
+    background: radial-gradient(ellipse at top, var(--primary-10), var(--bg-surface) 50%, var(--bg-main));
+  }
+
+  .utility-production-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg) var(--space-4xl);
+  }
+
+  .production-breadcrumb {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    overflow-wrap: anywhere;
+  }
+
+  .production-breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
   .production-breadcrumb a:hover { color: var(--tabletop-accent); }
-  .utility-tool-production { width: 100%; margin-top: var(--space-2xl); }
-  .utility-zoom-production { display: flex; justify-content: center; gap: 0.5rem; margin: var(--space-lg) 0; }
-  .utility-zoom-production button { border: 1px solid var(--border-base); border-radius: 0.5rem; padding: 0.4rem 0.7rem; background: var(--bg-surface); color: var(--text-main); cursor: pointer; }
+
+  .utility-tool-production {
+    width: 100%;
+    margin-top: var(--space-2xl);
+  }
+
+  .utility-zoom-production {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: var(--space-lg) 0;
+  }
+
+  .utility-zoom-production button {
+    border: 1px solid var(--border-base);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    cursor: pointer;
+  }
   .utility-zoom-production button:hover { border-color: var(--tabletop-accent); }
-  .utility-section-production, .utility-related-production { max-width: 56rem; margin: var(--space-4xl) auto 0; }
-  .utility-section-production { font-size: 1.125rem; line-height: 1.75; }
-  .utility-related-production h2 { margin: 0 0 var(--space-lg); color: var(--text-main); text-align: center; }
-  .utility-related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); }
-  .utility-related-card { padding: var(--space-md); border: 1px solid var(--border-base); border-radius: 0.75rem; background: var(--bg-surface); color: inherit; text-decoration: none; }
+
+  .utility-section-production, .utility-related-production {
+    max-width: 56rem;
+    margin: var(--space-4xl) auto 0;
+  }
+
+  .utility-section-production {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  .utility-related-production h2 {
+    margin: 0 0 var(--space-lg);
+    color: var(--text-main);
+    text-align: center;
+  }
+
+  .utility-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .utility-related-card {
+    padding: var(--space-md);
+    border: 1px solid var(--border-base);
+    border-radius: 0.75rem;
+    background: var(--bg-surface);
+    color: inherit;
+    text-decoration: none;
+  }
   .utility-related-card:hover { border-color: var(--tabletop-accent); }
-  .utility-related-card h3 { margin: 0 0 0.5rem; color: var(--text-main); font-size: 1rem; }
-  .utility-related-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
-  @media (width <= 640px) { .utility-production-inner { padding: var(--space-lg) var(--space-sm) var(--space-3xl); } }
+
+  .utility-related-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text-main);
+    font-size: 1rem;
+  }
+
+  .utility-related-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  @media (width <= 640px) {
+    .utility-production-inner { padding: var(--space-lg) var(--space-sm) var(--space-3xl); }
+  }
 </style>

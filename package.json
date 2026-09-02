@@ -19,7 +19,7 @@
         "access": "public"
     },
     "scripts": {
-        "dev": "astro dev --host",
+        "dev": "astro dev --host --port 4324",
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
@@ -28,6 +28,12 @@
         "check": "astro check",
         "type-check": "astro check",
         "test": "vitest run --reporter=verbose --testTimeout=30000",
+        "qa": "npm run lint && npm run test && npm run build",
+        "cf:dry-run": "npm run build && wrangler deploy --dry-run",
+        "cf:preview": "npm run build && wrangler deploy --config wrangler.staging.jsonc",
+        "cf:deploy": "npm run build && wrangler deploy",
+        "cf:deployments": "wrangler deployments list",
+        "cf:rollback": "wrangler rollback",
         "preversion": "npm run lint && npm run test && npm run build",
         "postversion": "git push && git push --tags",
         "patch": "npm version patch",
@@ -42,7 +48,9 @@
     },
     "dependencies": {
         "@iconify-json/mdi": "^1.2.3",
+        "@jjlmoya/identity": "0.4.0",
         "@jjlmoya/prompagate": "^1.1.0",
+        "@jjlmoya/tracking": "0.2.0",
         "@jjlmoya/utils-shared": "1.5.0",
         "@panzoom/panzoom": "^4.6.2",
         "astro": "^6.1.2",
@@ -52,6 +60,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.8",
+        "@types/node": "25.5.0",
         "eslint": "^9.39.4",
         "eslint-plugin-astro": "^1.6.0",
         "eslint-plugin-no-comments": "^1.1.10",
@@ -64,6 +73,7 @@
         "stylelint-declaration-strict-value": "^1.11.1",
         "typescript": "^5.4.0",
         "typescript-eslint": "^8.58.0",
-        "vitest": "^4.1.2"
+        "vitest": "^4.1.2",
+        "wrangler": "4.113.0"
     }
 }
