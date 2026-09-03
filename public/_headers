@@ -2,5 +2,11 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-/_utilities/*
+/_utilities/*/styles/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_utilities/*/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_utilities/*/_astro/*
   Cache-Control: public, max-age=31536000, immutable
