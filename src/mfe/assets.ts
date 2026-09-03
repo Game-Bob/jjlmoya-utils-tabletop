@@ -1,7 +1,15 @@
+import packageMetadata from "../../package.json";
+
+export const TABLETOP_ASSET_VERSION = encodeURIComponent(
+    import.meta.env.PUBLIC_APP_VERSION ?? packageMetadata.version,
+);
+
+const withAssetVersion = (path: string): string => `${path}?version=${TABLETOP_ASSET_VERSION}`;
+
 export const getUtilityOgImage = (englishSlug: string): string =>
-    `/_utilities/tabletop/images/${englishSlug}.webp`;
+    withAssetVersion(`/_utilities/tabletop/images/${englishSlug}.webp`);
 
 export const getUtilityCssPath = (englishSlug: string): string =>
-    `/styles/lib/tabletop/${englishSlug}.css`;
+    withAssetVersion(`/_utilities/tabletop/styles/${englishSlug}.css`);
 
 export const CATEGORY_OG_IMAGE = getUtilityOgImage("tabletop");

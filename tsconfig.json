@@ -6,6 +6,7 @@
         "strictNullChecks": true,
         "noImplicitAny": true,
         "strict": true,
+        "resolveJsonModule": true,
         "types": ["astro/client", "astro/jsx-runtime"],
         "jsx": "preserve",
         "jsxImportSource": "astro"

@@ -2,7 +2,12 @@ import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { describe, expect, it } from 'vitest';
 import { ALL_TOOLS } from '../tools';
-import { CATEGORY_OG_IMAGE, getUtilityOgImage } from '../mfe/assets';
+import {
+  CATEGORY_OG_IMAGE,
+  getUtilityCssPath,
+  getUtilityOgImage,
+  TABLETOP_ASSET_VERSION,
+} from '../mfe/assets';
 
 const assetRoot = join(process.cwd(), 'public', '_utilities', 'tabletop', 'images');
 
@@ -25,8 +30,15 @@ describe('MFE asset contract', () => {
     expect(actualSlugs).toEqual(expectedSlugs);
     for (const slug of expectedSlugs) {
       expect(existsSync(join(assetRoot, `${slug}.webp`))).toBe(true);
-      expect(getUtilityOgImage(slug)).toBe(`/_utilities/tabletop/images/${slug}.webp`);
+      expect(getUtilityOgImage(slug)).toBe(
+        `/_utilities/tabletop/images/${slug}.webp?version=${TABLETOP_ASSET_VERSION}`,
+      );
+      expect(getUtilityCssPath(slug)).toBe(
+        `/_utilities/tabletop/styles/${slug}.css?version=${TABLETOP_ASSET_VERSION}`,
+      );
     }
-    expect(CATEGORY_OG_IMAGE).toBe('/_utilities/tabletop/images/tabletop.webp');
+    expect(CATEGORY_OG_IMAGE).toBe(
+      `/_utilities/tabletop/images/tabletop.webp?version=${TABLETOP_ASSET_VERSION}`,
+    );
   });
 });
