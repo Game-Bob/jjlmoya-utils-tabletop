@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import type { KnownLocale } from "../types";
+import { getCategoryUi } from "../mfe/category-ui";
 import { getUtilitiesPath } from "@jjlmoya/utils-shared/routing";
 
 interface Props {
@@ -30,9 +31,10 @@ const LABELS: Record<KnownLocale, string> = {
 
 const { locale, categoryTitle, categoryHref, currentTitle } = Astro.props;
 const homeLabel = LABELS[locale];
+const breadcrumbLabel = getCategoryUi(locale).breadcrumb;
 ---
 
-<nav class="production-breadcrumb" aria-label="Breadcrumb">
+<nav class="production-breadcrumb" aria-label={breadcrumbLabel}>
     <ol class="production-breadcrumb-list">
         <li class="production-breadcrumb-item">
             <a href={getUtilitiesPath(locale)}>{homeLabel}</a>

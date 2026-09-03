@@ -27,9 +27,9 @@ const ui = getCategoryUi(locale);
       <ProductionBreadcrumb locale={locale} categoryTitle={categoryTitle} categoryHref={categoryHref || publicCategoryPath} currentTitle={content.title} />
       <UtilityHeader titleHighlight={titleHighlight} titleBase={titleBase} description={content.description} gradientFrom="#10b981" gradientTo="#0d9488" />
       <section class="utility-tool-production"><Component ui={content.ui} locale={locale} /></section>
-      <div class="utility-zoom-production" aria-label="Zoom controls">
-        <span class="utility-zoom-label">Zoom</span>
-        <div class="utility-zoom-controls"><button type="button" data-zoom="out" aria-label="Zoom out">−</button><button type="button" data-zoom="reset" aria-label="Reset zoom">100%</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button></div>
+      <div class="utility-zoom-production" aria-label={ui.zoomControls}>
+        <span class="utility-zoom-label">{ui.zoom}</span>
+        <div class="utility-zoom-controls"><button type="button" data-zoom="out" aria-label={ui.zoomOut}>−</button><button type="button" data-zoom="reset" aria-label={ui.resetZoom}>100%</button><button type="button" data-zoom="in" aria-label={ui.zoomIn}>+</button></div>
       </div>
       <ProductionWidget locale={locale} slug={content.slug} />
       {content.faq.length > 0 && <section class="utility-section-production"><FAQSection items={content.faq} /></section>}
@@ -38,7 +38,7 @@ const ui = getCategoryUi(locale);
       </Fragment>
       <section class="utility-section-production"><SEOComponent locale={locale} /></section>
       {content.bibliography.length > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}
-      {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><div class="utility-related-heading"><span class="utility-related-eyebrow">Keep exploring</span><h2 id="related-tools-title">More tools in {categoryTitle}</h2></div><div class="utility-related-grid">{relatedTools.map((tool, index) => <a href={tool.href} class="utility-related-card"><span class="utility-related-index">{String(index + 1).padStart(2, "0")}</span><span class="utility-related-icon"><Icon name={tool.icon} /></span><h3>{tool.title}</h3><p>{tool.description}</p><span class="utility-related-cta">{ui.openTool} <Icon name="mdi:arrow-top-right" /></span></a>)}</div></section>}
+      {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><div class="utility-related-heading"><span class="utility-related-eyebrow">{ui.relatedEyebrow}</span><h2 id="related-tools-title">{ui.moreToolsIn} {categoryTitle}</h2></div><div class="utility-related-grid">{relatedTools.map((tool, index) => <a href={tool.href} class="utility-related-card"><span class="utility-related-index">{String(index + 1).padStart(2, "0")}</span><span class="utility-related-icon"><Icon name={tool.icon} /></span><h3>{tool.title}</h3><p>{tool.description}</p><span class="utility-related-cta">{ui.openTool} <Icon name="mdi:arrow-top-right" /></span></a>)}</div></section>}
     </div>
   </div>
 </ProductionPage>
