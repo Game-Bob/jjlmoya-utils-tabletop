@@ -44,12 +44,25 @@ const ui = getCategoryUi(locale);
 </ProductionPage>
 
 <script>
+  const isWidget = new URLSearchParams(window.location.search).get("widget") === "true";
+  const page = document.querySelector<HTMLElement>(".utility-production");
   const container = document.querySelector<HTMLElement>(".utility-tool-production");
-  let zoom = Number(localStorage.getItem("gamebob-utility-zoom") ?? 1);
-  const applyZoom = () => { if (container) container.style.zoom = String(zoom); };
+  const zoomButton = document.querySelector<HTMLButtonElement>('[data-zoom="reset"]');
+  const storedZoom = isWidget ? 1 : Number(localStorage.getItem("gamebob-utility-zoom") ?? 1);
+  let zoom = Number.isFinite(storedZoom) ? Math.min(1.5, Math.max(0.75, storedZoom)) : 1;
+  const applyZoom = () => {
+    if (container) container.style.zoom = String(zoom);
+    if (zoomButton) zoomButton.textContent = `${Math.round(zoom * 100)}%`;
+  };
   document.querySelector('[data-zoom="out"]')?.addEventListener("click", () => { zoom = Math.max(0.75, zoom - 0.1); applyZoom(); localStorage.setItem("gamebob-utility-zoom", String(zoom)); });
   document.querySelector('[data-zoom="in"]')?.addEventListener("click", () => { zoom = Math.min(1.5, zoom + 0.1); applyZoom(); localStorage.setItem("gamebob-utility-zoom", String(zoom)); });
   document.querySelector('[data-zoom="reset"]')?.addEventListener("click", () => { zoom = 1; applyZoom(); localStorage.removeItem("gamebob-utility-zoom"); });
+  if (isWidget) {
+    document.body.classList.add("utility-widget-body");
+    if (page) {
+      page.classList.add("utility-widget-mode");
+    }
+  }
   applyZoom();
 </script>
 
@@ -58,6 +71,38 @@ const ui = getCategoryUi(locale);
     min-height: 100vh;
     overflow-x: clip;
     background: radial-gradient(ellipse at top, var(--primary-10), var(--bg-surface) 50%, var(--bg-main));
+  }
+
+  .utility-production.utility-widget-mode {
+    min-height: auto;
+    background: transparent;
+  }
+
+  .utility-production.utility-widget-mode .utility-production-inner {
+    max-width: none;
+    padding: 0;
+  }
+
+  .utility-production.utility-widget-mode .utility-tool-production {
+    margin-top: 0;
+  }
+
+  .utility-production.utility-widget-mode .utility-production-inner > :not(.utility-tool-production) {
+    display: none;
+  }
+
+  :global(body.utility-widget-body) {
+    margin: 0;
+    padding-top: 0;
+    background: transparent;
+  }
+
+  :global(body.utility-widget-body > :not(main)) {
+    display: none;
+  }
+
+  :global(body.utility-widget-body main), :global(body.utility-widget-body main .utility-production), :global(body.utility-widget-body main .utility-production-inner) {
+    min-height: auto;
   }
 
   .utility-production-inner {

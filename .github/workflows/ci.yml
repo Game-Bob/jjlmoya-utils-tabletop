@@ -82,11 +82,10 @@ jobs:
                         {"baseUrl":"https://www.gamebob.dev","pathPrefixes":["/en/utilities/","/fr/utilitaires/","/de/werkzeuge/","/it/utilita/","/pt/utilidades/","/nl/hulpmiddelen/","/sv/verktyg/","/pl/narzedzia/","/id/utilitas/","/tr/araclar/","/ru/instrumenty/","/ja/utilities/","/ko/utilities/","/zh/utilities/"]}
                       ]
             - name: Deploy both domains to Cloudflare
-              uses: cloudflare/wrangler-action@v3
-              with:
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: deploy
+              env:
+                  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+              run: ./node_modules/.bin/wrangler deploy
             - name: Save deployed page manifest
               continue-on-error: true
               uses: Game-Bob/ai-knows/.github/actions/indexnow-save@main
