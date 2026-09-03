@@ -5,11 +5,13 @@ import { SEORenderer } from "@jjlmoya/utils-shared";
 import ProductionBreadcrumb from "../components/ProductionBreadcrumb.astro";
 import type { KnownLocale, CategoryLocaleContent } from "../types";
 import { getCategoryPath } from "../mfe/routes";
+import { getCategoryUi } from "../mfe/category-ui";
 
 interface CategoryTool { id: string; icon: string; title: string; description: string; href: string; }
 interface Props { locale: KnownLocale; category: CategoryLocaleContent; tools: CategoryTool[]; alternates: { language: KnownLocale; url: string }[]; image?: string | undefined; }
 const { locale, category, tools, alternates, image } = Astro.props;
 const publicPath = getCategoryPath(locale, category.slug);
+const ui = getCategoryUi(locale);
 ---
 
 <ProductionPage title={category.title} description={category.description} {locale} {publicPath} {alternates} {image}>
@@ -25,7 +27,7 @@ const publicPath = getCategoryPath(locale, category.slug);
             <span class="category-tool-index">{String(index + 1).padStart(2, "0")}</span>
             <div class="category-tool-icon"><Icon name={tool.icon} /></div>
             <h2>{tool.title}</h2><p>{tool.description}</p>
-            <span class="category-tool-cta">Use tool <span aria-hidden="true">→</span></span>
+            <span class="category-tool-cta">{ui.useTool} <span aria-hidden="true">→</span></span>
           </a>
         ))}
       </div>
