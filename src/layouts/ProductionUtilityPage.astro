@@ -4,10 +4,11 @@ import { FAQSection, UtilityHeader } from "@jjlmoya/utils-shared";
 import { Icon } from "astro-icon/components";
 import ProductionBreadcrumb from "../components/ProductionBreadcrumb.astro";
 import ProductionWidget from "../components/ProductionWidget.astro";
+import ProductionStructuredData from "../components/ProductionStructuredData.astro";
 import type { KnownLocale, ToolLocaleContent } from "../types";
 import { getCategoryUi } from "../mfe/category-ui";
 import { getCategoryPath, getUtilityPath } from "../mfe/routes";
-import { getUtilityCssPath } from "../mfe/assets";
+import { getUtilityCssPath, TABLETOP_ASSET_VERSION } from "../mfe/assets";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 interface RelatedTool { title: string; description: string; href: string; icon: string; }
@@ -21,7 +22,7 @@ const publicCategoryPath = getCategoryPath(locale, categorySlug);
 const ui = getCategoryUi(locale);
 ---
 
-<ProductionPage title={content.title} description={content.description} {locale} {publicPath} {alternates} {image} toolCss={getUtilityCssPath(englishSlug)}>
+<ProductionPage title={content.title} description={content.description} {locale} {publicPath} manifestPath={`${publicPath}manifest.json?version=${TABLETOP_ASSET_VERSION}`} {alternates} {image} toolCss={getUtilityCssPath(englishSlug)}>
   <div class="utility-production">
     <div class="utility-production-inner">
       <ProductionBreadcrumb locale={locale} categoryTitle={categoryTitle} categoryHref={categoryHref || publicCategoryPath} currentTitle={content.title} />
@@ -34,7 +35,7 @@ const ui = getCategoryUi(locale);
       <ProductionWidget locale={locale} slug={content.slug} />
       {content.faq.length > 0 && <section class="utility-section-production"><FAQSection items={content.faq} /></section>}
       <Fragment slot="head">
-        {(content.schemas ?? []).map((schema) => <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+        <ProductionStructuredData locale={locale} {content} {publicPath} categoryTitle={categoryTitle} categoryHref={categoryHref || publicCategoryPath} />
       </Fragment>
       <section class="utility-section-production"><SEOComponent locale={locale} /></section>
       {content.bibliography.length > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}

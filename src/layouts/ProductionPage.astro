@@ -22,10 +22,11 @@ interface Props {
     image?: string | undefined;
     toolCss?: string | undefined;
     publicPath: string;
+    manifestPath?: string | undefined;
     alternates: readonly AlternateLink[];
 }
 
-const { title, description, locale, image, toolCss, publicPath, alternates } = Astro.props;
+const { title, description, locale, image, toolCss, publicPath, manifestPath, alternates } = Astro.props;
 const brand = getBrand(locale);
 const brandFavicon = getBrandAssetPath(brand, "favicon");
 const brandSizedFavicon = getBrandAssetPath(brand, "faviconSized");
@@ -67,6 +68,7 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
         <link rel="icon" type="image/x-icon" href={brandFavicon} />
         <link rel="icon" type="image/webp" sizes={brand === "jjlmoya" ? "32x32" : "48x48"} href={brandSizedFavicon} />
         <link rel="apple-touch-icon" href={brandAppleTouchIcon} />
+        {manifestPath && <link rel="manifest" href={manifestPath} />}
         <link rel="canonical" href={canonical} />
         {alternates.map(({ language, url }) => <link rel="alternate" hreflang={language} href={absoluteUrl(language, url)} />)}
         <link rel="alternate" hreflang="x-default" href={absoluteUrl("en", xDefaultUrl)} />
