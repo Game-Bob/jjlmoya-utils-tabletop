@@ -2,8 +2,25 @@ interface UtilityMfeEnvironment {
     ASSETS: { fetch(request: Request): Promise<Response> };
 }
 
+const LONG_LIVED_ASSET_CACHE = "public, max-age=31536000, immutable";
+const SITEMAP_CACHE = "public, max-age=3600, s-maxage=3600, must-revalidate";
+
+const getCacheControl = (pathname: string): string | undefined => {
+    if (pathname.endsWith("/sitemap.xml")) return SITEMAP_CACHE;
+    if (/^\/_utilities\/[^/]+\/(?:styles|images|_astro)\//.test(pathname)) {
+        return LONG_LIVED_ASSET_CACHE;
+    }
+    return undefined;
+};
+
 export default {
-    fetch(request: Request, environment: UtilityMfeEnvironment): Promise<Response> {
-        return environment.ASSETS.fetch(request);
+    async fetch(request: Request, environment: UtilityMfeEnvironment): Promise<Response> {
+        const response = await environment.ASSETS.fetch(request);
+        const cacheControl = getCacheControl(new URL(request.url).pathname);
+        if (!cacheControl) return response;
+
+        const headers = new Headers(response.headers);
+        headers.set("Cache-Control", cacheControl);
+        return new Response(response.body, { status: response.status, headers });
     },
 };
