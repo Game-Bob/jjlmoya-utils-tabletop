@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { ALL_TOOLS } from '../tools';
 import { CATEGORY_OG_IMAGE, getUtilityOgImage } from '../mfe/assets';
 
-const assetRoot = join(process.cwd(), 'public', 'images', 'utilities');
+const assetRoot = join(process.cwd(), 'public', '_utilities', 'tabletop', 'images');
 
 describe('MFE asset contract', () => {
   it('keeps one English OG asset per category and tool', async () => {
@@ -25,8 +25,8 @@ describe('MFE asset contract', () => {
     expect(actualSlugs).toEqual(expectedSlugs);
     for (const slug of expectedSlugs) {
       expect(existsSync(join(assetRoot, `${slug}.webp`))).toBe(true);
-      expect(getUtilityOgImage(slug)).toBe(`/images/utilities/${slug}.webp`);
+      expect(getUtilityOgImage(slug)).toBe(`/_utilities/tabletop/images/${slug}.webp`);
     }
-    expect(CATEGORY_OG_IMAGE).toBe('/images/utilities/tabletop.webp');
+    expect(CATEGORY_OG_IMAGE).toBe('/_utilities/tabletop/images/tabletop.webp');
   });
 });
