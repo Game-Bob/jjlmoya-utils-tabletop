@@ -7,7 +7,7 @@ const SITEMAP_CACHE = "public, max-age=3600, s-maxage=3600, must-revalidate";
 
 const getCacheControl = (pathname: string): string | undefined => {
     if (pathname.endsWith("/sitemap.xml")) return SITEMAP_CACHE;
-    if (/^\/_utilities\/[^/]+\/(?:styles|images|_astro)\//.test(pathname)) {
+    if (pathname.startsWith("/_utilities/")) {
         return LONG_LIVED_ASSET_CACHE;
     }
     return undefined;
