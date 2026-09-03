@@ -12,7 +12,7 @@ import { HEADER_UI } from "../i18n/header-ui";
 import { LANGUAGE_LOCALES, LANGUAGE_NAMES, type Language } from "../i18n/languages";
 import { LANGUAGE_UI } from "../i18n/language-ui";
 import { getBrand } from "../identity/brands";
-import { getUtilityAssetPath } from "../mfe/assets";
+import { getBrandAssetPath } from "../mfe/assets";
 
 interface AlternateLink { language: Language; url: string; }
 interface Props {
@@ -27,6 +27,9 @@ interface Props {
 
 const { title, description, locale, image, toolCss, publicPath, alternates } = Astro.props;
 const brand = getBrand(locale);
+const brandFavicon = getBrandAssetPath(brand, "favicon");
+const brandSizedFavicon = getBrandAssetPath(brand, "faviconSized");
+const brandAppleTouchIcon = getBrandAssetPath(brand, "appleTouchIcon");
 const origin = brand === "jjlmoya" ? "https://www.jjlmoya.es" : "https://www.gamebob.dev";
 const canonical = new URL(publicPath, origin).href;
 const socialImage = image ? new URL(image, canonical).href : undefined;
@@ -61,9 +64,9 @@ const xDefaultUrl = alternates.find(({ language }) => language === "en")?.url ??
         <meta name="author" content="jjlmoya" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <link rel="icon" type="image/x-icon" href={getUtilityAssetPath("favicon.ico")} />
-        <link rel="icon" type="image/webp" sizes="48x48" href={getUtilityAssetPath("favicon-48.webp")} />
-        <link rel="apple-touch-icon" href={getUtilityAssetPath("apple-touch-icon-brand.webp")} />
+        <link rel="icon" type="image/x-icon" href={brandFavicon} />
+        <link rel="icon" type="image/webp" sizes={brand === "jjlmoya" ? "32x32" : "48x48"} href={brandSizedFavicon} />
+        <link rel="apple-touch-icon" href={brandAppleTouchIcon} />
         <link rel="canonical" href={canonical} />
         {alternates.map(({ language, url }) => <link rel="alternate" hreflang={language} href={absoluteUrl(language, url)} />)}
         <link rel="alternate" hreflang="x-default" href={absoluteUrl("en", xDefaultUrl)} />
