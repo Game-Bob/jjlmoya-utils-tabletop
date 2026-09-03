@@ -36,6 +36,25 @@ export function getStaticPaths() {
     }));
 }
 
+const buildUrlEntry = async (locale: Language, path: string, index: number): Promise<string> => {
+    const links = await Promise.all(LANGUAGE_CODES.map(async (alternateLocale) => {
+        const alternateCategory = await getContent(tabletopCategory, alternateLocale);
+        const alternateContent = index === 0 ? null : await getContent(ALL_ENTRIES[index - 1], alternateLocale);
+        const alternatePath = alternateContent
+            ? getUtilityPath(alternateLocale, alternateCategory.slug, alternateContent.slug)
+            : getCategoryPath(alternateLocale, alternateCategory.slug);
+        return `    <xhtml:link rel="alternate" hreflang="${alternateLocale}" href="${escapeXml(absoluteUrl(alternateLocale, alternatePath))}"/>`;
+    }));
+    return [
+        "  <url>",
+        `    <loc>${escapeXml(absoluteUrl(locale, path))}</loc>`,
+        ...links,
+        `    <changefreq>${index === 0 ? "weekly" : "monthly"}</changefreq>`,
+        `    <priority>${index === 0 ? "0.7" : "0.6"}</priority>`,
+        "  </url>",
+    ].join("\n");
+};
+
 export const GET: APIRoute = async ({ props }) => {
     const locale = props.locale as Language;
     const category = await getContent(tabletopCategory, locale);
@@ -44,26 +63,7 @@ export const GET: APIRoute = async ({ props }) => {
         getCategoryPath(locale, category.slug),
         ...contents.map((content) => getUtilityPath(locale, category.slug, content.slug)),
     ];
-    const urls = await Promise.all(paths.map(async (path, index) => {
-        const links = await Promise.all(LANGUAGE_CODES.map(async (alternateLocale) => {
-            const alternateCategory = await getContent(tabletopCategory, alternateLocale);
-            const alternateContent = index === 0
-                ? null
-                : await getContent(ALL_ENTRIES[index - 1], alternateLocale);
-            const alternatePath = alternateContent
-                ? getUtilityPath(alternateLocale, alternateCategory.slug, alternateContent.slug)
-                : getCategoryPath(alternateLocale, alternateCategory.slug);
-            return `    <xhtml:link rel="alternate" hreflang="${alternateLocale}" href="${escapeXml(absoluteUrl(alternateLocale, alternatePath))}"/>`;
-        }));
-        return [
-            "  <url>",
-            `    <loc>${escapeXml(absoluteUrl(locale, path))}</loc>`,
-            ...links,
-            `    <changefreq>${index === 0 ? "weekly" : "monthly"}</changefreq>`,
-            `    <priority>${index === 0 ? "0.7" : "0.6"}</priority>`,
-            "  </url>",
-        ].join("\n");
-    }));
+    const urls = await Promise.all(paths.map((path, index) => buildUrlEntry(locale, path, index)));
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join("\n")}\n</urlset>`;
     return new Response(xml, {
