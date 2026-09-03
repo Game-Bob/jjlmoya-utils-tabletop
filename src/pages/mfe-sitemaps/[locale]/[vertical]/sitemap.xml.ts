@@ -12,7 +12,7 @@ type LocalizedEntry = {
 };
 
 const absoluteUrl = (locale: Language, path: string): string =>
-    `${locale === "es" ? JJLMOYA_URL : GAMEBOB_URL}${path}`;
+    path.startsWith("http") ? path : `${locale === "es" ? JJLMOYA_URL : GAMEBOB_URL}${path}`;
 
 const escapeXml = (value: string): string => value
     .replaceAll("&", "&amp;")
