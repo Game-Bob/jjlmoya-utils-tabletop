@@ -5,6 +5,7 @@ import { Icon } from "astro-icon/components";
 import ProductionBreadcrumb from "../components/ProductionBreadcrumb.astro";
 import ProductionWidget from "../components/ProductionWidget.astro";
 import type { KnownLocale, ToolLocaleContent } from "../types";
+import { getCategoryUi } from "../mfe/category-ui";
 import { getCategoryPath, getUtilityPath } from "../mfe/routes";
 import { getUtilityCssPath } from "../mfe/assets";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
@@ -17,6 +18,7 @@ const titleHighlight = words[0] ?? content.title;
 const titleBase = words.slice(1).join(" ");
 const publicPath = getUtilityPath(locale, categorySlug, content.slug);
 const publicCategoryPath = getCategoryPath(locale, categorySlug);
+const ui = getCategoryUi(locale);
 ---
 
 <ProductionPage title={content.title} description={content.description} {locale} {publicPath} {alternates} {image} toolCss={getUtilityCssPath(englishSlug)}>
@@ -36,7 +38,7 @@ const publicCategoryPath = getCategoryPath(locale, categorySlug);
       </Fragment>
       <section class="utility-section-production"><SEOComponent locale={locale} /></section>
       {content.bibliography.length > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}
-      {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><div class="utility-related-heading"><span class="utility-related-eyebrow">Keep exploring</span><h2 id="related-tools-title">More tools in {categoryTitle}</h2></div><div class="utility-related-grid">{relatedTools.map((tool, index) => <a href={tool.href} class="utility-related-card"><span class="utility-related-index">{String(index + 1).padStart(2, "0")}</span><span class="utility-related-icon"><Icon name={tool.icon} /></span><h3>{tool.title}</h3><p>{tool.description}</p><span class="utility-related-cta">Open tool <Icon name="mdi:arrow-top-right" /></span></a>)}</div></section>}
+      {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><div class="utility-related-heading"><span class="utility-related-eyebrow">Keep exploring</span><h2 id="related-tools-title">More tools in {categoryTitle}</h2></div><div class="utility-related-grid">{relatedTools.map((tool, index) => <a href={tool.href} class="utility-related-card"><span class="utility-related-index">{String(index + 1).padStart(2, "0")}</span><span class="utility-related-icon"><Icon name={tool.icon} /></span><h3>{tool.title}</h3><p>{tool.description}</p><span class="utility-related-cta">{ui.openTool} <Icon name="mdi:arrow-top-right" /></span></a>)}</div></section>}
     </div>
   </div>
 </ProductionPage>
