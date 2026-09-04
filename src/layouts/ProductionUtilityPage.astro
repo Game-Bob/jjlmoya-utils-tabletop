@@ -38,13 +38,14 @@ const ui = getCategoryUi(locale);
         <ProductionStructuredData locale={locale} {content} {publicPath} categoryTitle={categoryTitle} categoryHref={categoryHref || publicCategoryPath} />
       </Fragment>
       <section class="utility-section-production"><SEOComponent locale={locale} /></section>
-      {content.bibliography.length > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}
+      {(content.bibliography?.length ?? 0) > 0 && <section class="utility-section-production"><BibliographyComponent locale={locale} /></section>}
       {relatedTools.length > 0 && <section class="utility-related-production" aria-labelledby="related-tools-title"><div class="utility-related-heading"><span class="utility-related-eyebrow">{ui.relatedEyebrow}</span><h2 id="related-tools-title">{ui.moreToolsIn} {categoryTitle}</h2></div><div class="utility-related-grid">{relatedTools.map((tool, index) => <a href={tool.href} class="utility-related-card"><span class="utility-related-index">{String(index + 1).padStart(2, "0")}</span><span class="utility-related-icon"><Icon name={tool.icon} /></span><h3>{tool.title}</h3><p>{tool.description}</p><span class="utility-related-cta">{ui.openTool} <Icon name="mdi:arrow-top-right" /></span></a>)}</div></section>}
     </div>
   </div>
 </ProductionPage>
 
 <script>
+  import { observeWidgetHeight } from "../mfe/widget-height";
   const isWidget = new URLSearchParams(window.location.search).get("widget") === "true";
   const page = document.querySelector<HTMLElement>(".utility-production");
   const container = document.querySelector<HTMLElement>(".utility-tool-production");
@@ -60,11 +61,10 @@ const ui = getCategoryUi(locale);
   document.querySelector('[data-zoom="reset"]')?.addEventListener("click", () => { zoom = 1; applyZoom(); localStorage.removeItem("gamebob-utility-zoom"); });
   if (isWidget) {
     document.body.classList.add("utility-widget-body");
-    if (page) {
-      page.classList.add("utility-widget-mode");
-    }
+    page?.classList.add("utility-widget-mode");
   }
   applyZoom();
+  if (isWidget && container) observeWidgetHeight(container);
 </script>
 
 <style>
@@ -88,7 +88,7 @@ const ui = getCategoryUi(locale);
     margin-top: 0;
   }
 
-  .utility-production.utility-widget-mode .utility-production-inner > :not(.utility-tool-production) {
+  :global(.utility-production.utility-widget-mode .utility-production-inner > :not(.utility-tool-production)) {
     display: none;
   }
 
