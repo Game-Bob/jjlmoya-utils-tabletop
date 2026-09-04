@@ -1,1085 +1,1085 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T10:10:57.896Z",
+  "generatedAt": "2026-09-04T19:29:11.837Z",
   "pages": {
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/brettspiel-timer-schach-uhr/": {
-      "hash": "878f57d355bd5f8dae1072fd2e0e46fba7bc358037b063df877f7d388dea0f2d",
+      "hash": "79357e3e8eaa616f351213a72e35427a61c07f6f22f43b19638b814f104e04d9",
       "route": "/de/werkzeuge/kategorien/brettspiele/brettspiel-timer-schach-uhr/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/character-token-maker-rpg-rollenspiel/": {
-      "hash": "572178c6945a94036dad497ee0e2a0849aeb188d2bd2b1c86d8b06d3cc418cd2",
+      "hash": "faa148ba42e5fc325ac3431e183ae5920f12135b642d71850b946fcbe6865a95",
       "route": "/de/werkzeuge/kategorien/brettspiele/character-token-maker-rpg-rollenspiel/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/dnd-5e-begegnungs-schwierigkeitsrechner/": {
-      "hash": "791e2de5be53fa5e180a621bef48eda6fe18842b1e8c631ea686d010e78a1945",
+      "hash": "d859794c241714f9edcd55bcd4f939730841175d12be09620b73abb1553011a3",
       "route": "/de/werkzeuge/kategorien/brettspiele/dnd-5e-begegnungs-schwierigkeitsrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/entscheidungsrad/": {
-      "hash": "f3759a3f4deabff678f9d72f8ded2913203a5404467ad5af56d5f395ad154774",
+      "hash": "d9d1153642233c90fb7b5f97396c4c52f41715198a3dcb2aef1a1d63d3f5bb5d",
       "route": "/de/werkzeuge/kategorien/brettspiele/entscheidungsrad/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/erstspieler-auswahl/": {
-      "hash": "4aa94866e7d4f64751e7a40b6bd5ddd70db5e80e7eaa8f7c6baf3ff2cd54f7d1",
+      "hash": "4fb4b7e2b0703cb8a38e1cf2fe0fa773d5f1eadd4ea3792c36d32d9fafd4342e",
       "route": "/de/werkzeuge/kategorien/brettspiele/erstspieler-auswahl/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/fantasie-runen-ubersetzer/": {
-      "hash": "e44899bc1da8a393f02fec621647b255daceb5a84b73962c7141e30e3bdb1e2b",
+      "hash": "4abca93c05cc3db896435c49204912ab1ffe5b3ff98e524ed10ca494cd2e9292",
       "route": "/de/werkzeuge/kategorien/brettspiele/fantasie-runen-ubersetzer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/": {
-      "hash": "7edffe19376d8287bb10a7a70a938f3979137f00975eff71c3dc77750adb9396",
+      "hash": "9979b38ceb2b116ecbe1415d956faa3776f2f7412203abb5edec736ccc8bf07c",
       "route": "/de/werkzeuge/kategorien/brettspiele/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/initiativen-verfolger/": {
-      "hash": "670bf612455e22b9f52c9a219409ca46231c9abba8cfdc98da2ba8d02a9e3b1a",
+      "hash": "494b781081e0ef3a60ddbceff1aa001c0462850b82192f70cfaabeeb9c651b27",
       "route": "/de/werkzeuge/kategorien/brettspiele/initiativen-verfolger/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/karten-ziehwahrscheinlichkeit-rechner/": {
-      "hash": "a7d675bed48f09b0a0e4537842ac2e47f6fe6ee3e9d7038a30aa601369ce4d37",
+      "hash": "3c492005b9c77008e75dee4eec50aabba574a5ad2967a840cd0b40d3967f3cdd",
       "route": "/de/werkzeuge/kategorien/brettspiele/karten-ziehwahrscheinlichkeit-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/mondphasen-gezeiten-rechner/": {
-      "hash": "fbebc6d2066f0c187ea74627dd68cb7b2f2b8de220564f56f481b77ce1aa62d3",
+      "hash": "5404c070b7a1c75cb6b8c39383a7f4766661fbe55143f550d976c1323f09f0c1",
       "route": "/de/werkzeuge/kategorien/brettspiele/mondphasen-gezeiten-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/online-mus-punktezaehler/": {
-      "hash": "2670c4ef2a524da084f3db2bf26a2a2ab66d7785f719dced1d598bfb29ce5be7",
+      "hash": "838b8b2f89ed0c71d81addf59bd0256bd28e464a1823764e7d2c8faee5019807",
       "route": "/de/werkzeuge/kategorien/brettspiele/online-mus-punktezaehler/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/punktezahler/": {
-      "hash": "02764b846cdecf5c83a15163dc411c8ec76c9caa0d9bdf2089ec1e19e071f13d",
+      "hash": "928296690a75c3da017e12395dacf52c728b30f04b055e7a6338407480ba40b5",
       "route": "/de/werkzeuge/kategorien/brettspiele/punktezahler/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/rpg-siedlungs-erkundungskarten-generator/": {
-      "hash": "a50f0e65d2efea895e54d9e3f92cea991767e7fcfc0fc3b258e218ca3214c825",
+      "hash": "de31da08e1e604735bf47421273c686bf30a7d03d66815251cc212d54b44d646",
       "route": "/de/werkzeuge/kategorien/brettspiele/rpg-siedlungs-erkundungskarten-generator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/streuwahl-richtung/": {
-      "hash": "7d256f9ccc476a507489f5e5e9e160ba47ae9c8ee520a3da7b6b6246831d9b5d",
+      "hash": "389c4051779ea9de3a5c98479db838d683dee9a850cdb3d8081174a94a62f9c3",
       "route": "/de/werkzeuge/kategorien/brettspiele/streuwahl-richtung/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/verdeckte-rollenverteilung-geheim/": {
-      "hash": "3a2cf74c3e50ff43bc1a9cd8712e552689a3ab05b5c0abadbbfed47c0c40d745",
+      "hash": "4dc6e5d6da5a8d0d321122a04cfbef5cedec178e7f230d80b23674f1631c4d69",
       "route": "/de/werkzeuge/kategorien/brettspiele/verdeckte-rollenverteilung-geheim/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/verschwoerungsbrett-ersteller/": {
-      "hash": "fbb4fdc2630d7004b9f8e88ff2678df7de5d0dcf828ca887b15de187f5d9a5db",
+      "hash": "ea44d4b341ea915e832c3fe06fc6cb505ebce211988b5791bc1a664c3a6a4761",
       "route": "/de/werkzeuge/kategorien/brettspiele/verschwoerungsbrett-ersteller/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/wuerfel-rechner-wahrscheinlichkeit/": {
-      "hash": "b397e12f89c7012a70a89d90c95bbdd0ad68926f4806d9e561014fa09d4fdbf6",
+      "hash": "c847ac65c871942c80c94c4d365d611afeb2fe613f7e1845a07ddeb265125385",
       "route": "/de/werkzeuge/kategorien/brettspiele/wuerfel-rechner-wahrscheinlichkeit/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/zufalls-dungeon-karten-generator/": {
-      "hash": "d3af958a7ddb1bf9dfcb04a4ee2c4f0a725c09d054c4dec0e3213d6f027fbae3",
+      "hash": "b40360c600674f4c41ab698c376b03c0430fff77007d4c7cf1da3dee53e8f2fd",
       "route": "/de/werkzeuge/kategorien/brettspiele/zufalls-dungeon-karten-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/board-game-timer/": {
-      "hash": "87382e32a1a4f519472301464ea9409d21160395eeb6ba271910d596e6f5e408",
+      "hash": "aabf3fddbb2ac14c13be322609b1ecdbbb6d7f601adb29914f4f50047286481a",
       "route": "/en/utilities/categories/tabletop/board-game-timer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/card-draw-odds-calculator/": {
-      "hash": "dcae04e6bde86cdeb6ae95ad371826eaf0d28e219ea2b7bcfdd680d87dd727eb",
+      "hash": "ccaa2431fc54646963923487b27348f2c897d8259c1dfb08cc34963d9b7b840c",
       "route": "/en/utilities/categories/tabletop/card-draw-odds-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/decision-wheel/": {
-      "hash": "aaf97770f5174a8faac3367d250c6ada89766453cfa9f0f0c8a52f0011c3dcd4",
+      "hash": "fafd3cb894db2f6f2fe8a49a5f0cd88dd3ba235d07ccb94f228437d6306614b8",
       "route": "/en/utilities/categories/tabletop/decision-wheel/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/dice-roller-simulator/": {
-      "hash": "bdd227fb6aeeca5c5c7eb3c427aa6766cfe444b9e2ec5e8d5df30e98fdd79640",
+      "hash": "3c9ffc63ee0d76a26d2b308347433eb6334e4db8fac1d560ce7fcb1dd9ffe27f",
       "route": "/en/utilities/categories/tabletop/dice-roller-simulator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/": {
-      "hash": "807d8242a5cbc7e63b77d2aa02e2541c7b4eaa4bec4a8022cb476a1577025bfd",
+      "hash": "45df6564ca5edb5fb4ad8e6e4447340d2ae5530102b6fe6c78277b0519884e71",
       "route": "/en/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/fantasy-runes-translator/": {
-      "hash": "3df7ef678b6d62ba0056903403c6cb37e87b486aaa6e2b17613090d2ee9e4a7c",
+      "hash": "6aea36a51bc7f6bebae09a8c0e523d4a930c64f44b36e448c6b82f16b7940c92",
       "route": "/en/utilities/categories/tabletop/fantasy-runes-translator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/first-player-selector/": {
-      "hash": "fab49c9a7e0f026410b9ad4d022bf57bca3f5b5bf7a0caafec5828f94b5dcce7",
+      "hash": "da3d0685d6cf31c195899e0bc853cf92c0d5a18a8f01ab65457de3557727d432",
       "route": "/en/utilities/categories/tabletop/first-player-selector/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/hidden-role-dealer/": {
-      "hash": "602359a55cc0b0df2ccf2dc019e038e63353a4edf4c69abdb0db10975c2cfd2a",
+      "hash": "901568b8d3c10673b3bc039b54c6fc5c9fea64ad83e4fae0fb2a910f7712c962",
       "route": "/en/utilities/categories/tabletop/hidden-role-dealer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/": {
-      "hash": "f5ca6c86bebf48bd5f40c890d9052c616f6abf29510996cbfa4ff86cb0aed967",
+      "hash": "95035e76d06ce6015d788dff9b6c9469df63d898a5f8e1f72c2b09fdd493e76e",
       "route": "/en/utilities/categories/tabletop/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/investigation-board/": {
-      "hash": "d3680e4597e4fe6f8c51f8dbb789e3af31b87edfda0237d4c3e5005d097a878c",
+      "hash": "1ba54ce120c2d555ccc3c2661aa6701ee5766f085700186776dee674abf0dc25",
       "route": "/en/utilities/categories/tabletop/investigation-board/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/lunar-tide-tracker/": {
-      "hash": "d45e6fafd22ff6bcebd10852d7d96bbe5097c5d16363b1760ba06e0c204529f0",
+      "hash": "806a71335b83e4e6428e0c0d41c6025cef9fcb21e601dd82f169368ce2d31c2a",
       "route": "/en/utilities/categories/tabletop/lunar-tide-tracker/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/online-mus-scoreboard/": {
-      "hash": "d15a0b9d94f6fc69c7244a4340c91201014cdcc44def0427595ec35b7ff16c45",
+      "hash": "2f1dfb95fecc6b6265cba6c9c51e881bfbe6d72a6beb69cc1ed3451603bf5a8e",
       "route": "/en/utilities/categories/tabletop/online-mus-scoreboard/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/random-dungeon-map-generator/": {
-      "hash": "879bcecc562baa4aa0f53ccecae9c21f01da9940724819e54317612b0dbb77fa",
+      "hash": "7f539ed62726fae67601e5c699c5b34e7f328f6ac1b868d3167dfebf47c2aac6",
       "route": "/en/utilities/categories/tabletop/random-dungeon-map-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/rpg-initiative-tracker/": {
-      "hash": "62e696abf9dee15782bd113b51c8c711ce8bde1d89a3324aa658dd9c32ba83d5",
+      "hash": "5043e1565779a7fadc87731110988b23ccc8ea4bbeca581012700637397d49ab",
       "route": "/en/utilities/categories/tabletop/rpg-initiative-tracker/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/": {
-      "hash": "f45df2082a5bf8cfa03e0f6a08cee442b66dd0e4c3602ead7fa43dae38bf78b9",
+      "hash": "89af9d21287ca3bf6b871d20cdf0e830b21be43401d69c5c1b7511d613d9fb93",
       "route": "/en/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/scatter-direction-selector/": {
-      "hash": "2bb4061ac5d0934b7b65b697b8343087799da7258c7e85ec8bc74ed80d51f8fd",
+      "hash": "cf533e910c6036b852521ac71a06e558d7aa3af1ac56f70b00767e362eafb05a",
       "route": "/en/utilities/categories/tabletop/scatter-direction-selector/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/score-tracker/": {
-      "hash": "2d4f76c9fdbcfb0810acfed1ba6bddedbc1766ddc55ee20b1e27e1b79794b401",
+      "hash": "ecbd9c26ca4dfd657215d0c324fda7afe1e199d63b00a6626f66d875564914c6",
       "route": "/en/utilities/categories/tabletop/score-tracker/"
     },
     "https://www.gamebob.dev/en/utilities/categories/tabletop/token-stamp-studio/": {
-      "hash": "c381131b270ac7b043a534e0df8b39f8382c5adb5c3d06002464cc1a2319268d",
+      "hash": "b7a7860cf79a5fa9a5dc5926fe99b0f2666881d930d320208478959c0c84cc35",
       "route": "/en/utilities/categories/tabletop/token-stamp-studio/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/calculateur-difficulte-rencontre-dnd-5e/": {
-      "hash": "a1c62104002ba07fafd208d949cb96e7fd4908cf36de7e49d6ad374e1c50d881",
+      "hash": "8e92b97adddc7e5dd76364b533f22838da3dc12d7dfc30d271376665e2ac17fe",
       "route": "/fr/utilitaires/categories/jeux-de-societe/calculateur-difficulte-rencontre-dnd-5e/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/calculateur-phases-lunaires/": {
-      "hash": "28dcbf1ef5ace4b4f48e197963534baf3659c0d307c02a2f7a7adbed03bcd64b",
+      "hash": "8eed624c84ea4e282a9d7cf762ef007c898fcf0f153c5dafed020cb080919d07",
       "route": "/fr/utilitaires/categories/jeux-de-societe/calculateur-phases-lunaires/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/calculateur-probabilite-piocher-cartes/": {
-      "hash": "118168b0c98f201f69f3899269e60b63ad9a8aee858d283081ee4ac3db2ed4bb",
+      "hash": "b73eb97a8a4e2868af72c7b5665e9520e0c818c9389420ad53b8d7d013ec63bc",
       "route": "/fr/utilitaires/categories/jeux-de-societe/calculateur-probabilite-piocher-cartes/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/compteur-de-points/": {
-      "hash": "62a79604a34f8818546b69481f02c7b3723e44cf5b7f337db386774ff22e99ae",
+      "hash": "e9bdf8dd0d0e0608b65318c69d58d89263572111cdf763417e08c8bf71130c43",
       "route": "/fr/utilitaires/categories/jeux-de-societe/compteur-de-points/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/createur-de-tableau-de-conspiration/": {
-      "hash": "887de64dc7a75f9f6927cba253517d925e2c5ed4ce65ab678f2e61c69838307b",
+      "hash": "046d3679e16db1554ea3754a2f0a3593404137d21deb51e94c09b2e24b94d5ed",
       "route": "/fr/utilitaires/categories/jeux-de-societe/createur-de-tableau-de-conspiration/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/createur-tokens-personnages-jdr-table/": {
-      "hash": "832984d54d6f8f7e576d1fbe07c9c266b6fcfe4b1096d59bcd760787cbec449b",
+      "hash": "fad1f2cbf5d1d4605c7dda946594603288bcb5e7dbf3111842bb8af40e75cdc6",
       "route": "/fr/utilitaires/categories/jeux-de-societe/createur-tokens-personnages-jdr-table/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/distributeur-roles-caches-secrets/": {
-      "hash": "ee6cbcf5f7fbdb4cb5093f0ee1515cc6dc7ba4b16f9039829369d98ae1d97232",
+      "hash": "7e3618482b233e6a599510891bc8e071c2fdef2b1f71df3508358ab07cbe3b2f",
       "route": "/fr/utilitaires/categories/jeux-de-societe/distributeur-roles-caches-secrets/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/generateur-carte-donjon-aleatoire/": {
-      "hash": "197c094da0e0503aa19cea5e7f4966d56991e57c93098114bc82f5205f5233b7",
+      "hash": "e751a82412c60aa6e597609b4670357feb9710588d7b64e407d0e1d0d83416a1",
       "route": "/fr/utilitaires/categories/jeux-de-societe/generateur-carte-donjon-aleatoire/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/generateur-de-cartes-de-colonie-jdr-exploration/": {
-      "hash": "7b88157e3b1fde88f679fbbab4c05d48777e21b68f78b39d2be810e467dd2fc8",
+      "hash": "287a5858609a82611f2b50c5830838b0806f3c2708552912e5ef5cfc4e204c7b",
       "route": "/fr/utilitaires/categories/jeux-de-societe/generateur-de-cartes-de-colonie-jdr-exploration/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/": {
-      "hash": "3b4320a9c61b06b2c847e52b48cd8c3f95c398056f6eee97b8134c11b09e3c86",
+      "hash": "075485faa0bdfc9917625e27a559204b3fd1227345d21c5b92bf9b53db6f0836",
       "route": "/fr/utilitaires/categories/jeux-de-societe/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/lanceur-des-simulateur-probabilite/": {
-      "hash": "53f0d1f510d8d8ad4629137f358c4671f59672cebeed40bacf31109a18634e60",
+      "hash": "e33092acd7d248a31d5d1c913afbd9a78eb7a8809e6e3b7c3ae138ba09ba55a0",
       "route": "/fr/utilitaires/categories/jeux-de-societe/lanceur-des-simulateur-probabilite/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/marqueur-de-points-mus-en-ligne/": {
-      "hash": "6f628c5972358dbc7064d073a1196466d966fb9e511274288fe521fc9cc6ceae",
+      "hash": "9f84a1a900a62f8696d0f80103a15becad29dd6440ae0d3e91ab342e2b6511d5",
       "route": "/fr/utilitaires/categories/jeux-de-societe/marqueur-de-points-mus-en-ligne/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/minuteur-jeux-de-societe-sablier/": {
-      "hash": "a5d5aa62b5298e9118a2fd14b8c2c218a0f3392cabdfee77bd5ae46c9f62b692",
+      "hash": "7ae7138686a334ba99e19f54179457d74947ca877ae326e680a33a429c7ca290",
       "route": "/fr/utilitaires/categories/jeux-de-societe/minuteur-jeux-de-societe-sablier/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/roue-de-decision/": {
-      "hash": "8b3013c55f950858935055eb7eaa1a6f4328d210047e529dad24422991d68a9b",
+      "hash": "890fa905d872bf245ec9ee71b0ee2aadae9daa48add579586e7f9a3278e6322a",
       "route": "/fr/utilitaires/categories/jeux-de-societe/roue-de-decision/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/selecteur-de-direction-de-deviation/": {
-      "hash": "38dd999e753caf1f4df82e2f571cdfa1b082aa4f35336743e4e8544be35fa5c2",
+      "hash": "f24918b0b808ecec7f4f0b5082b882a3853027ec5cec2fe03a89bc39874c2c32",
       "route": "/fr/utilitaires/categories/jeux-de-societe/selecteur-de-direction-de-deviation/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/selecteur-premier-joueur/": {
-      "hash": "f5c6ce4fdeeceb986b24bce4e1d892a1ddccd3ad7c446beb7af4be06d1d510b3",
+      "hash": "3e7f7ddbd7be6b4efbeb539c55974e7797012f2b05fe7f762f1ee1baf271ee39",
       "route": "/fr/utilitaires/categories/jeux-de-societe/selecteur-premier-joueur/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/suivi-initiative/": {
-      "hash": "4cc2cba0ccb7a71e14ef04d0918a5004554a84a4ad7d842d36e4449441096887",
+      "hash": "40af1cb60af4de5bf7276f3105d22d7a38e70dcb3d3e62f6ad6c1f2def74e4d3",
       "route": "/fr/utilitaires/categories/jeux-de-societe/suivi-initiative/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/traducteur-runes-fantastiques/": {
-      "hash": "c11e5ff0b3b018c7ac163ceeb7c1eaf0b8df90a6d966212da9c843fbc82714bc",
+      "hash": "a37af6eaf2230add263bf997ff34cd7374411c97a378ead3c3071c8d6c6cd931",
       "route": "/fr/utilitaires/categories/jeux-de-societe/traducteur-runes-fantastiques/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/": {
-      "hash": "b68826dffc76cea55206558deeeca59cb4c634d04f356aacf59a33d3cd533634",
+      "hash": "1bf4f9a7d6d063e54db783c4e456c96f2bf90a6bf4aba33d04db4d4ab4ca08b9",
       "route": "/id/utilitas/kategori/permainan-papan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/kalkulator-kesulitan-pertarungan-dnd-5e/": {
-      "hash": "341aca03e0ffd487c2233f1595960a59a36e1d0e6453103101b079d94783ee98",
+      "hash": "63cde091bd4156b7fc6fc68050519c403bd3b177f7b1702d621ed139712f3be4",
       "route": "/id/utilitas/kategori/permainan-papan/kalkulator-kesulitan-pertarungan-dnd-5e/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/kalkulator-peluang-menarik-kartu/": {
-      "hash": "f9ad010f0293ce02c24a20156bb246b759e1ef4b0170595b2e066288aae9d930",
+      "hash": "e7ed2c8e59aad2d18b4b4dc9da15c02f4a30ef7f1ad988b04d9d1c5b39f469c2",
       "route": "/id/utilitas/kategori/permainan-papan/kalkulator-peluang-menarik-kartu/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/papan-skor-mus-online/": {
-      "hash": "413afdfe66a3bc8a2486897957e5ae18604df3864db26914b51402485af93600",
+      "hash": "a48f8f5977d0e134cb511c9386c6b44ddceca8878d14d893d87ce527d5e49cc8",
       "route": "/id/utilitas/kategori/permainan-papan/papan-skor-mus-online/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pelacak-fase-bulan/": {
-      "hash": "e56522fe83cf907918fcb087b7d69d536db79b372ec02537b5ce7d6d715300f8",
+      "hash": "183e2ea414300afd14c4daff40ce2bd112f242edad5ce0d8689a8f468569c06a",
       "route": "/id/utilitas/kategori/permainan-papan/pelacak-fase-bulan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pelacak-inisiatif/": {
-      "hash": "40ad9aefe3156ff1f5e1b12c6c2a61b9b0fdf77d043bd6af47d51329a205cb73",
+      "hash": "6160a52f2fb578d7b6c341030e5d8228746f344efecfb327b709f701c59f8873",
       "route": "/id/utilitas/kategori/permainan-papan/pelacak-inisiatif/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pelacak-skor/": {
-      "hash": "d64d711cce4bdec75d3f9b94675e6180e82bb279287da9fe72f642ac60dd936b",
+      "hash": "135e895741ffcadb2ecf695aead989046c3b6a7127f669a56ca685eee0b34e23",
       "route": "/id/utilitas/kategori/permainan-papan/pelacak-skor/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pembagi-peran-tersembunyi-rahasia/": {
-      "hash": "22a89775f1bf2166faf8523695f2829eda72354a42948d366d5b9cca79316316",
+      "hash": "966067982576a2636d4727c0cc4269f114ad744be04492703737bdf0cf29e3e1",
       "route": "/id/utilitas/kategori/permainan-papan/pembagi-peran-tersembunyi-rahasia/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pembuat-papan-konspirasi/": {
-      "hash": "c2520883c0fb0b64464dae40ad5872cbc8d4adcf495a2d24fa6f0ed67d73904a",
+      "hash": "0525fece3fe9dcf8bf70b8c6956503e6219275567fb1d3de6a049c76fc54022d",
       "route": "/id/utilitas/kategori/permainan-papan/pembuat-papan-konspirasi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pembuat-peta-dungeon-acak/": {
-      "hash": "c56c78faab3bb46565d617e1d759536783fe15456c83ab11598de83b77cdbf80",
+      "hash": "5e68eb45a5d4def201d65e536d145a5aa29b832e9da883a0d513118f8fe734a2",
       "route": "/id/utilitas/kategori/permainan-papan/pembuat-peta-dungeon-acak/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pembuat-peta-pemukiman-dan-jelajah-rpg/": {
-      "hash": "0a7b0414408e6b0bacdd383323dc03f8cb1cd3495d7dc713ee666b6f97fd3cea",
+      "hash": "4ebb5a7534308f93fd1682ca4ad03727c7697224b90968c2a3f1fc63141fded6",
       "route": "/id/utilitas/kategori/permainan-papan/pembuat-peta-pemukiman-dan-jelajah-rpg/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pembuat-token-karakter-rpg-meja/": {
-      "hash": "8fdaa2c8a7032c09e52db74e47b2671848d4af5b95462bc1d0b9aee0eb22d388",
+      "hash": "8264188019b070e21cc1c610f3d55fa07a0cc393dfa31bbe1bb67c993aa80565",
       "route": "/id/utilitas/kategori/permainan-papan/pembuat-token-karakter-rpg-meja/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pemilih-arah-hamburan/": {
-      "hash": "66dbb2093070dcd1994de23836af2c1b21cdfb7d733d09611b87773e4e6fb4e0",
+      "hash": "003b60b9299cec8a1b17087c5a925de9140ba3af555ba21114f9fe4b21a0c960",
       "route": "/id/utilitas/kategori/permainan-papan/pemilih-arah-hamburan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pemilih-pemain-pertama/": {
-      "hash": "bd1cff6260345778e50fbb6684ba77b3e3fd41f6976da9ed46ee02f362c5841e",
+      "hash": "c7d762a1c7a8c3e39b97a403cf87a7a60e926c643bb6d801d36b3493b950d3a2",
       "route": "/id/utilitas/kategori/permainan-papan/pemilih-pemain-pertama/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/penerjemah-rune-fantasi/": {
-      "hash": "e17deb479b6dc237da11c4342461cc663368349edbaf3c98fd0cc92fc790f0fa",
+      "hash": "73b72cf2f0a1b403f7f890add0d141ad5439198e90e02317d63d772f6c1d9380",
       "route": "/id/utilitas/kategori/permainan-papan/penerjemah-rune-fantasi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/pengatur-waktu-permainan-papan-catur/": {
-      "hash": "6098132b856f51bcb8c15d2f07996343c5fc6d6d6fcb302f385260de0366a8d3",
+      "hash": "f9e29f3ab0d61a42ccd9db4397df89b76b9cda0769382908528e714571610b7a",
       "route": "/id/utilitas/kategori/permainan-papan/pengatur-waktu-permainan-papan-catur/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/roda-keputusan/": {
-      "hash": "5e2b3f403f8a62afa91727ab0dd60bf405fee5542c8480bad047f70305dd2fb0",
+      "hash": "1a1ee723256c123d15ecc051278b94f5ff975c1a0d576cf29f2d4682c02ef885",
       "route": "/id/utilitas/kategori/permainan-papan/roda-keputusan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/permainan-papan/simulasi-lempar-dadu-probabilitas/": {
-      "hash": "46734f4f659253905481ee957ff370c193d5df70e36b6ff758352362a779794b",
+      "hash": "e76225a20e19b9fcf933a2acd05d04c9d3de55ee5e176e1344e609c9f0402084",
       "route": "/id/utilitas/kategori/permainan-papan/simulasi-lempar-dadu-probabilitas/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/calcolatore-difficolta-scontri-dnd-5e/": {
-      "hash": "0daf41980269f1fb67bfaadc5b1e1eef9df4cf4a700ad678ce66d5201d4ec982",
+      "hash": "b5643015142a837d1d7f7bc4f3549e33b545bbb11cbd553624351e7ca2af946b",
       "route": "/it/utilita/categorie/giochi-da-tavolo/calcolatore-difficolta-scontri-dnd-5e/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/calcolatore-fasi-lunari/": {
-      "hash": "5e354195ed7ba5b9d47fb044ecabcaa9d64df0035d4f6de18c3f439d241f3902",
+      "hash": "be243dd8cd44ca64f7cd6c97c641f9cea67356fbf8e90bf9e182ab12efe3b254",
       "route": "/it/utilita/categorie/giochi-da-tavolo/calcolatore-fasi-lunari/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/calcolatore-probabilita-pescare-carte/": {
-      "hash": "676cd7d3d32a82b157d5a47f3f08a407f538dda72566ddfd8606581ddb5f484f",
+      "hash": "4801792014215ad2c37179e84eea407551dc173d74c00655a5b99ec464fff8a3",
       "route": "/it/utilita/categorie/giochi-da-tavolo/calcolatore-probabilita-pescare-carte/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/creatore-lavagna-cospirazione/": {
-      "hash": "82fc91f08ef238ff996f09fed01f6287ef92b4396486eb37ff09bb63322844e6",
+      "hash": "880f44c5d8c64e4bb0b6877cda0d976ef8a70f062a8d4b9e837b9f011a863c2b",
       "route": "/it/utilita/categorie/giochi-da-tavolo/creatore-lavagna-cospirazione/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/creatore-token-personaggi-gdr-tavolo/": {
-      "hash": "cfbd7108494d99677328e1289d668bc5e97cdd94e4a6891f4f03208752e8589e",
+      "hash": "8b81a60d758d2030ce38e6b399120a4727642e1f4d08ca4766610fbc743fffc5",
       "route": "/it/utilita/categorie/giochi-da-tavolo/creatore-token-personaggi-gdr-tavolo/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/distributore-ruoli-segreti-occulti/": {
-      "hash": "475a9f54ba192e5a3c42033274efbb11c55bd14371734cb4c545913c6bec529c",
+      "hash": "facf3201eecab037bbe854d86b404b35910a838472ac78f8b4f16f448abd9813",
       "route": "/it/utilita/categorie/giochi-da-tavolo/distributore-ruoli-segreti-occulti/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/generatore-mappe-dungeon-casuali/": {
-      "hash": "4249899b626e9156f8d455671ea28a86e72703c89af91d4f7394be33223f58a6",
+      "hash": "c2aa868bbc9267af202aff8a25d1fcffa3eb9201be2c58c3cfc2463b1af32d27",
       "route": "/it/utilita/categorie/giochi-da-tavolo/generatore-mappe-dungeon-casuali/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/generatore-mappe-insediamenti-gdr-esplorazione/": {
-      "hash": "803e81de7235cd4e6264c569c679d5519814e93d1f9b7ffa2846dfed73b2bfd2",
+      "hash": "e41fb298c78680272382467208f8fc554a669d9111310c8f54080d68e68d152f",
       "route": "/it/utilita/categorie/giochi-da-tavolo/generatore-mappe-insediamenti-gdr-esplorazione/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/": {
-      "hash": "2dfe9bb0fe46d6e5ba2ac5fdd4ae7c812f04d2b17971abb45188fec4a87d1f6f",
+      "hash": "bcd0020ae8120f1b15dd577716326b0738605cdcca7fabe51654f1c6331dc940",
       "route": "/it/utilita/categorie/giochi-da-tavolo/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/ruota-delle-decisioni/": {
-      "hash": "ad06f37192ba7e636799d40793468347e6c9c7520de52f56819db9a6fb3131b3",
+      "hash": "8715f8f6630c11f6cd5d946ae98d133ed29069a305a2e1f3334313508b8f167b",
       "route": "/it/utilita/categorie/giochi-da-tavolo/ruota-delle-decisioni/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/segnapunti-mus-online/": {
-      "hash": "6c35462ebb7298df54f3da4544bacc7e98b683cd42cf567f713c0832e8a702b6",
+      "hash": "c79fd8351dba7c730ca502f325f1b3d8b50b837edfd5ce4496fda1d4ae7c830b",
       "route": "/it/utilita/categorie/giochi-da-tavolo/segnapunti-mus-online/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/selettore-direzione-deviazione/": {
-      "hash": "ee0f2aac0c8893627960782a7d799df7051ad2eb33642e4019670446594347da",
+      "hash": "1875ff763332fe43ffe70303bec80ab41781aaa4df760ec3327bdc7ce8277235",
       "route": "/it/utilita/categorie/giochi-da-tavolo/selettore-direzione-deviazione/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/selettore-primo-giocatore/": {
-      "hash": "04d9635c0446f79ac00b9d04bd9f4f0f0a7bc8dd1345162f8608ec1a0be6e213",
+      "hash": "d4b1683f9724873965555b40d2cbc584b2956c81f424501f60b17f8331541443",
       "route": "/it/utilita/categorie/giochi-da-tavolo/selettore-primo-giocatore/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/simulatore-lancio-dadi-probabilita/": {
-      "hash": "3a02f6077a98ac7dc69816c92cea43c4e505440ce1f22e40f76d90b982d2d5e8",
+      "hash": "678ae87b1182342b7fbd1407386652483e68d7c4031bea6d3ee391f555c9fc85",
       "route": "/it/utilita/categorie/giochi-da-tavolo/simulatore-lancio-dadi-probabilita/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/timer-giochi-da-tavolo-clessidra/": {
-      "hash": "75c645db8aae1ce140794e4524a60cf9c6afb2ed105d613b806f7827a159e20e",
+      "hash": "c6c5ad363ea5bcdd07da5683b85ecaf755856481523a02d46f7ca95ce59bae7c",
       "route": "/it/utilita/categorie/giochi-da-tavolo/timer-giochi-da-tavolo-clessidra/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/tracciatore-iniziativa/": {
-      "hash": "7c59aa334f53137414751069295fb59f7241ee35cb712838721e0049a714e43f",
+      "hash": "72d3ada75e57d19dfe90baca9a6d2757160431396aa68e58722301bdf3c7c97f",
       "route": "/it/utilita/categorie/giochi-da-tavolo/tracciatore-iniziativa/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/tracciatore-punteggio/": {
-      "hash": "ac2fb562ca04b7f61731300790034f6be613f1a5a5b62200796b8b786ff546f7",
+      "hash": "c428c1744f11dd833ccf240431adc90eddb89687dbbd4d8ffd72be1b9162f539",
       "route": "/it/utilita/categorie/giochi-da-tavolo/tracciatore-punteggio/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/traduttore-rune-fantasy/": {
-      "hash": "9d1ce2a71369d83c667426d6ce358f63e7178055b53c8d35de0d3067601e92f2",
+      "hash": "46ed0b5f65e7d20a98c777b216d223ec2827d533bbef377b2a43c03728debd6a",
       "route": "/it/utilita/categorie/giochi-da-tavolo/traduttore-rune-fantasy/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/board-game-timer/": {
-      "hash": "681c3f77f612c70f81649bf6a9d8f378fbb657db4d70b9326fe3adf09496002e",
+      "hash": "b32f63b19244570c2c707d09a738419be155de242710018ba541acdb8d1a011a",
       "route": "/ja/utilities/categories/tabletop/board-game-timer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/card-draw-odds-calculator/": {
-      "hash": "ce0beaa437b9a86aaeac1f9026f43d6d25a5afcb6e6890031508413f5f35e2c7",
+      "hash": "e529e43ec8e2dfe753da1196193b255003136c2e8032493d0218ab652b64ec28",
       "route": "/ja/utilities/categories/tabletop/card-draw-odds-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/decision-wheel/": {
-      "hash": "dc750ea1f6c1ab1a9e3de40b66f2a27448d7906ecdb9348df35b3e922c615043",
+      "hash": "131a23a150b8c74419da90c1b6771cf32b62a7d1ac0601612fc991617c8e5953",
       "route": "/ja/utilities/categories/tabletop/decision-wheel/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/dice-roller-simulator/": {
-      "hash": "0928985b2139d13e607e09efefea597fd94d847c0b755e2da63781e3a4189a9c",
+      "hash": "809350991b6376300cc84a8a19b9dc8110e67b0b9167a34a6305b2af2257c45f",
       "route": "/ja/utilities/categories/tabletop/dice-roller-simulator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/": {
-      "hash": "d56d84c791d6100f0747e1ae550251249004f847e947057f91f294541b01c1fb",
+      "hash": "d5b8060c3a1d24363297ca2b032782138f279c709c1b7bd089f94181112efbd2",
       "route": "/ja/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/fantasy-runes-translator/": {
-      "hash": "9b9e09f1fe5c758488fe510d30bb20b74036d9a997c6856ff3032374cb125c90",
+      "hash": "ece7633e8bd450924216a2f9c2c1327b3b6edf0ff104238e83bd69274c3a522d",
       "route": "/ja/utilities/categories/tabletop/fantasy-runes-translator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/first-player-selector/": {
-      "hash": "a2d23faa658fa351e44779884105681817caab3f9e6356b7c1c7331478778163",
+      "hash": "4c0d037b07b4b10051493cef8e0b8f88e5e6ac978bf1c641950a4cf92ad26003",
       "route": "/ja/utilities/categories/tabletop/first-player-selector/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/hidden-role-dealer/": {
-      "hash": "8242ff683577d238f2402f19de963935f7431785ae4e7d9986d1776c3e91295f",
+      "hash": "a9b8662fa0f399e6b660217cb37923ac7318a4601c835875ed7e540c44353b27",
       "route": "/ja/utilities/categories/tabletop/hidden-role-dealer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/": {
-      "hash": "732c1f8f411b3cb6580b0c8260dde6d5a2b9fd591681c539fb80fbff305cd797",
+      "hash": "db7f2eac13ee32a12977ca0f32c0bbdb24d609fa42eeb160f0b0cb9cdda0b146",
       "route": "/ja/utilities/categories/tabletop/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/investigation-board/": {
-      "hash": "b2e5f6bf79d9b8faa7f17d19c52c58c62e0da5ca9024baed0bf1533ff692055e",
+      "hash": "261c80dbf06214e67d6ce651830d48f4c25ca4cc5036aa12f3fdc3bac8f95cbe",
       "route": "/ja/utilities/categories/tabletop/investigation-board/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/lunar-tide-tracker/": {
-      "hash": "940c779e1f7ffbbab9d12029baad4e4873335c07ad2279525dc2212f56fee520",
+      "hash": "6fe636eb4ace9d93bfafe2924374aad6f9742e128a2b2edb001758401bc99588",
       "route": "/ja/utilities/categories/tabletop/lunar-tide-tracker/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/online-mus-scoreboard/": {
-      "hash": "c4bb7a168cbb42e3b340a158bba14dd43d835df404c3ae6ec960af50d98322fb",
+      "hash": "e8df22b912697233e981a49b77965ca76aea7646a412eb20c3b76d13bb1540d2",
       "route": "/ja/utilities/categories/tabletop/online-mus-scoreboard/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/random-dungeon-map-generator/": {
-      "hash": "16d504c38b4dd0c8fdbd3a2cde773f335bff1c02d88ffdc5947e63e9563d474f",
+      "hash": "ba0ecb7c9df55474f079bccc6be4e367a523d81ffe6b58ee2d953e14f1b3d839",
       "route": "/ja/utilities/categories/tabletop/random-dungeon-map-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/rpg-initiative-tracker/": {
-      "hash": "413113d6e41c88e99d6356d89a04eb8f3a97ac80891929bfab57b95d5bc22016",
+      "hash": "8df9df2dd184547d9193546a76be58f2b62356dd1aee812b408af4cfcbacc655",
       "route": "/ja/utilities/categories/tabletop/rpg-initiative-tracker/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/": {
-      "hash": "d5fadb476dae54b1c52ce33d19868031d1c0338c7cf3263405b3913fd0520d31",
+      "hash": "be9fd37043c1b26f8b004db97ef3fd8d7bff760b0eb5a75ec7a4ffda225acfce",
       "route": "/ja/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/scatter-direction-selector/": {
-      "hash": "a22f16b497da76429bde03f0a54d0ec7b97546cfcd21bd5b019ff8ebf74fde91",
+      "hash": "deabd8c84f1265b54194ce372a60280f2215552edb8fff291ecd215ccaee91f2",
       "route": "/ja/utilities/categories/tabletop/scatter-direction-selector/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/score-tracker/": {
-      "hash": "d339c93cb33d31961fca0e2b445c6cadeb823b13c7ec372b78506f6fd963f6b6",
+      "hash": "ac72c45252a556e5a9c8a039f6f352b53e688529c908bd3f3478769d5ef470e3",
       "route": "/ja/utilities/categories/tabletop/score-tracker/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/tabletop/token-stamp-studio/": {
-      "hash": "c994104398fbf5027208dfe4c5945b3adee11f815fba186cdcf87eec3d67ceac",
+      "hash": "7be7def076d3e6ee1608be2e52cd6a3be21d61204d875a975968f9a1a9f60e2e",
       "route": "/ja/utilities/categories/tabletop/token-stamp-studio/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/board-game-timer/": {
-      "hash": "95537b6ec106c65e7bb851f8e3c5b0ef1b3726333acbc14a78ba228ba8b5a6b2",
+      "hash": "108577057a89729692eff8ba391c0ec7def0c1a2db768992ed517a6c4ef0b683",
       "route": "/ko/utilities/categories/tabletop/board-game-timer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/card-draw-odds-calculator/": {
-      "hash": "b040cfa014a6632279a20b0df832506ab79b1c4c581c07e5872bce5542d13f9a",
+      "hash": "7ac928d860da5c929ff7047a0077d7ce09adfb9ef8f96ac8ad7664cf22017c55",
       "route": "/ko/utilities/categories/tabletop/card-draw-odds-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/decision-wheel/": {
-      "hash": "ea4357ab5558428bf515aa3bc28df705ebef73f2af9605615b7b6172878426ce",
+      "hash": "2b5aaf3736bd53b6409533b4779153072ff62d094d1852e34d76bc18091f250a",
       "route": "/ko/utilities/categories/tabletop/decision-wheel/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/dice-roller-simulator/": {
-      "hash": "1b4e2890d186c394009938dc12badbda51fd4a4b4a4e5c6295d9088f13983b79",
+      "hash": "dfdaaad6f88f19a07a14409791458ade2ba44ff210d908e9acb529de57573d00",
       "route": "/ko/utilities/categories/tabletop/dice-roller-simulator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/": {
-      "hash": "92a6f3f0de3664aef991f534e6aee1170e13cf23ae8dc1022e389123fd37a5ec",
+      "hash": "bec77f82eb056463379544a0b593d514463f2c53a947cae629b2994989685659",
       "route": "/ko/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/fantasy-runes-translator/": {
-      "hash": "e367a0e8eda9e97b3ac5d882039265c6f2868a85ada66df938ff9356ed2e63ed",
+      "hash": "2039776aa0d1966beeb6e5c0a03d140953d5de29672c13cce52ae652b6116993",
       "route": "/ko/utilities/categories/tabletop/fantasy-runes-translator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/first-player-selector/": {
-      "hash": "ff34ee294276d79d2993d084f072cbe700b38fe07e127947cef99a4e26e3cb75",
+      "hash": "48d136e1389c1c73962c8b89a53578373cb3cb63032a0e870540f13d6911cf4f",
       "route": "/ko/utilities/categories/tabletop/first-player-selector/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/hidden-role-dealer/": {
-      "hash": "507dd67cc3cf2c8b72b1d51f7809ce4d3ce8da5f06a625af1f4477ceaaf129ad",
+      "hash": "4bbb937d04dca89c9d923ec9e1567778d6124fad02b4f9c8c8d93afbe477f723",
       "route": "/ko/utilities/categories/tabletop/hidden-role-dealer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/": {
-      "hash": "0ef8e5080fa1045130594fef29dc7efd8d18e4143efa34f5a5d0912426fda1b8",
+      "hash": "a61489246c7f8109a3a80b715bdfacc1920ef739e9c5f3672c55a108ca4f7c80",
       "route": "/ko/utilities/categories/tabletop/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/investigation-board/": {
-      "hash": "df67ffe8eb4a663a2104cab0252ae58faef883382ede96718cbbfccc311204a1",
+      "hash": "d18f4962104b9386a4c42d52086335fc93105ffb9949614ef189118d0a6b21cf",
       "route": "/ko/utilities/categories/tabletop/investigation-board/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/lunar-tide-tracker/": {
-      "hash": "4b2731904b19813a523b0d767c8e6d2e4b1f1a6ef90c2669e05f7af323be37ae",
+      "hash": "68661627e7d6d51fe10baa5e62b2573483419884b08f23532ec9c0ffe0e36829",
       "route": "/ko/utilities/categories/tabletop/lunar-tide-tracker/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/online-mus-scoreboard/": {
-      "hash": "1e25e46c46664dec6a494066a2f8ce971c42a53a04b5156c99f170642f395358",
+      "hash": "029670d64f73542f1d0a48b722cbc426101e35920ccfaf98437c1008c00bfd4a",
       "route": "/ko/utilities/categories/tabletop/online-mus-scoreboard/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/random-dungeon-map-generator/": {
-      "hash": "bd4a77fad34222cf2191166ebb7df880a4a4bec4e82ea1b55bc1cecd05ce3ed3",
+      "hash": "65c173fbd11911f6aef8ef01748dbeb42683c5195e0e2396f4362e9f569bfd54",
       "route": "/ko/utilities/categories/tabletop/random-dungeon-map-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/rpg-initiative-tracker/": {
-      "hash": "d1a22b74a9fc959debdcf2c40e36fe97ff2eecf74c95cd4b3b93fd6fe4465bdb",
+      "hash": "b0cb6c5897b06d92d1745a6183d2fe34dd6a2030a302df738c25cb7b84d90f46",
       "route": "/ko/utilities/categories/tabletop/rpg-initiative-tracker/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/": {
-      "hash": "30757658b8caf7332f9d3690edde3f7bfa23f4aecbf51f16d3105de8869706ac",
+      "hash": "8a01431850c301932dce543d553c963ad6ee1ca6be61eee01493208f850beb57",
       "route": "/ko/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/scatter-direction-selector/": {
-      "hash": "13d59d57c1b9866f78fad18a0692cd8ed6e79bda98d7103e25543f745df7e185",
+      "hash": "01cb9f4f56e6807d48d6f8fd12994c342cb2be0968150fe198efbe0f95e44c35",
       "route": "/ko/utilities/categories/tabletop/scatter-direction-selector/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/score-tracker/": {
-      "hash": "86cad91daafa74b178dd5c5bf077b10aa44426d76757ac5f6c740f9a9bb5bb5f",
+      "hash": "1cbca2488d72b976d0a25918c3e5beae37f6428af32d96793d8f0ff8896cdfc6",
       "route": "/ko/utilities/categories/tabletop/score-tracker/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/tabletop/token-stamp-studio/": {
-      "hash": "2a143d33a4c5ed5bc175e10dfad1d873df1e4e3639ec85fe244924193751017d",
+      "hash": "0bcbe9406dd31dfd31fb4bbf8d45029a35439da3cd3ba9b49c8ec2266ba8b148",
       "route": "/ko/utilities/categories/tabletop/token-stamp-studio/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/beslissingsrad/": {
-      "hash": "3f7033c245326b41ba75c156111edc972d18796a1591577faa071dfa4c6d260b",
+      "hash": "8b198c7a0fcf8c1684f9915b5cf89e13bbe0041bcc3da0e4419bf619debcf856",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/beslissingsrad/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/bordspel-timer-schaakklok/": {
-      "hash": "da0af77a4a287514a8aa01edade9440781c09dbe6a48e78de5362e2e6e157a37",
+      "hash": "2dd8ad2639b8d73dd85d08dbd5610bcd8bca8437308354807f167ba08eac30bc",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/bordspel-timer-schaakklok/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/dnd-5e-ontmoetings-moeilijkheidsgraad-calculator/": {
-      "hash": "3bfbfb55fa880de889a17c248de466b750ec370cbe4731320b34fa72ee7070fc",
+      "hash": "cdde6bd2b9bed6df98badf851398bcfe73857c92911d4ba9afd591938491a152",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/dnd-5e-ontmoetings-moeilijkheidsgraad-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/dobbelsteen-roller-kans-simulator/": {
-      "hash": "36e9eeb267bcd8f6595774476c0ee592f6326a2ac9606a77e1fd422fff0abd01",
+      "hash": "8d22e6c899bd4c36e4b02aab69c19452fd2165168f949f049985541443d893c5",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/dobbelsteen-roller-kans-simulator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/eerste-speler-kiezer/": {
-      "hash": "4b2396afaa1a5233d4edf83a20938c56b3a0a724817d59c52ec5c2a0e34cd97d",
+      "hash": "0e2ebb297eb78bd52d4544a381650fd5723d8ad345c144dd893da3af11f75ea9",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/eerste-speler-kiezer/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/fantasie-runen-vertaler/": {
-      "hash": "b9a29750f191077e6e11dd5b5f3153861dee3a5ce0e6c7b60ebe34d10c41e6eb",
+      "hash": "18975a2f3849c0c6fe1c0d22c273d8bf7c3d7027f2584191428d7b8a0fff6152",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/fantasie-runen-vertaler/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/geheime-rollenverdeler-roles/": {
-      "hash": "593c2f70cf633363c1e692cca652b5243260b646e77c7c6bf11f5bbf1ce4586a",
+      "hash": "59993216da3601430ca59eeea2787b140ddd341cf5c77782b4a0586e7faf2fdd",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/geheime-rollenverdeler-roles/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/": {
-      "hash": "d5ae846210b4fb25f4f7a94b470be78007b1322009fcd99fce74ffb7fd95a3f6",
+      "hash": "6ed15e93dbd42e4d279eae0cdf7f3feb8a19577c9e0da5739c7f76b5e7c897a8",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/initiatief-volger/": {
-      "hash": "5237ae4fbdb1b85039d9f07c9ecbb35c65c413950ef3249e448a44751670cb82",
+      "hash": "1db97a30bec0c7112b3db053f6fde357c5e4a9bd90d29553af71cf081ca5cf25",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/initiatief-volger/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/kans-kaart-trekken-calculator/": {
-      "hash": "b95129771847827da5ba8aeac2e1d98594d762e5cfd5076c90f52003a7d995e3",
+      "hash": "e8cd3d88bac31a602352cbd15be52198074240d5dbbbe09e1b46b2a71e748dd1",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/kans-kaart-trekken-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/karakter-token-maker-rpg-tafel/": {
-      "hash": "c8268e031ee90d85625d9ba809ea4d272fbbb35720a846545af4d3ead55bb503",
+      "hash": "342c9d9c353558fd21258e8b5c8047ce374f5926139707f4a5aa669a9e96615f",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/karakter-token-maker-rpg-tafel/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/maanfasen-getijden-tracker/": {
-      "hash": "cc16d0761cbe36ea97aeba4a6f3df67b083eb464add2cea292197b4047bc133b",
+      "hash": "6fbceeed79d126addb9a3ba4fef55cf93cc0255eed87615b8549480d776aa6aa",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/maanfasen-getijden-tracker/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/online-mus-scorebord/": {
-      "hash": "5a901ed91d1234030409c73b53ccaadcd0c20c647d9545a14263cd985d3ed398",
+      "hash": "120d89031f37030cd48ce8cc72fd9ac2eda62c511770d0d2f510b41ddcc9e68b",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/online-mus-scorebord/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/richtingskiezer-afwijking/": {
-      "hash": "18c525ec5a8646b282ede7b3be4195707a7df79e6a12eeb60f9a424840765fe3",
+      "hash": "7fb704bb7a41655772857290f714486c89a732069089c7ca28d7024f613052df",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/richtingskiezer-afwijking/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/rpg-nederzetting-en-verkenningskaart-generator/": {
-      "hash": "d4e1459445488a95053f599e22ad69b38e651d0e78575ebd87ffb787f69ff60d",
+      "hash": "2d85edacc42fcfc4dc9d02300528767ff37333b999977b7cb7a8709e2ef8ec68",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/rpg-nederzetting-en-verkenningskaart-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/samenzweringsbord-maker/": {
-      "hash": "407c0fd71ecf3c3c927d4640de1d7acf21f92bfb8a33ed1e555b22ee4888fb21",
+      "hash": "d8cc1e110473614f3710f712f43041a65d8c9f527ad92cd517b09f654aab1bbd",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/samenzweringsbord-maker/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/score-teller/": {
-      "hash": "4fb91c7ac871f0203e0a1b64ee9a5b33a7fea450be5073cdc5dbe0159ce80df2",
+      "hash": "c7e094ce05653cc37e59354a8410107e37142344e589c8e9a0960ad8e6ad3d9a",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/score-teller/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/willekeurige-dungeonkaart-generator/": {
-      "hash": "b1f99ab811bcd4ba92806d7e6bf83c11f3cbace0466164fd7d24dc04ade708eb",
+      "hash": "8e15bf9e81ec64d392db53682a0043666be41bca216868774f0e3c0a91d476e7",
       "route": "/nl/hulpmiddelen/categorieen/bordspelen/willekeurige-dungeonkaart-generator/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/generator-losowych-map-lochow/": {
-      "hash": "35888a938583185256a02f9d6436a4502be48e7b3bf1b68f654729b26e0c8f52",
+      "hash": "531a118c66968c9d277c5831d046fd466685523344f65f6c51a651aef85162d6",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/generator-losowych-map-lochow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/generator-map-osad-i-eksploracji-rpg/": {
-      "hash": "fd9d951889e03f91dddb88998a352dd7a5c64ce58683860f21a18971339c81c0",
+      "hash": "1303e2ac7fe7eba77611ac6dc110d34795decc36a8af6133519e72d4358cf04e",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/generator-map-osad-i-eksploracji-rpg/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/": {
-      "hash": "d5393ddd4ce85126167acebf458edf2d93e21905315ee7d94de32a27ee84ab99",
+      "hash": "3ec8582ba7c065fdc5a30ab49dd80031e48f64178128310a67c48297147891ed",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kalkulator-faz-ksiezyca/": {
-      "hash": "b4d1603e6c7d78c269c69cab12dc9358c0e5a50a33f65019e6f06bcfef048f7b",
+      "hash": "06e0c7b849b3e2c6b40f582fbab811123390d34afd6f86d138099e4984f4281b",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kalkulator-faz-ksiezyca/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kalkulator-prawdopodobienstwa-doboru-karty/": {
-      "hash": "e020585c66bf277414aa7f9abc38cf5eeef5acc0493246b4eff5343600f7f620",
+      "hash": "6960480c180e7396111baf062ad09cdf9bddcc066f8e7a06be5d159ecd02971a",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kalkulator-prawdopodobienstwa-doboru-karty/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kalkulator-trudnosci-starc-dnd-5e/": {
-      "hash": "f28229c829db27491a2e8b37e06ac16ab930df19d51348c43af8c6fbe4e82e77",
+      "hash": "ab449bdad6c4e434936e34ea9f572e1bdb71058ebe28337583ee957efae3943e",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kalkulator-trudnosci-starc-dnd-5e/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kolo-decyzyjne/": {
-      "hash": "38ad836eccef701b6f27ffdddfd5a2aad0167a916f7cfae0de0859402effbb31",
+      "hash": "b6243cc11d05b6a9d667b968590fd98e65313dd2715f99b30bd165ce48b44071",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kolo-decyzyjne/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kreator-tablicy-spiskowej/": {
-      "hash": "8f84794f48f4dab27088759a8f2d2e28c283ce5d5974db0ca603ede10a133a17",
+      "hash": "a10d11078d18fe33e9c0fe80f2b52117b6050d782f0997da2d1741c888633040",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kreator-tablicy-spiskowej/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/kreator-zetonow-postaci-rpg-stolosw/": {
-      "hash": "1cb150045b6566986cc0bd89f82850e9afc7fddb6d1c5aee0a1580663dff408f",
+      "hash": "57b16a05ad62bf7f6c5123a92bb7a592b9ed033c8b27e8e0b0a9dad69b159c73",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/kreator-zetonow-postaci-rpg-stolosw/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/licznik-punktow/": {
-      "hash": "f0933bc07a92d6e1445971583fcd261c55cc3b9ebfd88a6704682277672ac389",
+      "hash": "603016cc09112891d02ba39cb8ba80f86a03211229da1393d44098e92799f3ca",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/licznik-punktow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/licznik-punktow-mus-online/": {
-      "hash": "b277092f35d2a458391b36dbb065fba0a98b5755ae9d56e7b73420551057e37e",
+      "hash": "95b391f73de7229c7641bb28143121eeae37d060b1a11558d5c3280c8fa59434",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/licznik-punktow-mus-online/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/rozdajacy-ukryte-role-tajne/": {
-      "hash": "ab86a9812d086eff5e6dd8a4806b9508d30962ffacaa3af30c3a056f86f98f00",
+      "hash": "40e0741037e605503ea6f8cd0ff095573ff2b1498ecead1be0eeb77a61ffafca",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/rozdajacy-ukryte-role-tajne/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/sledzenie-inicjatywy/": {
-      "hash": "5698a280d5700622aca703603031b10bfcf0dfc0252e4e7199b982a27937580e",
+      "hash": "5baa84d7cad3be0a3082192efd7be80bf12d12c169134f1776139b22e9f96514",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/sledzenie-inicjatywy/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/stoper-do-gier-planszowych-zegar/": {
-      "hash": "2e3c866e3191fc9cf164e7090f6ddac0c0a7dac77c57120b8a39d50b8cf2b706",
+      "hash": "b4281b9f9333b24aae68d3b7e9841e0fde68e378e1f62c267803ace60f444dfd",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/stoper-do-gier-planszowych-zegar/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/symulator-rzutow-kostkami-prawdopodobienstwo/": {
-      "hash": "172eac7d816fa441b36f8fe37f666c2d7add1b62840e180e2148688f4d984a7b",
+      "hash": "ed59178beed6835436e4b52af607ca94adb0d38f2e92f4713ec6b7dcfbb4d72d",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/symulator-rzutow-kostkami-prawdopodobienstwo/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/tlumacz-run-fantastycznych/": {
-      "hash": "f2d57ecf06a16c53f5b84d8fb73955f140d7361205efe310d604c13c262808b1",
+      "hash": "e96fd60bda56b9ef47f15c40cb502c0861ff8c2996ab6f8f7b4c7cfa63163ecc",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/tlumacz-run-fantastycznych/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/wybor-kierunku-rozrzutu/": {
-      "hash": "8c167a75575410112664096d39d5345acb3105bccc529c83bbd458e186da1b19",
+      "hash": "aefb88605457a399d4f93be05ea9f5043cdc120a73fed2118d9e77e6b0297608",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/wybor-kierunku-rozrzutu/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/wybor-pierwszego-gracza/": {
-      "hash": "9f580f0b677a30f2afada0fa1a2e6deae42176974e925285ec5b1aeabc01ce79",
+      "hash": "f43cb231aa95124905d6d0461fb61d967bfc8d07a660ee546ed19f48e1a3be76",
       "route": "/pl/narzedzia/kategorie/gry-planszowe/wybor-pierwszego-gracza/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/calculador-fases-lua/": {
-      "hash": "9a522b9344ef375b3a7fe96e6afefa85e36c10d813e075e965c0189401bdbc78",
+      "hash": "4724c731ef8057b05dad1fc7b9c3793bb64784a39ba5e3a944c350667ce6d03b",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/calculador-fases-lua/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/calculadora-dificuldade-encontros-dnd-5e/": {
-      "hash": "5a6581e6444480abe88aae47bd7f5fa2c291908ce714e89f461d139485b5f547",
+      "hash": "49dba694395bd980310c220749298e0c7529d0475a8d88a537e1fbea5a91a41c",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/calculadora-dificuldade-encontros-dnd-5e/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/calculadora-probabilidade-comprar-cartas/": {
-      "hash": "836e2a01e0ef1afadf22235542a2a791ff4fe62a14cd484083066a0aebb4cdfd",
+      "hash": "f9618fc48d84a419a8420cbd42de472556ba2827685caeead5b7801aed79bc98",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/calculadora-probabilidade-comprar-cartas/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/contador-de-pontos/": {
-      "hash": "4c2b79aa929c7c2ac3e831ae7d687d8f31250c2732d98fc8064cf692e4ae5108",
+      "hash": "3b4aec1b2b99993ffa71c68103226a959a16c6a4583799828a282f0989d633aa",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/contador-de-pontos/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/criador-de-quadro-de-conspiracao/": {
-      "hash": "405364fd566a46e19bf858310ca93da6e67d32d5b7fa297e36b69adbd1c9761c",
+      "hash": "74f14acaf777712a4452cef19064f699f1616ec13e40e69de5c15a7993c825a5",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/criador-de-quadro-de-conspiracao/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/criador-tokens-personagens-rpg-mesa/": {
-      "hash": "014f16655dbd84075db69caec4663bee13420e17e25293c8b7b8039a8d6b7773",
+      "hash": "c0dded478f8edf506e76126ef7b8afeb13cc323e3b88ca667dd5ea2440bd01cb",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/criador-tokens-personagens-rpg-mesa/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/distribuidor-papeis-secretos-ocultos/": {
-      "hash": "dca15c1cae0b752e315f0f8f528528194fa14eef2f072dffd0ae86ce072eaeb8",
+      "hash": "016b8ef69d959f46087a25589ae2e0b965be29d0ba02464148b5d8fa046a0ef0",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/distribuidor-papeis-secretos-ocultos/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/gerador-de-mapas-de-assentamento-e-exploracao-rpg/": {
-      "hash": "82396cd17d2da60613ec19a8af68e2b6d90e0d4eeed05c6850b747430cf6202a",
+      "hash": "e509ca5b609ecd2a323d30e8571beb60e06f574f8824b899d770ff41f8b6e6f3",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/gerador-de-mapas-de-assentamento-e-exploracao-rpg/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/gerador-mapas-masmorra-aleatorios/": {
-      "hash": "9735bfac973d529a2d14a41a6bb212bb8915818f93b3c993385c14f216f380b5",
+      "hash": "db8bc19df0403f89b6ecd926d9795710afb23ed4fa436dd39e1bc74cfc211503",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/gerador-mapas-masmorra-aleatorios/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/": {
-      "hash": "e644d0f62ce49969ecdcc3c97233317ef7949aee8c62e2ff92899bc29a1614ff",
+      "hash": "4a5aa08a986ab48d3b616fbf1f2c5fb27fdbafb5ba4c9ba1a199e1970095d049",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/marcador-de-mus-online/": {
-      "hash": "a8f92801d2f95f4dc50219c10f89c17985d298896c5af7c501772bcb33b47202",
+      "hash": "2f8b336397ed27257c2a1e0022193083cb5f1b3388e8dcd98715ed70667ef1b7",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/marcador-de-mus-online/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/rastreador-de-iniciativa/": {
-      "hash": "39e88f82a9210b24787102ec3ba117f763197260376db1a8af51f6dcef2c6687",
+      "hash": "17ba0ef2693444d9d7adfee42114303050af4dcef0d2670fd24d40932b65edf0",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/rastreador-de-iniciativa/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/rolador-dados-simulador-probabilidade/": {
-      "hash": "e94e82e9d7c198ad87a08551db0a98c2f021cbd9fd7faf8dda6750b95ae89ebb",
+      "hash": "d54a64c321a72f71e57584e9f95ec4d225e1604f8a0bd59c5138f37142032a21",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/rolador-dados-simulador-probabilidade/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/roleta-de-decisoes/": {
-      "hash": "2f95c9d7818ce912a46cd2cac6a02ea309e20ca5e1dcee5799cea6a028bde5ff",
+      "hash": "c4baa7b5ac80c64246590a196b15b93dbce4ea24e3dbfafe118f16a9a7559116",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/roleta-de-decisoes/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/seletor-de-direcao-de-desvio/": {
-      "hash": "d0a0a7a48b4a72f86fd5932d948f5908676ebaf020fe42b7c5877192eabc4eaa",
+      "hash": "bdd350c144c893c59a11a0983b3e417e83862a282d67f4977a775c2829654b2d",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/seletor-de-direcao-de-desvio/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/seletor-primeiro-jogador/": {
-      "hash": "093e6ef030495ab45f9c7361bbf864f21f6adacc95bcebebc60f4ab993b9c4b3",
+      "hash": "6e1ac7268d407715ea82e13cb326b214e162f92dd1493b9b848d28ed0df10fd5",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/seletor-primeiro-jogador/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/temporizador-jogos-tabuleiro-relogio/": {
-      "hash": "848d5aad08dd87d1c56726d7202dc59f5c0f805fcdfb92474bbd980eb670f94d",
+      "hash": "1893e63acf154ff18e93fe0c6780ceecffe667dd5541b31650d1acb5866edb51",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/temporizador-jogos-tabuleiro-relogio/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/tradutor-runas-fantasticas/": {
-      "hash": "c6e0156bfcfd4bfb268ee10751cc1488d71942b1e5015aa8be3abe8ba88cd69a",
+      "hash": "f6fc4061f8eb8fdcf3a83166639a5966d5ffd621b47038580d23ff3f0d20d368",
       "route": "/pt/utilidades/categorias/jogos-de-mesa/tradutor-runas-fantasticas/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/generator-kart-poselenij-i-issledovanij-rpg/": {
-      "hash": "e45803607dd51a8f6b54edb087c3d786264bebf309812de33272bd2e8831d909",
+      "hash": "2f49ab6eb14c109e73a136f72ab027a75ce2f4ec70ecf75c94879e3b01390502",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/generator-kart-poselenij-i-issledovanij-rpg/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/generator-sluchaynyh-kart-podzemeliy/": {
-      "hash": "0e141b2cc553d95469807fd8139764db8e65f39dd7515a4d3b58bb18f16fc759",
+      "hash": "2ec790b877a8a5b55ca928c08be8e7238b35ad9cdb2d657ed0d88806648dae97",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/generator-sluchaynyh-kart-podzemeliy/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/": {
-      "hash": "ddb324eff3533f3ee2f6118b52bebcaf543d949f1a003a1807ffea903c560ba0",
+      "hash": "44e7798dbb65ce32927630414a1d6023ca9ff6fb19f48cf740f28b325dfc9e02",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/kalkulyator-slozhnosti-stolknovenij-dnd-5e/": {
-      "hash": "661112fcd8a9275e3eb6a08bf6abbdb9d29160e06e209e3518e755128590fe7a",
+      "hash": "8d592b375657ae60ce2cc452264bb89789c881f7525df38cffa9a35b90e61340",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/kalkulyator-slozhnosti-stolknovenij-dnd-5e/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/kalkulyator-veroyatnosti-vytyagivaniya-kart/": {
-      "hash": "d5ca5b946f148f0139c77ebf1c20b9f8035e542e3f92df60bf1d161300ca3940",
+      "hash": "bf7cc2f08958b5d23845479f929ac4421c05eec2a335d89fd4e3d2e3d50ff5b5",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/kalkulyator-veroyatnosti-vytyagivaniya-kart/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/koleso-reshenij/": {
-      "hash": "c3acaf9685426f69b8c1ea5bdad511c62f2c3fa4c6e1896a11bc68e701790cb3",
+      "hash": "f628675ba22b42352287cb5c0e7515dbf72174047c1f1cd662a1fdca12dad731",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/koleso-reshenij/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/lunnyj-kalkulyator-faz/": {
-      "hash": "8f94ea416e1d8c8a55f96e96a4ea4430b88ad269bb11ac36ae05da4f5535e527",
+      "hash": "d31bd74ee459833c596baab1cff6566dc4f733774a2973ee43be9d1aa56a681a",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/lunnyj-kalkulyator-faz/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/onlajn-tablo-dlya-igry-v-mus/": {
-      "hash": "b604338fd1c0828374814e3323c21d19b278865a3b700c0318f43b9730503925",
+      "hash": "6b0d0ef64682549f6bba0079f3bfebb22654a1676c47587da2d8d79cc7f5423d",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/onlajn-tablo-dlya-igry-v-mus/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/otslezhivanie-initsiativy/": {
-      "hash": "704972b5cef5ce560079329f0cd802165d1ab66fba957359879903c562d4b58e",
+      "hash": "453d3771cc37170581b5111c6bc237393252373ad94836ec9983ac344b93edc6",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/otslezhivanie-initsiativy/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/perevodchik-run/": {
-      "hash": "c07dac4782fd6f4c7eebbfd5c511da350921f86eda5c192cf91e9771b2efaa94",
+      "hash": "5463b540b7428764a292eb9164921e5b1bbf4ffb14cd043f727fe1a83a966acb",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/perevodchik-run/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/razdacha-taynyh-roley-mafiya/": {
-      "hash": "161d5174bda47138ac16ac40c50698c1f4a5e4f26a8741a71cf195362145deb4",
+      "hash": "db0435eac7f37958799f709248efc66af15952dcb044c485fd961e4ec037f074",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/razdacha-taynyh-roley-mafiya/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/ru-board-game-timer-shahmatnye-chasy/": {
-      "hash": "ca1bcb86324013843adb33b6cd15c33c3effd6a13efc3905cbeefede7f78ed48",
+      "hash": "56ba6f1b0077b7ebf60cb93fd2be1e4b31e314e15975d1e1c0e4abd531540ba9",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/ru-board-game-timer-shahmatnye-chasy/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/schetchik-ochkov/": {
-      "hash": "1dff8200753e1c429d723e1b21b8797e75b19eb8a31f91f3e2adbf937723dbd2",
+      "hash": "5f41ffc9aa18a0a3046812ea206c618c6fa310269888ecf5f67cd95934906df7",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/schetchik-ochkov/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/simulyator-broskov-kostej-veroyatnost/": {
-      "hash": "ce6230a41742bbbacd407a76b07fff884262305973f739ff61ca29c31a7ab4b7",
+      "hash": "f11a92d4f096912720c441af8459b3f48ca5c3e086e283b5a3ee4b4c3b9317e5",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/simulyator-broskov-kostej-veroyatnost/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/sozdatel-doski-zagovora/": {
-      "hash": "cbdd545d64dd792aa91d55f0ad2b128fd2ffd0a624a2cc32914ecfc76e0172be",
+      "hash": "e0eda14adb3edb4ce891ea72ecc4ba0ba0a12ad0485c46ffe514555e4b4a6ab2",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/sozdatel-doski-zagovora/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/sozdatel-zhetonov-personazhey-rpg-nastolnyh/": {
-      "hash": "9fd426b0fe26baf23b8578a7f328abeaad35211f4b577e4410eaa27f71639f9b",
+      "hash": "5e4a4de9e89519a2a4f9bc3609a08934f2851419601a3b3d359921763ccc4d45",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/sozdatel-zhetonov-personazhey-rpg-nastolnyh/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/vybor-napravleniya-razbrosa/": {
-      "hash": "4839df759c76e5841133ed7881bd22330ce518588d0395e874eaf7eafc769984",
+      "hash": "7da9208cffdd0b5392c7995e225b42bd5fd21c1677648f19108f6f3ec5cc113e",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/vybor-napravleniya-razbrosa/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/vybor-pervogo-igroka/": {
-      "hash": "4d4b667aa09902c5ae636924e5a1688fa322df96865a74cb4badd2eb683d83b2",
+      "hash": "c6ee9471db5f734d1e8b47c7a24045865c0e432b12873ef12dfba42dbab8f882",
       "route": "/ru/instrumenty/kategorii/nastolnye-igry/vybor-pervogo-igroka/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/beslutsjhjul/": {
-      "hash": "9ab348588d82fe0b05bb121f18b83863d4b1791902537c998d116e5fb255ae0a",
+      "hash": "b43366af242c82e6a5d714a572f26bdef5eb03227d1948061e575e22b32e689c",
       "route": "/sv/verktyg/kategorier/bordspel/beslutsjhjul/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/dnd-5e-stridssvarighetskalkylator/": {
-      "hash": "1acfdc1046c3af94054f5244d1f2bcff43da18a0ec5239ddf600ce2e11b85be2",
+      "hash": "d76ecd44a44495ac8b2f452178a7cb3a823187b257a507a79ae461989bc397d5",
       "route": "/sv/verktyg/kategorier/bordspel/dnd-5e-stridssvarighetskalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/fantasy-runor-oversattare/": {
-      "hash": "7c60c89ac117d2a13a79e2201ce961c72afcce50cc63386672e690e38c572cce",
+      "hash": "6a4fc9bfea98a4cd773ca453be5c1f3dd4d4fde157a80fda456713787b7e7b54",
       "route": "/sv/verktyg/kategorier/bordspel/fantasy-runor-oversattare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/forsta-spelare-valjare/": {
-      "hash": "03632f236f09f730e923b2b71d83733fef5bdc18b5b4e41f1974010771d8d40d",
+      "hash": "75b3ce1d0bc56356d97e6758708e3ef68eb9209dc890be5e379a1314a28c0a33",
       "route": "/sv/verktyg/kategorier/bordspel/forsta-spelare-valjare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/hemlig-rollfordelare-roller/": {
-      "hash": "7f3eaebf9557d1d778b1b24bc10bef5258f1318cb7448c3f3d780a647e4e291d",
+      "hash": "c31833b65178c92e24908cf11382b395ceb59ed89a68bdab6a3e7d844c6a306a",
       "route": "/sv/verktyg/kategorier/bordspel/hemlig-rollfordelare-roller/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/": {
-      "hash": "56c2c09727504b1602db38e17be6ac41e40e2b5b22738d55e85a344846a4d159",
+      "hash": "9dc5f90e8f65063e56002c9055eb1c43bcadb61b2e3132b82b937006d86d1124",
       "route": "/sv/verktyg/kategorier/bordspel/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/initiativ-sparare/": {
-      "hash": "a68badb97fa43305d5943df50e992e56cc11e5c8e7767b0472f980df48a61b07",
+      "hash": "baf8549daadc71d9a3d29a5d906d2ea0c72e6b66a802935fedc3ae818e03a4c6",
       "route": "/sv/verktyg/kategorier/bordspel/initiativ-sparare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/kalkylator-kortdragnings-sannolikhet/": {
-      "hash": "d3c4cd00351b51b05c19bef31b7386ae06a87b12fb8386fc3f4323d181710032",
+      "hash": "e3315d04fc61e77ca463d4bf71e506b27eb86836ff781e264a81f596574a85ba",
       "route": "/sv/verktyg/kategorier/bordspel/kalkylator-kortdragnings-sannolikhet/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/karaktars-token-skapare-rpg-bordssport/": {
-      "hash": "bd553ee9c937aa1a17a200848e90f86eae7e1a5edad01d27aae100bf537dd2b4",
+      "hash": "7456304ee8c228c24b15aa6a498d6be79c5bff94884af9e42eab373e9b275e84",
       "route": "/sv/verktyg/kategorier/bordspel/karaktars-token-skapare-rpg-bordssport/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/kartgenerator-bosattningar-rollspel-utforskning/": {
-      "hash": "7295529ac155e5c9c6ceed5fd95b199dddbf516c817c618c903c75b1799369ec",
+      "hash": "3c4b7f20018ed5ea27c5385f4baa92a911fd7afd01149973fc5d45ad9f17f724",
       "route": "/sv/verktyg/kategorier/bordspel/kartgenerator-bosattningar-rollspel-utforskning/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/konspirationsbrade-skapare/": {
-      "hash": "f4c8c8d2acf931b94aebdce99e02166b5dbf2030b6d8db86d3d40d6ff885a5b5",
+      "hash": "070b0824e135cfa4cd283d65a9dd7baf76b01702620ce2b4cf4327d54bcf3155",
       "route": "/sv/verktyg/kategorier/bordspel/konspirationsbrade-skapare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/manfaserna-tidvatten-raknare/": {
-      "hash": "11119376f41841514d92bb4ced294bfa6de07ed72c805714b662f70fc4c0b258",
+      "hash": "7525954de0cc3ba3c15572bb6691dd8d6b177886e681029109a042cc36946883",
       "route": "/sv/verktyg/kategorier/bordspel/manfaserna-tidvatten-raknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/online-mus-poangraknare/": {
-      "hash": "b14b892ffaff4c34b66c921586f64767809c2b18a12f9c8dd1b09c256a97516d",
+      "hash": "c8edac2e2241068669a94f5b0b1ddc126ab505fa09e2ee3ea9364c83e4a874c3",
       "route": "/sv/verktyg/kategorier/bordspel/online-mus-poangraknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/poang-raknare/": {
-      "hash": "66d6c01aa6366bf68ffd7a3df1aec7a13b9cbc92e22715033b2c0857001f9aee",
+      "hash": "5e7c893751768e7a1650916d522762cfe89ab1624466baddfbb305625264f7a0",
       "route": "/sv/verktyg/kategorier/bordspel/poang-raknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/slumpmassig-dungeonkart-generator/": {
-      "hash": "ad7f6dbc8c3de34d76fdcef19c4d58d611288beff2a864280afdfe8a07064d7f",
+      "hash": "57ca2b059bf5c9383f04f8a3ba8f5b1017564d0ae60177aa95bfa5e52e24309e",
       "route": "/sv/verktyg/kategorier/bordspel/slumpmassig-dungeonkart-generator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/spridningsriktningsvaljare/": {
-      "hash": "4710638cfa49f5bf8489a0c4eda96cb96ad23b4423a0abb18acd9b450418c500",
+      "hash": "34a2681ec633028558d7515fad7245dfd597846b3c2e578bfc24e61bbf0f1d8a",
       "route": "/sv/verktyg/kategorier/bordspel/spridningsriktningsvaljare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/tarnings-kalkylator-sannolikhet/": {
-      "hash": "8d93cf1287e50c1ea69acc208f4f246c79465dfb80a137f13a0c7f790c943b2d",
+      "hash": "cc4344c7a7d7f9e28dd9eb7c5088081ef53206aaa3d990a9908b1cf10fe552a8",
       "route": "/sv/verktyg/kategorier/bordspel/tarnings-kalkylator-sannolikhet/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/bordspel/tidstagare-for-sallskapsspel-schackklocka/": {
-      "hash": "e6592f87d3d2f307120332fd844c6bd485b0e2d634cff84a77fe425588150c3c",
+      "hash": "7e09205cfad00f86649505ba8f67c01feff7519dd96979e6d87dd02a4555c014",
       "route": "/sv/verktyg/kategorier/bordspel/tidstagare-for-sallskapsspel-schackklocka/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/ay-fazi-gelgit-hesaplayici/": {
-      "hash": "dffaf8018224baf669d7df996b12551d52ed00f0bf9a0ad8d85a046f75a1d9f4",
+      "hash": "750f1389402aeaed33b2d2280cc4ffec489309f58d2b8a4da3b6632be4e66184",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/ay-fazi-gelgit-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/cevrimici-mus-skor-tahtasi/": {
-      "hash": "593bddc174044acf036157470a871a6dbee62e714277d0795b488fb6ec5b5982",
+      "hash": "5d0f810da2daecc4c32b89162368dd8099a0cc81d5b495f21eac208914b71f16",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/cevrimici-mus-skor-tahtasi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/dnd-5e-karsilasma-zorlugu-hesaplayici/": {
-      "hash": "f99bd706ec9d64f6aeb171b0915761d40515afffb9593f6436d8a691cd5f7ef4",
+      "hash": "48348cbfd976496527b24e704368bcb38188d364b1372d004f2b03fdbc650839",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/dnd-5e-karsilasma-zorlugu-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/fantastik-run-cevirmeni/": {
-      "hash": "a2d130ed5090545887c0668d6fe80244a72b0a23888a147acedc2bf66bca8c69",
+      "hash": "8300c42e740b8a5261d00f1bfb3c48730df911e4346c7873bc3b0d1b9322aae3",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/fantastik-run-cevirmeni/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/frp-yerlesim-ve-kesif-haritasi-ureteci/": {
-      "hash": "e55de5c0a999fdb40f3134ab9f16ceaba1cec4edea12df61b0ee93ba388fb08e",
+      "hash": "1667c431d7a2302b1744ae334fdef886946e4e6963bd65f9978c5add114c88c7",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/frp-yerlesim-ve-kesif-haritasi-ureteci/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/gizli-rol-dagitici-roller/": {
-      "hash": "39d4e91d01d287192a08c0d7096ca4795754f57b9e33c756d60bbe249d38c4f0",
+      "hash": "67a8bf0894392ae55ab9cb0e72f577b3f586eb04aaf3e7e4e68aaef9a785dfb5",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/gizli-rol-dagitici-roller/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/ilk-oyuncu-secici/": {
-      "hash": "200ce8480d6a9f16c7e9c4b76e94959e0f2f6bc7ee206f606fcdfad459d116da",
+      "hash": "3b37ab4a87dd115c7d4deb80816a754873d82086e4c3eee170c15020f42bf0b9",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/ilk-oyuncu-secici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/": {
-      "hash": "25be2772dbf3880ae00b449c66d604c384144e85facced667eceead6a197667b",
+      "hash": "c38a2f85306851ecf43edbfc1ae5f761bb013920ac69410d62c7e65f638c0347",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/inisiyatif-takipcisi/": {
-      "hash": "b6b1d0e6c30cce54ca1302d22108ed6b2cee939596efee9241ce9a50f1dea499",
+      "hash": "5819dc14434e3966cb6e02b22e8d64782535c724aee037340cadaee59ee143f3",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/inisiyatif-takipcisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/karar-carki/": {
-      "hash": "ae9ce6cc1ea97b43d10e1899affddcafee69c44c4f152564f62f5fc14d57dfd8",
+      "hash": "9ab5f4d8b6084455c4dfb812b9417523e46e73e826ce224ef8c56db409299b16",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/karar-carki/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/kart-cekme-olasilik-hesaplayici/": {
-      "hash": "59941ad25ead0241952a6a349e8f236a7f7d364a71a5560807e2f00fbf5daef5",
+      "hash": "2ee01307ce54e57b3a27cf7dee5803c6f18b8d057be60aed0705715dccfa8483",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/kart-cekme-olasilik-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/komplo-tahtasi-olusturucu/": {
-      "hash": "b84ed9bf822381a5e7bf4e7702dd534ddfa9858f28dbc880e85d26787c7cc742",
+      "hash": "fb12a7bb606ab67bc5cfb5b8cce89b0e9f7835476e43719869c22598f0fbff2c",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/komplo-tahtasi-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/masa-ustu-oyun-zamanlayici-saat/": {
-      "hash": "e3927418f0c5060314ea52def43c4dfb4cfff5ebbfbf3637051e7b8a55e6a949",
+      "hash": "2ab37c23c22bf2f40fb2d4bdf663d4b176fd0a83c38d80e889e12a49c728cc8e",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/masa-ustu-oyun-zamanlayici-saat/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/puan-takipcisi/": {
-      "hash": "9eccd90630e3eeb4fba72fd6a8e53d2f91ff9cff2f58c6463dfa3b7c0ade2571",
+      "hash": "5e303cb863465bace6d702b9a77df0e1c56ae48f19d9d0e3259ccd8676be96a5",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/puan-takipcisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/rastgele-zindan-haritasi-olusturucu/": {
-      "hash": "f73eb1f869be013d072743f0306d3894c532995d16b30070229a2d65b1e11cf4",
+      "hash": "691a56ed38019d46023936b33f062c8831c4597a74eb932dc4ec7ca9e61c56ee",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/rastgele-zindan-haritasi-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/rpg-karakter-pulu-olusturucu-masaustu/": {
-      "hash": "26c9ac0fc788c0760812b3993602c037b8b8c42decf5617f5c87b34a7b378717",
+      "hash": "7badcba55852c9b0907a9bfd90ca691a1c25303ffcb27138c689f88656c928a5",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/rpg-karakter-pulu-olusturucu-masaustu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/sapma-yonu-secici/": {
-      "hash": "3b7bbf5cebcc552665dd4ab124d0f2a3783f66378c761d9de6da8229f5266c44",
+      "hash": "e989e8818c08e592814ec45c7c7e8ba964807b0caf72db7559462388e277672d",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/sapma-yonu-secici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/zar-atma-ve-olasilik-simulatoru/": {
-      "hash": "a18e40008ea7f33631ca020de7c8f8670a30406a4bf5343f80434b2fb89cc26b",
+      "hash": "aa4e3b1a0edcf11591a84e0666cd04b63bb5a324756c74463eeb8b999b8164ec",
       "route": "/tr/araclar/kategoriler/masa-oyunlari/zar-atma-ve-olasilik-simulatoru/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-dificultad-encuentros-dnd-5e/": {
-      "hash": "f5e6afed7b481bd8874454a8eb4c67fdf7b2f634af5e8fc04406034de8c8ae0e",
+      "hash": "61617c2e99f6cea8b2c6bcfc7a715f771a581177b22ba04c9478a3badeef9d31",
       "route": "/utilidades/calculadora-dificultad-encuentros-dnd-5e/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-fases-lunares/": {
-      "hash": "5c71f3760c3c90ea1705fc9ba5f83df35fd27aac4aa3afbccc77ecc20eccb549",
+      "hash": "72e0f6bf450265aa41331bebed6c8f1548680641c4531a2b131a5f18b4ada460",
       "route": "/utilidades/calculadora-fases-lunares/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-probabilidad-robar-cartas/": {
-      "hash": "e0c447c66aaba082006939e3de2c14d7106ed257c73238879a3eb7b18764a0bc",
+      "hash": "04c39cab5ee7274f6a4236f058bc795b454b503a480fe0c5c16b550796af4ee0",
       "route": "/utilidades/calculadora-probabilidad-robar-cartas/"
     },
     "https://www.jjlmoya.es/utilidades/categorias/juegos-de-mesa/": {
-      "hash": "f3d7f501f1215972cd668a6fd2a95ebd2e7cc3c37af7da111bd723722254ee31",
+      "hash": "f4c619a55f22fb67958e18f3b67ccae823aa9f19d803e711dc2540cdcaaa22ac",
       "route": "/utilidades/categorias/juegos-de-mesa/"
     },
     "https://www.jjlmoya.es/utilidades/contador-de-puntuacion/": {
-      "hash": "b050cdaeb7af0dce2222a038074dfe270813cd7961518fe89f4b1ad5a2bede47",
+      "hash": "f3354c97b1b1593f7c261da842445b34da0a8454e8c368a24eece4a94fa62491",
       "route": "/utilidades/contador-de-puntuacion/"
     },
     "https://www.jjlmoya.es/utilidades/creador-fichas-personaje-tokens-rpg/": {
-      "hash": "4971cca90820e5cb696f7af1c52bcdd0d1432de2457373ae98cc08844d793bfb",
+      "hash": "c813cf207b1b595870f9274de683c092323256335296852fb36193cfea121bde",
       "route": "/utilidades/creador-fichas-personaje-tokens-rpg/"
     },
     "https://www.jjlmoya.es/utilidades/creador-tablero-conspiracion/": {
-      "hash": "b8edb9d9cf031f03dba40610f64454e1bca285f35e86249d749d00274ba33f40",
+      "hash": "c13b587ac88d6b8bbd9cf75ba85110630a4928f51150f4841885545da5ec3492",
       "route": "/utilidades/creador-tablero-conspiracion/"
     },
     "https://www.jjlmoya.es/utilidades/generador-mapas-asentamientos-rol-exploracion/": {
-      "hash": "47ca2dcd51c677559ea134bb04dfaf49d536480ba7fae31cdf6d76bad62ba327",
+      "hash": "48fdb3e067f2142f0e2288cf5e1b2b1e801f8ff65f1590863e346eeac65f187c",
       "route": "/utilidades/generador-mapas-asentamientos-rol-exploracion/"
     },
     "https://www.jjlmoya.es/utilidades/generador-mapas-mazmorras-aleatorios/": {
-      "hash": "bb32910c3ea960b90f89e6a31b2d01a5131175141a9d718d59e06091ba3b2b5c",
+      "hash": "dbe5296f9c90436c8073bba95aae969b21393c5c99dcd3c3ebc541e69066ec9f",
       "route": "/utilidades/generador-mapas-mazmorras-aleatorios/"
     },
     "https://www.jjlmoya.es/utilidades/marcador-mus-online/": {
-      "hash": "e7f171fb873e84939ed9ede805037a568490a5c339ec06749072922b40f6176e",
+      "hash": "3c9281842c0672ed4130138e0779572496b460cceb8ab122ed6091db48eecbac",
       "route": "/utilidades/marcador-mus-online/"
     },
     "https://www.jjlmoya.es/utilidades/repartidor-roles-ocultos-secretos/": {
-      "hash": "0a2e5f9efec8734b6c0f43af033419dd39c265050fa215bab5b826494d9efbea",
+      "hash": "3f576c796f213f098dc7e700500f263cf851280122c9a679c623272e8f7dd2ba",
       "route": "/utilidades/repartidor-roles-ocultos-secretos/"
     },
     "https://www.jjlmoya.es/utilidades/ruleta-de-decisiones/": {
-      "hash": "c2c5987c96ca22d5415071143d234241f12c51772f5d9a02d8690f757de0155a",
+      "hash": "1815675d13849b1636a624f03511ced321a8de718d16a5930b821f235866aff0",
       "route": "/utilidades/ruleta-de-decisiones/"
     },
     "https://www.jjlmoya.es/utilidades/seguidor-de-iniciativa/": {
-      "hash": "3c40e0a27036a2842e982c81e0dbd58e812f6d0c5313b0459c2dde6e7cdb1b59",
+      "hash": "5b3b9d35aa1e8d0a7ba037540792ee7fde2e2e1f99734b660be67b05b610e2cc",
       "route": "/utilidades/seguidor-de-iniciativa/"
     },
     "https://www.jjlmoya.es/utilidades/selector-de-direccion-de-desviacion/": {
-      "hash": "f9184efd42c76ac570a317dd77681dd0b2f82e3f6d86f3db4a7496f3260321a4",
+      "hash": "d022be65c5519ed99674768988be6b55d32c3627d92db1561e88722d3b3b0072",
       "route": "/utilidades/selector-de-direccion-de-desviacion/"
     },
     "https://www.jjlmoya.es/utilidades/selector-primer-jugador/": {
-      "hash": "e93780624d86f30531c7c2b323c5ab414466b276ef5d5654d1592a7273c3ee69",
+      "hash": "773835824b924940489338bd9e10b12007af8a21aebcb2a7def5ad77a843e2ca",
       "route": "/utilidades/selector-primer-jugador/"
     },
     "https://www.jjlmoya.es/utilidades/temporizador-juegos-mesa-reloj/": {
-      "hash": "2d47ea7c28028b7e5a18bfc93dc6960db7d3aa0295cb7a84665e14e0bd29f7a4",
+      "hash": "c6078985afca0e9242fea52ee2294744a4abb612e4f0f850f9699b9e7c95ef4d",
       "route": "/utilidades/temporizador-juegos-mesa-reloj/"
     },
     "https://www.jjlmoya.es/utilidades/tirador-dados-simulador-probabilidad/": {
-      "hash": "b7d2d9350ad584618d0f3451d5cdd5ad91c9676ff1f300417fc5ad21be6af30e",
+      "hash": "2c4348b28690be26b521c570574383b06c3a65f3066373211c6d7958ebab18b4",
       "route": "/utilidades/tirador-dados-simulador-probabilidad/"
     },
     "https://www.jjlmoya.es/utilidades/traductor-runas-fantasticas/": {
-      "hash": "4cef855e21e12c5c3adfaead712deef2e720708bfeb24f69a63d2bd8f41a9913",
+      "hash": "c59f021f73fe69df72a03e213e4d253ca48d033423a64b019f9be7446bab014b",
       "route": "/utilidades/traductor-runas-fantasticas/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/board-game-timer/": {
-      "hash": "b1ccb06c7a1f5eea7d4fe5ecdfbecc3641dfcb5069915bc912ff22b6e13eea55",
+      "hash": "8d8bbb75c4e36de46e71d60318648d3631ad7308edff33ba7960fa494ea21afc",
       "route": "/zh/utilities/categories/tabletop/board-game-timer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/card-draw-odds-calculator/": {
-      "hash": "28d45c7d9289247ec88bb5bd044d311e68c7c81fe5a035eab0e71174f00e9286",
+      "hash": "1cbd9eb3f390302fc32b3e144e26e2d438ed7d7ba78ceb60d8eb14cb6dd617a0",
       "route": "/zh/utilities/categories/tabletop/card-draw-odds-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/decision-wheel/": {
-      "hash": "69dbc682d77c0e160b220c1398a08e2b5751a9767786eaf17ee9f1880f83b271",
+      "hash": "eaf8793411035713fec87f7b18fe03f7bc495bb5dfd5e4a9e22239c8b31be77e",
       "route": "/zh/utilities/categories/tabletop/decision-wheel/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/dice-roller-simulator/": {
-      "hash": "26b0d29946ae560ebf3ea497e3ffe456316bdfadd93074722850ccd5c5bcae53",
+      "hash": "99c942dadf9f1dac58b3919611617d9fe0b84936d87660584247384c7a82323e",
       "route": "/zh/utilities/categories/tabletop/dice-roller-simulator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/": {
-      "hash": "bbad5ccf55e387d61fbc94ecbad9c67bf6c65ae550a5f84c1146f10b21c78872",
+      "hash": "7ccdef9159344b009a8d85e325f063e2b21b5e4b2b2c2431e21a376e07849f7a",
       "route": "/zh/utilities/categories/tabletop/dnd-5e-encounter-difficulty-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/fantasy-runes-translator/": {
-      "hash": "582beac87b31103b7f36793bada131a847b99c6c349f07bdda75f512cbcc5464",
+      "hash": "b593612c65aa410a0cea836ef60884eeb047dd250d0a3e4ec80e30b60fd6c730",
       "route": "/zh/utilities/categories/tabletop/fantasy-runes-translator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/first-player-selector/": {
-      "hash": "ca8ef56b76f4f108d0c55198d951316a765862f666a078602cc2bae3635d8f6e",
+      "hash": "337bcc5b7458d9c0088582db9c01041ce3d68c37fa21ad67a41cb1f2149ee66a",
       "route": "/zh/utilities/categories/tabletop/first-player-selector/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/hidden-role-dealer/": {
-      "hash": "860fe896649f30e32a86c58fc7bb5ef3e49876b0e6c0ac921a5118ed997afa90",
+      "hash": "ee098d66be002fb097c74e4130188a4092711fa629d66c94ab5a7b5f3f242fcd",
       "route": "/zh/utilities/categories/tabletop/hidden-role-dealer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/": {
-      "hash": "498287c2864c85ac2b62475f676d53672297430330e317c1e292e367dd9ff4c8",
+      "hash": "54f2843b83d1ab2bc451a4b31fee811672b870caa713086fdca46e08c879f231",
       "route": "/zh/utilities/categories/tabletop/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/investigation-board/": {
-      "hash": "08a52a13571ec6c1cb165bc064e7a19fce06d65bdc0d1c384f4282a9355d0288",
+      "hash": "bc508de49fa4ee1bd14b005799861c311b298456a0f0d251ee601fe2865379bb",
       "route": "/zh/utilities/categories/tabletop/investigation-board/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/lunar-tide-tracker/": {
-      "hash": "6627991e7520505dc19cd240d90802b37f4b14d066e191e25239a2bf7c5ca7a1",
+      "hash": "54a2266cbe521e7968d19c4d5f8c74fc1d31d35e7bc839830a78161adc9a883e",
       "route": "/zh/utilities/categories/tabletop/lunar-tide-tracker/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/online-mus-scoreboard/": {
-      "hash": "c6697cadc3c3485e3cd12f7c183329270e920234ff5c542ddb2e0cf43a102819",
+      "hash": "782f7f77144de792d1319e99c50b9fc6ca4b40e1342d466f95c8efa70890b1e3",
       "route": "/zh/utilities/categories/tabletop/online-mus-scoreboard/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/random-dungeon-map-generator/": {
-      "hash": "57cbfc4aa7a61edc74f5a5e2a498fe809b2901a0c89a042f46a365168bfc8742",
+      "hash": "f9de1d8d8127aed7ca6328842c38ee98be5441856ada1135937c6e4265afafc6",
       "route": "/zh/utilities/categories/tabletop/random-dungeon-map-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/rpg-initiative-tracker/": {
-      "hash": "e82957fe6a02202eff414ddebc1e1e5926343b5666484b8c086677a2e9dbf4aa",
+      "hash": "5888e4da52b767693eb00b5beb3881d5d8c2422c31fd1c5755abdac75d51332f",
       "route": "/zh/utilities/categories/tabletop/rpg-initiative-tracker/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/": {
-      "hash": "88a8bbecb82b9818224d7d0e7375bb16ffcdac58749e3fd51df136a8b918bf61",
+      "hash": "997f67c0893e4d3520ffca6ee70c88fa65a86792d39b8908f522cbb4522397d7",
       "route": "/zh/utilities/categories/tabletop/rpg-settlement-exploration-map-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/scatter-direction-selector/": {
-      "hash": "0e43521b6aabd6cb52a3f86452d5d7eb146ae9541bd48bc08e40946eaef986ec",
+      "hash": "a3bc3530a1b19ccd0a6654275efda7ab027bc6fb6fc908a3730d0668febdc59b",
       "route": "/zh/utilities/categories/tabletop/scatter-direction-selector/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/score-tracker/": {
-      "hash": "608ceb66306e347866e78ff6b3aa9bebd264ef16c90692694c2f6b10c91dddd8",
+      "hash": "35ee9cb04cca9c19aefaac2eecc42d24daf5d90e7f20ca018f22929e60ece73c",
       "route": "/zh/utilities/categories/tabletop/score-tracker/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/tabletop/token-stamp-studio/": {
-      "hash": "a5b280ef1aceb871d9092eaced3babca789f0d51ff48690484607f92cbb53665",
+      "hash": "f86ee2008d1a1d5b3468f6b1b39f7b6a89a3891cbdf375ed9fb9ba4170da8ca1",
       "route": "/zh/utilities/categories/tabletop/token-stamp-studio/"
     }
   }
