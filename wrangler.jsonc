@@ -7,259 +7,131 @@
     "preview_urls": true,
     "routes": [
         {
-            "pattern": "www.gamebob.dev/en/utilities/categories/tabletop",
+            "pattern": "www.gamebob.dev/en/utilities/categories/tabletop*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/en/utilities/categories/tabletop/*",
+            "pattern": "www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe",
+            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/brettspiele*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/fr/utilitaires/categories/jeux-de-societe/*",
+            "pattern": "www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/brettspiele",
+            "pattern": "www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/brettspiele/*",
+            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo",
+            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/bordspel*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/it/utilita/categorie/giochi-da-tavolo/*",
+            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa",
+            "pattern": "www.gamebob.dev/id/utilitas/kategori/permainan-papan*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/pt/utilidades/categorias/jogos-de-mesa/*",
+            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen",
+            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/bordspelen/*",
+            "pattern": "www.gamebob.dev/ja/utilities/categories/tabletop*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/bordspel",
+            "pattern": "www.gamebob.dev/ko/utilities/categories/tabletop*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/bordspel/*",
+            "pattern": "www.gamebob.dev/zh/utilities/categories/tabletop*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/gry-planszowe/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/id/utilitas/kategori/permainan-papan",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/id/utilitas/kategori/permainan-papan/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/masa-oyunlari/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/nastolnye-igry/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ja/utilities/categories/tabletop",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ja/utilities/categories/tabletop/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ko/utilities/categories/tabletop",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ko/utilities/categories/tabletop/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/zh/utilities/categories/tabletop",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/zh/utilities/categories/tabletop/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/categorias/juegos-de-mesa",
+            "pattern": "www.jjlmoya.es/utilidades/categorias/juegos-de-mesa*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/categorias/juegos-de-mesa/*",
+            "pattern": "www.jjlmoya.es/utilidades/tirador-dados-simulador-probabilidad*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/tirador-dados-simulador-probabilidad",
+            "pattern": "www.jjlmoya.es/utilidades/temporizador-juegos-mesa-reloj*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/tirador-dados-simulador-probabilidad/*",
+            "pattern": "www.jjlmoya.es/utilidades/selector-primer-jugador*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/temporizador-juegos-mesa-reloj",
+            "pattern": "www.jjlmoya.es/utilidades/contador-de-puntuacion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/temporizador-juegos-mesa-reloj/*",
+            "pattern": "www.jjlmoya.es/utilidades/seguidor-de-iniciativa*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/selector-primer-jugador",
+            "pattern": "www.jjlmoya.es/utilidades/traductor-runas-fantasticas*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/selector-primer-jugador/*",
+            "pattern": "www.jjlmoya.es/utilidades/ruleta-de-decisiones*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/contador-de-puntuacion",
+            "pattern": "www.jjlmoya.es/utilidades/creador-tablero-conspiracion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/contador-de-puntuacion/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-fases-lunares*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/seguidor-de-iniciativa",
+            "pattern": "www.jjlmoya.es/utilidades/repartidor-roles-ocultos-secretos*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/seguidor-de-iniciativa/*",
+            "pattern": "www.jjlmoya.es/utilidades/selector-de-direccion-de-desviacion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/traductor-runas-fantasticas",
+            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-mazmorras-aleatorios*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/traductor-runas-fantasticas/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-dificultad-encuentros-dnd-5e*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/ruleta-de-decisiones",
+            "pattern": "www.jjlmoya.es/utilidades/creador-fichas-personaje-tokens-rpg*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/ruleta-de-decisiones/*",
+            "pattern": "www.jjlmoya.es/utilidades/marcador-mus-online*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/creador-tablero-conspiracion",
+            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-asentamientos-rol-exploracion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/creador-tablero-conspiracion/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-fases-lunares",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-fases-lunares/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/repartidor-roles-ocultos-secretos",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/repartidor-roles-ocultos-secretos/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/selector-de-direccion-de-desviacion",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/selector-de-direccion-de-desviacion/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-mazmorras-aleatorios",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-mazmorras-aleatorios/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-dificultad-encuentros-dnd-5e",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-dificultad-encuentros-dnd-5e/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/creador-fichas-personaje-tokens-rpg",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/creador-fichas-personaje-tokens-rpg/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/marcador-mus-online",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/marcador-mus-online/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-asentamientos-rol-exploracion",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/generador-mapas-asentamientos-rol-exploracion/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-probabilidad-robar-cartas",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-probabilidad-robar-cartas/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-probabilidad-robar-cartas*",
             "zone_name": "jjlmoya.es"
         },
         {
