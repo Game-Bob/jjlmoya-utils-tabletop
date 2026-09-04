@@ -24,7 +24,6 @@
         "start": "astro dev",
         "prestart": "node scripts/postinstall.mjs",
         "build": "astro build",
-        "postbuild": "node scripts/postbuild.mjs",
         "prebuild": "node scripts/postinstall.mjs",
         "preview": "astro preview",
         "astro": "astro",
