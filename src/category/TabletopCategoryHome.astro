@@ -1,0 +1,196 @@
+---
+import { Icon } from 'astro-icon/components';
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import ProductionBreadcrumb from '../components/ProductionBreadcrumb.astro';
+import ProductionPage from '../layouts/ProductionPage.astro';
+import { getCategoryUi } from '../mfe/category-ui';
+import { getCategoryPath } from '../mfe/routes';
+import type { CategoryLocaleContent, KnownLocale } from '../types';
+import './tabletop-home.css';
+
+interface CategoryTool {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+interface Props {
+  locale: KnownLocale;
+  category: CategoryLocaleContent;
+  tools: CategoryTool[];
+  alternates: { language: KnownLocale; url: string }[];
+  image?: string | undefined;
+}
+
+const { locale, category, tools, alternates, image } = Astro.props;
+const publicPath = getCategoryPath(locale, category.slug);
+const ui = getCategoryUi(locale);
+const firstTool = tools[0];
+const toolCount = String(tools.length).padStart(2, '0');
+
+if (!firstTool) throw new Error('The tabletop category needs at least one tool');
+
+---
+
+<ProductionPage title={category.title} description={category.description} {locale} {publicPath} {alternates} {image}>
+  <div class="tabletop-home" data-tabletop-home>
+    <div class="tabletop-felt-speckle" aria-hidden="true"></div>
+    <div class="tabletop-frame">
+      <ProductionBreadcrumb locale={locale} currentTitle={category.title} />
+
+      <header class="tabletop-deck-intro">
+        <div class="tabletop-hero-meta" aria-hidden="true">
+          <span>01</span>
+          <span>{toolCount}</span>
+          <span>TABLETOP</span>
+        </div>
+
+        <div class="tabletop-title-lockup">
+          <span class="tabletop-title-mark" aria-hidden="true">+</span>
+          <h2 class="tabletop-hero-title">{ui.heroTitle}</h2>
+          <p>{category.description}</p>
+          <a class="tabletop-hero-cta" href="#tabletop-tools">{ui.catalogTitle} <b aria-hidden="true">↓</b></a>
+        </div>
+
+        <div class="tabletop-manifesto" aria-hidden="true">
+          <span class="tabletop-manifesto-number">{toolCount}</span>
+          <span class="tabletop-manifesto-copy">{ui.catalogTitle}</span>
+          <span class="tabletop-manifesto-mark">+</span>
+        </div>
+      </header>
+
+      <section class="tabletop-play-zone" aria-labelledby="tabletop-play-title">
+        <div class="tabletop-play-label">
+          <span id="tabletop-play-title">{ui.relatedEyebrow}</span>
+          <span aria-hidden="true">01 / {String(tools.length).padStart(2, '0')}</span>
+        </div>
+
+        <div class="tabletop-feature-wrap" data-featured-tool>
+          <article class="tabletop-feature-card">
+            <div class="tabletop-card-top">
+              <span>01</span>
+              <span class="tabletop-card-index" aria-hidden="true">{toolCount}</span>
+            </div>
+            <div class="tabletop-card-art" aria-hidden="true">
+              <span class="tabletop-card-art-ring"></span>
+              <span class="tabletop-card-art-star">*</span>
+              <Icon name={firstTool.icon} />
+            </div>
+            <div class="tabletop-card-body">
+              <a href={firstTool.href} data-featured-title>{firstTool.title}</a>
+              <p data-featured-description aria-live="polite">{firstTool.description}</p>
+            </div>
+            <div class="tabletop-card-bottom">
+              <button type="button" data-draw-tool>{ui.shuffleTool}</button>
+              <span aria-hidden="true">{ui.useTool} <b>↗</b></span>
+            </div>
+          </article>
+        </div>
+
+        <div class="tabletop-dice-bay" aria-hidden="true">
+          <div class="tabletop-d20">
+            <svg viewBox="0 0 240 220">
+              <polygon class="tabletop-d20-face" points="120,8 224,72 187,194 53,194 16,72" />
+              <path class="tabletop-d20-line" d="M120 8v186M16 72l171 122M224 72L53 194M16 72h208M120 8L53 194M120 8l67 186" />
+              <text x="120" y="139">20</text>
+            </svg>
+          </div>
+          <div class="tabletop-meeples">
+            <svg class="tabletop-meeple tabletop-meeple-red" viewBox="0 0 100 120"><path d="M50 8c-15 0-25 12-25 27 0 9 3 16 9 22C19 65 8 78 8 98v14h84V98c0-20-11-33-26-41 6-6 9-13 9-22C75 20 65 8 50 8Z" /></svg>
+            <svg class="tabletop-meeple tabletop-meeple-blue" viewBox="0 0 100 120"><path d="M50 8c-15 0-25 12-25 27 0 9 3 16 9 22C19 65 8 78 8 98v14h84V98c0-20-11-33-26-41 6-6 9-13 9-22C75 20 65 8 50 8Z" /></svg>
+            <svg class="tabletop-meeple tabletop-meeple-gold" viewBox="0 0 100 120"><path d="M50 8c-15 0-25 12-25 27 0 9 3 16 9 22C19 65 8 78 8 98v14h84V98c0-20-11-33-26-41 6-6 9-13 9-22C75 20 65 8 50 8Z" /></svg>
+          </div>
+          <span class="tabletop-dice-caption">{toolCount} / D20</span>
+        </div>
+      </section>
+
+      <section class="tabletop-catalog" id="tabletop-tools" aria-labelledby="tabletop-catalog-title">
+        <div class="tabletop-catalog-head">
+          <div>
+            <span class="tabletop-catalog-kicker" aria-hidden="true">01 — {toolCount}</span>
+            <h2 id="tabletop-catalog-title">{ui.catalogTitle}</h2>
+          </div>
+          <span class="tabletop-catalog-scribble" aria-hidden="true">*</span>
+        </div>
+
+        <div class="tabletop-card-grid">
+          {tools.map((tool, index) => (
+            <a
+              href={tool.href}
+              class:list={['tabletop-tool-card', 'tabletop-tool-card-' + ((index % 4) + 1)]}
+              data-tool-card
+              data-tool-title={tool.title}
+              data-tool-description={tool.description}
+            >
+              <div class="tabletop-tool-card-face">
+                <div class="tabletop-tool-card-top">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <span aria-hidden="true">{toolCount}</span>
+                </div>
+                <div class="tabletop-tool-card-art" aria-hidden="true">
+                  <Icon name={tool.icon} />
+                </div>
+                <h3>{tool.title}</h3>
+                <p>{tool.description}</p>
+                <span class="tabletop-tool-card-action">{ui.useTool} <b aria-hidden="true">↗</b></span>
+                <span class="tabletop-tool-card-corner" aria-hidden="true">#{String(index + 1).padStart(2, '0')}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="tabletop-rulebook" aria-labelledby="tabletop-rulebook-title">
+        <div class="tabletop-rulebook-spine" aria-hidden="true">
+          <span>{toolCount}</span><span>INFO</span>
+        </div>
+        <div class="tabletop-rulebook-copy">
+          <span class="tabletop-rulebook-kicker">{ui.relatedEyebrow}</span>
+          <h2 id="tabletop-rulebook-title">{category.title}</h2>
+          <div class="tabletop-seo-copy"><SEORenderer content={{ locale, sections: category.seo }} /></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</ProductionPage>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-tabletop-home]');
+
+  if (root) {
+    const button = root.querySelector<HTMLButtonElement>('[data-draw-tool]');
+    const featureWrap = root.querySelector<HTMLElement>('[data-featured-tool]');
+    const featureLink = root.querySelector<HTMLAnchorElement>('[data-featured-title]');
+    const featureDescription = root.querySelector<HTMLElement>('[data-featured-description]');
+    const cards = Array.from(root.querySelectorAll<HTMLElement>('[data-tool-card]'));
+    let activeIndex = 0;
+    let isShuffling = false;
+
+    button?.addEventListener('click', () => {
+      if (!featureLink || !featureDescription || cards.length === 0 || isShuffling) return;
+      isShuffling = true;
+      featureWrap?.classList.add('is-shuffling');
+      button.setAttribute('aria-busy', 'true');
+      activeIndex = (activeIndex + 1) % cards.length;
+      const card = cards[activeIndex];
+      if (!card) {
+        isShuffling = false;
+        featureWrap?.classList.remove('is-shuffling');
+        button.removeAttribute('aria-busy');
+        return;
+      }
+      window.setTimeout(() => {
+        featureLink.href = card.getAttribute('href') ?? '#';
+        featureLink.textContent = card.dataset.toolTitle ?? '';
+        featureDescription.textContent = card.dataset.toolDescription ?? '';
+        cards.forEach((item, index) => item.toggleAttribute('data-selected', index === activeIndex));
+        featureWrap?.classList.remove('is-shuffling');
+        button.removeAttribute('aria-busy');
+        isShuffling = false;
+      }, 360);
+    });
+  }
+</script>

@@ -1,5 +1,5 @@
 ---
-import ProductionCategoryPage from "../../../layouts/ProductionCategoryPage.astro";
+import TabletopCategoryHome from "../../../category/TabletopCategoryHome.astro";
 import { ALL_ENTRIES, tabletopCategory } from "../../../index";
 import { LANGUAGE_CODES, type Language } from "../../../i18n/languages";
 import { getCategoryPath, getUtilityPath } from "../../../mfe/routes";
@@ -35,4 +35,4 @@ const tools = await Promise.all(ALL_ENTRIES.map(async (entry) => {
 }));
 ---
 
-<ProductionCategoryPage locale="es" {category} {tools} {alternates} image={CATEGORY_OG_IMAGE} />
+<TabletopCategoryHome locale="es" {category} {tools} {alternates} image={CATEGORY_OG_IMAGE} />
