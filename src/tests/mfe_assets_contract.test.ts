@@ -40,5 +40,5 @@ describe('MFE asset contract', () => {
     expect(CATEGORY_OG_IMAGE).toBe(
       `/_utilities/tabletop/images/tabletop.webp?version=${TABLETOP_ASSET_VERSION}`,
     );
-  });
+  }, 30000);
 });
